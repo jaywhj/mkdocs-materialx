@@ -26,9 +26,7 @@
 
 // Navigation variables
 :root {
-  --md-nav-icon--prev: svg-load("material/arrow-left.svg");
   --md-nav-icon--next: svg-load("material/chevron-right.svg");
-  --md-toc-icon: svg-load("material/table-of-contents.svg");
 }
 
 // ----------------------------------------------------------------------------
@@ -37,57 +35,63 @@
 .md-nav {
   font-size: px2rem(14px);
   line-height: 1.3;
+  transition: max-height 250ms cubic-bezier(0.86, 0, 0.07, 1);
 
-  // Navigation title
-  &__title {
-    display: block;
-    padding: 0 px2rem(12px);
-    overflow: hidden;
-    font-weight: 700;
-    color: var(--md-default-fg-color--light);
-    text-overflow: ellipsis;
-
-    // Navigaton button
-    .md-nav__button {
-      display: none;
-
-      // Stretch images based on height, as it's the smaller dimension
-      img {
-        width: auto;
-        height: 100%;
-      }
-
-      // Button with logo, pointing to `config.site_url`
-      &.md-logo {
-
-        // Image or icon
-        :is(img, svg) {
-          display: block;
-          width: auto;
-          max-width: 100%;
-          height: px2rem(48px);
-          object-fit: contain;
-          fill: currentcolor;
-        }
-      }
-    }
+  // Navigation title - we don't need the navigation title in the modern
+  // theme, as the navigation layout was greatly simplified
+  .md-nav__title {
+    display: none;
   }
 
   // Navigation list
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: px2rem(4px);
     padding: 0;
     margin: 0;
     list-style: none;
+
+    // Adjust spacing for level 2+
+    & & {
+      margin-inline-start: px2rem(12px);
+    }
+  }
+
+  // Navigation item
+  &__item {
+
+    // Navigation list in nested item
+    &--nested .md-nav__list {
+
+      // Adjust spacing before nested list for better outlines
+      &::before,
+      &::after {
+        display: block;
+        height: 0;
+        content: " ";
+      }
+    }
   }
 
   // Navigation link
   &__link {
     display: flex;
-    gap: px2rem(8px);
+    gap: px2rem(12px);
     align-items: flex-start;
-    margin-top: 0.625em;
-    scroll-snap-align: start;
-    transition: color 125ms;
+    padding: px2rem(7px) px2rem(16px);
+    margin-inline: px2rem(4px);
+    cursor: pointer;
+    border-radius: px2rem(8px);
+    transition:
+      color            250ms,
+      background-color 250ms;
+
+    // Remove margin on nested navigation link - this is essentially necessary
+    // for section index pages, as they use two nested elements
+    & & {
+      margin: 0;
+    }
 
     // Navigation link that was passed
     &--passed {
@@ -101,12 +105,29 @@
 
     // Active link
     .md-nav__item &--active {
+      font-weight: 500;
+
+      // Only use background in primary navigation
+      .md-nav--primary & {
+        color: var(--md-accent-fg-color);
+        background: var(--md-accent-fg-color--transparent);
+      }
 
       // Also enable color transitions on inline code blocks
       &,
       code {
         color: var(--md-typeset-a-color);
+
+        // Navigation link icon
+        svg {
+          opacity: 1;
+        }
       }
+    }
+
+    // Navigation link in nested item
+    .md-nav__item--nested > &:not(.md-nav__container) {
+      padding-inline-end: px2rem(7px);
     }
 
     // Navigation link title
@@ -115,6 +136,7 @@
       // and the element will become unclickable. Setting `position: relative`
       // seems to fix the issue - see https://bit.ly/3HljM1T
       position: relative;
+      flex-grow: 1;
 
       // Truncate overflowing code blocks in the navigation with ellipsis, as
       // the full link title is always shown as a tooltip on focus/hover
@@ -123,57 +145,54 @@
       }
     }
 
-    // Always align navigation icons to the end
-    .md-icon:last-child {
-      margin-inline-start: auto;
-    }
-
-    // Navigation with content that is typeset
-    .md-typeset {
-      font-size: px2rem(14px);
-      line-height: 1.3;
-    }
-
     // Navigation link icon
     svg {
       // Hack: Safari has another bug where SVGs disappear on hover - same fix
       // as above via `position: relative` - see https://t.ly/5fSj1
       position: relative;
       flex-shrink: 0;
+      width: 1.3em;
       height: 1.3em;
+      opacity: 0.5;
       fill: currentcolor;
+
+      // Override for Lucide icons, which use strokes
+      &.lucide {
+        fill: transparent;
+        stroke: currentcolor;
+      }
     }
 
-    // Navigation link on focus/hover
-    &:is([href], [for]):is(:focus, :hover) {
-      color: var(--md-accent-fg-color);
-      cursor: pointer;
+    // Styles for primary navigation
+    .md-nav--primary & {
 
-      // Inline code block
-      code {
+      // Navigation link on focus/hover
+      &:is([href], [for]):is(:focus, :hover):not(.md-nav__link--active) {
+        color: var(--md-default-fg-color);
+        background-color: var(--md-default-fg-color--lightest);
+      }
+    }
+
+    // Styles for primary navigation
+    .md-nav--secondary & {
+      padding: px2rem(7px) px2rem(16px);
+      margin-inline: px2rem(4px);
+
+      // Navigation link on focus/hover
+      &:is([href], [for]):is(:focus, :hover) {
         color: var(--md-accent-fg-color);
-        background-color: var(--md-accent-fg-color--transparent);
+        background-color: transparent;
       }
     }
 
     // Show outline for keyboard devices
     &.focus-visible {
       outline-color: var(--md-accent-fg-color);
-      outline-offset: px2rem(4px);
     }
 
     // Navigation link for table of contents
     .md-nav--primary &[for="__toc"] {
       display: none;
-
-      // Table of contents icon
-      .md-icon::after {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: currentcolor;
-        mask-image: var(--md-toc-icon);
-      }
 
       // Hide table of contents
       ~ .md-nav {
@@ -182,22 +201,188 @@
     }
   }
 
+  // Navigation icon
+  &__icon {
+    width: px2rem(18px);
+    height: px2rem(18px);
+    font-size: px2rem(18px);
+
+    // Adjust for right-to-left languages
+    [dir="rtl"] &::after {
+      transform: rotate(180deg);
+    }
+
+    // Navigation icon in link to next level
+    .md-nav__item--nested &::after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: currentcolor;
+      mask-image: var(--md-nav-icon--next);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      transition: transform 250ms;
+    }
+
+    // Hide icon when marked as section on larger screens
+    @include break-from-device(screen) {
+      .md-nav__item--nested.md-nav__item--section > .md-nav__link &::after {
+        display: none;
+      }
+    }
+
+    // Navigation icon - rotate icon when toggle is active or indeterminate
+    .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav__link &::after,
+    .md-nav__item--nested .md-toggle--indeterminate ~ .md-nav__link &::after {
+      transform: rotate(90deg);
+    }
+  }
+
   // Navigation container (for section index pages)
-  &__container > .md-nav__link {
-    margin-top: 0;
+  &__container {
+    gap: px2rem(4px);
+    padding: 0;
+    background: transparent;
 
     // Stretch first child
-    &:first-child {
+    > :first-child {
       flex-grow: 1;
       // Hack: if a very long word is used, it can push the arrow out of sight.
       // Setting this property contains the text - see https://t.ly/E02vp
       min-width: 0;
     }
+
+    // Adjust spacing for icon
+    > :nth-child(2) {
+      padding: px2rem(7px);
+
+      // Hide icon when marked as section
+      @include break-from-device(screen) {
+        .md-nav__item--section > & {
+          display: none;
+        }
+      }
+    }
+
+    // Navigation icon
+    &__icon {
+      flex-shrink: 0;
+    }
   }
 
-  // Navigation icon
-  &__icon {
-    flex-shrink: 0;
+  // Hide nested navigation
+  &__toggle ~ & {
+    display: grid;
+    // Hack: we must set a minimum of 8px to work around a bug introduced in
+    // Safari 18.3, collapsing to a height of 0 – see https://t.ly/ViA3N
+    grid-template-rows: minmax(#{px2rem(0.1px)}, 0fr);
+    visibility: collapse;
+    opacity: 0;
+    transition:
+      grid-template-rows 250ms cubic-bezier(0.86, 0, 0.07, 1),
+      opacity            250ms,
+      visibility           0ms 250ms;
+
+    // Navigation list
+    > .md-nav__list {
+      overflow: hidden;
+    }
+  }
+
+  // Show nested navigation when toggle is active or indeterminate
+  &__toggle:is(:checked, .md-toggle--indeterminate) ~ & {
+    grid-template-rows: minmax(#{px2rem(8px)}, 1fr);
+    visibility: visible;
+    opacity: 1;
+    transition:
+      grid-template-rows 250ms cubic-bezier(0.86, 0, 0.07, 1),
+      opacity            150ms 100ms,
+      visibility           0ms;
+  }
+
+  // Disable transition for expanded navigation
+  &__toggle.md-toggle--indeterminate ~ & {
+    transition: none;
+  }
+
+  // Table of contents
+  &--secondary {
+    margin-block: px2rem(2px);
+
+    // Adjust spacing
+    .md-nav {
+      margin-top: px2rem(4px);
+
+      // Navigation title
+      &__title {
+        position: sticky;
+        top: 0;
+        // Hack: because of the hack that we need to make .md-ellipsis work in
+        // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
+        z-index: 1;
+        display: flex;
+        padding: px2rem(7px) px2rem(12px);
+        margin-inline: px2rem(4px);
+        font-weight: 700;
+        background: var(--md-default-bg-color);
+
+        // Hide navigation icon
+        .md-nav__icon {
+          display: none;
+        }
+      }
+
+      // Navigation link
+      &__link {
+        padding: px2rem(4px) px2rem(12px);
+      }
+    }
+  }
+
+  // [tablet landscape -]: Mobile navigation
+  @include break-to-device(tablet landscape) {
+
+    // Primary navigation
+    &--primary {
+      margin-inline: px2rem(4px);
+      margin-bottom: px2rem(8px);
+    }
+
+    // Navigation title - we don't need the navigation title in the modern
+    // theme, as the navigation layout was greatly simplified
+    .md-nav__title[for="__drawer"] {
+      display: flex;
+      gap: px2rem(8px);
+      align-items: center;
+      padding: px2rem(16px);
+      font-size: px2rem(16px);
+      font-weight: 700;
+      border-bottom: px2rem(1px) solid var(--md-default-fg-color-lightest);
+
+      // Logo
+      .md-logo {
+        width: px2rem(32px);
+        height: px2rem(32px);
+
+        // Image or icon
+        :is(img, svg) {
+          display: block;
+          width: auto;
+          max-width: 100%;
+          height: 100%;
+          object-fit: contain;
+          fill: currentcolor;
+
+          // Override for Lucide icons, which use strokes
+          &.lucide {
+            fill: transparent;
+            stroke: currentcolor;
+          }
+        }
+      }
+    }
   }
 
   // Repository information container
@@ -205,420 +390,83 @@
     display: none;
   }
 
-  // [tablet -]: Layered navigation
-  @include break-to-device(tablet) {
+  // Modifier for when table of contents is rendered in primary navigation
+  &--integrated > .md-nav__list > .md-nav__item--active {
 
-    // Primary and nested navigation
-    &--primary,
-    &--primary & {
-      position: absolute;
-      inset-inline: 0;
-      top: 0;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background-color: var(--md-default-bg-color);
-    }
-
-    // Primary navigation
-    &--primary {
-
-      // Navigation title and item
-      :is(.md-nav__title, .md-nav__item) {
-        font-size: px2rem(16px);
-        line-height: 1.5;
-      }
-
-      // Navigation title
-      .md-nav__title {
-        position: relative;
-        height: px2rem(112px);
-        padding: px2rem(60px) px2rem(16px) px2rem(4px);
-        line-height: px2rem(48px);
-        color: var(--md-default-fg-color--light);
-        white-space: nowrap;
-        cursor: pointer;
-        background-color: var(--md-default-fg-color--lightest);
-
-        // Navigation icon
-        .md-nav__icon {
-          position: absolute;
-          inset-inline-start: px2rem(8px);
-          top: px2rem(8px);
-          display: block;
-          width: px2rem(24px);
-          height: px2rem(24px);
-          margin: px2rem(4px);
-
-          // Navigation icon in link to previous level
-          &::after {
-            display: block;
-            width: 100%;
-            height: 100%;
-            content: "";
-            background-color: currentcolor;
-            mask-image: var(--md-nav-icon--prev);
-            mask-repeat: no-repeat;
-            mask-position: center;
-            mask-size: contain;
-          }
-        }
-
-        // Navigation list
-        ~ .md-nav__list {
-          overflow-y: auto;
-          touch-action: pan-y;
-          scroll-snap-type: y mandatory;
-          background-color: var(--md-default-bg-color);
-          box-shadow:
-            0 px2rem(1px) 0 var(--md-default-fg-color--lightest) inset;
-
-          // Omit border on first child
-          > :first-child {
-            border-top: 0;
-          }
-        }
-
-        // Top-level navigation title
-        &[for="__drawer"] {
-          font-weight: 700;
-          color: var(--md-primary-bg-color);
-          background-color: var(--md-primary-fg-color);
-        }
-
-        // Button with logo, pointing to `config.site_url`
-        .md-logo {
-          position: absolute;
-          inset-inline: px2rem(4px);
-          top: px2rem(4px);
-          display: block;
-          padding: px2rem(8px);
-          margin: px2rem(4px);
-        }
-      }
-
-      // Navigation list
-      .md-nav__list {
-        flex: 1;
-      }
-
-      // Navigation item
-      .md-nav__item {
-        border-top: px2rem(1px) solid var(--md-default-fg-color--lightest);
-
-        // Navigation link in active navigation
-        &--active > .md-nav__link {
-          color: var(--md-typeset-a-color);
-
-          // Navigation link on focus/hover
-          &:is(:focus, :hover) {
-            color: var(--md-accent-fg-color);
-          }
-        }
-      }
+    // Show integrated table of contents
+    .md-nav--secondary {
+      display: block;
+      margin-inline-start: px2rem(22px);
+      margin-block: 0.5em;
+      visibility: visible;
+      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
+      opacity: 1;
 
       // Navigation link
       .md-nav__link {
-        padding: px2rem(12px) px2rem(16px);
-        margin-top: 0;
+        background: transparent;
 
-        // Navigation link icon
-        svg {
-          margin-top: 0.1em;
+        // Active link in table of contents
+        &--active {
+          font-weight: 500;
         }
 
-        // Adjust spacing on nested link
-        > .md-nav__link {
-          padding: 0;
-        }
-
-        // Navigation icon
-        .md-nav__icon {
-          width: px2rem(24px);
-          height: px2rem(24px);
-          margin-inline-end: px2rem(-4px);
-          font-size: px2rem(24px);
-
-          // Navigation icon in link to next level
-          &::after {
-            display: block;
-            width: 100%;
-            height: 100%;
-            content: "";
-            background-color: currentcolor;
-            mask-image: var(--md-nav-icon--next);
-            mask-repeat: no-repeat;
-            mask-position: center;
-            mask-size: contain;
-          }
+        // Navigation link on focus/hover
+        &:is(:focus, :hover) {
+          color: var(--md-accent-fg-color);
         }
       }
-
-      // Flip icon vertically
-      .md-nav__icon {
-
-        // Adjust for right-to-left languages
-        [dir="rtl"] &::after {
-          transform: scale(-1);
-        }
-      }
-
-      // Table of contents contained in primary navigation
-      .md-nav--secondary {
-
-        // Navigation on level 2-6
-        .md-nav {
-          position: static;
-          background-color: transparent;
-
-          // Navigation link on level 3
-          .md-nav__link {
-            padding-inline-start: px2rem(28px);
-          }
-
-          // Navigation link on level 4
-          .md-nav .md-nav__link {
-            padding-inline-start: px2rem(40px);
-          }
-
-          // Navigation link on level 5
-          .md-nav .md-nav .md-nav__link {
-            padding-inline-start: px2rem(52px);
-          }
-
-          // Navigation link on level 6
-          .md-nav .md-nav .md-nav .md-nav__link {
-            padding-inline-start: px2rem(64px);
-          }
-        }
-      }
-    }
-
-    // Table of contents
-    &--secondary {
-      background-color: transparent;
-    }
-
-    // Hide nested navigation
-    &__toggle ~ & {
-      display: flex;
-      opacity: 0;
-      transition:
-        transform 250ms cubic-bezier(0.8, 0, 0.6, 1),
-        opacity   125ms 50ms;
-      transform: translateX(100%);
-
-      // Adjust for right-to-left languages
-      [dir="rtl"] & {
-        transform: translateX(-100%);
-      }
-    }
-
-    // Show nested navigation when toggle is active
-    &__toggle:checked ~ & {
-      opacity: 1;
-      transition:
-        transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity   125ms 125ms;
-      transform: translateX(0);
 
       // Navigation list
       > .md-nav__list {
-        // Hack: promote to own layer to reduce jitter
-        backface-visibility: hidden;
-      }
-    }
-  }
-
-  // [tablet portrait -]: Layered navigation with table of contents
-  @include break-to-device(tablet portrait) {
-
-    // Show link to table of contents
-    &--primary &__link[for="__toc"] {
-      display: flex;
-
-      // Show table of contents icon
-      .md-icon::after {
-        content: "";
+        padding-bottom: 0;
+        margin-left: 0;
+        overflow: visible;
       }
 
-      // Hide navigation link to current page
-      + .md-nav__link {
+      // Hide table of contents title
+      > .md-nav__title {
         display: none;
-      }
-
-      // Show table of contents
-      ~ .md-nav {
-        display: flex;
-      }
-    }
-
-    // Repository information container
-    &__source {
-      display: block;
-      padding: 0 px2rem(4px);
-      color: var(--md-primary-bg-color);
-      background-color: var(--md-primary-fg-color--dark);
-    }
-  }
-
-  // [tablet landscape]: Layered navigation with table of contents
-  @include break-at-device(tablet landscape) {
-
-    // Show link to integrated table of contents
-    &--integrated &__link[for="__toc"] {
-      display: flex;
-
-      // Show table of contents icon
-      .md-icon::after {
-        content: "";
-      }
-
-      // Hide navigation link to current page
-      + .md-nav__link {
-        display: none;
-      }
-
-      // Show table of contents
-      ~ .md-nav {
-        display: flex;
-      }
-    }
-  }
-
-  // [tablet landscape +]: Tree-like table of contents
-  @include break-from-device(tablet landscape) {
-    margin-bottom: px2rem(-8px);
-
-    // Table of contents
-    &--secondary {
-
-      // Navigation title
-      .md-nav__title {
-        position: sticky;
-        top: 0;
-        // Hack: because of the hack that we need to make .md-ellipsis work in
-        // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
-        z-index: 1;
-        background: var(--md-default-bg-color);
-        box-shadow: 0 0 px2rem(8px) px2rem(8px) var(--md-default-bg-color);
-
-        // Adjust snapping behavior
-        &[for="__toc"] {
-          scroll-snap-align: start;
-        }
-
-        // Hide navigation icon
-        .md-nav__icon {
-          display: none;
-        }
-      }
-
-      // Adjust spacing for navigation list - same reason as below
-      .md-nav__list {
-        padding-inline-start: px2rem(12px);
-        padding-bottom: px2rem(8px);
-      }
-
-      // Adjust spacing for navigation link - before this change, we set spacing
-      // on the left and right of a navigation item, but this led to the problem
-      // of cropped focus outlines, because we must set `overflow: hidden` on
-      // the navigation list for smooth expand and collapse transitions.
-      .md-nav__item > .md-nav__link {
-        margin-inline-end: px2rem(8px);
       }
     }
   }
 
   // [screen +]: Tree-like navigation
   @include break-from-device(screen) {
-    margin-bottom: px2rem(-8px);
-    transition: max-height 250ms cubic-bezier(0.86, 0, 0.07, 1);
 
     // Primary navigation
     &--primary {
-
-      // Navigation title
-      .md-nav__title {
-        position: sticky;
-        top: 0;
-        // Hack: because of the hack that we need to make .md-ellipsis work in
-        // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
-        z-index: 1;
-        background: var(--md-default-bg-color);
-        box-shadow: 0 0 px2rem(8px) px2rem(8px) var(--md-default-bg-color);
-
-        // Adjust snapping behavior
-        &[for="__drawer"] {
-          scroll-snap-align: start;
-        }
-
-        // Hide navigation icon
-        .md-nav__icon {
-          display: none;
-        }
-      }
-
-      // Adjust spacing for navigation list - same reason as below
-      .md-nav__list {
-        padding-inline-start: px2rem(12px);
-        padding-bottom: px2rem(8px);
-      }
-
-      // Adjust spacing for navigation link - before this change, we set spacing
-      // on the left and right of a navigation item, but this led to the problem
-      // of cropped focus outlines, because we must set `overflow: hidden` on
-      // the navigation list for smooth expand and collapse transitions.
-      .md-nav__item > .md-nav__link {
-        margin-inline-end: px2rem(8px);
-      }
+      margin-block: px2rem(2px);
     }
 
-    // Hide nested navigation
-    &__toggle ~ & {
-      display: grid;
-      // Hack: we must set a minimum of 8px to work around a bug introduced in
-      // Safari 18.3, collapsing to a height of 0 – see https://t.ly/ViA3N
-      grid-template-rows: minmax(#{px2rem(8px)}, 0fr);
-      visibility: collapse;
-      opacity: 0;
-      transition:
-        grid-template-rows 250ms cubic-bezier(0.86, 0, 0.07, 1),
-        opacity            250ms,
-        visibility           0ms 250ms;
-
-      // Navigation list
-      > .md-nav__list {
-        overflow: hidden;
-      }
-    }
-
-    // Show nested navigation when toggle is active or indeterminate
-    &__toggle:is(:checked, .md-toggle--indeterminate) ~ & {
-      grid-template-rows: minmax(#{px2rem(8px)}, 1fr);
-      visibility: visible;
-      opacity: 1;
-      transition:
-        grid-template-rows 250ms cubic-bezier(0.86, 0, 0.07, 1),
-        opacity            150ms 100ms,
-        visibility           0ms;
-    }
-
-    // Disable transition for expanded navigation
-    &__toggle.md-toggle--indeterminate ~ & {
-      transition: none;
-    }
-
-    // Hide navigation title in nested navigation
-    &__item--nested > & > &__title {
+    // Repository information container
+    &__source {
       display: none;
+    }
+
+    // Adjust spacing for sections
+    &__list .md-nav__item--section > .md-nav > &__list {
+      margin-inline-start: 0;
+    }
+
+    // Navigation link
+    &__link {
+
+      // Active link in navigation section
+      .md-nav__item--section > &--active,
+      .md-nav__item--section > & > &--active {
+        font-weight: 700;
+      }
     }
 
     // Navigation section
     &__item--section {
-      display: block;
-      margin: 1.25em 0;
+      margin-top: px2rem(8px);
+
+      // Adjust spacing on first child
+      &:first-child {
+        margin-top: 0;
+      }
 
       // Adjust spacing on last child
       &:last-child {
@@ -629,27 +477,15 @@
       > .md-nav__link {
         font-weight: 700;
 
-        // Make labels discernable from links
-        &[for] {
-          color: var(--md-default-fg-color--light);
-        }
-
         // Omit clicks if not a section index page
         &:not(.md-nav__container) {
           pointer-events: none;
-        }
-
-        // Hide navigation icon
-        > [for],
-        .md-icon {
-          display: none;
         }
       }
 
       // Navigation
       > .md-nav {
         display: block;
-        margin-inline-start: px2rem(-12px);
         visibility: visible;
         opacity: 1;
 
@@ -660,53 +496,9 @@
       }
     }
 
-    // Navigation icon
-    &__icon {
-      width: px2rem(18px);
-      height: px2rem(18px);
-      border-radius: 100%;
-      transition: background-color 250ms;
-
-      // Navigation icon on hover
-      &:hover {
-        background-color: var(--md-accent-fg-color--transparent);
-      }
-
-      // Navigation icon content
-      &::after {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        vertical-align: px2rem(-2px);
-        content: "";
-        background-color: currentcolor;
-        border-radius: 100%;
-        mask-image: var(--md-nav-icon--next);
-        mask-repeat: no-repeat;
-        mask-position: center;
-        mask-size: contain;
-        transition: transform 250ms;
-
-        // Adjust for right-to-left languages
-        [dir="rtl"] & {
-          transform: rotate(180deg);
-        }
-
-        // Navigation icon - rotate icon when toggle is active or indeterminate
-        .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav__link &,
-        .md-nav__item--nested .md-toggle--indeterminate ~ .md-nav__link & {
-          transform: rotate(90deg);
-        }
-      }
-    }
-
     // Modifier for when navigation tabs are rendered
     &--lifted {
-
-      // Hide site title
-      > .md-nav__title {
-        display: none;
-      }
+      margin-top: 0;
 
       // Hide level 0 navigation items
       > .md-nav__list > .md-nav__item {
@@ -716,35 +508,25 @@
         &--active {
           display: block;
 
+          // Apply spacing for outlines
+          > .md-nav {
+            margin-top: px2rem(2px);
+
+            // Remove gap
+            > .md-nav__list::before {
+              display: none;
+            }
+          }
+
           // Show navigation link as title
           > .md-nav__link {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            margin-top: 0;
-            background: var(--md-default-bg-color);
-            box-shadow: 0 0 px2rem(8px) px2rem(8px) var(--md-default-bg-color);
-
-            // Omit clicks if not a section index page
-            &:not(.md-nav__container) {
-              pointer-events: none;
-            }
+            display: none;
           }
 
           // Adjust spacing for navigation section
           &.md-nav__item--section {
             margin: 0;
           }
-        }
-
-        // Adjust spacing for nested navigation
-        > .md-nav:not(.md-nav--secondary) {
-          margin-inline-start: px2rem(-12px);
-        }
-
-        // Make labels discernable from links
-        > [for] {
-          color: var(--md-default-fg-color--light);
         }
       }
 
@@ -754,30 +536,6 @@
         grid-template-rows: minmax(#{px2rem(8px)}, 1fr);
         visibility: visible;
         opacity: 1;
-      }
-    }
-
-    // Modifier for when table of contents is rendered in primary navigation
-    &--integrated > .md-nav__list > .md-nav__item--active {
-
-      // Show integrated table of contents
-      .md-nav--secondary {
-        display: block;
-        margin-bottom: 1.25em;
-        visibility: visible;
-        border-inline-start: px2rem(1px) solid var(--md-primary-fg-color);
-        opacity: 1;
-
-        // Navigation list
-        > .md-nav__list {
-          padding-bottom: 0;
-          overflow: visible;
-        }
-
-        // Hide table of contents title
-        > .md-nav__title {
-          display: none;
-        }
       }
     }
   }

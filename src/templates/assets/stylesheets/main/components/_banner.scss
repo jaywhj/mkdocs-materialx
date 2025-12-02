@@ -27,8 +27,8 @@
 // Banner for announcements and warnings
 .md-banner {
   overflow: auto;
-  color: var(--md-footer-fg-color);
-  background-color: var(--md-footer-bg-color);
+  color: var(--md-default-fg-color);
+  background-color: var(--md-accent-fg-color--transparent);
 
   // [print]: Hide banner
   @media print {

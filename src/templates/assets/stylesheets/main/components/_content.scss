@@ -68,10 +68,13 @@
   // Button inside of the content area - these buttons are meant for actions on
   // a document-level, i.e. linking to related source code files, printing etc.
   &__button {
+    display: flex;
     float: inline-end;
-    padding: 0;
-    margin: px2rem(8px) 0;
+    padding: px2rem(6px);
     margin-inline-start: px2rem(8px);
+    margin-top: px2rem(4px);
+    background-color: var(--md-default-fg-color--lightest);
+    border-radius: px2rem(8px);
 
     // [print]: Hide buttons
     @media print {
@@ -80,17 +83,45 @@
 
     // Adjust default link color for icons
     .md-typeset & {
-      color: var(--md-default-fg-color--lighter);
+      color: var(--md-default-fg-color);
+      transition:
+        color            250ms,
+        background-color 250ms;
+
+      // Actual icon
+      svg {
+        opacity: 0.5;
+        transition: opacity 250ms;
+      }
+
+      // Button on focus/hover
+      &:is(:focus, :hover) {
+        color: var(--md-accent-fg-color);
+        background-color: var(--md-accent-fg-color--transparent);
+
+        // Actual icon
+        svg {
+          opacity: 1;
+        }
+      }
     }
 
     // Align with body copy located next to icon
     svg {
-      display: inline;
-      vertical-align: top;
+      // display: inline;
+      width: px2rem(18px);
+      height: px2rem(18px);
+      // vertical-align: top;
 
       // Adjust for right-to-left languages
       [dir="rtl"] & {
         transform: scaleX(-1);
+      }
+
+      // Override for Lucide icons, which use strokes
+      &.lucide {
+        fill: transparent;
+        stroke: currentcolor;
       }
     }
   }

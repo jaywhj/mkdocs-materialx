@@ -58,8 +58,9 @@
       border: px2rem(1px) solid var(--md-default-fg-color--lightest);
       border-radius: px2rem(2px);
       transition:
-        border     250ms,
-        box-shadow 250ms;
+        background-color 250ms,
+        border           250ms,
+        box-shadow       250ms;
 
       // Grid list item on focus/hover
       &:is(:focus-within, :hover) {

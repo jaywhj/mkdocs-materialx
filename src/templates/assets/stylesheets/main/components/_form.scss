@@ -32,27 +32,37 @@
     display: inline-block;
     padding: px2em(10px) px2em(32px);
     font-weight: 700;
-    color: var(--md-primary-fg-color);
+    color: var(--md-default-fg-color--light);
+    text-decoration: none;
     cursor: pointer;
-    border: px2rem(2px) solid currentcolor;
-    border-radius: px2rem(2px);
+    background-color: var(--md-default-fg-color--lightest);
+    border-radius: px2rem(24px);
     transition:
       color            125ms,
       background-color 125ms,
-      border-color     125ms;
+      opacity          125ms;
+
+    // Show outline for keyboard devices
+    &.focus-visible {
+      outline-offset: 0;
+    }
+
+    // Button on focus/hover
+    &:is(:focus, :hover) {
+      color: var(--md-default-fg-color--light);
+      opacity: 0.8;
+    }
 
     // Primary button
     &--primary {
       color: var(--md-primary-bg-color);
       background-color: var(--md-primary-fg-color);
-      border-color: var(--md-primary-fg-color);
-    }
 
     // Button on focus/hover
     &:is(:focus, :hover) {
-      color: var(--md-accent-bg-color);
-      background-color: var(--md-accent-fg-color);
-      border-color: var(--md-accent-fg-color);
+        color: var(--md-primary-bg-color);
+        opacity: 0.8;
+      }
     }
   }
 

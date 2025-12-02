@@ -66,6 +66,7 @@ kbd {
   --md-typeset-table-sort-icon: svg-load("material/sort.svg");
   --md-typeset-table-sort-icon--asc: svg-load("material/sort-ascending.svg");
   --md-typeset-table-sort-icon--desc: svg-load("material/sort-descending.svg");
+  --md-typeset-preview-icon: svg-load("material/mouse.svg");
 }
 
 // ----------------------------------------------------------------------------
@@ -74,7 +75,8 @@ kbd {
 // should be set in ems, so nested blocks (e.g. admonitions) render correctly.
 .md-typeset {
   font-size: px2rem(16px);
-  line-height: 1.6;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
   overflow-wrap: break-word;
   color-adjust: exact;
 
@@ -97,27 +99,27 @@ kbd {
   // Headline on level 1
   h1 {
     margin: 0 0 px2em(40px, 32px);
-    font-size: px2em(32px);
-    font-weight: 300;
+    font-size: px2em(30px);
+    font-weight: 700;
     line-height: 1.3;
-    color: var(--md-default-fg-color--light);
-    letter-spacing: -0.01em;
+    color: var(--md-default-fg-color);
+    letter-spacing: -0.025em;
   }
 
   // Headline on level 2
   h2 {
     margin: px2em(40px, 25px) 0 px2em(16px, 25px);
-    font-size: px2em(25px);
-    font-weight: 300;
+    font-size: px2em(24px);
+    font-weight: 700;
     line-height: 1.4;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.025em;
   }
 
   // Headline on level 3
   h3 {
     margin: px2em(32px, 20px) 0 px2em(16px, 20px);
     font-size: px2em(20px);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.5;
     letter-spacing: -0.01em;
   }
@@ -164,6 +166,7 @@ kbd {
   // Text link
   a {
     color: var(--md-typeset-a-color);
+    // text-decoration: underline;
     word-break: break-word;
 
     // Also enable color transition on pseudo elements
@@ -216,7 +219,7 @@ kbd {
     font-size: px2em(13.6px);
     word-break: break-word;
     background-color: var(--md-code-bg-color);
-    border-radius: px2rem(2px);
+    border-radius: px2rem(4px);
     box-decoration-break: clone;
     transition:
       color            125ms,
@@ -245,6 +248,7 @@ kbd {
       touch-action: auto;
       scrollbar-color: var(--md-default-fg-color--lighter) transparent;
       scrollbar-width: thin;
+      border-radius: px2rem(8px);
       outline-color: var(--md-accent-fg-color);
       box-shadow: none;
       box-decoration-break: slice;
@@ -305,7 +309,22 @@ kbd {
 
   // Instant previews
   [data-preview] {
-    border-bottom: px2rem(1px) dotted var(--md-default-fg-color--light);
+    position: relative;
+
+    // Preview icon
+    &::after {
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      margin-inline-start: 0.125em;
+      vertical-align: text-top;
+      content: "";
+      background-color: currentcolor;
+      mask-image: var(--md-typeset-preview-icon);
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      transition: background-color 125ms;
+    }
   }
 
   // Small text

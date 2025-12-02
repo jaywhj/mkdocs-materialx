@@ -34,7 +34,7 @@
 // Navigation path (breadcrumbs)
 .md-path {
   padding-top: px2rem(24px);
-  margin: 0 px2rem(16px);
+  margin: px2rem(8px) px2rem(16px) 0;
   overflow: auto;
   font-size: px2rem(14px);
 
@@ -45,7 +45,7 @@
 
   // [screen +]: Adjust spacing between content area and sidebars
   @include break-from-device(screen) {
-    margin: 0 px2rem(24px);
+    margin: px2rem(8px) px2rem(24px) 0;
   }
 
   // Navigation path list
@@ -62,13 +62,14 @@
   &__item:not(:first-child) {
     display: inline-flex;
     gap: px2rem(4px);
+    align-items: center;
     white-space: nowrap;
 
     // Path separator
     &::before {
       display: inline;
-      width: px2rem(16px);
-      height: px2rem(16px);
+      width: px2rem(12px);
+      height: px2rem(12px);
       content: "";
       background-color: var(--md-default-fg-color--lighter);
       mask-image: var(--md-path-icon);
@@ -80,6 +81,7 @@
     display: flex;
     align-items: center;
     color: var(--md-default-fg-color--light);
+    transition: color 250ms;
 
     // Navigation path link on focus/hover
     &:is(:focus, :hover) {

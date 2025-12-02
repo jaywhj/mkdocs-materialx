@@ -55,11 +55,11 @@
 // Tooltip
 .md-tooltip {
   position: absolute;
-  top: var(--md-tooltip-y);
+  top: calc(var(--md-tooltip-y) - #{px2rem(2px)});
   left:
     clamp(
       var(--md-tooltip-0, #{px2rem(0px)}) + #{px2rem(16px)},
-      var(--md-tooltip-x),
+      var(--md-tooltip-x) - #{px2rem(2px)},
       100vw +
       var(--md-tooltip-0, #{px2rem(0px)}) + #{px2rem(16px)} -
       var(--md-tooltip-width) -
