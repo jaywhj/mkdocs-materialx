@@ -79,7 +79,7 @@
     display: flex;
     gap: px2rem(6px);
     align-items: flex-start;
-    padding: px2rem(7px) px2rem(8px);
+    padding: px2rem(7px) px2rem(8px) px2rem(7px) px2rem(16px);
     margin-inline: px2rem(4px);
     cursor: pointer;
     border-radius: px2rem(8px);
@@ -175,7 +175,7 @@
 
     // Styles for primary navigation
     .md-nav--secondary & {
-      padding: px2rem(7px) px2rem(16px);
+      padding: px2rem(7px) px2rem(8px) px2rem(7px) px2rem(16px);
       margin-inline: px2rem(4px);
 
       // Navigation link on focus/hover
@@ -360,7 +360,7 @@
       display: flex;
       gap: px2rem(8px);
       align-items: center;
-      padding: px2rem(16px) px2rem(8px);
+      padding: px2rem(16px);
       font-size: px2rem(16px);
       font-weight: 700;
       border-bottom: px2rem(1px) solid var(--md-default-fg-color-lightest);

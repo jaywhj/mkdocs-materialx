@@ -24,13 +24,18 @@
 // Rules
 // ----------------------------------------------------------------------------
 
+:root {
+  --md-sidebar-primary-width: #{px2rem(250px)};
+  --md-sidebar-drawer-offset: #{px2rem(8px)};
+}
+
 // Sidebar
 .md-sidebar {
   position: sticky;
   top: px2rem(48px);
   flex-shrink: 0;
   align-self: flex-start;
-  width: px2rem(242px);
+  width: var(--md-sidebar-primary-width);
   padding: px2rem(22px) 0;
 
   // [print]: Hide sidebar
@@ -44,11 +49,11 @@
     // [tablet -]: Show navigation as drawer
     @include break-to-device(tablet) {
       position: fixed;
-      inset-inline-start: px2rem(-242px);
+      inset-inline-start: calc(-1 * var(--md-sidebar-primary-width));
       top: px2rem(8px);
       z-index: 5;
       display: block;
-      width: px2rem(242px);
+      width: var(--md-sidebar-primary-width);
       height: calc(100% - px2rem(16px));
       background-color: var(--md-default-bg-color--light);
       backdrop-filter: blur(px2rem(8px));
@@ -64,11 +69,21 @@
         transition:
           transform  350ms cubic-bezier(0.7, 0.7, 0.1, 1),
           box-shadow 350ms;
-        transform: translateX(px2rem(250px));
+        transform:
+          translateX(
+            calc(
+              var(--md-sidebar-primary-width) + var(--md-sidebar-drawer-offset)
+            )
+          );
 
         // Adjust for right-to-left languages
         [dir="rtl"] & {
-          transform: translateX(px2rem(-250px));
+          transform:
+            translateX(
+              calc(
+                -1 * (var(--md-sidebar-primary-width) + var(--md-sidebar-drawer-offset))
+              )
+            );
         }
       }
 
@@ -100,6 +115,7 @@
   &--secondary {
     display: none;
     order: 2;
+    width: var(--md-sidebar-primary-width);
 
     // [tablet landscape +]: Show table of contents as sidebar
     @include break-from-device(tablet landscape) {
@@ -179,7 +195,7 @@
 
     // Sidebar wrapper
     &__inner {
-      padding-inline-end: calc(100% - #{px2rem(230px)});
+      padding-inline-end: calc(100% - (var(--md-sidebar-primary-width) - #{px2rem(12px)}));
 
       // Adjust padding for smaller screens
       @include break-to-device(tablet) {
