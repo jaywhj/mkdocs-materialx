@@ -145,7 +145,7 @@ export function watchTooltip(
             const rSize = getElementSize(repo)
             return rOff.x - scroll.x + rSize.width / 2 - width / 2 + 20
           }
-          return x - scroll.x + size.width / 2 - width / 2
+          return x - scroll.x + size.width / 2 - width / 2 + 3
         })()
         return {
           active,
