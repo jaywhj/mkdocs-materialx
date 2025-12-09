@@ -22,21 +22,17 @@
 
 <!-- Render date of last update -->
 {% macro render_updated(date) %}
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="{{ lang.t('source.file.date.updated') }}">
-      {% include ".icons/material/clock-edit-outline.svg" %}
-    </span>
-    {{ date }}
+  <span>
+    <span class="material-icons" data-icon="doc_updated" title="{{ lang.t('source.file.date.updated') }}"></span>
+    <time datetime="{{ date }}" title="{{ date[:19].replace('T', ' ') }}"></time>
   </span>
 {% endmacro %}
 
 <!-- Render date of creation -->
 {% macro render_created(date) %}
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="{{ lang.t('source.file.date.created') }}">
-      {% include ".icons/material/clock-plus-outline.svg" %}
-    </span>
-    {{ date }}
+  <span>
+    <span class="material-icons" data-icon="doc_created" title="{{ lang.t('source.file.date.created') }}"></span>
+    <time datetime="{{ date }}" title="{{ date[:19].replace('T', ' ') }}"></time>
   </span>
 {% endmacro %}
 
@@ -44,28 +40,33 @@
 
 <!-- Render authors -->
 {% macro render_authors(authors) %}
-  {% set git_authors = config.plugins["git-authors"] %}
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="{{ lang.t('source.file.contributors') }}">
-      {% if authors | length == 1 %}
-        {% include ".icons/material/account.svg" %}
-      {% else %}
-        {% include ".icons/material/account-group.svg" %}
-      {% endif %}
-    </span>
-    <nav>
-      {% for author in authors %}
-        {%- if git_authors.config.show_email_address %}
-        <a href="mailto:{{ author.email }}">
-          {{- author.name -}}
-        </a>
-        {%- else -%}
-          {{- author.name -}}
-        {% endif -%}
-        {%- if loop.revindex > 1 %}, {% endif -%}
-      {% endfor %}
-    </nav>
-  </span>
+  {%- set icon = 'doc_author' if authors|length == 1 else 'doc_authors' %}
+  <span class="material-icons" data-icon="{{ icon }}" title="{{ lang.t('source.file.contributors') }}"></span>
+
+  {#- Render authors (avatar mode) #}
+  <div class="avatar-group">
+    {%- for author in authors %}
+    <div class="avatar-wrapper" data-name="{{ author.name }}" title="{{ author.name }}">
+      <span class="avatar-text"></span>
+      <img class="avatar" src="{{ author.avatar }}" onerror="this.style.display='none'" />
+    </div>
+    {%- endfor %}
+  </div>
+<!-- 
+  {#- Render authors (text mode) #}
+  <nav>
+  {% for author in authors %}
+    {%- if author.url -%}
+      <a href="{{ author.url }}" target="_blank">{{ author.name }}</a>
+    {%- elif author.email -%}
+      <a href="mailto:{{ author.email }}">{{ author.name }}</a>
+    {%- else -%}
+      {{ author.name }}
+    {%- endif -%}
+    {%- if loop.revindex > 1 %}, {% endif -%}
+  {% endfor %}
+  </nav>
+-->
 {% endmacro %}
 
 <!-- ---------------------------------------------------------------------- -->
@@ -131,42 +132,40 @@
 
 <!-- ---------------------------------------------------------------------- -->
 
-<!-- Determine date of last update -->
 {% if page.meta %}
-  {% if page.meta.git_revision_date_localized %}
-    {% set updated = page.meta.git_revision_date_localized %}
-  {% elif page.meta.revision_date %}
-    {% set updated = page.meta.revision_date %}
+  <!-- Determine date of creation -->
+  {% if page.meta.document_dates_created %}
+    {% set created = page.meta.document_dates_created %}
   {% endif %}
 
-  <!-- Determine date of creation -->
-  {% if page.meta.git_creation_date_localized %}
-    {% set created = page.meta.git_creation_date_localized %}
+  <!-- Determine date of last update -->
+  {% if page.meta.document_dates_updated %}
+    {% set updated = page.meta.document_dates_updated %}
+  {% endif %}
+
+  {% if page.meta.document_dates_authors %}
+    {% set page_authors = page.meta.document_dates_authors %}
   {% endif %}
 {% endif %}
 
 <!-- Source file information -->
 {% if updated or created or git_info or committers %}
-  <aside class="md-source-file">
-
-    <!-- Date of last update -->
-    {% if updated %}
-      {{ render_updated(updated) }}
-    {% endif %}
-
-    <!-- Date of creation -->
+  <div class="document-dates-plugin">
+<!-- 
     {% if created %}
       {{ render_created(created) }}
     {% endif %}
 
-    <!-- Authors (git-authors plugin) -->
-    {% if git_info %}
-      {{ render_authors(git_info["page_authors"]) }}
+    {% if updated %}
+      {{ render_updated(updated) }}
     {% endif %}
 
-    <!-- Authors (git-committers plugin) -->
+    {% if page_authors %}
+      {{ render_authors(page_authors) }}
+    {% endif %}
+-->
     {% if committers %}
       {{ render_committers(committers) }}
     {% endif %}
-  </aside>
+  </div>
 {% endif %}
