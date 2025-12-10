@@ -1,7 +1,7 @@
 <h2 style="text-align: center;margin-bottom: 1.5rem;"><span style="color:#449798">MaterialX</span> for MkDocs</h2>
 
 <p align="center">
-<strong>MaterialX</strong>, the next generation of mkdocs-material, is based on material v9.7.0 and is continuously maintained by individual developers (since mkdocs-material will cease maintenance) to keep the mkdocs ecosystem alive!
+<strong>MaterialX</strong>, the next generation of mkdocs-material, is based on <code>mkdocs-material-9.7.0</code> and is named <code>X</code>. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance) to keep the MkDocs ecosystem alive!
 </p>
 
 <p align="center">
@@ -11,9 +11,10 @@
 </p>
 
 
+
 ## Quick start
 
-<span style="color:#449798">MaterialX</span> for MkDocs can be installed with `pip`:
+Installation:
 
 ``` sh
 pip install mkdocs-materialx
@@ -27,7 +28,7 @@ theme:
 ```
 
 > [!NOTE]
-> The theme is `materialx`, not material. Everything else is the same as when using material.
+> The theme name is `materialx`, not material. Everything else is the same as when using material.
 
 <br />
 
