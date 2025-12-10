@@ -1,6 +1,4 @@
-<p align="center">
-<h2 style="text-align: center;margin-bottom: 1.5rem;"><span style="color:#449798">MaterialX</span> for MkDocs</h2>
-</p>
+<h2 style="margin-bottom: 2rem; text-align: center;"><span style="color:#449798">MaterialX</span> for MkDocs</h2>
 
 <p align="center">
 <strong>MaterialX</strong>, the next generation of mkdocs-material, is based on <code>mkdocs-material-9.7.0</code> and is named <code>X</code>. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance) to keep the MkDocs ecosystem alive!
