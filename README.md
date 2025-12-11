@@ -35,3 +35,12 @@ theme:
 <br />
 
 For detailed installation instructions, configuration options, and a demo, visit [squidfunk.github.io/mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
+
+
+## Chat Group
+
+**Discord**: https://discord.gg/cvTfge4AUy
+
+**Wechat**: 
+
+<img src="docs/assets/images/wechat-group.jpg" width="300" />
