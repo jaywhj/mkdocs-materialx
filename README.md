@@ -36,6 +36,7 @@ theme:
 
 For detailed installation instructions, configuration options, and a demo, visit [squidfunk.github.io/mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
 
+<br />
 
 ## Chat Group
 
