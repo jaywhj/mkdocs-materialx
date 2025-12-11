@@ -1,13 +1,11 @@
-<h2 style="margin-bottom: 2rem; text-align: center;"><span style="color:#449798">MaterialX</span> for MkDocs</h2>
+## MaterialX for MkDocs
+
+**MaterialX**, the next generation of mkdocs-material, is based on `mkdocs-material-9.7.0` and is named `X`. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance) to keep the MkDocs ecosystem alive!
 
 <p align="center">
-<strong>MaterialX</strong>, the next generation of mkdocs-material, is based on <code>mkdocs-material-9.7.0</code> and is named <code>X</code>. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance) to keep the MkDocs ecosystem alive!
-</p>
-
-<p align="center">
-  <a href="https://squidfunk.github.io/mkdocs-material/getting-started/">
-    <img src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/screenshot.png" width="700" />
-  </a>
+  <img src="docs/assets/screenshots/m-sample1.png" width="700" />
+  <img src="docs/assets/screenshots/m-sample3.png" width="700" />
+  <img src="docs/assets/screenshots/m-sample4.png" width="700" />
 </p>
 
 
