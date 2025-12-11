@@ -44,4 +44,4 @@ For detailed installation instructions, configuration options, and a demo, visit
 
 **Wechat**: 
 
-<img src="docs/assets/images/wechat-group.jpg" width="150" />
+<img src="docs/assets/images/wechat-group.jpg" width="140" />
