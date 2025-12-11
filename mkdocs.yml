@@ -27,8 +27,8 @@ site_description: >-
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_name: jaywhj/mkdocs-material
-repo_url: https://github.com/jaywhj/mkdocs-material
+repo_name: jaywhj/mkdocs-materialx
+repo_url: https://github.com/jaywhj/mkdocs-materialx
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2025 Martin Donath
