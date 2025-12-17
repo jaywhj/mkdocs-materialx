@@ -165,7 +165,7 @@ page] for the blog:
 
 ```yaml
 theme:
-  name: material
+  name: materialx
   features:
     - navigation.indexes
 nav:

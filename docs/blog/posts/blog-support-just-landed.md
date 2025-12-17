@@ -62,7 +62,7 @@ and replace its contents with:
 ``` yaml
 site_name: My Blog
 theme:
-  name: material
+  name: materialx
   features:
     - navigation.sections
 plugins:

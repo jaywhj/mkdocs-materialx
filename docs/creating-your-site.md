@@ -43,7 +43,7 @@ Simply set the `site_name` and add the following lines to `mkdocs.yml` to enable
 site_name: My site
 site_url: https://mydomain.org/mysite
 theme:
-  name: material
+  name: materialx
 ```
 
 The `site_url` setting is important for a number of reasons.

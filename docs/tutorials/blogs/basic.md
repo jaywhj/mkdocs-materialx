@@ -61,7 +61,7 @@ in the `mkdocs.yml`.
     site_url: http://www.example.com
 
     theme:
-      name: material
+      name: materialx
 
     plugins:
       - search

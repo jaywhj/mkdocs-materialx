@@ -64,7 +64,7 @@ inside it. Next:
     the bug:
 
     ```
-    pip install --upgrade --force-reinstall mkdocs-material
+    pip install --upgrade --force-reinstall mkdocs-materialx
     ```
 
 2.  Bootstrap a new documentation project using the `mkdocs` executable,
@@ -79,7 +79,7 @@ inside it. Next:
 
     ``` yaml
     theme:
-      name: material
+      name: materialx
     ```
 
 3.  Now, only add the necessary settings to `mkdocs.yml` to keep the

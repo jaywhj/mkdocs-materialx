@@ -1,17 +1,20 @@
 # Changelog
 
-## Material for MkDocs
+## MaterialX for MkDocs
+
+### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }
+
+- **New**: Added Liquid Glass theme, a modern theme identical to Zensical
+- **New**: Adjusted the maximum height of the language selection box to display more language options without scrolling
+- **New**: Added indentation guide lines to the TOC for more intuitive navigation
+- **New**: Applied the same accent color as the nav to active links in the TOC for clear progress tracking
+- **New**: Added zebra-striping to tables with support for both light and dark modes
+- **New**: Updated the `source-file.html` template example
+- **Fixed**: Tooltip in the header being blocked when `navigation.tabs.sticky` is enabled
+- **Fixed**: Misaligned (right-offset) tooltip for the repo link in the top-right corner
+- **Fixed**: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
 
 ### 9.7.0 <small>November 11, 2025</small> { id="9.7.0" }
-
-!!! warning "Material for MkDocs is now in maintenance mode"
-
-    This is the last release of Material for MkDocs that will receive new features.
-    Going forward, the Material for MkDocs team focuses on [Zensical], a next-gen
-    static site generator built from first principles. We will provide critical
-    bug fixes and security updates for Material for MkDocs for 12 months at least.
-
-    [Read the full announcement on our blog]
 
 This release includes all features that were previously exclusive to the
 Insiders edition. These features are now freely available to everyone.

@@ -326,7 +326,7 @@ discussions active for every page.
 
     ```yaml hl_lines="3"
     theme:
-      name: material
+      name: materialx
       custom_dir: overrides
     ```
 

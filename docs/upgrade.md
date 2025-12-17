@@ -3,13 +3,13 @@
 Upgrade to the latest version with:
 
 ```
-pip install --upgrade --force-reinstall mkdocs-material
+pip install --upgrade --force-reinstall mkdocs-materialx
 ```
 
 Show the currently installed version with:
 
 ```
-pip show mkdocs-material
+pip show mkdocs-materialx
 ```
 
 ## Upgrading from 8.x to 9.x

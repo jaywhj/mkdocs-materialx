@@ -27,13 +27,13 @@ Material for MkDocs with:
 === "Latest"
 
     ``` sh
-    pip install mkdocs-material
+    pip install mkdocs-materialx
     ```
 
-=== "9.x"
+=== "10.x"
 
     ``` sh
-    pip install mkdocs-material=="9.*" # (1)!
+    pip install mkdocs-materialx=="10.*" # (1)!
     ```
 
     1.  Material for MkDocs uses [semantic versioning][^2], which is why it's a
@@ -82,7 +82,7 @@ MkDocs on GitHub Pages in a step-by-step guide.
     really good introduction on the mechanics of Python package management and
     helps you troubleshoot if you run into errors.
 
-  [Python package]: https://pypi.org/project/mkdocs-material/
+  [Python package]: https://pypi.org/project/mkdocs-materialx/
   [virtual environment]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
   [semantic versioning]: https://semver.org/
   [upgrade to the next major version]: upgrade.md
@@ -157,13 +157,13 @@ repository into a subfolder of your project root which might be useful if you
 want to use the very latest version:
 
 ```
-git clone https://github.com/squidfunk/mkdocs-material.git
+git clone https://github.com/jaywhj/mkdocs-materialx.git
 ```
 
 Next, install the theme and its dependencies with:
 
 ```
-pip install -e mkdocs-material
+pip install -e mkdocs-materialx
 ```
 
-  [GitHub]: https://github.com/squidfunk/mkdocs-material
+  [GitHub]: https://github.com/jaywhj/mkdocs-materialx

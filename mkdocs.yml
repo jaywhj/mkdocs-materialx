@@ -99,6 +99,7 @@ plugins:
   #     minify_html: true
   - document-dates:
       type: timeago
+      locale: en
       exclude:
         - index.md
         - blog/*

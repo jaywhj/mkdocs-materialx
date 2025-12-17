@@ -43,7 +43,7 @@ attach the blog navigation to the rest of the navigation structure.
 
     ```yaml hl_lines="3 4"
     theme:
-      name: material
+      name: materialx
       features:
         - navigation.indexes
     ```

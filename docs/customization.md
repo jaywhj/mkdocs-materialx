@@ -94,7 +94,7 @@ setting:
 
 ``` yaml
 theme:
-  name: material
+  name: materialx
   custom_dir: overrides
 ```
 
@@ -265,8 +265,8 @@ directly in the source of the theme and recompile it.
 First, clone the repository:
 
 ```
-git clone https://github.com/squidfunk/mkdocs-material
-cd mkdocs-material
+git clone https://github.com/jaywhj/mkdocs-materialx.git
+cd mkdocs-materialx
 ```
 
 Next, create a new [Python virtual environment][venv] and
