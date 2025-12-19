@@ -57,7 +57,7 @@
       // visible when focusing. Therefore, we must set the border radius on the
       // summary explicitly.
       > summary {
-        border-radius: px2rem(2px);
+        border-radius: px2rem(8px);
       }
     }
   }

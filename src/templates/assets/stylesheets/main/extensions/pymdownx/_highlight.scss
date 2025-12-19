@@ -175,8 +175,8 @@
     font-weight: 700;
     background-color: var(--md-code-bg-color);
     border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
-    border-top-left-radius: px2rem(2px);
-    border-top-right-radius: px2rem(2px);
+    border-top-left-radius: px2rem(8px);
+    border-top-right-radius: px2rem(8px);
 
     // Adjust spacing for code block
     + pre {
@@ -287,8 +287,8 @@
     font-size: px2em(13.6px);
     user-select: none;
     background-color: var(--md-code-bg-color);
-    border-top-left-radius: px2rem(2px);
-    border-bottom-left-radius: px2rem(2px);
+    border-top-left-radius: px2rem(8px);
+    border-bottom-left-radius: px2rem(8px);
   }
 
   // Code block line numbers container
@@ -325,6 +325,7 @@
 // Code block line numbers container
 .linenodiv a {
   color: inherit;
+  text-decoration: none;
 }
 
 // ----------------------------------------------------------------------------
@@ -348,12 +349,12 @@
   // Code block result container
   .highlight + .result {
     padding: 0 px2em(16px);
-    margin-top: calc(-1em + #{px2em(-2px)});
+    margin-top: calc(-1em + #{px2em(-8px)});
     overflow: visible;
     border: px2rem(1px) solid var(--md-code-bg-color);
-    border-top-width: px2rem(2px);
-    border-bottom-right-radius: px2rem(2px);
-    border-bottom-left-radius: px2rem(2px);
+    border-top-width: px2rem(8px);
+    border-bottom-right-radius: px2rem(8px);
+    border-bottom-left-radius: px2rem(8px);
 
     // Clearfix, because we can't use overflow: auto
     &::after {
