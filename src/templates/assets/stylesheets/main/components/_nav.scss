@@ -412,7 +412,19 @@
 
   // Repository information container
   &__source {
-    display: none;
+    border-radius: px2rem(8px);
+    border: px2rem(1px) solid var(--md-default-fg-color--lightest);
+    margin: px2rem(4px);
+    margin-bottom: px2rem(12px);
+    transition:
+      250ms background-color,
+      250ms border-color;
+
+    // Link on focus/hover
+    &:is(:focus, :hover) {
+      background-color: var(--md-default-fg-color--lightest);
+      border-color: transparent;
+    }
   }
 
   // Modifier for when table of contents is rendered in primary navigation
