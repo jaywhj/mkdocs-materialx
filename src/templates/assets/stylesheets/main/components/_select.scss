@@ -25,12 +25,6 @@
 // ----------------------------------------------------------------------------
 
 // Selection
-
-:root {
-  --md-select-max-height: min(75vh, 560px);
-  --md-select-max-width: #{px2rem(150px)};
-}
-
 .md-select {
   position: relative;
   z-index: 1;
@@ -40,12 +34,11 @@
     position: absolute;
     top: calc(100% - #{px2rem(4px)});
     left: 50%;
-    max-width: var(--md-select-max-width, calc(100vw - 2 * #{px2rem(16px)}));
     max-height: 0;
     margin-top: px2rem(4px);
     color: var(--md-default-fg-color);
     background-color: var(--md-default-bg-color);
-    border-radius: px2rem(2px);
+    border-radius: px2rem(8px);
     box-shadow: var(--md-shadow-z2);
     opacity: 0;
     transition:
@@ -54,15 +47,26 @@
       max-height   0ms 500ms;
     transform: translate3d(-50%, px2rem(6px), 0);
 
+    // [tablet portrait -]: Align to the right
+    @include break-to-device(tablet portrait) {
+      left: 100%;
+      transform: translate3d(-100%, px2rem(6px), 0);
+    }
+
     // Selection bubble on parent focus/hover
     .md-select:is(:focus-within, :hover) & {
-      max-height: var(--md-select-max-height, #{px2rem(200px)});
+      max-height: min(75vh, px2rem(560px));
       opacity: 1;
       transition:
         transform  250ms cubic-bezier(0.1, 0.7, 0.1, 1),
         opacity    250ms,
         max-height   0ms;
       transform: translate3d(-50%, 0, 0);
+
+      // [tablet portrait -]: Align to the right
+      @include break-to-device(tablet portrait) {
+        transform: translate3d(-100%, 0, 0);
+      }
     }
 
     // Selection bubble handle
@@ -75,9 +79,16 @@
       margin-top: px2rem(-4px);
       margin-left: px2rem(-4px);
       content: "";
+      filter: drop-shadow(0 -1px 0 var(--md-default-fg-color--lightest));
       border: px2rem(4px) solid transparent;
       border-top: 0;
       border-bottom-color: var(--md-default-bg-color);
+
+      // [tablet portrait -]: Align to the right
+      @include break-to-device(tablet portrait) {
+        left: initial;
+        right: px2rem(20px);
+      }
     }
   }
 
