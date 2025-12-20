@@ -3,48 +3,48 @@
   "title": "Built-in projects plugin",
   "oneOf": [
     {
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/",
       "const": "projects"
     },
     {
       "type": "object",
       "properties": {
         "projects": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/",
           "type": "object",
           "properties": {
             "enabled": {
               "title": "Enable plugin",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.enabled",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.enabled",
               "type": "boolean",
               "default": true
             },
             "concurrency": {
               "title": "Concurrency (number of CPUs)",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.concurrency",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.concurrency",
               "type": "number"
             },
             "cache": {
               "title": "Enable caching",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.cache",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.cache",
               "type": "boolean",
               "default": true
             },
             "cache_dir": {
               "title": "Cache directory",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.cache_dir",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.cache_dir",
               "type": "string",
               "default": ".cache/plugins/projects"
             },
             "log": {
               "title": "Enable logging",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.log",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.log",
               "type": "boolean",
               "default": true
             },
             "log_level": {
               "title": "Log level",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.log_level",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.log_level",
               "enum": [
                 "error",
                 "warn",
@@ -55,25 +55,25 @@
             },
             "projects": {
               "title": "Enable projects",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.projects",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.projects",
               "type": "boolean",
               "default": true
             },
             "projects_dir": {
               "title": "Projects directory",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.projects_dir",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.projects_dir",
               "type": "string",
               "default": "projects"
             },
             "projects_config_files": {
               "title": "Projects configuration files",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.projects_config_files",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.projects_config_files",
               "type": "string",
               "default": "\"*/mkdocs.yml\""
             },
             "projects_config_transform": {
               "title": "Projects configuration transform",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.projects_config_transform",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.projects_config_transform",
               "type": "string",
               "defaultSnippets": [
                 {
@@ -83,7 +83,7 @@
             },
             "hoisting": {
               "title": "Enable hoisting",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/projects/#config.hoisting",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects/#config.hoisting",
               "type": "boolean",
               "default": true
             }

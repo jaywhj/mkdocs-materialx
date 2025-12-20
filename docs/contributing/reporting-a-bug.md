@@ -5,7 +5,7 @@ to improve. With a project of this size and complexity, bugs may occur. If you
 think you have discovered a bug, you can help us by submitting an issue in our
 public [issue tracker], following this guide.
 
-  [issue tracker]: https://github.com/squidfunk/mkdocs-material/issues
+  [issue tracker]: https://github.com/jaywhj/mkdocs-materialx/issues
 
 ## Before creating an issue
 
@@ -66,7 +66,7 @@ problems.__
   [hooks]: https://www.mkdocs.org/user-guide/configuration/#hooks
   [extra_css]: https://www.mkdocs.org/user-guide/configuration/#extra_css
   [extra_javascript]: https://www.mkdocs.org/user-guide/configuration/#extra_javascript
-  [discussion board]: https://github.com/squidfunk/mkdocs-material/discussions
+  [discussion board]: https://github.com/jaywhj/mkdocs-materialx/discussions
   [StackOverflow]: https://stackoverflow.com
   [that our documentation explicitly mentions]: ?q="extends+base"
 

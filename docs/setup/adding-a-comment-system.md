@@ -108,6 +108,6 @@ If you wish to enable comments for an entire folder, you can use the
 
   [Giscus GitHub App]: https://github.com/apps/giscus
   [theme extension]: ../customization.md#extending-the-theme
-  [comments]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/partials/comments.html
+  [comments]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/partials/comments.html
   [overriding partials]: ../customization.md#overriding-partials
   [built-in meta plugin]: ../plugins/meta.md

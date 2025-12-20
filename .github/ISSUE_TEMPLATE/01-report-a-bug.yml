@@ -11,7 +11,7 @@ body:
         you want to report, helping us to understand what you are working on and
         what you are trying to achieve. If the context is not relevant, you can
         leave this field empty.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#context)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#context)
 
   - type: textarea
     id: description
@@ -22,7 +22,7 @@ body:
         for MkDocs does not behave as you would expect it to. Be as specific as
         possible. If you have found a workaround or a fix for the problem,
         please let us maintainers (and all other users) know.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#bug-description)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#bug-description)
     validations:
       required: true
 
@@ -32,15 +32,15 @@ body:
       label: Related links
       description: >-
         Please list all links to the sections of
-        [our documentation](https://squidfunk.github.io/mkdocs-material/) that
+        [our documentation](https://jaywhj.github.io/mkdocs-materialx/) that
         are relevant to the bug in order to show that you have consulted and
         thoroughly read it. Additionally, list links to possibly related open
-        and closed [issues](https://github.com/squidfunk/mkdocs-material/issues)
-        and [discussions](https://github.com/squidfunk/mkdocs-material/discussions)
+        and closed [issues](https://github.com/jaywhj/mkdocs-materialx/issues)
+        and [discussions](https://github.com/jaywhj/mkdocs-materialx/discussions)
         you encountered when searching our issue tracker.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#related-links)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#related-links)
       value: |-
-        - [Reporting a bug](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/)
+        - [Reporting a bug](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/)
         -
     validations:
       required: true
@@ -51,11 +51,11 @@ body:
       label: Reproduction
       description: >-
         Please create a __.zip file__ with a __minimal reproduction__ for the
-        bug. First, read our [reproduction guide](https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/)
-        that explains the necessary steps, then use the [built-in info plugin](https://squidfunk.github.io/mkdocs-material/plugins/info/) (mandatory) to create a self-contained
+        bug. First, read our [reproduction guide](https://jaywhj.github.io/mkdocs-materialx/guides/creating-a-reproduction/)
+        that explains the necessary steps, then use the [built-in info plugin](https://jaywhj.github.io/mkdocs-materialx/plugins/info/) (mandatory) to create a self-contained
         .zip file with the reproduction. We reserve the right to close issues
         without .zip files.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#reproduction)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#reproduction)
       placeholder: |-
         Drag and drop the .zip file with the minimal reproduction here.
     validations:
@@ -70,7 +70,7 @@ body:
         through the required steps, helping us to recreate the problem using the
         minimal reproduction you provided. Be as specific as possible and as
         verbose as necessary – try not to leave anything out.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#steps-to-reproduce)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#steps-to-reproduce)
       placeholder: |-
         1. ...
         2. ...
@@ -87,7 +87,7 @@ body:
         please select them from the dropdown below. If your browser is not
         listed or the version is relevant, you may select _Other_ and provide
         more details in the field above.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#browser)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#browser)
       multiple: true
       options:
         - Chrome
@@ -108,17 +108,17 @@ body:
         box. This will save the maintainers and you valuable time.
       options:
         - label: >-
-            I have read and followed the [bug reporting guidelines](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/).
+            I have read and followed the [bug reporting guidelines](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/).
           required: true
         - label: >-
-            I have attached links to [the documentation](https://squidfunk.github.io/mkdocs-material/),
-            and possibly related [issues](https://github.com/squidfunk/mkdocs-material/issues)
-            and [discussions](https://github.com/squidfunk/mkdocs-material/discussions).
+            I have attached links to [the documentation](https://jaywhj.github.io/mkdocs-materialx/),
+            and possibly related [issues](https://github.com/jaywhj/mkdocs-materialx/issues)
+            and [discussions](https://github.com/jaywhj/mkdocs-materialx/discussions).
           required: true
         - label: >-
-            I assure that I have [removed all customizations](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-bug/#remove-customizations)
+            I assure that I have [removed all customizations](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/#remove-customizations)
             before submitting this bug report.
           required: true
         - label: >-
-            I have attached a __.zip file__ with a [minimal reproduction](https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/) using the [built-in info plugin](https://squidfunk.github.io/mkdocs-material/plugins/info/).
+            I have attached a __.zip file__ with a [minimal reproduction](https://jaywhj.github.io/mkdocs-materialx/guides/creating-a-reproduction/) using the [built-in info plugin](https://jaywhj.github.io/mkdocs-materialx/plugins/info/).
           required: true

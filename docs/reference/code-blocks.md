@@ -197,7 +197,7 @@ Now, code annotations can be used from within strings in JSON:
     text__, images, ... basically anything that can be written in Markdown.
 
   [placed in comments]: #adding-annotations
-  [s2]: https://github.com/squidfunk/mkdocs-material/blob/87d5ca487b9d9ab95c41ee72813149d214048693/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss#L45
+  [s2]: https://github.com/jaywhj/mkdocs-materialx/blob/87d5ca487b9d9ab95c41ee72813149d214048693/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss#L45
 
 ## Usage
 
@@ -506,11 +506,11 @@ override it as part of your [additional style sheet]:
       - stylesheets/extra.css
     ```
 
-  [colors]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/_colors.scss
+  [colors]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/assets/stylesheets/main/_colors.scss
   [color schemes]: ../setup/changing-the-colors.md#color-scheme
   [types of string tokens]: https://pygments.org/docs/tokens/#literals
   [additional style sheet]: ../customization.md#additional-css
-  [syntax theme definition]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
+  [syntax theme definition]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
 
 ### Annotation tooltip width
 

@@ -20,7 +20,7 @@
 
 # Project information
 site_name: MaterialX for MkDocs
-site_url: https://squidfunk.github.io/mkdocs-material/
+site_url: https://jaywhj.github.io/mkdocs-materialx/
 site_author: Aaron Wang
 site_description: >-
   Write your documentation in Markdown and create a professional static site in
@@ -43,7 +43,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     # - content.code.select
-    # - content.footnote.tooltips
+    - content.footnote.tooltips
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
@@ -58,7 +58,7 @@ theme:
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.top
-    - navigation.tracking
+    # - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
@@ -126,17 +126,14 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/bluesky
-      link: https://bsky.app/profile/squidfunk.bsky.social
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/squidfunk
+      link: https://github.com/jaywhj
+      name: GitHub
+    - icon: material/email
+      link: mailto:junewhj@qq.com
+      name: Email
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/cvTfge4AUy
+      name: Discord
 
 # Extensions
 markdown_extensions:
@@ -166,8 +163,8 @@ markdown_extensions:
   - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
+      user: jaywhj
+      repo: mkdocs-materialx
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
@@ -288,7 +285,7 @@ nav:
       - Requesting a change: contributing/requesting-a-change.md
       - Adding translations: contributing/adding-translations.md
       - Making a pull request: contributing/making-a-pull-request.md
-      - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
+      - Asking a question: https://github.com/jaywhj/mkdocs-materialx/discussions
     - Guides:
       - Creating a reproduction: guides/creating-a-reproduction.md
   - Blog:

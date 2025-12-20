@@ -1,3 +1,11 @@
+mkdocs-materialx-10.0.4 (2025-12-19)
+
+- **New**: Show `git repo` in sidebar on mobile
+- **Fixed**: Language selector escapes viewport when too wide on mobile
+- **Fixed**: Replace gap to increase compatibility
+- **Fixed**: Adjust the style for kbd styles
+- **Fixed**: Adjust the border-radius of all styles
+- **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
 mkdocs-materialx-10.0.3 (2025-12-11)
 
@@ -12,24 +20,6 @@ mkdocs-materialx-10.0.3 (2025-12-11)
 - **Fixed**: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
 
 mkdocs-material-9.7.0 (2025-11-11)
-
-⚠️ Material for MkDocs is now in maintenance mode
-
-This is the last release of Material for MkDocs that will receive new features.
-Going forward, the Material for MkDocs team focuses on Zensical, a next-gen
-static site generator built from first principles. We will provide critical
-bug fixes and security updates for Material for MkDocs for 12 months at least.
-
-Read the full announcement on our blog:
-https://squidfunk.github.io/mkdocs-material/blog/2025/11/05/zensical/
-
-This release includes all features that were previously exclusive to the
-Insiders edition. These features are now freely available to everyone.
-
-Note on deprecated plugins: The projects and typeset plugins are included in
-this release, but must be considered deprecated. Both plugins proved
-unsustainable to maintain and represent architectural dead ends. They are
-provided as-is without ongoing support.
 
 Changes:
 

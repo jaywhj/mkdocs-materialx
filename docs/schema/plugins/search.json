@@ -3,14 +3,14 @@
   "title": "Built-in search plugin",
   "oneOf": [
     {
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/",
       "const": "search"
     },
     {
       "type": "object",
       "properties": {
         "search": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/",
           "type": "object",
           "properties": {
             "lang": {
@@ -31,12 +31,12 @@
             },
             "separator": {
               "title": "Separator for indexing and query tokenization",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/#config.separator",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/#config.separator",
               "type": "string"
             },
             "pipeline": {
               "title": "Text processing pipeline for indexing",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/#config.pipeline",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/#config.pipeline",
               "type": "array",
               "items": {
                 "enum": [
@@ -49,12 +49,12 @@
             },
             "jieba_dict": {
               "title": "Jieba dictionary replacement",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/#config.jieba_dict",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/#config.jieba_dict",
               "type": "string"
             },
             "jieba_dict_user": {
               "title": "Jieba dictionary augmentation",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/#config.jieba_dict_user",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/#config.jieba_dict_user",
               "type": "string"
             }
           },
@@ -67,7 +67,7 @@
   "$defs": {
     "lang": {
       "title": "Site search language",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/search/#config.lang",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/search/#config.lang",
       "oneOf": [
         {
           "title": "Site search language: Arabic",

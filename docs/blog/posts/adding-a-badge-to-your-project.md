@@ -29,7 +29,7 @@ you can add to your project's README:
 Just copy the following snippet and paste it into your project's `README.md`:
 
 ``` markdown
-[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://jaywhj.github.io/mkdocs-materialx/)
 ```
 
   [Simple Icons]: https://simpleicons.org/

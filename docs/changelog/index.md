@@ -2,6 +2,15 @@
 
 ## MaterialX for MkDocs
 
+### 10.0.4 <small>December 19, 2025</small> { id="10.0.4" }
+
+- **New**: Show `git repo` in sidebar on mobile
+- **Fixed**: Language selector escapes viewport when too wide on mobile
+- **Fixed**: Replace gap to increase compatibility
+- **Fixed**: Adjust the style for kbd styles
+- **Fixed**: Adjust the border-radius of all styles
+- **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
+
 ### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }
 
 - **New**: Added Liquid Glass theme, a modern theme identical to Zensical

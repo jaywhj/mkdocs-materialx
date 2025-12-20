@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "title": "Theme configuration",
-  "markdownDescription": "https://squidfunk.github.io/mkdocs-material/",
+  "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/",
   "type": "object",
   "properties": {
     "name": {
@@ -19,7 +19,7 @@
     },
     "custom_dir": {
       "title": "Directory with theme overrides",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#setup-and-theme-structure",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/customization/#setup-and-theme-structure",
       "type": "string",
       "defaultSnippets": [
         {
@@ -41,11 +41,11 @@
     },
     "language": {
       "title": "Site language",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/",
       "oneOf": [
         {
           "title": "Site language: Custom",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#custom-translations",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#custom-translations",
           "const": "custom"
         },
         {
@@ -305,7 +305,7 @@
     },
     "direction": {
       "title": "Directionality",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#directionality",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#directionality",
       "enum": [
         "ltr",
         "rtl"
@@ -313,7 +313,7 @@
     },
     "favicon": {
       "title": "Favicon",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/#favicon",
       "pattern": "\\.(ico|png|svg|jpe?g|gif)$",
       "defaultSnippets": [
         {
@@ -323,7 +323,7 @@
     },
     "logo": {
       "title": "Logo",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/#logo",
       "pattern": "\\.(png|svg|jpe?g|gif|webp)$",
       "defaultSnippets": [
         {
@@ -333,7 +333,7 @@
     },
     "icon": {
       "title": "Icons",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/",
       "type": "object",
       "properties": {
         "edit": {
@@ -377,7 +377,7 @@
         },
         "admonition": {
           "title": "Admonition icon",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/admonitions/#admonition-icons",
           "type": "object",
           "properties": {
             "note": {
@@ -471,7 +471,7 @@
         },
         "tag": {
           "title": "Tag icon",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#tag-icons-and-identifiers",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-tags/#tag-icons-and-identifiers",
           "type": "object",
           "patternProperties": {
             "^[\\w-]+$": {
@@ -527,148 +527,148 @@
     },
     "features": {
       "title": "Feature flags",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/",
       "type": "array",
       "items": {
         "oneOf": [
           {
             "title": "Mark as read",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#mark-as-read",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-header/#mark-as-read",
             "const": "announce.dismiss"
           },
           {
             "title": "Edit this page",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#code-actions",
             "const": "content.action.edit"
           },
           {
             "title": "View source of this page",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#code-actions",
             "const": "content.action.view"
           },
           {
             "title": "Code annotations",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/#code-annotations",
             "const": "content.code.annotate"
           },
           {
             "title": "Code copy button",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/#code-copy-button",
             "const": "content.code.copy"
           },
           {
             "title": "Code selection button",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-selection-button",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/#code-selection-button",
             "const": "content.code.select"
           },
           {
             "title": "Footnote tooltips",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/footnotes/#footnote-tooltips",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/footnotes/#footnote-tooltips",
             "const": "content.footnote.tooltips"
           },
           {
             "title": "Linked content tabs",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/content-tabs/#linked-content-tabs",
             "const": "content.tabs.link"
           },
           {
             "title": "Improved tooltips",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/tooltips/#improved-tooltips",
             "const": "content.tooltips"
           },
           {
             "title": "Header hides automatically when scrolling",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#automatic-hiding",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-header/#automatic-hiding",
             "const": "header.autohide"
           },
           {
             "title": "Navigation expansion",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-expansion",
             "const": "navigation.expand"
           },
           {
             "title": "Navigation footer",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-footer",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-footer",
             "const": "navigation.footer"
           },
           {
             "title": "Section index pages",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#section-index-pages",
             "const": "navigation.indexes"
           },
           {
             "title": "Instant loading",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#instant-loading",
             "const": "navigation.instant"
           },
           {
             "title": "Instant prefetching",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-prefetching",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#instant-prefetching",
             "const": "navigation.instant.prefetch"
           },
           {
             "title": "Progress indicator",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#progress-indicator",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#progress-indicator",
             "const": "navigation.instant.progress"
           },
           {
             "title": "Navigation path (Breadcrumbs)",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-path",
             "const": "navigation.path"
           },
           {
             "title": "Navigation pruning",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-pruning",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-pruning",
             "const": "navigation.prune"
           },
           {
             "title": "Navigation sections",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-sections",
             "const": "navigation.sections"
           },
           {
             "title": "Navigation tabs",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-tabs",
             "const": "navigation.tabs"
           },
           {
             "title": "Sticky navigation tabs",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#sticky-navigation-tabs",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#sticky-navigation-tabs",
             "const": "navigation.tabs.sticky"
           },
           {
             "title": "Back-to-top button",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#back-to-top-button",
             "const": "navigation.top"
           },
           {
             "title": "Anchor tracking",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-tracking",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#anchor-tracking",
             "const": "navigation.tracking"
           },
           {
             "title": "Search highlighting",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-search/#search-highlighting",
             "const": "search.highlight"
           },
           {
             "title": "Search sharing",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-sharing",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-search/#search-sharing",
             "const": "search.share"
           },
           {
             "title": "Search suggestions",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-search/#search-suggestions",
             "const": "search.suggest"
           },
           {
             "title": "Integrated table of contents",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-following",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#anchor-following",
             "const": "toc.follow"
           },
           {
             "title": "Integrated table of contents",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-integration",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/#navigation-integration",
             "const": "toc.integrate"
           }
         ]
@@ -680,7 +680,7 @@
       "oneOf": [
         {
           "title": "Color palette",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/",
           "type": "object",
           "properties": {
             "scheme": {
@@ -697,7 +697,7 @@
         },
         {
           "title": "Color palette",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/",
           "type": "array",
           "items": {
             "type": "object",
@@ -715,7 +715,7 @@
                 "oneOf": [
                   {
                     "title": "System preference",
-                    "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#system-preference",
+                    "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#system-preference",
                     "type": "string",
                     "enum": [
                       "\"(prefers-color-scheme: light)\"",
@@ -735,14 +735,14 @@
               },
               "toggle": {
                 "title": "Color palette toggle",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#color-palette-toggle",
                 "properties": {
                   "icon": {
                     "$ref": "#/$defs/icon"
                   },
                   "name": {
                     "title": "Color palette toggle name",
-                    "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#toggle-name",
+                    "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#toggle-name",
                     "type": "string"
                   }
                 },
@@ -772,7 +772,7 @@
       "oneOf": [
         {
           "title": "Google Fonts",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-fonts/",
           "type": "object",
           "properties": {
             "text": {
@@ -786,7 +786,7 @@
         },
         {
           "title": "Disable Google Fonts",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/#autoloading",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-fonts/#autoloading",
           "enum": [
             false
           ]
@@ -809,7 +809,7 @@
   "$defs": {
     "scheme": {
       "title": "Color scheme",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#color-scheme",
       "anyOf": [
         {
           "enum": [
@@ -824,7 +824,7 @@
     },
     "primary": {
       "title": "Primary color",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#primary-color",
       "enum": [
         "red",
         "pink",
@@ -852,7 +852,7 @@
     },
     "accent": {
       "title": "Accent color",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/#accent-color",
       "enum": [
         "red",
         "pink",

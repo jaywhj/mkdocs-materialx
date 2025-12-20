@@ -1090,7 +1090,7 @@ The provided path is resolved from the [`docs` directory][mkdocs.docs_dir].
     a post. Multiple authors are supported. As an example, see
     [the `.authors.yml` file][.authors.yml] we're using for our blog.
 
-  [.authors.yml]: https://github.com/squidfunk/mkdocs-material/blob/master/docs/blog/.authors.yml
+  [.authors.yml]: https://github.com/jaywhj/mkdocs-materialx/blob/master/docs/blog/.authors.yml
 
 ---
 
@@ -1718,6 +1718,6 @@ Slugs are passed to [`post_url_format`][config.post_url_format].
     ask a question, or create a [change request] on our [issue tracker], so we
     can find out if it might be a good fit for the plugin.
 
-  [open a discussion]: https://github.com/squidfunk/mkdocs-material/discussions
+  [open a discussion]: https://github.com/jaywhj/mkdocs-materialx/discussions
   [change request]: ../contributing/requesting-a-change.md
-  [issue tracker]: https://github.com/squidfunk/mkdocs-material/issues
+  [issue tracker]: https://github.com/jaywhj/mkdocs-materialx/issues

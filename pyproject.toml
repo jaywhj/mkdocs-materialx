@@ -68,7 +68,7 @@ imaging = [
 ]
 
 [project.urls]
-Documentation = "https://squidfunk.github.io/mkdocs-material/"
+Documentation = "https://jaywhj.github.io/mkdocs-materialx/"
 Source = "https://github.com/jaywhj/mkdocs-materialx"
 Changelog = "https://github.com/jaywhj/mkdocs-materialx/changelog/"
 Issues = "https://github.com/jaywhj/mkdocs-materialx/issues"

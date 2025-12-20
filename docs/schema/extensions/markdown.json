@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "title": "Markdown extensions",
-  "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/",
+  "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/",
   "oneOf": [
     {
       "title": "Abbreviations – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#abbreviations",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#abbreviations",
       "enum": [
         "markdown.extensions.abbr",
         "abbr"
@@ -13,7 +13,7 @@
     },
     {
       "title": "Admonition – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#admonition",
       "enum": [
         "markdown.extensions.admonition",
         "admonition"
@@ -21,7 +21,7 @@
     },
     {
       "title": "Attribute Lists – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#attribute-lists",
       "enum": [
         "markdown.extensions.attr_list",
         "attr_list"
@@ -38,7 +38,7 @@
     },
     {
       "title": "Definition Lists – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#definition-lists",
       "enum": [
         "markdown.extensions.def_list",
         "def_list"
@@ -46,7 +46,7 @@
     },
     {
       "title": "Footnotes – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#footnotes",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#footnotes",
       "enum": [
         "markdown.extensions.footnotes",
         "footnotes"
@@ -54,7 +54,7 @@
     },
     {
       "title": "Markdown in HTML – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#markdown-in-html",
       "enum": [
         "markdown.extensions.md_in_html",
         "md_in_html"
@@ -70,7 +70,7 @@
     },
     {
       "title": "Tables – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#tables",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#tables",
       "enum": [
         "markdown.extensions.tables",
         "tables"
@@ -92,7 +92,7 @@
         },
         {
           "title": "Table Of Contents – Python Markdown",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#table-of-contents",
           "enum": [
             "markdown.extensions.toc",
             "toc"
@@ -104,21 +104,21 @@
   "$defs": {
     "toc": {
       "title": "Table Of Contents – Python Markdown",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#table-of-contents",
       "type": "object",
       "properties": {
         "title": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.title",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.title",
           "type": "string"
         },
         "permalink": {
           "oneOf": [
             {
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.permalink",
               "type": "boolean"
             },
             {
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.permalink",
               "type": "string"
             }
           ],
@@ -130,15 +130,15 @@
           "default": false
         },
         "permalink_title": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink_title",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.permalink_title",
           "type": "string"
         },
         "slugify": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.slugify",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.slugify",
           "default": "!!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}"
         },
         "toc_depth": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.toc_depth",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/#+toc.toc_depth",
           "type": "number",
           "enum": [
             0,

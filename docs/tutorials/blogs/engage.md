@@ -365,5 +365,5 @@ provides comprehensive documentation for the plugin. You may also want to
 look at the [social plugin tutorial] to generate social cards for your blog
 posts that get displayed when you post links to social media systems.
 
-[blog plugin reference]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[blog plugin reference]: https://jaywhj.github.io/mkdocs-materialx/plugins/blog/
 [social plugin tutorial]: ../social/basic.md

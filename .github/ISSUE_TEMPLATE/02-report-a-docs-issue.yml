@@ -10,11 +10,11 @@ body:
       label: Description
       description: >-
         Please describe the inconsistency or issue you have found in
-        [our documentation](https://squidfunk.github.io/mkdocs-material/)
+        [our documentation](https://jaywhj.github.io/mkdocs-materialx/)
         or indicate where you feel there is a need for improvement. Furthermore,
         explain the severity of the issue, i.e., its impact on you and potentially
         other users.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/#description)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/#description)
     validations:
       required: true
 
@@ -23,15 +23,15 @@ body:
     attributes:
       label: Related links
       description: >-
-        Please list all links to the sections of [our documentation](https://squidfunk.github.io/mkdocs-material/)
+        Please list all links to the sections of [our documentation](https://jaywhj.github.io/mkdocs-materialx/)
         that are impacted by the issue you described above. If applicable,
         add screenshots. Additionally, list links to possibly related open
-        and closed [issues](https://github.com/squidfunk/mkdocs-material/issues)
-        and [discussions](https://github.com/squidfunk/mkdocs-material/discussions)
+        and closed [issues](https://github.com/jaywhj/mkdocs-materialx/issues)
+        and [discussions](https://github.com/jaywhj/mkdocs-materialx/discussions)
         you encountered when searching our issue tracker.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/#related-links)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/#related-links)
       value: |-
-        - [Reporting a docs issue](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/)
+        - [Reporting a docs issue](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/)
         -
     validations:
       required: true
@@ -44,7 +44,7 @@ body:
         This field is optional. You may provide an improvement proposal for our
         documentation by describing your suggestion in the text field below or
         creating a pull request after reporting this issue referencing the issue.
-        [More](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/#proposed-change)
+        [More](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/#proposed-change)
 
   - type: checkboxes
     id: checklist
@@ -58,8 +58,8 @@ body:
         valuable time.
       options:
         - label: >-
-            I have read and followed the [documentation issue guidelines](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/).
+            I have read and followed the [documentation issue guidelines](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/).
           required: true
         - label: >-
-            I have attached the links to the affected sections of [the documentation](https://squidfunk.github.io/mkdocs-material/contributing/reporting-a-docs-issue/#related-links)
+            I have attached the links to the affected sections of [the documentation](https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/#related-links)
           required: true

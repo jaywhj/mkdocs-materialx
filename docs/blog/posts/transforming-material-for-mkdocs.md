@@ -46,7 +46,7 @@ With almost [50,000] public GitHub projects depending on Material for MkDocs, it
   [^1]:
     We've collected invaluable feedback from enterprises and other Open Source maintainers, which revealed that the actual numbers are even higher. Many organizations leverage the framework within private infrastructures, such as self-hosted platforms like GitLab, for internal knowledge management. This suggests that the true reach of Material for MkDocs extends far beyond what is publicly visible.
 
-  [50,000]: https://github.com/squidfunk/mkdocs-material/network/dependents
+  [50,000]: https://github.com/jaywhj/mkdocs-materialx/network/dependents
   [many popular Open Source projects]: https://github.com/squidfunk/mkdocs-material?tab=readme-ov-file#trusted-by-
   [AWS]: https://x.com/squidfunk/status/1740389441284579767
   [Microsoft]: https://x.com/squidfunk/status/1801909506391105840

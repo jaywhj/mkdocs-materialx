@@ -44,7 +44,7 @@ Note that the usage data is based on global browser market share, so it could
 in fact be entirely different for your target demographic. It's a good idea to
 check the distribution of browser types and versions among your users.
 
-  [open an issue]: https://github.com/squidfunk/mkdocs-material/issues/new/choose
+  [open an issue]: https://github.com/jaywhj/mkdocs-materialx/issues/new/choose
   [caniuse.com]: https://caniuse.com/
   [:is pseudo selector]: https://caniuse.com/css-matches-pseudo
   [browser support]: #supported-browsers

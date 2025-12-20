@@ -152,4 +152,4 @@ unsure, please ask us first by [creating a discussion].
 
   [requirements]: #how-it-works
   [explicitly mentioned in our documentation]: ?q=%22extends+base%22
-  [creating a discussion]: https://github.com/squidfunk/mkdocs-material/discussions
+  [creating a discussion]: https://github.com/jaywhj/mkdocs-materialx/discussions

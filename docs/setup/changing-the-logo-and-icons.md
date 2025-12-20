@@ -68,7 +68,7 @@ theme:
   favicon: images/favicon.png
 ```
 
-  [Favicon default]: https://github.com/squidfunk/mkdocs-material/blob/master/material/templates/assets/images/favicon.png
+  [Favicon default]: https://github.com/jaywhj/mkdocs-materialx/blob/master/material/templates/assets/images/favicon.png
 
 ### Site icons
 

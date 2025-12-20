@@ -10,7 +10,7 @@ Before you start, there are just a couple of [dependencies to install]. These
 are libraries for image processing that the plugin needs to produce the social
 cards, as well as their Python bindings.
 
-[dependencies to install]: https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/
+[dependencies to install]: https://jaywhj.github.io/mkdocs-materialx/plugins/requirements/image-processing/
 
 With those prerequisites met, it is simply a matter of activating the plugin,
 which will:

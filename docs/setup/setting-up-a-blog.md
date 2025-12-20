@@ -673,5 +673,5 @@ The following templates are added by the [built-in blog plugin]:
 
   [theme extension]: ../customization.md#extending-the-theme
 
-  [blog.html]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/blog.html
-  [blog-post.html]: https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/blog-post.html
+  [blog.html]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/blog.html
+  [blog-post.html]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/blog-post.html

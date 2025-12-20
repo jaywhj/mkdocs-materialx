@@ -34,7 +34,7 @@ theme:
 
 <br />
 
-For detailed installation instructions, configuration options, and a demo, visit [squidfunk.github.io/mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
+For detailed installation instructions, configuration options, and a demo, visit [jaywhj.github.io/mkdocs-materialx](https://jaywhj.github.io/mkdocs-materialx/)
 
 <br />
 
