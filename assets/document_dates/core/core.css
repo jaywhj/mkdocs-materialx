@@ -23,11 +23,11 @@
     color: #666;
     font-size: 0.9rem;
     display: flex;
-    /* flex-wrap: nowrap; */
     align-items: center;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 0.2rem 0;
-    margin-bottom: 0.6rem;
+    padding: 0.1rem 0;
+    margin-bottom: 0.5rem;
 }
 .md-main .document-dates-plugin {
     color: rgba(142, 142, 142, 0.7);
@@ -67,6 +67,7 @@
 .dd-left {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     margin-right: 1.5rem;
 }
 .dd-item {
@@ -84,12 +85,24 @@
     align-items: center;
     justify-content: flex-end;
     flex: 1 1 auto;
-    min-width: 90px;
+    min-width: 0;
+    overflow: hidden;
 }
-
+/* Left-aligned when only dd-right */
 .dd-right.dd-right-start {
     justify-content: flex-start;
 }
+
+/* JS control toggle */
+.document-dates-plugin.is-wrapped {
+    flex-wrap: wrap;
+}
+.document-dates-plugin.is-wrapped .dd-right {
+    flex: 0 0 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
 
 /* ==========================================================================
    3. Author Avatar styles
@@ -107,9 +120,11 @@
 
     margin-right: 10px;
 
+    /* Hide Firefox, IE scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+/* Hide Chrome/Safari scrollbar */
 .author-group::-webkit-scrollbar {
     display: none;
 }
@@ -162,18 +177,6 @@
     align-items: center;
     white-space: nowrap;
     flex-shrink: 0;
-}
-
-/* Optimize the experience with line breaks on very narrow screens */
-@media screen and (max-width: 370px) {
-    .document-dates-plugin {
-        flex-wrap: wrap;
-    }
-    .dd-right {
-        justify-content: flex-start;
-        width: 100%;
-        margin: 10px 0 0 0;
-    }
 }
 
 

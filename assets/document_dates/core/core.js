@@ -241,6 +241,25 @@ function enableHorizontalWheelScroll() {
 }
 
 
+// 动态处理窄屏换行
+function handleDocumentDatesAutoWrap() {
+    const containers = document.querySelectorAll('.document-dates-plugin');
+    const AUTHOR_THRESHOLD = 140;   // 大概2个作者宽度
+
+    containers.forEach(container => {
+        const leftPart = container.querySelector('.dd-left');
+        const rightPart = container.querySelector('.dd-right');
+        if (!leftPart || !rightPart) return;
+
+        // 使用 getBoundingClientRect 更加精确（包含小数）
+        const containerWidth = container.getBoundingClientRect().width;
+        const leftWidth = leftPart.getBoundingClientRect().width;
+
+        // 如果: 容器总宽度 < 日期宽度 + 2个作者宽度，则换行
+        const shouldWrap = containerWidth > 0 && containerWidth < (leftWidth + AUTHOR_THRESHOLD);
+        container.classList.toggle('is-wrapped', shouldWrap);
+    });
+}
 
 /*
     入口: 兼容 Material 主题的 'navigation.instant' 属性
@@ -250,6 +269,10 @@ function initPluginFeatures() {
     processDataLoading();
     generateAvatar();
     enableHorizontalWheelScroll();
+
+    handleDocumentDatesAutoWrap();
+    window.removeEventListener('resize', handleDocumentDatesAutoWrap);
+    window.addEventListener('resize', handleDocumentDatesAutoWrap, { passive: true });
 }
 
 if (window.document$ && !window.document$.isStopped) {
