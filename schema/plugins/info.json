@@ -3,37 +3,37 @@
   "title": "Built-in info plugin",
   "oneOf": [
     {
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/",
       "const": "info"
     },
     {
       "type": "object",
       "properties": {
         "info": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/",
           "type": "object",
           "properties": {
             "enabled": {
               "title": "Enable plugin",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/#config.enabled",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/#config.enabled",
               "type": "boolean",
               "default": true
             },
             "enabled_on_serve": {
               "title": "Enable plugin when previewing",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/#config.enabled_on_serve",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/#config.enabled_on_serve",
               "type": "boolean",
               "default": false
             },
             "archive": {
               "title": "Enable creation of archive",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/#config.archive",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/#config.archive",
               "type": "boolean",
               "default": true
             },
             "archive_stop_on_violation": {
               "title": "Stop creation of archive on violation",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/info/#config.archive_stop_on_violation",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/info/#config.archive_stop_on_violation",
               "type": "boolean",
               "default": true
             }

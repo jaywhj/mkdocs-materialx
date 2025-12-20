@@ -31,12 +31,12 @@
     },
     "repo_name": {
       "title": "Repository name, used in header",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-name",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#repository-name",
       "type": "string"
     },
     "repo_url": {
       "title": "Repository URL",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#repository",
       "type": "string"
     },
     "edit_uri": {
@@ -51,7 +51,7 @@
     },
     "copyright": {
       "title": "Copyright, used in footer",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/#copyright-notice",
       "type": "string"
     },
     "docs_dir": {
@@ -86,11 +86,11 @@
     },
     "extra_css": {
       "title": "Additional CSS files to include",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-css",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/customization/#additional-css",
       "type": "array",
       "items": {
         "title": "Path to CSS file",
-        "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-css",
+        "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/customization/#additional-css",
         "pattern": "\\.css($|\\?)"
       },
       "uniqueItems": true,
@@ -98,11 +98,11 @@
     },
     "extra_javascript": {
       "title": "Additional JavaScript files to include",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-javascript",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/customization/#additional-javascript",
       "type": "array",
       "items": {
         "title": "Path to JavaScript file (may be local or absolute URL to external JS)",
-        "markdownDescription": "https://squidfunk.github.io/mkdocs-material/customization/#additional-javascript"
+        "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/customization/#additional-javascript"
       },
       "uniqueItems": true,
       "minItems": 1

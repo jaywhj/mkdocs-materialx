@@ -3,25 +3,25 @@
   "title": "Built-in meta plugin",
   "oneOf": [
     {
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/meta/",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/meta/",
       "const": "meta"
     },
     {
       "type": "object",
       "properties": {
         "meta": {
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/meta/",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/meta/",
           "type": "object",
           "properties": {
             "enabled": {
               "title": "Enable plugin",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/meta/#config.enabled",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/meta/#config.enabled",
               "type": "boolean",
               "default": true
             },
             "meta_file": {
               "title": "Meta file name",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/plugins/meta/#config.meta_file",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/meta/#config.meta_file",
               "pattern": "\\.yml$",
               "default": "\"**/.meta.yml\""
             }

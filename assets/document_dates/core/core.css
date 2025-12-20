@@ -38,9 +38,6 @@
     font-size: 1rem;
     opacity: 0.85;
     margin-right: 0.3rem;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
 }
 .md-main .document-dates-plugin .material-icons {
     font-size: 0.9rem;
@@ -77,7 +74,6 @@
     align-items: center;
     white-space: nowrap;
     flex-shrink: 0;
-    line-height: 1;
 }
 .dd-left > .dd-item + .dd-item {
     margin-left: 1.5rem;
@@ -88,7 +84,7 @@
     align-items: center;
     justify-content: flex-end;
     flex: 1 1 auto;
-    min-width: 110px;
+    min-width: 90px;
 }
 
 .dd-right.dd-right-start {
@@ -169,7 +165,7 @@
 }
 
 /* Optimize the experience with line breaks on very narrow screens */
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 370px) {
     .document-dates-plugin {
         flex-wrap: wrap;
     }

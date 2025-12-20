@@ -1,17 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
   "title": "Extra configuration",
-  "markdownDescription": "https://squidfunk.github.io/mkdocs-material/",
+  "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/",
   "type": "object",
   "properties": {
     "homepage": {
       "title": "Homepage link (when clicking on logo)",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/#logo",
       "type": "string"
     },
     "analytics": {
       "title": "Analytics provider",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#google-analytics",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#google-analytics",
       "type": "object",
       "allOf": [
         {
@@ -26,19 +26,19 @@
             "properties": {
               "provider": {
                 "title": "Google Analytics",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#google-analytics",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#google-analytics",
                 "const": "google"
               },
               "property": {
                 "anyOf": [
                   {
                     "title": "Google Analytics 4",
-                    "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#google-analytics",
+                    "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#google-analytics",
                     "pattern": "^G-\\w{10}$"
                   },
                   {
                     "title": "Unknown property",
-                    "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#google-analytics",
+                    "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#google-analytics",
                     "type": "string"
                   }
                 ]
@@ -66,7 +66,7 @@
             "properties": {
               "provider": {
                 "title": "Custom analytics provider",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-analytics",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#custom-site-analytics",
                 "type": "string"
               },
               "feedback": {
@@ -106,12 +106,12 @@
     },
     "annotate": {
       "title": "Custom selectors for annotations",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-selectors",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/#custom-selectors",
       "type": "object",
       "patternProperties": {
         ".*": {
           "title": "Custom selector",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-selectors",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/#custom-selectors",
           "type": "array",
           "items": {
             "type": "string",
@@ -122,23 +122,23 @@
     },
     "consent": {
       "title": "Cookie consent",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#cookie-consent",
       "type": "object",
       "properties": {
         "title": {
           "title": "Cookie consent title",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.title",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.title",
           "type": "string",
           "default": "Cookie consent"
         },
         "description": {
           "title": "Cookie consent description",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.description",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.description",
           "type": "string"
         },
         "cookies": {
           "title": "Cookies",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.cookies",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.cookies",
           "type": "object",
           "properties": {
             "analytics": {
@@ -157,7 +157,7 @@
           "defaultSnippets": [
             {
               "label": "analytics (default)",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.cookies",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.cookies",
               "body": {
                 "analytics": {
                   "name": "Google Analytics",
@@ -167,7 +167,7 @@
             },
             {
               "label": "github (default)",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.cookies",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.cookies",
               "body": {
                 "analytics": {
                   "name": "GitHub",
@@ -179,7 +179,7 @@
         },
         "actions": {
           "title": "Cookie consent actions",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.actions",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.actions",
           "type": "array",
           "items": {
             "oneOf": [
@@ -204,7 +204,7 @@
       "defaultSnippets": [
         {
           "label": "actions (default)",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#+consent.actions",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#+consent.actions",
           "body": {
             "actions": [
               "accept",
@@ -220,7 +220,7 @@
     },
     "social": {
       "title": "Social links",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/#social-links",
       "type": "array",
       "items": {
         "title": "Social link",
@@ -231,12 +231,12 @@
           },
           "link": {
             "title": "Social link",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#+social.link",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/#+social.link",
             "type": "string"
           },
           "name": {
             "title": "Social link name",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#+social.name",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/#+social.name",
             "type": "string"
           }
         },
@@ -249,26 +249,26 @@
     },
     "alternate": {
       "title": "Site language selector",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#site-language-selector",
       "type": "array",
       "items": {
         "title": "Alternate language",
-        "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector",
+        "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#site-language-selector",
         "type": "object",
         "properties": {
           "name": {
             "title": "Alternate language name",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#+alternate.name",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#+alternate.name",
             "type": "string"
           },
           "link": {
             "title": "Alternate language link",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#+alternate.link",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#+alternate.link",
             "type": "string"
           },
           "lang": {
             "title": "Alternate language code (ISO 639-1)",
-            "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#+alternate.lang",
+            "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/#+alternate.lang",
             "type": "string"
           }
         },
@@ -282,29 +282,29 @@
     },
     "tags": {
       "title": "Tag identifiers",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#tag-icons-and-identifiers",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-tags/#tag-icons-and-identifiers",
       "type": "object",
       "patternProperties": {
         ".*": {
           "title": "Tag identifier mapping",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#tag-icons-and-identifiers",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-tags/#tag-icons-and-identifiers",
           "pattern": "^[\\w-]+$"
         }
       }
     },
     "version": {
       "title": "Versioning",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-versioning/#versioning",
       "type": "object",
       "properties": {
         "provider": {
           "title": "Versioning provider",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-versioning/#versioning",
           "const": "mike"
         },
         "default": {
           "title": "Default version",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#version-warning",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-versioning/#version-warning",
           "oneOf": [
             {
               "type": "string"
@@ -320,7 +320,7 @@
         },
         "alias": {
           "title": "Show alias next to version number",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-versioning/#version-alias",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-versioning/#version-alias",
           "type": "boolean",
           "default": true
         }
@@ -328,7 +328,7 @@
     },
     "generator": {
       "title": "Generator notice",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#generator-notice",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/#generator-notice",
       "type": "boolean",
       "default": true
     }
@@ -337,19 +337,19 @@
   "$defs": {
     "cookie": {
       "title": "Cookie",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#cookie-consent",
       "oneOf": [
         {
           "type": "object",
           "properties": {
             "name": {
               "title": "Cookie name",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#cookie-consent",
               "type": "string"
             },
             "checked": {
               "title": "Initial state",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#cookie-consent",
               "type": "boolean",
               "default": true
             }
@@ -361,7 +361,7 @@
         },
         {
           "title": "Cookie name",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/#cookie-consent",
           "type": "string"
         }
       ]
@@ -379,18 +379,18 @@
     },
     "feedback": {
       "title": "Was this page helpful?",
-      "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#was-this-page-helpful",
+      "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#was-this-page-helpful",
       "type": "object",
       "properties": {
         "title": {
           "title": "Feedback widget title",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#was-this-page-helpful",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#was-this-page-helpful",
           "type": "string",
           "default": "Was this page helpful?"
         },
         "ratings": {
           "title": "Feedback ratings",
-          "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#was-this-page-helpful",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#was-this-page-helpful",
           "type": "array",
           "items": {
             "title": "Feedback rating",
@@ -401,17 +401,17 @@
               },
               "name": {
                 "title": "Feedback rating name",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#+analytics.feedback.ratings.name",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#+analytics.feedback.ratings.name",
                 "type": "string"
               },
               "data": {
                 "title": "Feedback rating data",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#+analytics.feedback.ratings.data",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#+analytics.feedback.ratings.data",
                 "type": "number"
               },
               "note": {
                 "title": "Feedback rating data",
-                "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#+analytics.feedback.ratings.note",
+                "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/#+analytics.feedback.ratings.note",
                 "type": "string"
               }
             },
