@@ -19,12 +19,13 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: MaterialX for MkDocs
+site_name: MaterialX - gen X
 site_url: https://jaywhj.github.io/mkdocs-materialx/
 site_author: Aaron Wang
 site_description: >-
-  Write your documentation in Markdown and create a professional static site in
-  minutes – searchable, customizable, in 60+ languages, for all devices
+  Born for documents, yet beyond documents. 
+  Accessible to everyone, extremely easy to use. 
+  Modern, lightweight, customizable, responsive.
 
 # Repository
 repo_name: jaywhj/mkdocs-materialx
@@ -92,7 +93,7 @@ theme:
 
 # Plugins
 plugins:
-  - blog
+  # - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:
@@ -288,5 +289,5 @@ nav:
       - Asking a question: https://github.com/jaywhj/mkdocs-materialx/discussions
     - Guides:
       - Creating a reproduction: guides/creating-a-reproduction.md
-  - Blog:
-    - blog/index.md
+  # - Blog:
+    # - blog/index.md
