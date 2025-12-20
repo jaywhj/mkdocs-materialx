@@ -1,0 +1,214 @@
+/* ==========================================================================
+   1. Plug-in wrapper styles
+   ========================================================================== */
+.document-dates-plugin-wrapper.document-dates-top,
+.document-dates-plugin-wrapper.document-dates-bottom {
+    margin: 1rem 0;
+    border-bottom: 1px solid rgba(142, 142, 142, 0.1);
+}
+.md-main .document-dates-plugin-wrapper.document-dates-top {
+    margin: -1rem 0 1rem 0;
+}
+
+/* Hide the footnote divider immediately following the date information with the CSS adjacent sibling selector */
+.document-dates-plugin-wrapper + .footnote hr {
+    display: none;
+}
+
+
+/* ==========================================================================
+   2. Plug-in Layout & Fonts
+   ========================================================================== */
+.document-dates-plugin {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    margin-bottom: 0.6rem;
+}
+.md-main .document-dates-plugin {
+    color: rgba(142, 142, 142, 0.7);
+    font-size: 0.75rem;
+}
+
+.document-dates-plugin .material-icons {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-right: 0.3rem;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+.md-main .document-dates-plugin .material-icons {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Customized icons, just change the icon name.
+    Google Fonts Icons (2500+): https://fonts.google.com/icons
+
+    doc_created:  add_circle, add_circle, note_add, more_time
+    doc_updated:  update, check_circle, task, refresh
+    doc_author:   person, account_circle
+    doc_authors:  group, groups */
+.document-dates-plugin .material-icons[data-icon="doc_created"]::before {
+    content: "more_time";
+}
+.document-dates-plugin .material-icons[data-icon="doc_updated"]::before {
+    content: "refresh";
+}
+.document-dates-plugin .material-icons[data-icon="doc_author"]::before {
+    content: "person";
+}
+.document-dates-plugin .material-icons[data-icon="doc_authors"]::before {
+    content: "group";
+}
+
+.dd-left {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+.dd-item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.dd-left > .dd-item + .dd-item {
+    margin-left: 1.5rem;
+}
+
+.dd-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    min-width: 110px;
+}
+
+.dd-right.dd-right-start {
+    justify-content: flex-start;
+}
+
+/* ==========================================================================
+   3. Author Avatar styles
+   ========================================================================== */
+.author-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* Prevent overflow of child elements when scaling */
+    padding: 0.15rem 0.15rem 0.15rem 0;
+
+    margin-right: 10px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.author-group::-webkit-scrollbar {
+    display: none;
+}
+
+.avatar-wrapper {
+    margin-left: 0.3rem;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.85;
+    filter: grayscale(90%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+    display: block;
+
+    /* Fix bug in Safari: rounded corners may blink to show square corners */
+    will-change: transform;
+    transform: translateZ(0);
+}
+.avatar-wrapper:hover {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+.avatar-wrapper .avatar-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.avatar-wrapper img.avatar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Show authors in text mode */
+.author-group .text-wrapper {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Optimize the experience with line breaks on very narrow screens */
+@media screen and (max-width: 359px) {
+    .document-dates-plugin {
+        flex-wrap: wrap;
+    }
+    .dd-right {
+        justify-content: flex-start;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
+
+
+/* ==========================================================================
+   4. Tooltip styles, including theme, arrow, font, color, background color, etc
+   ========================================================================== */
+
+/* .tippy-box {
+    font-size: 12px;
+} */
+
+/* Demo of the custom theme 'tomato' (optional) */
+.tippy-box[data-theme~='tomato'] {
+    background-color: tomato;
+    color: white;
+}
+/* Customize the arrow corresponding to the theme tomato */
+.tippy-box[data-theme~='tomato'] > .tippy-arrow::before {
+    color: tomato;
+}
+/* 
+Recommended Colors:
+    tomato: rgb(241, 112, 91);
+    mung_bean: rgb(122, 145, 109);
+    cloisonné: rgb(15, 89, 164);
+    soft_blue: rgb(16, 104, 152);
+*/
+
+/* Customize arrows, resize */
+.tippy-arrow::before {
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
