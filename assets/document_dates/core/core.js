@@ -146,6 +146,7 @@ function initTippy() {
 // 在滚动时隐藏 author-group 的 tooltip
 function initAuthorGroupTippyGuard() {
     document.querySelectorAll('.author-group').forEach(groupEl => {
+        // 先取消旧监听器，避免重复绑定
         if (groupEl._ddTippyGuardAbortController) {
             groupEl._ddTippyGuardAbortController.abort();
         }
@@ -160,7 +161,7 @@ function initAuthorGroupTippyGuard() {
                 }
             });
         };
-
+        // true: 浏览器可以立刻执行默认行为。这个事件监听器只是‘看看’，绝不会阻止浏览器的默认行为
         const opts = { passive: true, signal: controller.signal };
         groupEl.addEventListener('scroll', hideAllTippies, opts);
         groupEl.addEventListener('touchmove', hideAllTippies, opts);
@@ -207,36 +208,44 @@ const tippyManager = (() => {
 function enableHorizontalWheelScroll() {
     // 移动端不接管滚轮
     const isTouchDevice =
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0;
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
     if (isTouchDevice) return;
 
     const groups = document.querySelectorAll('.author-group');
     groups.forEach(el => {
-        el.addEventListener('wheel',
-            function (event) {
-                // 只处理纵向滚轮（触控板横向滑动不干预）
-                if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-                // 在 author-group 内，始终阻止页面纵向滚动
-                event.preventDefault();
+        // 先取消旧监听器，避免重复绑定
+        if (el._ddWheelAbortController) {
+            el._ddWheelAbortController.abort();
+        }
+        const controller = new AbortController();
+        el._ddWheelAbortController = controller;
 
-                const scrollWidth = el.scrollWidth;
-                const clientWidth = el.clientWidth;
-                // 元素不可横向滚动时返回
-                if (scrollWidth <= clientWidth) return;
+        el.addEventListener('wheel', function (event) {
+            // 只处理纵向滚轮（触控板横向滑动不干预）
+            if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+            // 在 author-group 内，始终阻止页面纵向滚动
+            event.preventDefault();
 
-                const delta = event.deltaY;
-                const atLeft = el.scrollLeft <= 0;
-                const atRight = el.scrollLeft + clientWidth >= scrollWidth - 1;
+            const scrollWidth = el.scrollWidth;
+            const clientWidth = el.clientWidth;
+            // 元素不可横向滚动时返回
+            if (scrollWidth <= clientWidth) return;
 
-                if ((delta < 0 && !atLeft) || (delta > 0 && !atRight)) {
-                    el.scrollLeft += delta;
-                }
-                // 到边界：什么都不做（不冒泡、不滚页面）
-            },
-            { passive: false }
-        );
+            const delta = event.deltaY;
+            const atLeft = el.scrollLeft <= 0;
+            const atRight = el.scrollLeft + clientWidth >= scrollWidth - 1;
+
+            if ((delta < 0 && !atLeft) || (delta > 0 && !atRight)) {
+                el.scrollLeft += delta;
+            }
+            // 到边界：什么都不做（不冒泡、不滚页面）
+        }, {
+            // false: 先等 JS 跑完，再决定要不要滚。我可能会调用 event.preventDefault()，浏览器你先别急着执行默认行为
+            passive: false,
+            signal: controller.signal
+        });
     });
 }
 
@@ -254,25 +263,36 @@ function handleDocumentDatesAutoWrap() {
         // 使用 getBoundingClientRect 更加精确（包含小数）
         const containerWidth = container.getBoundingClientRect().width;
         const leftWidth = leftPart.getBoundingClientRect().width;
+        if (containerWidth <= leftWidth) return;
 
         // 如果: 容器总宽度 < 日期宽度 + 2个作者宽度，则换行
-        const shouldWrap = containerWidth > 0 && containerWidth < (leftWidth + AUTHOR_THRESHOLD);
-        container.classList.toggle('is-wrapped', shouldWrap);
+        const shouldWrap = containerWidth < (leftWidth + AUTHOR_THRESHOLD);
+        // 只有在状态确实需要改变时才操作 DOM
+        if (container.classList.contains('is-wrapped') !== shouldWrap) {
+            container.classList.toggle('is-wrapped', shouldWrap);
+        }
     });
 }
 
 /*
     入口: 兼容 Material 主题的 'navigation.instant' 属性
 */
+let datesAutoWrapObserver = null;
 function initPluginFeatures() {
     tippyManager.initialize();
     processDataLoading();
     generateAvatar();
     enableHorizontalWheelScroll();
 
-    handleDocumentDatesAutoWrap();
-    window.removeEventListener('resize', handleDocumentDatesAutoWrap);
-    window.addEventListener('resize', handleDocumentDatesAutoWrap, { passive: true });
+    if (datesAutoWrapObserver) datesAutoWrapObserver.disconnect();
+    datesAutoWrapObserver = new ResizeObserver(() => {
+        // 使用 RAF 确保在浏览器重绘前处理，减少视觉跳动
+        window.requestAnimationFrame(() => {
+            handleDocumentDatesAutoWrap();
+        });
+    });
+    const containers = document.querySelectorAll('.document-dates-plugin');
+    containers.forEach(el => datesAutoWrapObserver.observe(el));
 }
 
 if (window.document$ && !window.document$.isStopped) {
