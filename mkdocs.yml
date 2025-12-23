@@ -84,9 +84,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
-  font:
-    text: Roboto
-    code: Roboto Mono
+  font: false
   favicon: assets/favicon.png
   icon:
     logo: logo
@@ -122,9 +120,6 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/jaywhj
