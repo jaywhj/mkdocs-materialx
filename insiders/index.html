@@ -1,13 +1,61 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html><html><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>MaterialX</title>
     <noscript>
       <meta http-equiv="refresh" content="0;url=getting-started/">
-    </noscript>
-    <script>window.location.replace(["getting-started/",window.location.search,window.location.hash].join(""))</script>
-  </head>
-  <body></body>
-</html>
+    
+    </noscript><script>window.location.replace(["getting-started/",window.location.search,window.location.hash].join(""))</script>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+
+(function () {
+  if (typeof MutationObserver === 'undefined') return;
+
+  let reloadScheduled = false;
+  function scheduleReload() {
+    if (reloadScheduled) return;
+    reloadScheduled = true;
+
+    requestAnimationFrame(() => {
+      reloadScheduled = false;
+      try {
+        lightbox.reload();
+      } catch (e) {
+        console.warn('[glightbox] reload failed:', e);
+      }
+    });
+  }
+
+  function observeAnchor(anchor) {
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type !== 'attributes') continue;
+        const img = mutation.target;
+        if (!(img instanceof HTMLImageElement)) continue;
+        const src = img.src;
+        if (!src) continue;
+
+        if (anchor.getAttribute('href') !== src) {
+          anchor.setAttribute('href', src);
+          scheduleReload();
+        }
+      }
+    });
+
+    observer.observe(anchor, {
+      attributes: true,
+      subtree: true,
+      attributeFilter: ['src'],
+    });
+  }
+
+  document.querySelectorAll('a.glightbox').forEach(observeAnchor);
+})();
+        </script></body></html>
