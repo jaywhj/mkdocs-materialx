@@ -77,6 +77,11 @@
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
         </style></head>
   
   
@@ -359,28 +364,6 @@
     
   
   Reference
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../insiders/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Insiders
 
         </a>
       </li>
@@ -1343,8 +1326,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,6 +1378,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/changing-the-logo-and-icons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changing the logo and icons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1490,14 +1499,86 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/changing-the-logo-and-icons/" class="md-nav__link">
+      <a href="../../setup/adding-document-dates-authors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changing the logo and icons
+    Document dates &amp; authors
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/adding-recent-updates-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recent updates module
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/adding-a-git-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a git repository
   
 
     
@@ -1518,14 +1599,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/ensuring-data-privacy/" class="md-nav__link">
+      <a href="../../setup/adding-a-comment-system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ensuring data privacy
+    Adding a comment system
   
 
     
@@ -1797,118 +1878,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../setup/adding-a-git-repository/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding a git repository
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/adding-a-comment-system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding a comment system
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/building-an-optimized-site/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Building an optimized site
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/building-for-offline-usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Building for offline usage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
       
@@ -1933,7 +1902,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1955,14 +1924,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_20">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2056,10 +2025,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -2355,44 +2320,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugins/projects/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 20H4a2 2 0 0 1-2-2V6c0-1.11.89-2 2-2h6l2 2h7a2 2 0 0 1 2 2H4v10l2.14-8h17.07l-2.28 8.5c-.23.87-1.01 1.5-1.93 1.5"></path></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Projects
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--deprecated" title="Deprecated">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../plugins/search/" class="md-nav__link">
         
   
@@ -2482,44 +2409,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../plugins/typeset/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4v3h5.5v12h3V7H19V4z"></path></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Typeset
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--deprecated" title="Deprecated">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
       
@@ -2540,10 +2429,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12">
         
           
-          <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
             
   
   
@@ -2561,8 +2450,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_14">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3205,44 +3094,44 @@
       
   
   
+    
   
   
+  
     
     
       
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../insiders/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Insiders
+    Community
   
 
     
@@ -3250,225 +3139,14 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Insiders
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../insiders/getting-started/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../insiders/changelog/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Changelog
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Changelog
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../insiders/upgrade/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to upgrade
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Community
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
     Community
   
 
@@ -3518,7 +3196,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -3540,14 +3218,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6_1" id="__nav_6_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3964,10 +3642,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
             
   
   
@@ -3985,8 +3663,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4254,9 +3932,9 @@
 
 
 <h1 id="bug-reports">Bug reports<a class="headerlink" href="#bug-reports" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2023-01-29"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-01-29T19:14:23+01:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2025-12-20"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2025-12-20T16:14:28+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="katharinalisalin" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:katharina.linnenkugel@gmail.com&quot;&gt;katharinalisalin&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="katharina.linnenkugel@gmail.com"></a></div><div class="avatar-wrapper" data-name="eleanor-arc-boats" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:113399976+eleanor-arc-boats@users.noreply.github.com&quot;&gt;eleanor-arc-boats&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="113399976+eleanor-arc-boats@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2023-01-29"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-01-29T19:14:23+01:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2025-12-28"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2025-12-28T14:08:33+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="katharinalisalin" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:katharina.linnenkugel@gmail.com&quot;&gt;katharinalisalin&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="katharina.linnenkugel@gmail.com"></a></div><div class="avatar-wrapper" data-name="eleanor-arc-boats" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:113399976+eleanor-arc-boats@users.noreply.github.com&quot;&gt;eleanor-arc-boats&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="113399976+eleanor-arc-boats@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
-<p>Material for MkDocs is an actively maintained project that we constantly strive
+<p>MaterialX for MkDocs is an actively maintained project that we constantly strive
 to improve. With a project of this size and complexity, bugs may occur. If you
 think you have discovered a bug, you can help us by submitting an issue in our
 public <a href="https://github.com/jaywhj/mkdocs-materialx/issues">issue tracker</a>, following this guide.</p>
@@ -4269,12 +3947,12 @@ what information we need to help you quickly.</p>
 <h3 id="upgrade-to-latest-version">Upgrade to latest version<a class="headerlink" href="#upgrade-to-latest-version" title="Permanent link">¶</a></h3>
 <p>Chances are that the bug you discovered was already fixed in a subsequent
 version. Thus, before reporting an issue, ensure that you're running the
-<a href="../../changelog/">latest version</a> of Material for MkDocs. Please consult our <a href="../../upgrade/">upgrade guide</a> to
+<a href="../../changelog/">latest version</a> of MaterialX for MkDocs. Please consult our <a href="../../upgrade/">upgrade guide</a> to
 learn how to upgrade to the latest version.</p>
 <div class="admonition warning">
 <p class="admonition-title">Bug fixes are not backported</p>
 <p>Please understand that only bugs that occur in the latest version of
-Material for MkDocs will be addressed. Also, to reduce duplicate efforts,
+MaterialX for MkDocs will be addressed. Also, to reduce duplicate efforts,
 fixes cannot be backported to earlier versions.</p>
 </div>
 <h3 id="remove-customizations">Remove customizations<a class="headerlink" href="#remove-customizations" title="Permanent link">¶</a></h3>
@@ -4294,7 +3972,7 @@ the root cause of the problem. If you did a major version upgrade, make sure you
 adjusted all partials you have overridden.</p>
 <div class="admonition warning">
 <p class="admonition-title">Customizations mentioned in our documentation</p>
-<p>A handful of the features Material for MkDocs offers can only be implemented
+<p>A handful of the features MaterialX for MkDocs offers can only be implemented
 with customizations. If you find a bug in any of the customizations <a href="?q=&quot;extends+base&quot;">that
 our documentation explicitly mentions</a>, you are, of course, encouraged to
 report it.</p>
@@ -4381,7 +4059,7 @@ can be inferred from the title.</p>
 <h3 id="context">Context <small>optional</small><a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
 <p>Before describing the bug, you can provide additional context for us to
 understand what you were trying to achieve. Explain the circumstances
-in which you're using Material for MkDocs, and what you <em>think</em> might be
+in which you're using MaterialX for MkDocs, and what you <em>think</em> might be
 relevant. Don't write about the bug here.</p>
 <blockquote>
 <p><strong>Why this might be helpful</strong>: some errors only manifest in specific settings,
@@ -4391,7 +4069,7 @@ thousands of documents.</p>
 <h3 id="bug-description">Bug description<a class="headerlink" href="#bug-description" title="Permanent link">¶</a></h3>
 <p>Now, to the bug you want to report. Provide a clear, focused, specific, and
 concise summary of the bug you encountered. Explain why you think this is a bug
-that should be reported to Material for MkDocs, and not to one of its
+that should be reported to MaterialX for MkDocs, and not to one of its
 dependencies.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> Adhere to the following principles:</p>
 <ul>
 <li>
@@ -4460,7 +4138,7 @@ to a repository with the bug report, we currently don't support those in our
 process. The reason is that the reproduction, which is automatically
 produced by the <a href="../../plugins/info/">built-in info plugin</a> contains all of the necessary
 environment information that is often forgotten to be included.</p>
-<p>Additionally, there are many non-technical users of Material for MkDocs that
+<p>Additionally, there are many non-technical users of MaterialX for MkDocs that
 have trouble creating repositories.</p>
 </div>
 <h3 id="steps-to-reproduce">Steps to reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permanent link">¶</a></h3>
@@ -4481,7 +4159,7 @@ specific conditions.</p>
 <p>If you're reporting a bug that only occurs in one or more <em>specific</em> browsers,
 we need to know which browsers are affected. This field is optional, as it is
 only relevant when the bug you are reporting does not involve a crash when
-<a href="http://localhost:8000/mkdocs-material/creating-your-site/#previewing-as-you-write">previewing</a> or <a href="http://localhost:8000/mkdocs-material/creating-your-site/#building-your-site">building</a> your site.</p>
+<a href="http://localhost:8000/mkdocs-materialx/creating-your-site/#previewing-as-you-write">previewing</a> or <a href="http://localhost:8000/mkdocs-materialx/creating-your-site/#building-your-site">building</a> your site.</p>
 <hr>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.06 13c-1.86 0-3.42 1.33-3.82 3.1-.95-.41-1.82-.3-2.48-.01C10.35 14.31 8.79 13 6.94 13 4.77 13 3 14.79 3 17s1.77 4 3.94 4c2.06 0 3.74-1.62 3.9-3.68.34-.24 1.23-.69 2.32.02.18 2.05 1.84 3.66 3.9 3.66 2.17 0 3.94-1.79 3.94-4s-1.77-4-3.94-4M6.94 19.86c-1.56 0-2.81-1.28-2.81-2.86s1.26-2.86 2.81-2.86c1.56 0 2.81 1.28 2.81 2.86s-1.25 2.86-2.81 2.86m10.12 0c-1.56 0-2.81-1.28-2.81-2.86s1.25-2.86 2.81-2.86 2.82 1.28 2.82 2.86-1.27 2.86-2.82 2.86M22 10.5H2V12h20zm-6.47-7.87c-.22-.49-.78-.75-1.31-.58L12 2.79l-2.23-.74-.05-.01c-.53-.15-1.09.13-1.29.64L6 9h12l-2.44-6.32z"></path></svg></span> <strong>Incognito mode</strong> – Please verify that a the bug is
 not caused by a browser extension. Switch to incognito mode and try to reproduce
@@ -4518,7 +4196,7 @@ of our upstream dependencies, including <a href="https://www.mkdocs.org">MkDocs<
 <a href="https://facelessuser.github.io/pymdown-extensions/">Python Markdown Extensions</a> or third-party plugins. A good rule of thumb is
 to change the <a href="https://www.mkdocs.org/user-guide/configuration/#theme"><code>theme.name</code></a> to <code>mkdocs</code> or <code>readthedocs</code> and
 check if the problem persists. If it does, the problem is likely not
-related to Material for MkDocs and should be reported upstream. When in
+related to MaterialX for MkDocs and should be reported upstream. When in
 doubt, use our <a href="https://github.com/jaywhj/mkdocs-materialx/discussions">discussion board</a> to ask for help.&nbsp;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
@@ -4736,4 +4414,5 @@ doubt, use our <a href="https://github.com/jaywhj/mkdocs-materialx/discussions">
 
   document.querySelectorAll('a.glightbox').forEach(observeAnchor);
 })();
-        </script></body></html>
+        document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

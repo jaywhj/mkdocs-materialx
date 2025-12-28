@@ -336,7 +336,7 @@ function enableHorizontalWheelScroll() {
 }
 
 
-// 动态处理窄屏换行
+// 为 author-group 添加自适应动态布局
 function handleDocumentDatesAutoWrap() {
     // 设定作者区域最小的显示宽度，大概2个作者宽度
     const AUTHOR_THRESHOLD = 140;
@@ -372,7 +372,7 @@ function initPluginFeatures() {
     });
     enableHorizontalWheelScroll();
 
-    // 观察插件尺寸变化，resize 时动态处理是否换行
+    // 观察插件尺寸变化，resize 时动态处理布局
     if (datesAutoWrapObserver) datesAutoWrapObserver.disconnect();
     datesAutoWrapObserver = new ResizeObserver(() => {
         // 使用 RAF 确保在浏览器重绘前处理，减少视觉跳动

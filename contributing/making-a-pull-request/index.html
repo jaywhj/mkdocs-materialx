@@ -77,6 +77,11 @@
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
         </style></head>
   
   
@@ -359,28 +364,6 @@
     
   
   Reference
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../insiders/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Insiders
 
         </a>
       </li>
@@ -1343,8 +1326,6 @@
       
         
       
-        
-      
     
     
     
@@ -1397,6 +1378,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/changing-the-logo-and-icons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changing the logo and icons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1490,14 +1499,86 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/changing-the-logo-and-icons/" class="md-nav__link">
+      <a href="../../setup/adding-document-dates-authors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Changing the logo and icons
+    Document dates &amp; authors
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/adding-recent-updates-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recent updates module
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/adding-a-git-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a git repository
   
 
     
@@ -1518,14 +1599,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/ensuring-data-privacy/" class="md-nav__link">
+      <a href="../../setup/adding-a-comment-system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ensuring data privacy
+    Adding a comment system
   
 
     
@@ -1797,118 +1878,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../setup/adding-a-git-repository/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding a git repository
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/adding-a-comment-system/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding a comment system
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/building-an-optimized-site/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Building an optimized site
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../setup/building-for-offline-usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Building for offline usage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
       
@@ -1933,7 +1902,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19">
         
           
           <div class="md-nav__link md-nav__container">
@@ -1955,14 +1924,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_20">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2056,10 +2025,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -2355,44 +2320,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugins/projects/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 20H4a2 2 0 0 1-2-2V6c0-1.11.89-2 2-2h6l2 2h7a2 2 0 0 1 2 2H4v10l2.14-8h17.07l-2.28 8.5c-.23.87-1.01 1.5-1.93 1.5"></path></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Projects
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--deprecated" title="Deprecated">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../plugins/search/" class="md-nav__link">
         
   
@@ -2482,44 +2409,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../plugins/typeset/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4v3h5.5v12h3V7H19V4z"></path></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Typeset
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--deprecated" title="Deprecated">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
       
@@ -2540,10 +2429,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12">
         
           
-          <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
             
   
   
@@ -2561,8 +2450,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_14">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3205,44 +3094,44 @@
       
   
   
+    
   
   
+  
     
     
       
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../insiders/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
     
   
-    Insiders
+    Community
   
 
     
@@ -3250,225 +3139,14 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Insiders
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../insiders/getting-started/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../insiders/changelog/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Changelog
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Changelog
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../insiders/upgrade/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to upgrade
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Community
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
     Community
   
 
@@ -3518,7 +3196,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -3540,14 +3218,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6_1" id="__nav_6_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3997,10 +3675,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
             
   
   
@@ -4018,8 +3696,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4320,9 +3998,9 @@
 
 
 <h1 id="pull-requests">Pull Requests<a class="headerlink" href="#pull-requests" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2023-12-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-12-09T16:26:42-05:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2025-12-20"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2025-12-20T16:14:28+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Alexander Voss" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:alex@corealisation.com&quot;&gt;Alexander Voss&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="alex@corealisation.com"></a></div><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Andreas Deininger" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:andreas@deininger.net&quot;&gt;Andreas Deininger&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="andreas@deininger.net"></a></div><div class="avatar-wrapper" data-name="Ilya Grigoriev" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:ilyagr@users.noreply.github.com&quot;&gt;Ilya Grigoriev&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="ilyagr@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="RRC-ETO" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:168771051+RRC-ETO@users.noreply.github.com&quot;&gt;RRC-ETO&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="168771051+RRC-ETO@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Niclas Heinz" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:nheinz@hpost.net&quot;&gt;Niclas Heinz&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="nheinz@hpost.net"></a></div><div class="avatar-wrapper" data-name="Ayussh Verma" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:ayussh.verma@maersk.com&quot;&gt;Ayussh Verma&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="ayussh.verma@maersk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2023-12-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-12-09T16:26:42-05:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2025-12-28"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2025-12-28T14:08:33+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Alexander Voss" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:alex@corealisation.com&quot;&gt;Alexander Voss&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="alex@corealisation.com"></a></div><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Andreas Deininger" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:andreas@deininger.net&quot;&gt;Andreas Deininger&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="andreas@deininger.net"></a></div><div class="avatar-wrapper" data-name="Ilya Grigoriev" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:ilyagr@users.noreply.github.com&quot;&gt;Ilya Grigoriev&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="ilyagr@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="RRC-ETO" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:168771051+RRC-ETO@users.noreply.github.com&quot;&gt;RRC-ETO&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="168771051+RRC-ETO@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Niclas Heinz" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:nheinz@hpost.net&quot;&gt;Niclas Heinz&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="nheinz@hpost.net"></a></div><div class="avatar-wrapper" data-name="Ayussh Verma" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:ayussh.verma@maersk.com&quot;&gt;Ayussh Verma&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="ayussh.verma@maersk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
-<p>You can contribute to Material for MkDocs by making a <a href="https://docs.github.com/en/pull-requests">pull request</a> that
+<p>You can contribute to MaterialX for MkDocs by making a <a href="https://docs.github.com/en/pull-requests">pull request</a> that
 will be reviewed by maintainers and integrated into the main repository when
 the changes made are approved. You can contribute bug fixes, changes to the
 documentation, or new functionality you have developed.</p>
@@ -4350,7 +4028,7 @@ following articles are of particular importance:</p>
 </ol>
 <p>Note that they provide tailored documentation for different operating systems
 and different ways of interacting with GitHub. We do our best in the
-documentation here to describe the process as it applies to Material for MkDocs
+documentation here to describe the process as it applies to MaterialX for MkDocs
 but cannot cover all possible combinations of tools and ways of doing things.
 It is also important that you understand the concept of a pull-request in
 general before continuing.</p>
@@ -4366,12 +4044,12 @@ providing instructions below.</p>
 <pre class="mermaid"><code>sequenceDiagram
   autonumber
 
-  participant mkdocs-material
+  participant mkdocs-materialx
   participant PR
   participant fork
   participant local
 
-  mkdocs-material -&gt;&gt; fork: fork on GitHub
+  mkdocs-materialx -&gt;&gt; fork: fork on GitHub
   fork -&gt;&gt; local: clone to local
   local -&gt;&gt; local: branch
   loop prepare
@@ -4381,13 +4059,13 @@ providing instructions below.</p>
       end
       local -&gt;&gt; fork: push
     end
-    mkdocs-material -&gt;&gt; fork: merge in any changes
+    mkdocs-materialx -&gt;&gt; fork: merge in any changes
     fork -&gt;&gt;+ PR: create draft PR
     PR -&gt;&gt; PR: review your changes
   end</code></pre>
 <ol>
 <li>
-<p>The first step is that you create a fork of the Material for MkDocs
+<p>The first step is that you create a fork of the MaterialX for MkDocs
    repository. This provides you with a repository that you can push changes to.
    Note that it is not possible to have more than one fork of a given repository
    at any point in time. So, the fork you create will be <em>the</em> fork you have.</p>
@@ -4423,7 +4101,7 @@ meaningful commit messages.</p>
 <p>Push your work up to your fork regularly.</p>
 </li>
 <li>
-<p>You should also keep an eye on changes in the Material for MkDocs repository
+<p>You should also keep an eye on changes in the MaterialX for MkDocs repository
    you cloned. This is especially important if you work takes a while. Please
    try and merge any concurrent changes into your fork and into your branch
    regularly. You <em>must</em> do this at least once before creating a pull request,
@@ -4446,7 +4124,7 @@ meaningful commit messages.</p>
     If you received feedback, iterate over the process so far as necessary.</p>
 <p>You should choose a number of projects to test your changes with. You should
 definitely make sure that the changes do not break the building of the
-documentation for Material for MkDocs, which you can find in the <code>docs</code>
+documentation for MaterialX for MkDocs, which you can find in the <code>docs</code>
 folder. You may also want to make sure that relevant examples from the
 <a href="https://github.com/mkdocs-material/examples">examples repository</a> still build fine.</p>
 </li>
@@ -4457,7 +4135,7 @@ your pull request and asking for a more formal and detailed review. The diagram
 below shows the process:</p>
 <pre class="mermaid"><code>sequenceDiagram
   autonumber
-  participant mkdocs-material
+  participant mkdocs-materialx
   participant PR
   participant fork
   participant local
@@ -4470,10 +4148,10 @@ below shows the process:</p>
       PR -&gt;&gt; PR: discussion
       local -&gt;&gt; fork: push further changes
     end
-    PR -&gt;&gt; mkdocs-material: merge (and squash)
+    PR -&gt;&gt; mkdocs-materialx: merge (and squash)
     deactivate PR
     fork -&gt;&gt; fork: delete branch
-    mkdocs-material -&gt;&gt; fork: pull
+    mkdocs-materialx -&gt;&gt; fork: pull
     local -&gt;&gt; local: delete branch
     fork -&gt;&gt; local: pull
   end</code></pre>
@@ -4543,11 +4221,11 @@ the translation from the command-line instructions should be simple enough.  We
 will add notes only where really necessary to keep the complexity of this to a
 reasonable level.</p>
 <h3 id="forking-the-repository">Forking the repository<a class="headerlink" href="#forking-the-repository" title="Permanent link">¶</a></h3>
-<p>To make changes to Material for MkDocs, you would first fork one of its
+<p>To make changes to MaterialX for MkDocs, you would first fork one of its
 repositories on GitHub. This is so that you have a repository on GitHub that
 you can push changes to (only maintainers and collaborators have write access
 to the original repositories).</p>
-<p>Fork the <a href="https://github.com/squidfunk/mkdocs-material">repository</a> if you want to make changes to code or to the documentation.
+<p>Fork the <a href="https://github.com/jaywhj/mkdocs-materialx">repository</a> if you want to make changes to code or to the documentation.
 It is a good idea to change the name of the repository by appending <code>-fork</code> so
 that people who come across it know that they have found a temporary fork rather
 than the original or a permanent fork of the project. You may also want to add
@@ -4578,18 +4256,18 @@ will work against that branch in your fork by default.</p>
 <h3 id="merging-concurrent-changes">Merging concurrent changes<a class="headerlink" href="#merging-concurrent-changes" title="Permanent link">¶</a></h3>
 <p>If the work you do takes some time then the chances increase that changes will
 be made to the main repository while you work. It is probably a good idea to set
-up the original Material for MkDocs repository as an <code>upstream</code> repository for
+up the original MaterialX for MkDocs repository as an <code>upstream</code> repository for
 your local clone.</p>
 <p>This is what it might look like:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>origin<span class="w">  </span>git@github.com:&lt;your_username&gt;/mkdocs-material-fork.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>origin<span class="w">  </span>git@github.com:&lt;your_username&gt;/mkdocs-material-fork.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="hll">$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/squidfunk/mkdocs-material.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>origin<span class="w">  </span>git@github.com:&lt;your_username&gt;/mkdocs-materialx-fork.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>origin<span class="w">  </span>git@github.com:&lt;your_username&gt;/mkdocs-materialx-fork.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="hll">$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/jaywhj/mkdocs-materialx.git
 </span></span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>origin<span class="w">  </span>git@github.com:alexvoss/mkdocs-material-fork.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>origin<span class="w">  </span>git@github.com:alexvoss/mkdocs-material-fork.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>upstream<span class="w">    </span>https://github.com/squidfunk/mkdocs-material.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>upstream<span class="w">    </span>https://github.com/squidfunk/mkdocs-material.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>origin<span class="w">  </span>git@github.com:alexvoss/mkdocs-materialx-fork.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>origin<span class="w">  </span>git@github.com:alexvoss/mkdocs-materialx-fork.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>upstream<span class="w">    </span>https://github.com/jaywhj/mkdocs-materialx.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>upstream<span class="w">    </span>https://github.com/jaywhj/mkdocs-materialx.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
 </span></code></pre></div>
 <p>After you have done this, you can pull any concurrent changes from the upstream
 repository directly into your clone and do any necessary merges there, then push
@@ -4606,7 +4284,7 @@ and do not create any unintended side effects. You should test them on at least
 these three <a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)">smoke tests</a>:</p>
 <ul>
 <li>
-<p>The documentation of Material for MkDocs itself. If you set up and run the
+<p>The documentation of MaterialX for MkDocs itself. If you set up and run the
 development environment as outlined in the <a href="../../customization/#environment-setup">instructions for setting up the
 development environment</a>, <code>mkdocs serve</code> should be running and continuously
 building the documentation. Check that there are no error messages and, ideally,
@@ -4620,7 +4298,7 @@ to build a project to serve as a test suite. It can double as documentation that
 shows how your new feature is meant to work.</p>
 </li>
 <li>
-<p>Test with relevant examples from the <a href="https://github.com/mkdocs-material/examples">Material for MkDocs Examples</a>
+<p>Test with relevant examples from the <a href="https://github.com/mkdocs-material/examples">MaterialX for MkDocs Examples</a>
   repository.</p>
 </li>
 <li>
@@ -4634,7 +4312,7 @@ you. We do not provide specific instructions for using the interfaces as GitHub
 provide all the information that should be necessary.</p>
 <h3 id="commits-messages-mistakes-and-squash">Commits, messages, mistakes and 'squash'<a class="headerlink" href="#commits-messages-mistakes-and-squash" title="Permanent link">¶</a></h3>
 <h3 id="deleting-branches">Deleting branches<a class="headerlink" href="#deleting-branches" title="Permanent link">¶</a></h3>
-<p>Once the pull request has been merged into the master branch of the Material
+<p>Once the pull request has been merged into the master branch of the MaterialX
 for MkDocs repository, you should remove the branch both from the fork on
 GitHub and from the local clone on your computer. This avoids possible
 confusion about the state of development.</p>
@@ -4644,7 +4322,7 @@ delete the branch used for the PR using <code>git branch -d &lt;name&gt;</code>.
 <p>It is important that subsequent pull requests are started from an up-to-date
 history of the <code>master</code> branch. One way to achieve this is to delete the fork
 and start with an entirely new one next time round.</p>
-<p>If you contribute to Material for MkDocs more often or just happen to be
+<p>If you contribute to MaterialX for MkDocs more often or just happen to be
 doing two or more pull requests in succession, you can also just make sure
 to sync your fork (using the GitHub UI) and pull from it into your local
 repository. So, just delete the topic branch you created (both locally and in
@@ -4668,7 +4346,7 @@ your fork) and pull from the main repository's <code>master</code> branch into y
 </li>
 <li>
 <p><strong>Do</strong> ask yourself if what you are doing benefits the wider community and
-   makes Material for MkDocs a better product.</p>
+   makes MaterialX for MkDocs a better product.</p>
 </li>
 <li>
 <p><strong>Do</strong> ask yourself if the cost of making the changes stands in a good
@@ -4894,4 +4572,5 @@ your fork) and pull from the main repository's <code>master</code> branch into y
 
   document.querySelectorAll('a.glightbox').forEach(observeAnchor);
 })();
-        </script></body></html>
+        document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
