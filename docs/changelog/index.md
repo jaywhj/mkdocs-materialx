@@ -7,10 +7,13 @@
 - **New**: Show `git repo` in sidebar on mobile
 - **New**: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors/)
 - **New**: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module/)
+- **Fixed**: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
+- **Fixed**: iconsearch_index.json write issue
 - **Fixed**: Language selector escapes viewport when too wide on mobile
 - **Fixed**: Replace gap to increase compatibility
 - **Fixed**: Adjust the style for kbd styles
 - **Fixed**: Adjust the border-radius of all styles
+- **Fixed**: Adjust UI shadow effect
 - **Fixed**: Merge the upstream 9.7.1 update
 - **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
