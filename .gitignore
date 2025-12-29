@@ -30,6 +30,8 @@ venv
 
 # Build files
 build
+!tools/build
+!tools/
 site
 
 # Distribution files

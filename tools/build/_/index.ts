@@ -185,8 +185,11 @@ export function write(file: string, data: string): Observable<string> {
     return of(file)
   } else {
     cache.set(file, data)
-    return defer(() => fs.writeFile(file, data))
+    // 修复bug：写入前自动创建不存在的多层级目录
+    const dir = path.dirname(file)
+    return defer(() => fs.mkdir(dir, { recursive: true }))
       .pipe(
+        switchMap(() => fs.writeFile(file, data)),
         map(() => file),
         process.argv.includes("--verbose")
           ? tap(file => console.log(`${now()} + ${file}`))
