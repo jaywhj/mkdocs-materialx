@@ -1,488 +1,391 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/</loc>
-        <lastmod>2023-09-12</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/alternatives/</loc>
-        <lastmod>2023-02-16</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/alternatives/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/browser-support/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/browser-support/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/conventions/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/conventions/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/creating-your-site/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/creating-your-site/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/customization/</loc>
-        <lastmod>2025-12-17</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/customization/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/getting-started/</loc>
-        <lastmod>2025-12-17</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/getting-started/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/license/</loc>
-        <lastmod>2025-01-04</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/license/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/philosophy/</loc>
-        <lastmod>2024-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/philosophy/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/publishing-your-site/</loc>
-        <lastmod>2025-12-17</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/publishing-your-site/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/upgrade/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/upgrade/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/</loc>
-        <lastmod>2022-09-13</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/adding-a-badge-to-your-project/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/adding-a-badge-to-your-project/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/blog-support-just-landed/</loc>
-        <lastmod>2025-12-17</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/blog-support-just-landed/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/chinese-search-support/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/chinese-search-support/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/excluding-content-from-search/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/excluding-content-from-search/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/git-sparse-checkout/</loc>
-        <lastmod>2023-09-23</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/git-sparse-checkout/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/goodbye-github-discussions/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/goodbye-github-discussions/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/insiders-now-free-for-everyone/</loc>
-        <lastmod>2025-11-27</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/insiders-now-free-for-everyone/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/search-better-faster-smaller/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/search-better-faster-smaller/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/sunsetting-gitter/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/sunsetting-gitter/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/the-past-present-and-future/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/the-past-present-and-future/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/transforming-material-for-mkdocs/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/transforming-material-for-mkdocs/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/zensical/</loc>
-        <lastmod>2025-11-27</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/blog/posts/zensical/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/changelog/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/changelog/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/adding-translations/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/adding-translations/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/making-a-pull-request/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/making-a-pull-request/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-bug/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/reporting-a-docs-issue/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/requesting-a-change/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/contributing/requesting-a-change/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/guides/creating-a-reproduction/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/guides/creating-a-reproduction/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/getting-started/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/getting-started/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/upgrade/</loc>
-        <lastmod>2024-05-21</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/upgrade/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/changelog/</loc>
-        <lastmod>2025-08-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/insiders/changelog/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/</loc>
-        <lastmod>2023-10-03</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/blog/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/blog/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/group/</loc>
-        <lastmod>2023-12-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/group/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/info/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/info/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/meta/</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/meta/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/offline/</loc>
-        <lastmod>2025-05-27</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/offline/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/optimize/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/optimize/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/privacy/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/privacy/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/projects/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/projects/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/search/</loc>
-        <lastmod>2024-04-25</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/search/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/social/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/social/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/tags/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/tags/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/typeset/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/typeset/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/requirements/caching/</loc>
-        <lastmod>2023-09-15</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/requirements/caching/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/requirements/image-processing/</loc>
-        <lastmod>2024-05-14</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/requirements/image-processing/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/admonitions/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/admonitions/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/annotations/</loc>
-        <lastmod>2024-02-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/annotations/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/buttons/</loc>
-        <lastmod>2024-02-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/buttons/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/content-tabs/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/content-tabs/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/data-tables/</loc>
-        <lastmod>2024-02-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/data-tables/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/diagrams/</loc>
-        <lastmod>2025-08-02</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/diagrams/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/footnotes/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/footnotes/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/formatting/</loc>
-        <lastmod>2024-04-24</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/formatting/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/grids/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/grids/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/icons-emojis/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/icons-emojis/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/images/</loc>
-        <lastmod>2024-10-30</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/images/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/lists/</loc>
-        <lastmod>2024-02-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/lists/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/math/</loc>
-        <lastmod>2024-10-08</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/math/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/reference/tooltips/</loc>
-        <lastmod>2024-02-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/tooltips/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-comment-system/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-comment-system/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/</loc>
-        <lastmod>2025-12-28</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/building-an-optimized-site/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/building-an-optimized-site/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/building-for-offline-usage/</loc>
-        <lastmod>2025-05-27</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/building-for-offline-usage/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-fonts/</loc>
-        <lastmod>2023-11-08</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-fonts/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-language/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/ensuring-data-privacy/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-a-blog/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-a-blog/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-navigation/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-analytics/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-search/</loc>
-        <lastmod>2023-09-15</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-site-search/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-social-cards/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-social-cards/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-tags/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-tags/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-footer/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-header/</loc>
-        <lastmod>2025-10-13</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-the-header/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-versioning/</loc>
-        <lastmod>2025-02-02</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-versioning/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/</loc>
-        <lastmod>2023-09-22</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown-extensions/</loc>
-        <lastmod>2024-10-30</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown-extensions/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/</loc>
-        <lastmod>2024-03-29</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/extensions/python-markdown/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/basic/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/basic/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/engage/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/engage/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/navigation/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/blogs/navigation/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/social/basic/</loc>
-        <lastmod>2025-12-20</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/social/basic/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
     <url>
-        <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/social/custom/</loc>
-        <lastmod>2025-11-07</lastmod>
-        <changefreq>daily</changefreq>
+         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/social/custom/</loc>
+         <lastmod>2025-12-29</lastmod>
     </url>
 </urlset>
