@@ -164,7 +164,7 @@ export function mountBackToTop(
       distinctUntilKeyChanged("height")
     )
       .subscribe(({ height }) => {
-        el.style.bottom = `${height + 16}px`
+        el.style.bottom = `${height}px`
       })
 
   /* Go back to top */

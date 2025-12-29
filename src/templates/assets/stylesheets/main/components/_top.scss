@@ -27,16 +27,16 @@
 // Back-to-top button
 .md-top {
   position: fixed;
-  bottom: px2rem(48px + 16px);
+  bottom: px2rem(48px);
   z-index: 2;
   display: flex;
   gap: px2rem(8px);
   padding: px2rem(8px) px2rem(16px) px2rem(8px) px2rem(12px);
   margin-inline-start: 50%;
   font-size: px2rem(14px);
-  color: var(--md-accent-fg-color);   // var(--md-default-fg-color)
+  color: var(--md-default-fg-color);   // --md-default-fg-color    --md-accent-fg-color
   cursor: pointer;
-  background-color: var(--md-default-bg-color--light);
+  background-color: var(--md-default-fg-color--lightest);
   backdrop-filter: blur(px2rem(8px));
   border-radius: px2rem(32px);
   outline: none;
