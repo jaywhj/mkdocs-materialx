@@ -213,7 +213,7 @@ The following configuration options are supported:
 
 <!-- md:option document-dates.exclude -->
 
-:   <!-- md:default `[]` --> This option specifies a list of excluded files:
+:   <!-- md:default none --> This option specifies a list of excluded files:
 
     ``` yaml
     plugins:
