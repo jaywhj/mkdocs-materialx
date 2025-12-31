@@ -20,9 +20,10 @@
   IN THE SOFTWARE.
 -->
 
+{#-
 <!-- Render date of last update -->
 {% macro render_updated(date) %}
-  <span>
+  <span class="dd-item">
     <span class="material-icons" data-icon="doc_updated" title="{{ lang.t('source.file.date.updated') }}"></span>
     <time datetime="{{ date }}" title="{{ date[:19].replace('T', ' ') }}"></time>
   </span>
@@ -30,7 +31,7 @@
 
 <!-- Render date of creation -->
 {% macro render_created(date) %}
-  <span>
+  <span class="dd-item">
     <span class="material-icons" data-icon="doc_created" title="{{ lang.t('source.file.date.created') }}"></span>
     <time datetime="{{ date }}" title="{{ date[:19].replace('T', ' ') }}"></time>
   </span>
@@ -42,31 +43,14 @@
 {% macro render_authors(authors) %}
   {%- set icon = 'doc_author' if authors|length == 1 else 'doc_authors' %}
   <span class="material-icons" data-icon="{{ icon }}" title="{{ lang.t('source.file.contributors') }}"></span>
-
-  {#- Render authors (avatar mode) #}
-  <div class="avatar-group">
+  <div class="author-group">
     {%- for author in authors %}
     <div class="avatar-wrapper" data-name="{{ author.name }}" title="{{ author.name }}">
       <span class="avatar-text"></span>
-      <img class="avatar" src="{{ author.avatar }}" onerror="this.style.display='none'" />
+      <img class="avatar" data-src="{{ author.avatar }}" data-email="{{ author.email }}" />
     </div>
     {%- endfor %}
   </div>
-<!-- 
-  {#- Render authors (text mode) #}
-  <nav>
-  {% for author in authors %}
-    {%- if author.url -%}
-      <a href="{{ author.url }}" target="_blank">{{ author.name }}</a>
-    {%- elif author.email -%}
-      <a href="mailto:{{ author.email }}">{{ author.name }}</a>
-    {%- else -%}
-      {{ author.name }}
-    {%- endif -%}
-    {%- if loop.revindex > 1 %}, {% endif -%}
-  {% endfor %}
-  </nav>
--->
 {% endmacro %}
 
 <!-- ---------------------------------------------------------------------- -->
@@ -131,14 +115,11 @@
 {% endmacro %}
 
 <!-- ---------------------------------------------------------------------- -->
-
 {% if page.meta %}
-  <!-- Determine date of creation -->
   {% if page.meta.document_dates_created %}
     {% set created = page.meta.document_dates_created %}
   {% endif %}
 
-  <!-- Determine date of last update -->
   {% if page.meta.document_dates_updated %}
     {% set updated = page.meta.document_dates_updated %}
   {% endif %}
@@ -149,23 +130,28 @@
 {% endif %}
 
 <!-- Source file information -->
-{% if updated or created or git_info or committers %}
-  <div class="document-dates-plugin">
-<!-- 
-    {% if created %}
-      {{ render_created(created) }}
-    {% endif %}
+<div class="document-dates-plugin">
+  <div class="dd-left">
+  {%- if created %}
+    {{ render_created(created) }}
+  {%- endif %}
 
-    {% if updated %}
-      {{ render_updated(updated) }}
-    {% endif %}
-
-    {% if page_authors %}
-      {{ render_authors(page_authors) }}
-    {% endif %}
--->
-    {% if committers %}
-      {{ render_committers(committers) }}
-    {% endif %}
+  {%- if updated %}
+    {{ render_updated(updated) }}
+  {%- endif %}
   </div>
-{% endif %}
+
+  {%- if page_authors %}
+  <div class="dd-right">
+    {{ render_authors(page_authors) }}
+  </div>
+  {%- endif %}
+</div>
+
+{%- if committers %}
+<aside class="md-source-file">
+  {{ render_committers(committers) }}
+</aside>
+{%- endif %}
+
+-#}
