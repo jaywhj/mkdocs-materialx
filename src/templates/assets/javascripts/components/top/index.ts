@@ -33,6 +33,10 @@ import {
   ignoreElements,
   map,
   repeat,
+  scan,
+  filter,
+  merge,
+  withLatestFrom,
   skip,
   takeUntil,
   tap
@@ -94,14 +98,44 @@ export function watchBackToTop(
   _el: HTMLElement, { viewport$, main$, target$ }: WatchOptions
 ): Observable<BackToTop> {
 
-  /* Compute direction */
-  const direction$ = viewport$
-    .pipe(
-      map(({ offset: { y } }) => y),
-      bufferCount(2, 1),
-      map(([a, b]) => a > b && b > 0),
-      distinctUntilChanged()
-    )
+  /* Compute direction (with jitter guard) */
+  const DIRECTION_THRESHOLD = 12
+
+  const direction$ = viewport$.pipe(
+    map(({ offset: { y } }) => y),
+
+    bufferCount(2, 1),
+    map(([prev, curr]) => curr - prev),
+
+    scan((acc, delta) => {
+      const next =
+        Math.sign(acc) === Math.sign(delta)
+          ? acc + delta
+          : delta
+
+      // clamp，防止无限增大
+      return Math.max(
+        -DIRECTION_THRESHOLD * 2,
+        Math.min(DIRECTION_THRESHOLD * 2, next)
+      )
+    }, 0),
+
+    map(acc => {
+      if (acc <= -DIRECTION_THRESHOLD) return true
+      if (acc >=  DIRECTION_THRESHOLD) return false
+      return null
+    }),
+
+    // 保留“确认型语义”
+    filter((v): v is boolean => v !== null),
+
+    // 补充“非顶部”条件（仅在确认时判断）
+    withLatestFrom(viewport$),
+    filter(([, vp]) => vp.offset.y > 0),
+    map(([dir]) => dir),
+
+    distinctUntilChanged()
+  )
 
   /* Compute whether main area is active */
   const active$ = main$
@@ -109,8 +143,21 @@ export function watchBackToTop(
       map(({ active }) => active)
     )
 
+    /* NEW: Detect reaching top */
+  const atTop$ = viewport$
+    .pipe(
+      map(({ offset: { y } }) => y === 0),
+      distinctUntilChanged(),
+      filter(Boolean)
+    )
+
+    const effectiveDirection$ = merge(
+    direction$,
+    atTop$.pipe(map(() => false))
+  )
+
   /* Compute threshold for hiding */
-  return combineLatest([active$, direction$])
+  return combineLatest([active$, effectiveDirection$])
     .pipe(
       map(([active, direction]) => !(active && direction)),
       distinctUntilChanged(),
@@ -143,6 +190,10 @@ export function mountBackToTop(
       el.hidden = hidden
       if (hidden) {
         el.setAttribute("tabindex", "-1")
+        // 主动移除按钮焦点，恢复非选中状态
+        if (button instanceof HTMLElement) {
+          button.blur()
+        }
         el.blur()
       } else {
         el.removeAttribute("tabindex")
