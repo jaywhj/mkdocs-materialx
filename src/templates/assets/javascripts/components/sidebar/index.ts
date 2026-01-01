@@ -202,6 +202,19 @@ export function mountSidebar(
         }
       })
 
+    /* Hide TOC on selection */
+    if (el.classList.contains("md-sidebar--secondary")) {
+      fromEvent(el, "click")
+        .subscribe(event => {
+          const target = event.target as HTMLElement
+          if (target.closest(".md-nav__link")) {
+            const toggle = document.querySelector<HTMLInputElement>("[data-md-toggle='toc']")
+            if (toggle && toggle.checked)
+              toggle.click()
+          }
+        })
+    }
+
     /* Handle accessibility for expandable items, see https://bit.ly/3jaod9p */
     from(getElements<HTMLLabelElement>("label[tabindex]", el))
       .pipe(

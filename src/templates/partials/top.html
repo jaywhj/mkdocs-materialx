@@ -20,9 +20,23 @@
   IN THE SOFTWARE.
 -->
 
-<!-- Back-to-top button -->
-<button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  {% set icon = config.theme.icon.top or "material/arrow-up" %}
-  {% include ".icons/" ~ icon ~ ".svg" %}
-  {{ lang.t("top") }}
-</button>
+<!-- Back-to-top container -->
+<div class="md-top" data-md-component="top" hidden>
+  
+  <!-- Show navigation -->
+  <label class="md-top__button" for="__drawer">
+    {% include ".icons/material/format-list-numbered.svg" %}
+  </label>
+
+  <!-- Back to top -->
+  <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+    {% set icon = config.theme.icon.top or "material/arrow-up" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+    <span>{{ lang.t("top") }}</span>
+  </button>
+
+  <!-- Show table of contents -->
+  <label class="md-top__button" for="__toc">
+    {% include ".icons/material/format-list-numbered-rtl.svg" %}
+  </label>
+</div>

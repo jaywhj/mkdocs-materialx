@@ -4,6 +4,7 @@
 
 ### 10.0.4 <small>December 19, 2025</small> { id="10.0.4" }
 
+- **New**: Refactor the nav and toc components for mobile, now you can experience nav and toc perfectly on mobile!
 - **New**: Show `git repo` in sidebar on mobile
 - **New**: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors/)
 - **New**: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module/)
