@@ -58,6 +58,7 @@
       background-color: var(--md-default-bg-color--light);
       backdrop-filter: blur(px2rem(8px));
       border-radius: px2rem(16px);
+      overflow: hidden;
       transition:
         transform  250ms cubic-bezier(0.5, 0, 0.5, 0),
         box-shadow 250ms;
@@ -128,6 +129,7 @@
       background-color: var(--md-default-bg-color--light);
       backdrop-filter: blur(px2rem(8px));
       border-radius: px2rem(16px);
+      overflow: hidden;
       transition:
         transform  250ms cubic-bezier(0.5, 0, 0.5, 0),
         box-shadow 250ms;

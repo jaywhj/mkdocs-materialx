@@ -327,6 +327,7 @@
   // Table of contents
   &--secondary {
     margin-block: px2rem(2px);
+    margin-left: -1px;
 
     // Adjust spacing
     .md-nav {
@@ -344,8 +345,7 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(7px) px2rem(10px);
-        margin-inline: px2rem(4px);
+        padding: px2rem(16px);
         font-weight: 700;
         background: var(--md-default-bg-color);
 
