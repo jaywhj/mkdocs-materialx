@@ -54,7 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100%;
+  min-height: 100dvh;
   // Hack: reset `font-size` to `10px`, so the spacing for all inline elements
   // is correct again. Otherwise the spacing would be based on `20px`.
   font-size: px2rem(10px);
