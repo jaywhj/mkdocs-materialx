@@ -31,12 +31,16 @@
   z-index: 2;
   display: flex;
   justify-content: center;
-  gap: px2rem(30px);
   margin-inline-start: 50%;
   transform: translate(-50%, 0);
   transition:
     transform 125ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity   125ms;
+
+  // Add spacing between buttons for browsers that don't support gap
+  &__button:not(:last-child) {
+    margin-inline-end: px2rem(30px);
+  }
 
   // [print]: Hide back-to-top button
   @media print {
@@ -84,7 +88,11 @@
       width: auto;
       max-width: calc(100vw - px2rem(180px)); // Dynamic width: 100vw - (2 * side_btn + 2 * gap + margins)
       padding: px2rem(8px) px2rem(16px) px2rem(8px) px2rem(12px);
-      gap: px2rem(8px);
+
+      // Add spacing between icon and text for browsers that don't support gap
+      svg {
+        margin-inline-end: px2rem(8px);
+      }
 
       // Text container
       span {
