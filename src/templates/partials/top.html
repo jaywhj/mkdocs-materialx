@@ -36,7 +36,9 @@
   </button>
 
   <!-- Show table of contents -->
+  {% if "toc.integrate" not in features %}
   <label class="md-top__button" for="__toc">
     {% include ".icons/material/format-list-numbered-rtl.svg" %}
   </label>
+  {% endif %}
 </div>
