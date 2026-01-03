@@ -67,7 +67,7 @@ import {
   mountPalette,
   mountProgress,
   mountSearch,
-  mountSearchHiglight,
+  mountSearchHighlight,
   mountSidebar,
   mountSource,
   mountTableOfContents,
@@ -121,54 +121,54 @@ function fetchSearchIndex(): Observable<SearchIndex> {
  * Application
  * ------------------------------------------------------------------------- */
 
-/* Yay, JavaScript is available */
+// Yay, JavaScript is available
 document.documentElement.classList.remove("no-js")
 document.documentElement.classList.add("js")
 
-/* Set up navigation observables and subjects */
+// Set up navigation observables and subjects
 const document$ = watchDocument()
 const location$ = watchLocation()
 const target$   = watchLocationTarget(location$)
 const keyboard$ = watchKeyboard()
 
-/* Set up media observables */
+// Set up media observables
 const viewport$ = watchViewport()
 const tablet$   = watchMedia("(min-width: 60em)")
 const screen$   = watchMedia("(min-width: 76.25em)")
 const print$    = watchPrint()
 
-/* Retrieve search index, if search is enabled */
+// Retrieve search index, if search is enabled
 const config = configuration()
 const index$ = document.forms.namedItem("search")
   ? fetchSearchIndex()
   : NEVER
 
-/* Set up Clipboard.js integration */
+// Set up Clipboard.js integration
 const alert$ = new Subject<string>()
 setupClipboardJS({ alert$ })
 
-/* Set up language selector */
+// Set up language selector
 setupAlternate({ document$ })
 
-/* Set up progress indicator */
+// Set up progress indicator
 const progress$ = new Subject<number>()
 
-/* Set up sitemap for instant navigation and previews */
+// Set up sitemap for instant navigation and previews
 const sitemap$ = fetchSitemap(config.base)
 
-/* Set up instant navigation, if enabled */
+// Set up instant navigation, if enabled
 if (feature("navigation.instant"))
   setupInstantNavigation({ sitemap$, location$, viewport$, progress$ })
     .subscribe(document$)
 
-/* Set up version selector */
+// Set up version selector
 if (config.version?.provider === "mike")
   setupVersionSelector({ document$ })
 
-/* Always close drawer and search on navigation */
+// Always close drawer and search on navigation
 merge(location$, target$)
   .pipe(
-    delay(50)
+    delay(100)
   )
     .subscribe(() => {
       setToggle("drawer", false)
@@ -176,7 +176,7 @@ merge(location$, target$)
       setToggle("toc", false)
     })
 
-/* Set up global keyboard handlers */
+// Set up global keyboard handlers
 keyboard$
   .pipe(
     filter(({ mode }) => mode === "global")
@@ -184,7 +184,7 @@ keyboard$
     .subscribe(key => {
       switch (key.type) {
 
-        /* Go to previous page */
+        // Go to previous page
         case "p":
         case ",":
           const prev = getOptionalElement<HTMLLinkElement>("link[rel=prev]")
@@ -192,7 +192,7 @@ keyboard$
             setLocation(prev)
           break
 
-        /* Go to next page */
+        // Go to next page
         case "n":
         case ".":
           const next = getOptionalElement<HTMLLinkElement>("link[rel=next]")
@@ -200,7 +200,7 @@ keyboard$
             setLocation(next)
           break
 
-        /* Expand navigation, see https://bit.ly/3ZjG5io */
+        // Expand navigation, see https://bit.ly/3ZjG5io
         case "Enter":
           const active = getActiveElement()
           if (active instanceof HTMLLabelElement)
@@ -208,13 +208,13 @@ keyboard$
       }
     })
 
-/* Set up patches */
+// Set up patches
 patchEllipsis({ viewport$, document$ })
 patchIndeterminate({ document$, tablet$ })
 patchScrollfix({ document$ })
 patchScrolllock({ viewport$, tablet$ })
 
-/* Set up header and main area observable */
+// Set up header and main area observable
 const header$ = watchHeader(getComponentElement("header"), { viewport$ })
 const main$ = document$
   .pipe(
@@ -223,83 +223,83 @@ const main$ = document$
     shareReplay(1)
   )
 
-/* Set up control component observables */
+// Set up control component observables
 const control$ = merge(
 
-  /* Consent */
+  // Consent
   ...getComponentElements("consent")
     .map(el => mountConsent(el, { target$ })),
 
-  /* Dialog */
+  // Dialog
   ...getComponentElements("dialog")
     .map(el => mountDialog(el, { alert$ })),
 
-  /* Color palette */
+  // Color palette
   ...getComponentElements("palette")
     .map(el => mountPalette(el)),
 
-  /* Progress bar */
+  // Progress bar
   ...getComponentElements("progress")
     .map(el => mountProgress(el, { progress$ })),
 
-  /* Search */
+  // Search
   ...getComponentElements("search")
     .map(el => mountSearch(el, { index$, keyboard$ })),
 
-  /* Repository information */
+  // Repository information
   ...getComponentElements("source")
     .map(el => mountSource(el))
 )
 
-/* Set up content component observables */
+// Set up content component observables
 const content$ = defer(() => merge(
 
-  /* Announcement bar */
+  // Announcement bar
   ...getComponentElements("announce")
     .map(el => mountAnnounce(el)),
 
-  /* Content */
+  // Content
   ...getComponentElements("content")
     .map(el => mountContent(el, { sitemap$, viewport$, target$, print$ })),
 
-  /* Search highlighting */
+  // Search highlighting
   ...getComponentElements("content")
     .map(el => feature("search.highlight")
-      ? mountSearchHiglight(el, { index$, location$ })
+      ? mountSearchHighlight(el, { index$, location$ })
       : EMPTY
     ),
 
-  /* Header */
+  // Header
   ...getComponentElements("header")
     .map(el => mountHeader(el, { viewport$, header$, main$ })),
 
-  /* Header title */
+  // Header title
   ...getComponentElements("header-title")
     .map(el => mountHeaderTitle(el, { viewport$, header$ })),
 
-  /* Sidebar */
+  // Sidebar
   ...getComponentElements("sidebar")
     .map(el => el.getAttribute("data-md-type") === "navigation"
       ? at(screen$, () => mountSidebar(el, { viewport$, header$, main$ }))
       : at(tablet$, () => mountSidebar(el, { viewport$, header$, main$ }))
     ),
 
-  /* Navigation tabs */
+  // Navigation tabs
   ...getComponentElements("tabs")
     .map(el => mountTabs(el, { viewport$, header$ })),
 
-  /* Table of contents */
+  // Table of contents
   ...getComponentElements("toc")
     .map(el => mountTableOfContents(el, {
       viewport$, header$, main$, target$
     })),
 
-  /* Back-to-top button */
+  // Back-to-top button
   ...getComponentElements("top")
     .map(el => mountBackToTop(el, { viewport$, header$, main$, target$ }))
 ))
 
-/* Set up component observables */
+// Set up component observables
 const component$ = document$
   .pipe(
     switchMap(() => content$),
@@ -307,21 +307,21 @@ const component$ = document$
     shareReplay(1)
   )
 
-/* Subscribe to all components */
+// Subscribe to all components
 component$.subscribe()
 
 /* ----------------------------------------------------------------------------
  * Exports
  * ------------------------------------------------------------------------- */
 
-window.document$  = document$          /* Document observable */
-window.location$  = location$          /* Location subject */
-window.target$    = target$            /* Location target observable */
-window.keyboard$  = keyboard$          /* Keyboard observable */
-window.viewport$  = viewport$          /* Viewport observable */
-window.tablet$    = tablet$            /* Media tablet observable */
-window.screen$    = screen$            /* Media screen observable */
-window.print$     = print$             /* Media print observable */
-window.alert$     = alert$             /* Alert subject */
-window.progress$  = progress$          /* Progress indicator subject */
-window.component$ = component$         /* Component observable */
+window.document$  = document$          // Document observable
+window.location$  = location$          // Location subject
+window.target$    = target$            // Location target observable
+window.keyboard$  = keyboard$          // Keyboard observable
+window.viewport$  = viewport$          // Viewport observable
+window.tablet$    = tablet$            // Media tablet observable
+window.screen$    = screen$            // Media screen observable
+window.print$     = print$             // Media print observable
+window.alert$     = alert$             // Alert subject
+window.progress$  = progress$          // Progress indicator subject
+window.component$ = component$         // Component observable

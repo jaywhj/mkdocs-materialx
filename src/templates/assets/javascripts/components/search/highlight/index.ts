@@ -73,7 +73,7 @@ interface MountOptions {
  *
  * @returns Search highlighting component observable
  */
-export function mountSearchHiglight(
+export function mountSearchHighlight(
   el: HTMLElement, { index$, location$ }: MountOptions
 ): Observable<Component<SearchHighlight>> {
   return combineLatest([

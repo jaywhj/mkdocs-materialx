@@ -33,6 +33,7 @@ import {
   endWith,
   filter,
   finalize,
+  fromEvent,
   ignoreElements,
   map,
   merge,
@@ -58,6 +59,7 @@ import {
   getElements,
   getLocation,
   getOptionalElement,
+  setToggle,
   watchElementSize
 } from "~/browser"
 
@@ -335,6 +337,16 @@ export function mountTableOfContents(
             }
           })
     }
+
+    /* Set up anchor tracking, if enabled */
+    fromEvent(el, "click")
+      .pipe(takeUntil(done$))
+      .subscribe(event => {
+        const target = event.target as HTMLElement
+        if (target.closest(".md-nav__link")) {
+          setToggle("toc", false)
+        }
+      })
 
     /* Set up anchor tracking, if enabled */
     if (feature("navigation.tracking"))

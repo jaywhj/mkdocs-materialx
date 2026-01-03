@@ -37,9 +37,9 @@ import { getElement } from "../element"
  * Toggle
  */
 export type Toggle =
-  | "drawer"                           /* Toggle for drawer */
-  | "search"                           /* Toggle for search */
-  | "toc"                              /* Toggle for table of contents */
+  | "drawer"                           // Toggle for drawer
+  | "search"                           // Toggle for search
+  | "toc"                              // Toggle for table of contents
 
 /* ----------------------------------------------------------------------------
  * Data
@@ -85,7 +85,7 @@ export function setToggle(name: Toggle, value: boolean): void {
     toggles[name].click()
 }
 
-/* ------------------------------------------------------------------------- */
+// -------------------------------------------------------------------------
 
 /**
  * Watch toggle

@@ -51,7 +51,6 @@ import {
   getElementSize,
   getElements
 } from "~/browser"
-import { setToggle, getToggle } from "~/browser/toggle"
 
 import { Component } from "../_"
 import { Header } from "../header"
@@ -66,8 +65,8 @@ import { mountInlineTooltip2 } from "../tooltip2"
  * Sidebar
  */
 export interface Sidebar {
-  height: number                       /* Sidebar height */
-  locked: boolean                      /* Sidebar is locked */
+  height: number                       // Sidebar height
+  locked: boolean                      // Sidebar is locked
 }
 
 /* ----------------------------------------------------------------------------
@@ -78,17 +77,17 @@ export interface Sidebar {
  * Watch options
  */
 interface WatchOptions {
-  viewport$: Observable<Viewport>      /* Viewport observable */
-  main$: Observable<Main>              /* Main area observable */
+  viewport$: Observable<Viewport>      // Viewport observable
+  main$: Observable<Main>              // Main area observable
 }
 
 /**
  * Mount options
  */
 interface MountOptions {
-  viewport$: Observable<Viewport>      /* Viewport observable */
-  header$: Observable<Header>          /* Header observable */
-  main$: Observable<Main>              /* Main area observable */
+  viewport$: Observable<Viewport>      // Viewport observable
+  header$: Observable<Header>          // Header observable
+  main$: Observable<Main>              // Main area observable
 }
 
 /* ----------------------------------------------------------------------------
@@ -116,7 +115,7 @@ export function watchSidebar(
     parent.offsetTop -
     parent.parentElement!.offsetTop
 
-  /* Compute the sidebar's available height and if it should be locked */
+  // Compute the sidebar's available height and if it should be locked
   return combineLatest([main$, viewport$])
     .pipe(
       map(([{ offset, height }, { offset: { y } }]) => {
@@ -169,24 +168,24 @@ export function mountSidebar(
         auditTime(0, animationFrameScheduler)
       )
 
-    /* Update sidebar height and offset */
+    // Update sidebar height and offset
     next$.pipe(withLatestFrom(header$))
       .subscribe({
 
-        /* Handle emission */
+        // Handle emission
         next([{ height }, { height: offset }]) {
           inner.style.height = `${height - 2 * y}px`
           el.style.top       = `${offset}px`
         },
 
-        /* Handle complete */
+        // Handle complete
         complete() {
           inner.style.height = ""
           el.style.top       = ""
         }
       })
 
-    /* Bring active item into view on initial load */
+    // Bring active item into view on initial load
     next$.pipe(first())
       .subscribe(() => {
         for (const item of getElements(".md-nav__link--active[href]", el)) {
@@ -203,18 +202,7 @@ export function mountSidebar(
         }
       })
 
-    /* Hide TOC on selection */
-    if (el.classList.contains("md-sidebar--secondary")) {
-      fromEvent(el, "click")
-        .subscribe(event => {
-          const target = event.target as HTMLElement
-          if (target.closest(".md-nav__link")) {
-            setToggle("toc", false)
-          }
-        })
-    }
-
-    /* Handle accessibility for expandable items, see https://bit.ly/3jaod9p */
+    // Handle accessibility for expandable items, see https://bit.ly/3jaod9p
     from(getElements<HTMLLabelElement>("label[tabindex]", el))
       .pipe(
         mergeMap(label => fromEvent(label, "click")
@@ -240,7 +228,7 @@ export function mountSidebar(
         )
           .subscribe()
 
-    /* Create and return component */
+    // Create and return component
     return watchSidebar(el, options)
       .pipe(
         tap(state => push$.next(state)),
