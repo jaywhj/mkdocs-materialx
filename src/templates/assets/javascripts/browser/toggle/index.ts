@@ -39,6 +39,7 @@ import { getElement } from "../element"
 export type Toggle =
   | "drawer"                           /* Toggle for drawer */
   | "search"                           /* Toggle for search */
+  | "toc"                              /* Toggle for table of contents */
 
 /* ----------------------------------------------------------------------------
  * Data
@@ -49,7 +50,8 @@ export type Toggle =
  */
 const toggles: Record<Toggle, HTMLInputElement> = {
   drawer: getElement("[data-md-toggle=drawer]"),
-  search: getElement("[data-md-toggle=search]")
+  search: getElement("[data-md-toggle=search]"),
+  toc:    getElement("[data-md-toggle=toc]")
 }
 
 /* ----------------------------------------------------------------------------

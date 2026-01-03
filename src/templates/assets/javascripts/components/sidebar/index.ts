@@ -51,6 +51,7 @@ import {
   getElementSize,
   getElements
 } from "~/browser"
+import { setToggle, getToggle } from "~/browser/toggle"
 
 import { Component } from "../_"
 import { Header } from "../header"
@@ -208,9 +209,7 @@ export function mountSidebar(
         .subscribe(event => {
           const target = event.target as HTMLElement
           if (target.closest(".md-nav__link")) {
-            const toggle = document.querySelector<HTMLInputElement>("[data-md-toggle='toc']")
-            if (toggle && toggle.checked)
-              toggle.click()
+            setToggle("toc", false)
           }
         })
     }

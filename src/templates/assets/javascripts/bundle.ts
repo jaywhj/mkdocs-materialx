@@ -168,11 +168,12 @@ if (config.version?.provider === "mike")
 /* Always close drawer and search on navigation */
 merge(location$, target$)
   .pipe(
-    delay(125)
+    delay(50)
   )
     .subscribe(() => {
       setToggle("drawer", false)
       setToggle("search", false)
+      setToggle("toc", false)
     })
 
 /* Set up global keyboard handlers */
