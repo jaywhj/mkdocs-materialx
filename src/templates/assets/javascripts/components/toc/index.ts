@@ -304,6 +304,16 @@ export function mountTableOfContents(
       }
     })
 
+    /* Set up click handler */
+    fromEvent(el, "click")
+      .pipe(takeUntil(done$))
+      .subscribe(event => {
+        const target = event.target as HTMLElement
+        if (target.closest(".md-nav__link")) {
+          setToggle("toc", false)
+        }
+      })
+
     /* Set up following, if enabled */
     if (feature("toc.follow")) {
 
@@ -337,16 +347,6 @@ export function mountTableOfContents(
             }
           })
     }
-
-    /* Set up anchor tracking, if enabled */
-    fromEvent(el, "click")
-      .pipe(takeUntil(done$))
-      .subscribe(event => {
-        const target = event.target as HTMLElement
-        if (target.closest(".md-nav__link")) {
-          setToggle("toc", false)
-        }
-      })
 
     /* Set up anchor tracking, if enabled */
     if (feature("navigation.tracking"))
