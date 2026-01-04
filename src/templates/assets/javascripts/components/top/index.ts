@@ -209,14 +209,14 @@ export function mountBackToTop(
   })
 
   /* Watch header height */
-  header$
-    .pipe(
-      takeUntil(done$),
-      distinctUntilKeyChanged("height")
-    )
-      // .subscribe(({ height }) => {
-      //   el.style.bottom = `${height - 16}px`
-      // })
+  // header$
+  //   .pipe(
+  //     takeUntil(done$),
+  //     distinctUntilKeyChanged("height")
+  //   )
+  //     .subscribe(({ height }) => {
+  //       el.style.bottom = `${height - 16}px`
+  //     })
 
   /* Go back to top */
   const button = el.querySelector("[data-md-action='top']")
