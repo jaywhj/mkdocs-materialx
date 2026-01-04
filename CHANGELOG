@@ -9,32 +9,32 @@ mkdocs-materialx-10.0.5 (2026-01-05)
 
 mkdocs-materialx-10.0.4 (2026-01-02)
 
-- **New**: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
-- **New**: Show `git repo` in sidebar on mobile
-- **New**: Add a new generation date author plugin, see doc [Add document dates authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/)
-- **New**: Add recent updates module, see doc [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/)
-- **Fixed**: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
-- **Fixed**: Optimize the judgment of the direction of the swipe gesture, so as to adjust the sensitivity of showing the bottom menu
-- **Fixed**: Search function does not display properly on mobile
-- **Fixed**: iconsearch_index.json write issue
-- **Fixed**: Language selector escapes viewport when too wide on mobile
-- **Fixed**: Replace the gap attribute to increase compatibility
-- **Fixed**: Adjust the style of kbd shortcuts
-- **Fixed**: Adjust UI shadow effect
-- **Fixed**: Merge the upstream 9.7.1 update
-- **Fixed**: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
+- New: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
+- New: Show `git repo` in sidebar on mobile
+- New: Add a new generation date author plugin, see doc [Add document dates authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/)
+- New: Add recent updates module, see doc [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/)
+- Fixed: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
+- Fixed: Optimize the judgment of the direction of the swipe gesture, so as to adjust the sensitivity of showing the bottom menu
+- Fixed: Search function does not display properly on mobile
+- Fixed: iconsearch_index.json write issue
+- Fixed: Language selector escapes viewport when too wide on mobile
+- Fixed: Replace the gap attribute to increase compatibility
+- Fixed: Adjust the style of kbd shortcuts
+- Fixed: Adjust UI shadow effect
+- Fixed: Merge the upstream 9.7.1 update
+- Fixed: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
 mkdocs-materialx-10.0.3 (2025-12-11)
 
-- **New**: Added Liquid Glass theme, a modern theme identical to Zensical
-- **New**: Adjusted the maximum height of the language selection box to display more language options without scrolling
-- **New**: Added indentation guide lines to the TOC for more intuitive navigation
-- **New**: Applied the same accent color as the nav to active links in the TOC for clear progress tracking
-- **New**: Added zebra-striping to tables with support for both light and dark modes
-- **New**: Updated the `source-file.html` template example
-- **Fixed**: Tooltip in the header being blocked when `navigation.tabs.sticky` is enabled
-- **Fixed**: Misaligned (right-offset) tooltip for the repo link in the top-right corner
-- **Fixed**: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
+- New: Added Liquid Glass theme, a modern theme identical to Zensical
+- New: Adjusted the maximum height of the language selection box to display more language options without scrolling
+- New: Added indentation guide lines to the TOC for more intuitive navigation
+- New: Applied the same accent color as the nav to active links in the TOC for clear progress tracking
+- New: Added zebra-striping to tables with support for both light and dark modes
+- New: Updated the `source-file.html` template example
+- Fixed: Tooltip in the header being blocked when `navigation.tabs.sticky` is enabled
+- Fixed: Misaligned (right-offset) tooltip for the repo link in the top-right corner
+- Fixed: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
 
 mkdocs-material-9.7.0 (2025-11-11)
 
