@@ -545,7 +545,7 @@ kbd {
       transition: background-color 125ms;
 
       // Zebra striping
-      &:nth-of-type(even) {
+      &:nth-of-type(odd) {
         background-color: var(--md-typeset-table-row-color);
       }
 
