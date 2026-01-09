@@ -327,15 +327,15 @@
   // Table of contents
   &--secondary {
     margin-bottom: px2rem(12px);
-    margin-left: -1px;
+
+    // 只有当 list 被包含在 .md-nav__item 时（即二级及以上），才添加缩进参考线
+    .md-nav__item .md-nav__list {
+      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
+    }
 
     // Adjust spacing
     .md-nav {
       margin-top: px2rem(4px);
-
-      &__list {
-        border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
-      }
 
       // Navigation title
       &__title {
@@ -345,7 +345,7 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(16px) px2rem(16px) px2rem(10px);
+        padding: px2rem(16px) px2rem(calc(16px - 1px)) px2rem(10px);
         font-weight: 700;
         background: var(--md-default-bg-color);
 
