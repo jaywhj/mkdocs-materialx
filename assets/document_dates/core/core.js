@@ -381,7 +381,7 @@ function initPluginFeatures() {
         });
     });
     document.querySelectorAll('.document-dates-plugin').forEach(ddpEl => datesAutoWrapObserver.observe(ddpEl));
-    setTimeout(handleDocumentDatesAutoWrap, 50);
+    setTimeout(handleDocumentDatesAutoWrap, 100);
 }
 
 // 兼容 Material 主题的 'navigation.instant' 属性

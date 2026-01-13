@@ -68,7 +68,6 @@
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    margin-right: 1.4rem;
 }
 .dd-item {
     display: inline-flex;
