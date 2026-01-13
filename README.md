@@ -2,7 +2,7 @@
 
 <br />
 
-**MaterialX**, the next generation of mkdocs-material, is based on `mkdocs-material-9.7.0` and is named `X`. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance) to keep the MkDocs ecosystem alive!
+**MaterialX**, the next generation of mkdocs-material, is based on `mkdocs-material-9.7.0` and is named `X`. It continues to be maintained by individual developers (since mkdocs-material will cease maintenance)
 
 <br />
 <br />
@@ -12,9 +12,31 @@
   <img src="docs/assets/screenshots/m-sample4.png" width="700" />
 </p>
 
+## What Difference
 
+For a more detailed description of the differences, see documentation: [Why MaterialX](https://jaywhj.github.io/mkdocs-materialx/differences/)
 
-## Quick start
+### Differences from Material
+
+| Aspect              |          mkdocs-material           |                       MaterialX                   |
+| :------------------ | :--------------------------------: | :-----------------------------------------------: |
+| **Latest Version**  |       mkdocs-material-9.7.1        |       mkdocs-materialx-10.x (based on v9.7.1)     |
+| **Current Status**  |     Nearing end-of-maintenance     |          Active maintenance and updates           |
+| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements, etc. See [Changelog](changelog/index.md) |
+
+### Differences from Zensical
+
+| Aspect          |                    Zensical                    |                          MaterialX                  |
+| :-------------- | :--------------------------------------------: | :-------------------------------------------------: |
+| **Audience**    | Technical developers / Technical documentation |    All users / Markdown notes & documents  |
+| **Direction**   |  Increasingly feature-heavy and complex | Prioritizes extreme ease of use, stays increasingly lightweight |
+| **Language**    |                      Rust                      |                       Python                        |
+| **Stage**       |                  Early-stage                   |                  Mature and stable                  |
+| **Ecosystem**   |         Non-existent, uncertain future         |               Rich, open, and vibrant               |
+
+<br />
+
+## Quick Start
 
 Installation:
 
