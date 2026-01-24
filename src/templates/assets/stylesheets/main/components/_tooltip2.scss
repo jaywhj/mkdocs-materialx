@@ -109,7 +109,7 @@
 
   // Tooltip is visible
   &--active {
-    z-index: 4;
+    z-index: 2;
     opacity: 1;
     transition:
       transform 400ms cubic-bezier(0, 1, 0.35, 1),
