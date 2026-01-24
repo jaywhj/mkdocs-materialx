@@ -162,17 +162,10 @@ function applyTimeagoToTimes(timeNodes, rawLocale) {
 }
 
 // 处理数据加载
-function processDataLoading() {
-    // 获取 locale，优先级：用户主动选择 > 服务端显式配置 > 用户浏览器语言 > 站点HTML语言 > 默认英语
-    const rawLocale =
-        ddUtils.getSavedLanguage() ||
-        // ddpEl.getAttribute('locale') ||
-        navigator.language ||
-        navigator.userLanguage ||
-        document.documentElement.lang ||
-        'en';
-
+function processDataLoading() {    
     document.querySelectorAll('.document-dates-plugin').forEach(ddpEl => {
+        const rawLocale = ddUtils.getCurrentLocale(ddpEl);
+
         // 处理 time 元素（使用 timeago 时）
         applyTimeagoToTimes(ddpEl.querySelectorAll('time'), rawLocale);
 
@@ -192,6 +185,7 @@ function processDataLoading() {
     });
 
     // 处理其他 timeago 时间
+    const rawLocale = ddUtils.getCurrentLocale();
     applyTimeagoToTimes(document.querySelectorAll('time.dd-timeago'), rawLocale);
 }
 

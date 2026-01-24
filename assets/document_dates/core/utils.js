@@ -44,6 +44,18 @@ window.ddUtils = {
         }
     },
 
+    // 获取当前语言环境，优先级：用户选择 > 元素配置 > 浏览器语言 > 页面语言 > 默认 'en'
+    getCurrentLocale(el) {
+        return (
+            this.getSavedLanguage() ||
+            (el ? el.getAttribute('locale') : null) ||
+            navigator.language ||
+            navigator.userLanguage ||
+            document.documentElement.lang ||
+            'en'
+        );
+    },
+
     // 清除保存的语言设置
     clearLanguage() {
         try {
