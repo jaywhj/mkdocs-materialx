@@ -211,7 +211,7 @@ Fallback: If the cached file doesn't exist or automatic caching fails, the creat
 
 ### Configure git fetch depth
 
-If the creation date is based on the date of the first git commit (i.e., when no custom creation date and cache file creation date are available), and you are deploying through a CI system, you might need to configure the git fetch depth in the CI system to retrieve the accurate record of the first git commit, for example:
+If the "creation date" is the date of the first git commit (i.e., when no custom creation date and cache file creation date are available), and you are deploying through a CI system, you might need to configure the git fetch depth in the CI system to retrieve the accurate record of the first git commit, for example:
 
 ```yaml hl_lines="6 7"
 jobs:
