@@ -209,7 +209,7 @@ The plugin automatically caches the creation date (no need to cache the last upd
 
 Fallback: If the cached file doesn't exist or automatic caching fails, the creation date will not be affected, it will proceed to priority 3 (read the first git commit date as the creation date)
 
-### Notes on using build environments
+### Configure git fetch depth
 
 If the creation date is based on the date of the first git commit (i.e., when no custom creation date and cache file creation date are available), and you are deploying through a CI system, you might need to configure the git fetch depth in the CI system to retrieve the accurate record of the first git commit, for example:
 
@@ -223,10 +223,12 @@ jobs:
           fetch-depth: 0
 ```
 
-- Github Actions: set `fetch-depth` to `0` ([docs](https://github.com/actions/checkout))
-- Gitlab Runners: set `GIT_DEPTH` to `0` ([docs](https://docs.gitlab.com/ee/ci/pipelines/settings.html#limit-the-number-of-changes-fetched-during-clone))
-- Bitbucket pipelines: set `clone: depth: full` ([docs](https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/))
-- Azure Devops pipelines: set `Agent.Source.Git.ShallowFetchDepth` to something very high like `10e99` ([docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git?view=azure-devops#shallow-fetch))
+!!! quote ""
+
+    - Github Actions: set `fetch-depth` to `0` ([docs](https://github.com/actions/checkout))
+    - Gitlab Runners: set `GIT_DEPTH` to `0` ([docs](https://docs.gitlab.com/ee/ci/pipelines/settings.html#limit-the-number-of-changes-fetched-during-clone))
+    - Bitbucket pipelines: set `clone: depth: full` ([docs](https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/))
+    - Azure Devops pipelines: set `Agent.Source.Git.ShallowFetchDepth` to something very high like `10e99` ([docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/pipeline-options-for-git?view=azure-devops#shallow-fetch))
 
 ### Adaptive to any environment
 

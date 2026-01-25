@@ -28,7 +28,7 @@ This feature is provided by the plugin [document-dates], which should be install
 pip install mkdocs-document-dates
 ```
 
-then configure the switch recently-updated in `mkdocs.yml`:
+then configure the switch `recently-updated` in `mkdocs.yml`:
 
 ```yaml
 - document-dates:
