@@ -69,8 +69,8 @@ $admonitions: (
     font-size: px2rem(12.8px);
     color: var(--md-admonition-fg-color);
     background-color: var(--md-admonition-bg-color);
-    border: px2rem(1.5px) solid $clr-blue-a200;
-    border-radius: px2rem(4px);
+    // border: px2rem(1.5px) solid $clr-blue-a200;
+    border-radius: px2rem(8px);
     box-shadow: var(--md-shadow-z1);
     transition: box-shadow 125ms;
     page-break-inside: avoid;
@@ -80,10 +80,10 @@ $admonitions: (
       box-shadow: none;
     }
 
-    // Admonition on focus
-    &:focus-within {
-      box-shadow: 0 0 0 px2rem(4px) color.adjust($clr-blue-a200, $alpha: -0.9);
-    }
+    // // Admonition on focus
+    // &:focus-within {
+    //   box-shadow: 0 0 0 px2rem(4px) color.adjust($clr-blue-a200, $alpha: -0.9);
+    // }
 
     // Hack: Chrome exhibits a weird issue where it will set nested elements to
     // content-box. Doesn't happen in other browsers, so looks like a bug.
@@ -129,19 +129,22 @@ $admonitions: (
     background-color: color.adjust($clr-blue-a200, $alpha: -0.9);
     border: none;
     border-inline-start-width: px2rem(4px);
-    border-start-start-radius: px2rem(2px);
-    border-start-end-radius: px2rem(2px);
+    border-start-start-radius: px2rem(8px);
+    border-start-end-radius: px2rem(8px);
 
     // Adjust spacing for title-only admonitions
     html &:last-child {
       margin-bottom: 0;
+      border-end-start-radius: px2rem(8px);
+      border-end-end-radius: px2rem(8px);
     }
 
     // Admonition icon
     &::before {
       position: absolute;
       inset-inline-start: px2rem(12px);
-      top: px2em(10px);
+      top: 50%;
+      margin-top: px2rem(-10px);
       width: px2rem(20px);
       height: px2rem(20px);
       content: "";
@@ -167,15 +170,15 @@ $admonitions: (
 @each $name, $props in $admonitions {
   $tint: list.nth($props, 2);
 
-  // Admonition flavour
-  .md-typeset .admonition.#{$name} {
-    border-color: $tint;
+  // // Admonition flavour
+  // .md-typeset .admonition.#{$name} {
+  //   border-color: $tint;
 
-    // Admonition on focus
-    &:focus-within {
-      box-shadow: 0 0 0 px2rem(4px) color.adjust($tint, $alpha: -0.9);
-    }
-  }
+  //   // Admonition on focus
+  //   &:focus-within {
+  //     box-shadow: 0 0 0 px2rem(4px) color.adjust($tint, $alpha: -0.9);
+  //   }
+  // }
 
   // Admonition flavour title
   .md-typeset .#{$name} > .admonition-title {
