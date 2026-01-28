@@ -2,6 +2,16 @@
 
 ## MaterialX for MkDocs
 
+### 10.0.6 <small>January 28, 2026</small> { id="10.0.6" }
+
+- New: The recently updated document list supports **summary mode** and automatically extracts article summaries, [preview](https://jaywhj.netlify.app/)
+- New: The recently updated document list supports **dynamic layout**, with multiple view modes added including list, detail and grid
+- Updated: Adjusted the UI style of `admonition`
+- Updated: Adjusted the UI style of `blockquote`
+- Updated: Adjusted the UI style of the search box
+- Updated: Adjusted the tooltip layer level to prevent it from obscuring tabs
+- Fixed: The issue where the back-to-top button was not centered
+
 ### 10.0.5 <small>January 5, 2026</small> { id="10.0.5" }
 
 - New: **Refactor the TOC components for mobile**, now you can experience TOC perfectly on mobile!
