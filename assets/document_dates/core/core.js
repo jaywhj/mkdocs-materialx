@@ -162,7 +162,7 @@ function applyTimeagoToTimes(timeNodes, rawLocale) {
 }
 
 // 处理数据加载
-function processDataLoading() {    
+function processDataLoading() {
     document.querySelectorAll('.document-dates-plugin').forEach(ddpEl => {
         const rawLocale = ddUtils.getCurrentLocale(ddpEl);
 
