@@ -100,7 +100,7 @@
       <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
       {% if search.enabled %}
         <label class="md-header__button md-icon" for="__search">
-          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% set icon = config.theme.icon.search or "octicons/search-24" %}
           {% include ".icons/" ~ icon ~ ".svg" %}
         </label>
 
