@@ -79,7 +79,7 @@ theme:
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      # primary: black
+      # primary: deep purple
       accent: deep orange
       toggle:
         icon: material/brightness-4
@@ -88,6 +88,7 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
+    annotation: material/plus-circle-outline
 
 # Plugins
 plugins:
@@ -187,7 +188,7 @@ not_in_nav: |
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
+  - Get started:
     - Differences: differences.md
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
@@ -195,47 +196,38 @@ nav:
     - Customization: customization.md
     - Conventions: conventions.md
     - Browser support: browser-support.md
-    - Philosophy: philosophy.md
-    - Alternatives: alternatives.md
+    # - Philosophy: philosophy.md
+    # - Alternatives: alternatives.md
     - License: license.md
-    - Tutorials:
-      - tutorials/index.md
-      - "Blogs":
-        - tutorials/blogs/basic.md
-        - tutorials/blogs/navigation.md
-        - tutorials/blogs/engage.md
-      - "Social cards":
-        - tutorials/social/basic.md
-        - tutorials/social/custom.md
     - Changelog:
       - changelog/index.md
       - How to upgrade: upgrade.md
   - Setup:
     - setup/index.md
-    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
-    - Changing the colors: setup/changing-the-colors.md
-    - Changing the fonts: setup/changing-the-fonts.md
-    - Changing the language: setup/changing-the-language.md
-    - Document dates authors: setup/adding-document-dates-authors.md
-    - Recent updates module: setup/adding-recent-updates-module.md
-    - Adding a git repository: setup/adding-a-git-repository.md
-    - Adding a comment system: setup/adding-a-comment-system.md
-    - Setting up navigation: setup/setting-up-navigation.md
-    - Setting up site search: setup/setting-up-site-search.md
-    - Setting up site analytics: setup/setting-up-site-analytics.md
-    - Setting up social cards: setup/setting-up-social-cards.md
-    - Setting up a blog: setup/setting-up-a-blog.md
-    - Setting up tags: setup/setting-up-tags.md
-    - Setting up versioning: setup/setting-up-versioning.md
-    - Setting up the header: setup/setting-up-the-header.md
-    - Setting up the footer: setup/setting-up-the-footer.md
-    - Ensuring data privacy: setup/ensuring-data-privacy.md
+    - Logo and icons: setup/changing-the-logo-and-icons.md
+    - Colors: setup/changing-the-colors.md
+    - Fonts: setup/changing-the-fonts.md
+    - Language: setup/changing-the-language.md
+    - Navigation: setup/setting-up-navigation.md
+    - Dates & authors: setup/adding-document-dates-authors.md
+    - Recently updated: setup/adding-recent-updates-module.md
+    - Repository: setup/adding-a-git-repository.md
+    - Site search: setup/setting-up-site-search.md
+    - Site analytics: setup/setting-up-site-analytics.md
+    - Social cards: setup/setting-up-social-cards.md
+    - Tags: setup/setting-up-tags.md
+    - Header: setup/setting-up-the-header.md
+    - Footer: setup/setting-up-the-footer.md
+    - Comment system: setup/adding-a-comment-system.md
+    - Versioning: setup/setting-up-versioning.md
+    - Data privacy: setup/ensuring-data-privacy.md
+    - Blog: setup/setting-up-a-blog.md
     # - Building an optimized site: setup/building-an-optimized-site.md
     # - Building for offline usage: setup/building-for-offline-usage.md
     - Extensions:
       - setup/extensions/index.md
-      - Python Markdown: setup/extensions/python-markdown.md
-      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+      - Markdown: setup/extensions/python-markdown.md
+      - Markdown Extensions: setup/extensions/python-markdown-extensions.md
   - Plugins:
     - plugins/index.md
     - Blog: plugins/blog.md
@@ -287,5 +279,14 @@ nav:
       - Asking a question: https://github.com/jaywhj/mkdocs-materialx/discussions
     - Guides:
       - Creating a reproduction: guides/creating-a-reproduction.md
+  - Tutorials:
+    # - tutorials/index.md
+    - "Blogs":
+      - tutorials/blogs/basic.md
+      - tutorials/blogs/navigation.md
+      - tutorials/blogs/engage.md
+    - "Social cards":
+      - tutorials/social/basic.md
+      - tutorials/social/custom.md
   # - Blog:
     # - blog/index.md
