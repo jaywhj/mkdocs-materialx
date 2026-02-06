@@ -123,8 +123,8 @@
 
       // Only use background in primary navigation
       .md-nav--primary & {
-        color: var(--md-accent-fg-color);
-        background: var(--md-accent-fg-color--transparent);
+        color: var(--md-primary-fg-color);
+        background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
       }
 
       // Also enable color transitions on inline code blocks
@@ -361,7 +361,7 @@
       }
 
       &__link--active {
-        color: var(--md-accent-fg-color);
+        color: var(--md-primary-fg-color);
       }
     }
   }
