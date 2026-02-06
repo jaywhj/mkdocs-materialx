@@ -1,5 +1,5 @@
 ---
-icon: material/alphabet-greek
+icon: material/square-root
 ---
 
 # Math
