@@ -1,5 +1,5 @@
 ---
-icon: material/format-paint
+icon: material/palette-outline
 ---
 
 # Changing the colors

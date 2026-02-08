@@ -1,3 +1,7 @@
+---
+icon: material/cloud-upload-outline
+---
+
 # Publishing your site
 
 The great thing about hosting project documentation in a `git` repository is

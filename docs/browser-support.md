@@ -1,3 +1,7 @@
+---
+icon: material/apple-safari
+---
+
 # Browser support
 
 MaterialX for MkDocs goes at great lengths to support the largest possible range

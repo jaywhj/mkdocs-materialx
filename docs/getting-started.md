@@ -1,3 +1,7 @@
+---
+icon: octicons/desktop-download-24
+---
+
 # Getting started
 
 MaterialX for MkDocs is a powerful documentation framework on top of [MkDocs],

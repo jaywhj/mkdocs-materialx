@@ -1,3 +1,7 @@
+---
+icon: material/folder-plus-outline
+---
+
 # Creating your site
 
 After you've [installed] MaterialX for MkDocs, you can bootstrap your project

@@ -1,3 +1,7 @@
+---
+icon: material/layers-triple-outline
+---
+
 # Changelog
 
 ## MaterialX for MkDocs

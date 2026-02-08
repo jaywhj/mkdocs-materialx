@@ -1,3 +1,7 @@
+---
+icon: octicons/screen-normal-24
+---
+
 # Conventions
 
 This section explains several conventions used in this documentation.

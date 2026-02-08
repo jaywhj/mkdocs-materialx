@@ -1,3 +1,7 @@
+---
+icon: material/update
+---
+
 # How to upgrade
 
 Upgrade to the latest version with:

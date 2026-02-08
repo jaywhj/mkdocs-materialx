@@ -1,3 +1,7 @@
+---
+icon: octicons/gear-24
+---
+
 # Customization
 
 Project documentation is as diverse as the projects themselves and MaterialX for
