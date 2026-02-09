@@ -1,5 +1,5 @@
 ---
-icon: fontawesome/solid/language
+icon: material/translate
 ---
 
 # Changing the language

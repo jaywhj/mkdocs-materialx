@@ -1,5 +1,5 @@
 ---
-icon: material/update
+icon: material/briefcase-arrow-left-right-outline
 ---
 
 # How to upgrade
