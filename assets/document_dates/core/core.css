@@ -143,8 +143,8 @@
     display: block;
 
     /* Fix bug in Safari: rounded corners may blink to show square corners */
-    will-change: transform;
     transform: translateZ(0);
+    will-change: transform;
 }
 .avatar-wrapper:hover {
     transform: scale(1.08);
