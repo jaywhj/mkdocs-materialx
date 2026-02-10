@@ -99,8 +99,8 @@
 
     // Shadow depth 1
     --md-shadow-z1:
-      0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
-      0 0              #{px2rem(1px)}  hsla(0, 0%, 100%, 0.1);
+      0 #{px2rem(2px)} #{px2rem(6px)} hsla(0, 0%, 0%, 0.05),
+      0 0              #{px2rem(1px)}  hsla(0, 0%, 100%, 0.2);
 
     // Shadow depth 2
     --md-shadow-z2:
