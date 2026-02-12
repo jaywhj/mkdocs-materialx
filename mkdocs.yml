@@ -93,12 +93,12 @@ theme:
 # Plugins
 plugins:
   # - blog
+  - offline
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   # - minify:
   #     minify_html: true
-  
-  - glightbox
+
   - document-dates:
       type: timeago
       locale: en
@@ -110,6 +110,8 @@ plugins:
         exclude:
           - index.md
           - blog/*
+
+  - glightbox
 
 # Hooks
 hooks:
@@ -182,8 +184,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-not_in_nav: |
-  /tutorials/**/*.md
+
+# use_directory_urls: false
+# not_in_nav: |
+#   /tutorials/**/*.md
 
 # Page tree
 nav:
