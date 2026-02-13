@@ -51,13 +51,14 @@
     margin: 0;
     list-style: none;
 
+    // set gap
     > li + li {
-      margin-block-start: px2rem(2.5px);
+      margin-block-start: px2rem(4px);
     }
 
     // Adjust spacing for level 2+
     & & {
-      margin-inline-start: px2rem(17px);
+      margin-inline-start: px2rem(calc(16px + 4px + 1px))
     }
   }
 
@@ -75,12 +76,12 @@
         content: " ";
       }
 
+      // set gap
       &::before {
-        margin-block-end: px2rem(2.5px);
+        margin-block-end: px2rem(4px);
       }
-
       &::after {
-        margin-block-start: px2rem(2.5px);
+        margin-block-start: px2rem(4px);
       }
     }
   }
@@ -89,7 +90,7 @@
   &__link {
     display: flex;
     align-items: flex-start;
-    padding: px2rem(7px) px2rem(12px) px2rem(7px) px2rem(16px);
+    padding: px2rem(7px) px2rem(16px);
     margin-inline: px2rem(4px);
     cursor: pointer;
 
@@ -98,8 +99,9 @@
     -webkit-touch-callout: none;
     user-select: none;
 
+    // Set the gap between the icon and the text
     > * + * {
-      margin-inline-start: px2rem(8px);
+      margin-inline-start: px2rem(10px);
     }
     border-radius: px2rem(8px);
     transition:
@@ -126,7 +128,7 @@
     .md-nav__item &--active {
       font-weight: 500;
 
-      // Only use background in primary navigation
+      // Set primary color & background for active link in primary navigation
       .md-nav--primary & {
         color: var(--md-primary-fg-color);
         background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
@@ -194,7 +196,7 @@
 
     // Styles for secondary navigation
     .md-nav--secondary & {
-      padding: px2rem(7px) px2rem(8px) px2rem(7px) px2rem(16px);
+      padding: px2rem(7px) px2rem(16px);
       margin-inline: px2rem(4px);
 
       // Navigation link on focus/hover
@@ -270,6 +272,7 @@
     padding: 0;
     background: transparent;
 
+    // set gap
     > * + * {
       margin-inline-start: px2rem(4px);
     }
@@ -356,7 +359,7 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(16px) px2rem(calc(16px - 1px)) px2rem(10px);
+        padding: px2rem(16px) px2rem(calc(16px + 4px - 1px)) px2rem(10px);
         font-weight: 700;
         background: var(--md-default-bg-color);
 
@@ -368,7 +371,7 @@
 
       // Navigation link
       &__link {
-        padding: px2rem(4.5px) px2rem(12px);
+        padding: px2rem(4px) px2rem(16px);
       }
 
       &__link--active {
@@ -398,6 +401,7 @@
 
       // Logo
       .md-logo {
+        // set gap
         margin-inline-end: px2rem(8px);
         width: px2rem(32px);
         height: px2rem(32px);
