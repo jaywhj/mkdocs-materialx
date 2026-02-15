@@ -58,7 +58,7 @@
 
     // Adjust spacing for level 2+
     & & {
-      margin-inline-start: px2rem(calc(16px + 4px + 1px))
+      margin-inline-start: px2rem(calc(16px + 1px))
     }
   }
 
@@ -342,7 +342,13 @@
   &--secondary {
     margin-bottom: px2rem(12px);
 
-    // 只有当 list 被包含在 .md-nav__item 时（即二级及以上），才添加缩进参考线
+    // 设置 toc 的整体外边距，不影响嵌套的 list
+    > .md-nav__list {
+      margin-top: px2rem(8px);
+      margin-inline-start: px2rem(4px);
+    }
+
+    // 给二级及以上的 list 添加缩进参考线 (被 .md-nav__item 包含时)
     .md-nav__item .md-nav__list {
       border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
     }
@@ -371,7 +377,7 @@
 
       // Navigation link
       &__link {
-        padding: px2rem(4px) px2rem(16px);
+        padding: px2rem(4px) px2rem(calc(16px - 4px));
       }
 
       &__link--active {
