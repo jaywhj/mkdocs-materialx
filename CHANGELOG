@@ -1,4 +1,4 @@
-mkdocs-materialx-10.0.7 (2026-02-12)
+mkdocs-materialx-10.0.8 (2026-02-12)
 
 - **Highlights**: Fixed issue where swipe events would wear through on mobile
 - **Highlights**: Adjust the “back to top” container to dynamic positioning, now it will be intelligently centered and auto-hide when not needed

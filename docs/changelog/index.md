@@ -4,9 +4,9 @@ icon: material/layers-triple-outline
 
 # Changelog
 
-## MaterialX for MkDocs
+## MaterialX
 
-### 10.0.7 <small>February 12, 2026</small> { id="10.0.7" }
+### 10.0.8 <small>February 12, 2026</small> { id="10.0.8" }
 
 - **Highlights**: Fixed issue where swipe events would wear through on mobile
 - **Highlights**: Adjust the “back to top” container to dynamic positioning, now it will be intelligently centered and auto-hide when not needed
@@ -65,6 +65,8 @@ icon: material/layers-triple-outline
 - Fixed: Tooltip in the header being blocked when `navigation.tabs.sticky` is enabled
 - Fixed: Misaligned (right-offset) tooltip for the repo link in the top-right corner
 - Fixed: Display issues on mobile devices when the maximum width of the language selection box exceeds 150px (Chrome: right side gets clipped; Safari: horizontal page scrolling occurs)
+
+## Material for MkDocs
 
 ### 9.7.0 <small>November 11, 2025</small> { id="9.7.0" }
 
