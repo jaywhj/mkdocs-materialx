@@ -57,8 +57,12 @@
     }
 
     // Adjust spacing for level 2+
-    & & {
-      margin-inline-start: px2rem(calc(16px + 1px))
+    .md-nav--primary & & {
+      margin-inline-start: px2rem(calc(16px - 6px));
+    }
+
+    .md-nav--secondary & & {
+      margin-inline-start: px2rem(calc(16px + 1px));
     }
   }
 
@@ -131,7 +135,9 @@
       // Set primary color & background for active link in primary navigation
       .md-nav--primary & {
         color: var(--md-primary-fg-color);
-        background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
+        background-color: var(--md-primary-fg-color--transparent);
+        // Safari 15.4 之前不支持 color-mix()
+        // background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
       }
 
       // Also enable color transitions on inline code blocks
@@ -365,7 +371,7 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(16px) px2rem(calc(16px + 4px - 1px)) px2rem(10px);
+        padding: px2rem(7px) px2rem(calc(16px + 4px - 1px)) px2rem(10px);
         font-weight: 700;
         background: var(--md-default-bg-color);
 
@@ -393,6 +399,10 @@
     &--primary {
       margin-inline: px2rem(4px);
       margin-bottom: px2rem(8px);
+    }
+
+    .md-nav__title[for="__toc"] {
+      padding-top: px2rem(16px);
     }
 
     // Navigation title - we don't need the navigation title in the modern
