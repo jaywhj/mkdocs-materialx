@@ -63,7 +63,7 @@ The following configuration options are supported:
 
 Download the sample template [nav.html](https://github.com/jaywhj/mkdocs-document-dates/blob/main/templates/overrides/partials/nav.html), and override this path `docs/overrides/partials/nav.html`
 
-## Add anywhere in the document
+## Add anywhere in document
 
 Insert this line anywhere in your document:
 
