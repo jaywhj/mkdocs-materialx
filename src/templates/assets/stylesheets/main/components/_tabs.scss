@@ -33,7 +33,8 @@
   width: 100%;
   overflow: auto;
   line-height: 1.3;
-  color: var(--md-default-fg-color);
+  color: var(--mx-topbar-fg);
+  background-color: var(--mx-topbar-bg);
   box-shadow: 0 px2rem(-1px) 0 inset var(--md-default-fg-color--lightest);
 
   // [print]: Hide tabs
@@ -88,7 +89,7 @@
     &--active {
       position: relative;
       font-weight: 500;
-      border-bottom: px2rem(1px) solid var(--md-default-fg-color);
+      border-bottom: px2rem(1px) solid var(--mx-tabs-active-underline);
       transition: border-bottom 250ms;
 
       // Hide tabs upon scrolling - disable transition to minimizes repaints
@@ -150,4 +151,12 @@
       transform: translateY(50%);
     }
   }
+}
+
+[data-mx-topbar="primary"] .md-tabs {
+  backdrop-filter: none;
+}
+
+[data-mx-topbar="accent"] .md-tabs {
+  backdrop-filter: none;
 }

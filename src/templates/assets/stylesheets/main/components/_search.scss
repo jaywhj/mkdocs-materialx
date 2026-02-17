@@ -192,10 +192,10 @@
 
   // Search form
   &__form {
-    display: flex;
-    align-items: center;
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
     height: px2rem(48px);
     background-color: var(--md-default-bg-color);
     box-shadow: 0 0 px2rem(12px) transparent;
@@ -208,11 +208,11 @@
       height: px2rem(36px);
       background-color: transparent;
       border-radius: px2rem(8px);
-      box-shadow: 0 0 0 px2rem(1px) var(--md-default-fg-color--lightest);
+      box-shadow: 0 0 0 px2rem(1px) var(--mx-search-outline);
 
       // Search form on hover
       &:hover {
-        background-color: hsla(0, 0%, 0%, 0.2);
+        background-color: var(--mx-search-hover-bg);
       }
     }
 
@@ -221,7 +221,7 @@
       color: var(--md-default-fg-color);
       background-color: var(--md-default-bg-color);
       border-radius: px2rem(8px) px2rem(8px) 0 0;
-      box-shadow: 
+      box-shadow:
         0 0 0 px2rem(1px) var(--md-default-fg-color--lightest),
         0 0 px2rem(12px) hsla(0, 0%, 0%, 0.07);
     }
@@ -271,12 +271,12 @@
 
       // Search placeholder
       &::placeholder {
-        color: var(--md-default-fg-color--light);
+        color: var(--mx-topbar-fg-muted);
       }
 
       // Search icon
       + .md-search__icon {
-        color: var(--md-default-fg-color);
+        color: var(--mx-topbar-fg);
       }
 
       // Adjust appearance when search is active
@@ -318,11 +318,11 @@
       position: absolute;
       inset-inline-start: px2rem(10px);
       top: 50%;
-      transform: translateY(-50%);
       z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(-50%);
 
       // Adjust for right-to-left languages
       [dir="rtl"] & svg {
@@ -356,11 +356,11 @@
     position: absolute;
     inset-inline-end: px2rem(10px);
     top: 50%;
-    transform: translateY(-50%);
     z-index: 2;
     display: flex;
     align-items: center;
     pointer-events: none;
+    transform: translateY(-50%);
 
     // [tablet portrait -]: Search modal
     @include break-to-device(tablet portrait) {
@@ -402,18 +402,18 @@
   &__suggest {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     width: 100%;
     padding-inline: px2rem(72px) px2rem(44px);
     font-size: px2rem(18px);
     line-height: 1;
-    color: var(--md-default-fg-color--lighter);
+    color: var(--mx-topbar-fg-muted);
     white-space: nowrap;
-    opacity: 0;
     pointer-events: none;
+    opacity: 0;
     transition: opacity 50ms;
+    transform: translateY(-50%);
 
     // [tablet landscape +]: Header-embedded search
     @include break-from-device(tablet landscape) {

@@ -175,6 +175,8 @@
 
   <!-- Set text direction and color palette, if defined -->
   {% set direction = config.theme.direction or lang.t("direction") %}
+  {% set topbar = config.theme.topbar | d({}, true) %}
+  {% set topbar_style = config.theme.topbar_style | d(topbar.style | d("glass", true), true) %}
   {% if config.theme.palette %}
     {% set palette = config.theme.palette %}
     {% if not palette is mapping %}
@@ -188,9 +190,10 @@
       data-md-color-scheme="{{ scheme | replace(' ', '-') }}"
       data-md-color-primary="{{ primary | replace(' ', '-') }}"
       data-md-color-accent="{{ accent | replace(' ', '-') }}"
+      data-mx-topbar="{{ topbar_style | replace(' ', '-') }}"
     >
   {% else %}
-    <body dir="{{ direction }}">
+    <body dir="{{ direction }}" data-mx-topbar="{{ topbar_style | replace(' ', '-') }}">
   {% endif %}
     {% set features = config.theme.features or [] %}
 

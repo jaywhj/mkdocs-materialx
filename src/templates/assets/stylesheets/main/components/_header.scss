@@ -32,8 +32,8 @@
   top: 0;
   z-index: 4;
   display: block;
-  color: var(--md-default-fg-color);
-  background-color: var(--md-default-bg-color--light);
+  color: var(--mx-topbar-fg);
+  background-color: var(--mx-topbar-bg);
   backdrop-filter: blur(px2rem(8px));
 
   // [print]: Hide header
@@ -259,4 +259,12 @@
     width: px2rem(20px);
     height: px2rem(20px);
   }
+}
+
+[data-mx-topbar="primary"] .md-header {
+  backdrop-filter: none;
+}
+
+[data-mx-topbar="accent"] .md-header {
+  backdrop-filter: none;
 }

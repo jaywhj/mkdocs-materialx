@@ -45,6 +45,53 @@
 
 // ----------------------------------------------------------------------------
 
+// Topbar style (default): glass
+[data-md-color-scheme] {
+  --mx-topbar-bg:                      var(--md-default-bg-color--light);
+  --mx-topbar-fg:                      var(--md-default-fg-color);
+  --mx-topbar-fg-muted:                var(--md-default-fg-color--light);
+  --mx-topbar-backdrop-filter:         blur(px2rem(8px));
+  --mx-tabs-active-underline:          var(--md-default-fg-color);
+  --mx-search-outline:                 var(--md-default-fg-color--lightest);
+  --mx-search-hover-bg:                hsla(0, 0%, 0%, 0.2);
+}
+
+// Topbar style: primary
+[data-mx-topbar="primary"] {
+  --mx-topbar-bg:                      var(--md-primary-fg-color);
+  --mx-topbar-fg:                      var(--md-primary-bg-color);
+  --mx-topbar-fg-muted:                var(--mx-topbar-fg);
+  --mx-topbar-backdrop-filter:         none;
+  --mx-tabs-active-underline:          transparent;
+  --mx-search-outline:                 var(--mx-topbar-fg);
+  --mx-search-hover-bg:                var(--mx-topbar-fg);
+
+  @supports (color: color-mix(in srgb, black, white)) {
+    --mx-topbar-fg-muted:              color-mix(in srgb, var(--mx-topbar-fg) 72%, transparent);
+    --mx-search-outline:               color-mix(in srgb, var(--mx-topbar-fg) 22%, transparent);
+    --mx-search-hover-bg:              color-mix(in srgb, var(--mx-topbar-fg) 16%, transparent);
+  }
+}
+
+// Topbar style: accent
+[data-mx-topbar="accent"] {
+  --mx-topbar-bg:                      var(--md-accent-fg-color);
+  --mx-topbar-fg:                      var(--md-accent-bg-color);
+  --mx-topbar-fg-muted:                var(--mx-topbar-fg);
+  --mx-topbar-backdrop-filter:         none;
+  --mx-tabs-active-underline:          transparent;
+  --mx-search-outline:                 var(--mx-topbar-fg);
+  --mx-search-hover-bg:                var(--mx-topbar-fg);
+
+  @supports (color: color-mix(in srgb, black, white)) {
+    --mx-topbar-fg-muted:              color-mix(in srgb, var(--mx-topbar-fg) 72%, transparent);
+    --mx-search-outline:               color-mix(in srgb, var(--mx-topbar-fg) 22%, transparent);
+    --mx-search-hover-bg:              color-mix(in srgb, var(--mx-topbar-fg) 16%, transparent);
+  }
+}
+
+// ----------------------------------------------------------------------------
+
 // Allow to explicitly use color schemes in nested content
 [data-md-color-scheme="default"] {
   @extend %root;
