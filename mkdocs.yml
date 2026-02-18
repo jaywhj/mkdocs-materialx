@@ -65,7 +65,8 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
-  # topbar_style: glass   # glass primary accent
+
+  # topbar_style: primary   # glass primary accent
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
