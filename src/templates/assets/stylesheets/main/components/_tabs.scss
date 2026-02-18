@@ -153,10 +153,7 @@
   }
 }
 
-[data-mx-topbar="primary"] .md-tabs {
-  backdrop-filter: none;
-}
-
+[data-mx-topbar="primary"] .md-tabs,
 [data-mx-topbar="accent"] .md-tabs {
   backdrop-filter: none;
 }

@@ -392,6 +392,16 @@
     }
   }
 
+  @include break-to-device(tablet portrait) {
+    .md-nav__title[for="__toc"] {
+      padding-top: px2rem(16px);
+      [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
+        color: var(--mx-topbar-fg);
+        background-color: var(--mx-topbar-bg);
+      }
+    }
+  }
+
   // [tablet landscape -]: Mobile navigation
   @include break-to-device(tablet landscape) {
 
@@ -399,10 +409,6 @@
     &--primary {
       margin-inline: px2rem(4px);
       margin-bottom: px2rem(8px);
-    }
-
-    .md-nav__title[for="__toc"] {
-      padding-top: px2rem(16px);
     }
 
     // Navigation title - we don't need the navigation title in the modern

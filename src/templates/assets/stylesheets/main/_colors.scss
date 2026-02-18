@@ -67,6 +67,7 @@
   --mx-search-hover-bg:                var(--mx-topbar-fg);
 
   @supports (color: color-mix(in srgb, black, white)) {
+    --mx-topbar-bg:                    color-mix(in srgb, var(--md-primary-fg-color) 80%, var(--md-default-bg-color));
     --mx-topbar-fg-muted:              color-mix(in srgb, var(--mx-topbar-fg) 72%, transparent);
     --mx-search-outline:               color-mix(in srgb, var(--mx-topbar-fg) 22%, transparent);
     --mx-search-hover-bg:              color-mix(in srgb, var(--mx-topbar-fg) 16%, transparent);
@@ -84,6 +85,7 @@
   --mx-search-hover-bg:                var(--mx-topbar-fg);
 
   @supports (color: color-mix(in srgb, black, white)) {
+    --mx-topbar-bg:                    color-mix(in srgb, var(--md-accent-fg-color) 80%, var(--md-default-bg-color));
     --mx-topbar-fg-muted:              color-mix(in srgb, var(--mx-topbar-fg) 72%, transparent);
     --mx-search-outline:               color-mix(in srgb, var(--mx-topbar-fg) 22%, transparent);
     --mx-search-hover-bg:              color-mix(in srgb, var(--mx-topbar-fg) 16%, transparent);

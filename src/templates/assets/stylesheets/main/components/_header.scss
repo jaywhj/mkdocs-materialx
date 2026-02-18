@@ -261,10 +261,7 @@
   }
 }
 
-[data-mx-topbar="primary"] .md-header {
-  backdrop-filter: none;
-}
-
+[data-mx-topbar="primary"] .md-header,
 [data-mx-topbar="accent"] .md-header {
   backdrop-filter: none;
 }
