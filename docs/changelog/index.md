@@ -52,7 +52,7 @@ icon: material/layers-triple-outline
 - Fixed: Adjust the style of kbd shortcuts
 - Fixed: Adjust UI shadow effect
 - Fixed: Merge the upstream 9.7.1 update
-- Fixed: Update Doc Site, see [MaterialX](/)
+- Fixed: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
 ### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }
 
