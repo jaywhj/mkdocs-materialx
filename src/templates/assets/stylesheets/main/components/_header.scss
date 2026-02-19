@@ -261,7 +261,6 @@
   }
 }
 
-[data-mx-topbar="primary"] .md-header,
-[data-mx-topbar="accent"] .md-header {
+[data-mx-topbar]:not([data-mx-topbar="glass"]) .md-header {
   backdrop-filter: none;
 }

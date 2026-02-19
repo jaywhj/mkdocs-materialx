@@ -153,8 +153,7 @@
   }
 }
 
-[data-mx-topbar="primary"] .md-tabs,
-[data-mx-topbar="accent"] .md-tabs {
+[data-mx-topbar]:not([data-mx-topbar="glass"]) .md-tabs {
   backdrop-filter: none;
   box-shadow: none;
 }

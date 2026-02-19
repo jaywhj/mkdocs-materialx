@@ -140,6 +140,15 @@
         // background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
       }
 
+      [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="white"] .md-nav--primary &,
+      [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="black"] .md-nav--primary & {
+        color: var(--md-primary-bg-color);
+
+        @supports (color: color-mix(in srgb, black, white)) {
+          background-color: color-mix(in srgb, var(--md-primary-bg-color), transparent 90%);
+        }
+      }
+
       // Also enable color transitions on inline code blocks
       &,
       code {
@@ -350,8 +359,8 @@
 
     // 设置 toc 的整体外边距，不影响嵌套的 list
     > .md-nav__list {
-      margin-top: px2rem(8px);
       margin-inline-start: px2rem(4px);
+      margin-top: px2rem(8px);
     }
 
     // 给二级及以上的 list 添加缩进参考线 (被 .md-nav__item 包含时)
@@ -388,6 +397,11 @@
 
       &__link--active {
         color: var(--md-primary-fg-color);
+
+        [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="white"] &,
+        [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="black"] & {
+          color: var(--md-primary-bg-color);
+        }
       }
     }
   }
@@ -395,6 +409,7 @@
   @include break-to-device(tablet portrait) {
     .md-nav__title[for="__toc"] {
       padding-top: px2rem(16px);
+
       [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
         color: var(--mx-topbar-fg);
         background-color: var(--mx-topbar-bg);
@@ -424,9 +439,9 @@
       // Logo
       .md-logo {
         // set gap
-        margin-inline-end: px2rem(8px);
         width: px2rem(32px);
         height: px2rem(32px);
+        margin-inline-end: px2rem(8px);
 
         // Image or icon
         :is(img, svg) {
@@ -449,10 +464,10 @@
 
   // Repository information container
   &__source {
-    border-radius: px2rem(8px);
-    border: px2rem(1px) solid var(--md-default-fg-color--lightest);
     margin: px2rem(4px);
     margin-bottom: px2rem(12px);
+    border: px2rem(1px) solid var(--md-default-fg-color--lightest);
+    border-radius: px2rem(8px);
     transition:
       250ms background-color,
       250ms border-color;
@@ -470,8 +485,8 @@
     // Show integrated table of contents
     .md-nav--secondary {
       display: block;
-      margin-inline-start: px2rem(22px);
       margin-block: 0.5em;
+      margin-inline-start: px2rem(22px);
       visibility: visible;
       border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
       opacity: 1;

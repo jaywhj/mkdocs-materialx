@@ -194,13 +194,4 @@
       background-color: hsla(var(--md-hue), 15%, 9%, 1);
     }
   }
-
-  // [screen +]: Set background color for tabs
-  @include break-from-device(screen) {
-
-    // Navigation tabs
-    .md-tabs {
-      background-color: hsla(var(--md-hue), 15%, 9%, 1);
-    }
-  }
 }
