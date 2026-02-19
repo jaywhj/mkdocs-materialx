@@ -165,7 +165,7 @@ if (feature("navigation.instant"))
 if (config.version?.provider === "mike")
   setupVersionSelector({ document$ })
 
-// Always close drawer and search on navigation
+// Always close drawer, search and table of contents on navigation
 merge(location$, target$)
   .pipe(
     delay(100)

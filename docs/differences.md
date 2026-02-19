@@ -44,8 +44,8 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
     - Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
     - Refactor the TOC components for mobile, enabling seamless NAV and TOC experiences on mobile
-    - Fixed issue where swipe events would wear through when displaying drawer on mobile
-    - Added indentation guide lines and active link accent colors for TOC
+    - Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
+    - Added indentation guide lines and active link accent color for TOC
     - Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
     - Allow to set topbar background color in glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
 
