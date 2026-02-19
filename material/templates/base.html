@@ -37,7 +37,7 @@
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.updated') }}" href="{{ 'feed_rss_updated.xml' | url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.0.8">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.0.9">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -49,10 +49,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.38d142ab.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.90ee4e44.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.a62bd823.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.63c7e8c3.min.css' | url }}">
       {% endif %}
       {% include "partials/icons.html" %}
     {% endblock %}
@@ -83,6 +83,8 @@
     {% block extrahead %}{% endblock %}
   </head>
   {% set direction = config.theme.direction or lang.t("direction") %}
+  {% set topbar = config.theme.topbar | d({}, true) %}
+  {% set topbar_style = config.theme.topbar_style | d(topbar.style | d("glass", true), true) %}
   {% if config.theme.palette %}
     {% set palette = config.theme.palette %}
     {% if not palette is mapping %}
@@ -91,9 +93,9 @@
     {% set scheme  = palette.scheme  | d("default", true) %}
     {% set primary = palette.primary | d("indigo", true) %}
     {% set accent  = palette.accent  | d("indigo", true) %}
-    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}">
+    <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}" data-mx-topbar="{{ topbar_style | replace(' ', '-') }}">
   {% else %}
-    <body dir="{{ direction }}">
+    <body dir="{{ direction }}" data-mx-topbar="{{ topbar_style | replace(' ', '-') }}">
   {% endif %}
     {% set features = config.theme.features or [] %}
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -250,7 +252,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.c5352097.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.6a56f36d.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}
