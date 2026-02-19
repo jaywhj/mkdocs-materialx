@@ -41,8 +41,8 @@ Therefore, MaterialX will adhere to the following goals and principles:
 ??? quote "Key Update Highlights of MaterialX"
 
     - Added the modern Liquid Glass theme, consistent with Zensical
-    - Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/)
-    - Added the recent updates module, see documentation: [Adding Recent Updates Module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/)
+    - Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
+    - Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
     - Refactor the TOC components for mobile, enabling seamless NAV and TOC experiences on mobile
     - Fixed issue where swipe events would wear through on mobile
     - Added indentation guide lines and active link accent colors for TOC
