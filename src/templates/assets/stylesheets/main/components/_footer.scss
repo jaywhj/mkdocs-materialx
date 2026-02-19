@@ -137,9 +137,9 @@
 
   // Lighten color for non-hovered text links
   html &.md-typeset a:not(:focus, :hover) {
-      color: var(--md-default-fg-color);
-    }
+    color: var(--md-default-fg-color);
   }
+}
 
 // ----------------------------------------------------------------------------
 

@@ -58,8 +58,8 @@
       color: var(--md-primary-bg-color);
       background-color: var(--md-primary-fg-color);
 
-    // Button on focus/hover
-    &:is(:focus, :hover) {
+      // Button on focus/hover
+      &:is(:focus, :hover) {
         color: var(--md-primary-bg-color);
         opacity: 0.8;
       }

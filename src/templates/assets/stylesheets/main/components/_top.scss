@@ -172,32 +172,39 @@
 @include break-from-device(screen) {
   @supports selector(.md-container:has(.md-sidebar)) {
     .md-container {
-      // 只有左侧 nav 侧栏可见，同时没有可见的 toc 侧栏
-      &:has(.md-sidebar.md-sidebar--primary:not([hidden]))
-        :not(:has(.md-sidebar.md-sidebar--secondary:not([hidden])))
-        .md-top {
-        margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+      // 当左侧 nav 可见，右侧 toc 不可见时
+      &:has(.md-sidebar.md-sidebar--primary:not([hidden])) {
+        &:not(:has(.md-sidebar.md-sidebar--secondary:not([hidden]))) {
+          .md-top {
+            margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+          }
+        }
       }
-      // 只有右侧 toc 侧栏可见，同时没有可见的 nav 侧栏
-      &:has(.md-sidebar.md-sidebar--secondary:not([hidden]))
-        :not(:has(.md-sidebar.md-sidebar--primary:not([hidden])))
-        .md-top {
-        margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+      // 当右侧 toc 可见，左侧 nav 不可见时
+      &:has(.md-sidebar.md-sidebar--secondary:not([hidden])) {
+        &:not(:has(.md-sidebar.md-sidebar--primary:not([hidden]))) {
+          .md-top {
+            margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+          }
+        }
       }
     }
 
     [dir="rtl"] .md-container {
-      &:has(.md-sidebar.md-sidebar--primary:not([hidden]))
-        :not(:has(.md-sidebar.md-sidebar--secondary:not([hidden])))
-        .md-top {
-        margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+      &:has(.md-sidebar.md-sidebar--primary:not([hidden])) {
+        &:not(:has(.md-sidebar.md-sidebar--secondary:not([hidden]))) {
+          .md-top {
+            margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
+          }
+        }
       }
-      &:has(.md-sidebar.md-sidebar--secondary:not([hidden]))
-        :not(:has(.md-sidebar.md-sidebar--primary:not([hidden])))
-        .md-top {
-        margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+      &:has(.md-sidebar.md-sidebar--secondary:not([hidden])) {
+        &:not(:has(.md-sidebar.md-sidebar--primary:not([hidden]))) {
+          .md-top {
+            margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
+          }
+        }
       }
     }
-
   }
 }
