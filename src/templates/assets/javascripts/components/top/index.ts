@@ -26,11 +26,9 @@ import {
   bufferCount,
   combineLatest,
   distinctUntilChanged,
-  distinctUntilKeyChanged,
   endWith,
   finalize,
   fromEvent,
-  ignoreElements,
   map,
   repeat,
   scan,
@@ -56,7 +54,7 @@ import { Main } from "../main"
  * Back-to-top button
  */
 export interface BackToTop {
-  hidden: boolean                      /* Back-to-top button is hidden */
+  hidden: boolean                      // Back-to-top button is hidden
 }
 
 /* ----------------------------------------------------------------------------
@@ -67,19 +65,19 @@ export interface BackToTop {
  * Watch options
  */
 interface WatchOptions {
-  viewport$: Observable<Viewport>      /* Viewport observable */
-  main$: Observable<Main>              /* Main area observable */
-  target$: Observable<HTMLElement>     /* Location target observable */
+  viewport$: Observable<Viewport>      // Viewport observable
+  main$: Observable<Main>              // Main area observable
+  target$: Observable<HTMLElement>     // Location target observable
 }
 
 /**
  * Mount options
  */
 interface MountOptions {
-  viewport$: Observable<Viewport>      /* Viewport observable */
-  header$: Observable<Header>          /* Header observable */
-  main$: Observable<Main>              /* Main area observable */
-  target$: Observable<HTMLElement>     /* Location target observable */
+  viewport$: Observable<Viewport>      // Viewport observable
+  header$: Observable<Header>          // Header observable
+  main$: Observable<Main>              // Main area observable
+  target$: Observable<HTMLElement>     // Location target observable
 }
 
 /* ----------------------------------------------------------------------------
@@ -98,7 +96,7 @@ export function watchBackToTop(
   _el: HTMLElement, { viewport$, main$, target$ }: WatchOptions
 ): Observable<BackToTop> {
 
-  /* Compute direction (with jitter guard) */
+  // Compute direction (with jitter guard)
   const DIRECTION_THRESHOLD = 12
 
   const direction$ = viewport$.pipe(
@@ -137,13 +135,13 @@ export function watchBackToTop(
     distinctUntilChanged()
   )
 
-  /* Compute whether main area is active */
+  // Compute whether main area is active
   const active$ = main$
     .pipe(
       map(({ active }) => active)
     )
 
-    /* NEW: Detect reaching top */
+  // Detect reaching top
   const atTop$ = viewport$
     .pipe(
       map(({ offset: { y } }) => y === 0),
@@ -151,12 +149,12 @@ export function watchBackToTop(
       filter(Boolean)
     )
 
-    const effectiveDirection$ = merge(
+  const effectiveDirection$ = merge(
     direction$,
     atTop$.pipe(map(() => false))
   )
 
-  /* Compute threshold for hiding */
+  // Compute threshold for hiding
   return combineLatest([active$, effectiveDirection$])
     .pipe(
       map(([active, direction]) => !(active && direction)),
@@ -168,7 +166,7 @@ export function watchBackToTop(
     )
 }
 
-/* ------------------------------------------------------------------------- */
+// -------------------------------------------------------------------------
 
 /**
  * Mount back-to-top
@@ -179,13 +177,12 @@ export function watchBackToTop(
  * @returns Back-to-top component observable
  */
 export function mountBackToTop(
-  el: HTMLElement, { viewport$, header$, main$, target$ }: MountOptions
+  el: HTMLElement, { viewport$, main$, target$ }: MountOptions
 ): Observable<Component<BackToTop>> {
   const push$ = new Subject<BackToTop>()
-  const done$ = push$.pipe(ignoreElements(), endWith(true))
   push$.subscribe({
 
-    /* Handle emission */
+    // Handle emission
     next({ hidden }) {
       el.hidden = hidden
       if (hidden) {
@@ -200,7 +197,7 @@ export function mountBackToTop(
       }
     },
 
-    /* Handle complete */
+    // Handle complete
     complete() {
       el.style.bottom = ""
       el.hidden = true
@@ -208,17 +205,7 @@ export function mountBackToTop(
     }
   })
 
-  /* Watch header height */
-  // header$
-  //   .pipe(
-  //     takeUntil(done$),
-  //     distinctUntilKeyChanged("height")
-  //   )
-  //     .subscribe(({ height }) => {
-  //       el.style.top = `${height + 16}px`
-  //     })
-
-  /* Go back to top */
+  // Go back to top
   const button = el.querySelector("[data-md-action='top']")
   if (button) {
     fromEvent(button, "click")
@@ -228,7 +215,7 @@ export function mountBackToTop(
       })
   }
 
-  /* Create and return component */
+  // Create and return component
   return watchBackToTop(el, { viewport$, main$, target$ })
     .pipe(
       tap(state => push$.next(state)),

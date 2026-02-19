@@ -22,13 +22,9 @@
 
 import {
   Observable,
-  filter,
   fromEvent,
-  map,
   merge,
-  mergeMap,
-  switchMap,
-  tap
+  switchMap
 } from "rxjs"
 
 import { getElements } from "~/browser"
