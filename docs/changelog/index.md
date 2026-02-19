@@ -41,8 +41,8 @@ icon: material/layers-triple-outline
 
 - New: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
 - New: Show `git repo` in sidebar on mobile
-- New: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors/)
-- New: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module/)
+- New: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors.md)
+- New: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module.md)
 - Fixed: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
 - Fixed: Optimize the judgment of the direction of the swipe gesture, so as to adjust the sensitivity of showing the bottom menu
 - Fixed: Search function does not display properly on mobile
@@ -52,7 +52,7 @@ icon: material/layers-triple-outline
 - Fixed: Adjust the style of kbd shortcuts
 - Fixed: Adjust UI shadow effect
 - Fixed: Merge the upstream 9.7.1 update
-- Fixed: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
+- Fixed: Update Doc Site, see [MaterialX](/)
 
 ### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }
 
