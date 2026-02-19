@@ -1,6 +1,6 @@
 mkdocs-materialx-10.0.9 (2026-02-20)
 
-- Added configurable styles for Topbar, allow to set topbar background color in glass theme, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors.md#topbar-style)
+- Added configurable styles for Topbar, allow to set topbar background color in glass theme, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors.html#topbar-style)
 - Make color-mix of navigation background compatible with iOS 14 and earlier
 - Optimized the css details of NAV and TOC on different platforms again to improve the aesthetics
 
