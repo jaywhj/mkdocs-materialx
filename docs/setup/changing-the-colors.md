@@ -312,6 +312,24 @@ Material for MkDocs will now change the color palette each time the operating
 system switches between light and dark appearance, even when the user doesn't
 reload the site.
 
+### Topbar style
+
+<!-- md:version 10.0.9 -->
+
+In Liquid Glass theme, the topbar (header + tabs) will always be frosted transparent color by default. If you need to set the background color of the topbar to follow `primary` or `accent`, configure it via `topbar_style`:
+
+<!-- md:option theme.topbar_style -->
+
+:   <!-- md:default `glass` --> This property is used to set the background color of the topbar.
+    Valid values are `glass`, `primary`, `accent`:
+
+    ``` yaml hl_lines="2"
+    theme:
+      topbar_style: primary   # glass primary accent
+      palette:
+        primary: indigo
+    ```
+
 ## Customization
 
 ### Custom colors

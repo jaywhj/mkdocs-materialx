@@ -6,6 +6,12 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.0.9 <small>February 20, 2026</small> { id="10.0.9" }
+
+- Added configurable styles for Topbar, allow to set topbar background color in glass theme, see [Topbar style](../setup/changing-the-colors.md#topbar-style)
+- Make color-mix of navigation background compatible with iOS 14 and earlier
+- Optimized the css details of NAV and TOC on different platforms again to improve the aesthetics
+
 ### 10.0.8 <small>February 12, 2026</small> { id="10.0.8" }
 
 - **Highlights**: Fixed issue where swipe events would wear through on mobile

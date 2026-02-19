@@ -23,9 +23,9 @@ MaterialX aims to be a **zero-fuss** solution, allowing users to convert everyda
 Therefore, MaterialX will adhere to the following goals and principles:
 
 - **Goal**: Pursue **accessibility for everyone**. Empowering all users to own their websites, including but not limited to developers, product managers, marketers, and DevOps engineers. Website creation should no longer be exclusive to technical users
-- **Principle**: **Extreme ease of use** is our top priority. We will simplify configurations and feature sets, provide sensible defaults and automated setup, and minimize the cost of configuration and maintenance for users
-- **Focus**: **General-purpose features** and **visual presentation**. Future feature selection will lean more toward general-purpose functionality and visual expression, and we will deliver a wider range of content presentation formats, such as graphs, charts, images, audio and video, to bring your content to life
-- **Obsession**: **User experience (UX)**. We will pay meticulous attention to interactive and visual details, whether it’s an unnoticeable line spacing adjustment or a simple border design ...
+- **Principle**: **Extreme ease of use** is the top priority. MaterialX will simplify configurations and feature sets, provide sensible defaults and automated setup, and minimize the cost of configuration and maintenance for users
+- **Focus**: **General-purpose features** and **visual presentation**. Future feature selection will lean more toward general-purpose functionality and visual expression, and it will deliver a wider range of content presentation formats, such as graphs, charts, images, audio and video, to bring your content to life
+- **Obsession**: **User experience (UX)**. I will pay meticulous attention to interactive and visual details, whether it’s an unnoticeable line spacing adjustment or a simple border design ...
 
 
 
@@ -44,9 +44,10 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
     - Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
     - Refactor the TOC components for mobile, enabling seamless NAV and TOC experiences on mobile
-    - Fixed issue where swipe events would wear through on mobile
+    - Fixed issue where swipe events would wear through when displaying drawer on mobile
     - Added indentation guide lines and active link accent colors for TOC
     - Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
+    - Allow to set topbar background color in glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
 
 
 
