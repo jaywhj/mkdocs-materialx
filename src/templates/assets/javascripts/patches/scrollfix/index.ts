@@ -62,10 +62,9 @@ export function patchScrollfix(
   document$
     .pipe(
       switchMap(() => merge(
-        // 抽屉容器的滑动穿透已由 CSS 处理 (overscroll-behavior)，这里只需单独处理 overlay 的轻扫事件
-        // getElements(".md-sidebar--primary"),
-        // getElements(".md-sidebar--secondary"),
-        // getElements(".md-search"),
+        getElements(".md-sidebar--primary"),
+        getElements(".md-sidebar--secondary"),
+        getElements(".md-search"),
         getElements(".md-overlay")
       ))
     )
