@@ -62,9 +62,10 @@ export function patchScrollfix(
   document$
     .pipe(
       switchMap(() => merge(
-        getElements(".md-sidebar--primary"),
-        getElements(".md-sidebar--secondary"),
-        getElements(".md-search"),
+        // 抽屉容器的滑动穿透已由 CSS 处理 (overscroll-behavior)，这里只需单独处理 overlay 的轻扫事件
+        // getElements(".md-sidebar--primary"),
+        // getElements(".md-sidebar--secondary"),
+        // getElements(".md-search"),
         getElements(".md-overlay")
       ))
     )
@@ -73,7 +74,7 @@ export function patchScrollfix(
       let scrollable: HTMLElement | null = null
       let isOverlay = false
 
-      /* Intercept touch start to record position and prepare context */
+      /* touchstart: intercept touch start to record position and prepare context */
       fromEvent<TouchEvent>(el, "touchstart", { passive: true })
         .subscribe(ev => {
           startY = ev.touches[0].pageY
@@ -87,12 +88,9 @@ export function patchScrollfix(
           }
         })
 
-      /* Intercept touch move to prevent leaking */
+      /* touchmove: intercept touch move to prevent leaking */
       fromEvent<TouchEvent>(el, "touchmove", { passive: false })
         .subscribe(ev => {
-          const y = ev.touches[0].pageY
-          const delta = startY - y
-
           /* Case 1: The element is an overlay (background) */
           if (isOverlay) {
             if (ev.cancelable)
@@ -108,7 +106,6 @@ export function patchScrollfix(
             return
           }
 
-          const top = scrollable.scrollTop
           const height = scrollable.offsetHeight
           const total = scrollable.scrollHeight
 
@@ -118,6 +115,10 @@ export function patchScrollfix(
               ev.preventDefault()
             return
           }
+
+          const top = scrollable.scrollTop
+          const y = ev.touches[0].pageY
+          const delta = startY - y
 
           /* Prevent leaking when at the top and pulling down */
           if (top <= 0 && delta < 0) {

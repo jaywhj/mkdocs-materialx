@@ -77,11 +77,14 @@ body {
 
 // ----------------------------------------------------------------------------
 
-// Container with scrollfix
-.md-sidebar__scrollwrap,
-.md-search__scrollwrap {
-  // 阻止滑动穿透，让滑动行为只局限在当前元素内部
-  overscroll-behavior: contain;
+// 阻止触屏设备上的滑动穿透
+@media (hover: none) and (pointer: coarse) {
+  // 带 scrollfix 的容器
+  .md-sidebar__scrollwrap,
+  .md-search__scrollwrap {
+    // 阻止滑动穿透，让滑动行为只局限在当前元素内部
+    overscroll-behavior: contain;
+  }
 }
 
 // ----------------------------------------------------------------------------
