@@ -8,7 +8,9 @@ Since `mkdocs-material` has entered maintenance mode with no new features planne
 
 So, is there a way to retain the rich ecosystem and stability of mkdocs-material while also gaining the cutting-edge features like Zensical provides?
 
-The answer is **MaterialX**, which is positioned with the following brand-new vision.
+The answer is **MaterialX**, which lets you continue to build beautiful documents in a familiar way.
+
+Here's its brand-new vision and positioning:
 
 
 

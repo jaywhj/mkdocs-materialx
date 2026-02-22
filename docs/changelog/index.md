@@ -8,7 +8,7 @@ icon: material/layers-triple-outline
 
 ### 10.0.9 <small>February 20, 2026</small> { id="10.0.9" }
 
-- Added configurable styles for Topbar, allow to set topbar background color in Liquid Glass theme, see [Topbar style](../setup/changing-the-colors.md#topbar-style)
+- Added configurable styles for topbar, allow to set topbar background color in Liquid Glass theme, see [Topbar style](../setup/changing-the-colors.md#topbar-style)
 - Make color-mix of navigation background compatible with iOS 14 and earlier
 - Optimized the css details of NAV and TOC on different platforms again to improve the aesthetics
 
