@@ -171,7 +171,7 @@ See our guide below to learn how to set [custom colors].
 <!-- md:default none -->
 <!-- md:example color-palette-toggle -->
 
-Offering a light _and_ dark color palette makes your documentation pleasant to
+Offering a __light__ & __dark__ color palette makes your documentation pleasant to
 read at different times of the day, so the user can choose accordingly. Add the
 following lines to `mkdocs.yml`:
 
@@ -181,12 +181,16 @@ theme:
 
     # Palette toggle for light mode
     - scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7 # (2)!
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -252,6 +256,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -259,6 +265,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -292,6 +300,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default # (1)!
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -299,6 +309,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: cyan
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to system preference

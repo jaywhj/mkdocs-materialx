@@ -47,7 +47,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
     - Added indentation guide lines and active link accent color for TOC
     - Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
-    - Allow to set topbar background color in glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
+    - Allow to set topbar background color in Liquid Glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
 
 
 
