@@ -10,7 +10,7 @@
 
 ## What Difference
 
-For a more detailed description of the differences, see documentation: [Why MaterialX](https://jaywhj.github.io/mkdocs-materialx/differences/)
+For a more detailed description of the differences, see documentation: [Why MaterialX](https://jaywhj.github.io/mkdocs-materialx/differences.html)
 
 <br />
 
