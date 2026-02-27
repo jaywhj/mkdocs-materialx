@@ -365,7 +365,7 @@
 
     // 给二级及以上的 list 添加缩进参考线 (被 .md-nav__item 包含时)
     .md-nav__item .md-nav__list {
-      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
+      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--quote);
     }
 
     .md-nav {
@@ -488,7 +488,7 @@
       margin-block: 0.5em;
       margin-inline-start: px2rem(22px);
       visibility: visible;
-      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--lightest);
+      border-inline-start: px2rem(1px) solid var(--md-default-fg-color--quote);
       opacity: 1;
 
       // Navigation link
