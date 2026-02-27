@@ -40,19 +40,6 @@ Therefore, MaterialX will adhere to the following goals and principles:
 | **Current Status**  |     Nearing end-of-maintenance     |          Active maintenance and updates           |
 | **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new feature additions, UX improvements,<br />see [Changelog](changelog/index.md) |
 
-??? quote "Key Update Highlights of MaterialX"
-
-    - Added the modern Liquid Glass theme, consistent with Zensical
-    - Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
-    - Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
-    - Refactor the TOC components for mobile, enabling seamless NAV and TOC experiences on mobile
-    - Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
-    - Added indentation guide lines and active link accent color for TOC
-    - Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
-    - Allow to set topbar background color in Liquid Glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
-
-
-
 ## Differences from Zensical
 
 | Aspect         |                    Zensical                  |                        MaterialX                  |
@@ -65,6 +52,17 @@ Therefore, MaterialX will adhere to the following goals and principles:
 | **Core Focus** | Prioritizes technical customization, with increasingly cumbersome feature configurations and ever-growing complexity in usage | Focuses on universal functions & visual presentation, extreme ease of use as primary principle, evolving to be more lightweight |
 
 Zensical is impressive, but I cannot find a compelling reason to adopt it.
+
+## Key Update Highlights
+
+- Added the modern Liquid Glass theme, consistent with Zensical
+- Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
+- Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
+- Refactor the TOC for mobile, enabling seamless NAV and TOC experiences on mobile (Zensical has no TOC on mobile)
+- Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
+- Added indentation guide lines and active link accent color for TOC
+- Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
+- Allow to set topbar background color in Liquid Glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
 
 ## Quick Start
 

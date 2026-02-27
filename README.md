@@ -34,6 +34,17 @@ For a more detailed description of the differences, see documentation: [Why Mate
 | **Ecosystem**  | Built entirely from scratch, incompatible with all original MkDocs components, future development uncertain | Based on MkDocs & mkdocs-material-9.7.1, fully compatible with MkDocs' rich long-built ecosystem, open and vibrant |
 | **Core Focus** | Prioritizes technical customization, with increasingly cumbersome feature configurations and ever-growing complexity in usage | Focuses on universal functions & visual presentation, extreme ease of use as primary principle, evolving to be more lightweight |
 
+## Key Update Highlights
+
+- Added the modern Liquid Glass theme, consistent with Zensical
+- Added the next-gen date and author plugin, see documentation: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md)
+- Added the recent updates module, see documentation: [Adding Recent Updates Module](setup/adding-recent-updates-module.md)
+- Refactor the TOC for mobile, enabling seamless NAV and TOC experiences on mobile (Zensical has no TOC on mobile)
+- Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
+- Added indentation guide lines and active link accent color for TOC
+- Moved the "back-to-top" container to the bottom, aligning with intuitive proximity-based interaction logic
+- Allow to set topbar background color in Liquid Glass theme, see [Topbar style](setup/changing-the-colors.md#topbar-style)
+
 <br />
 
 ## Quick Start

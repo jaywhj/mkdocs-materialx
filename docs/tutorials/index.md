@@ -11,7 +11,7 @@ gain not only an understanding of how to use MaterialX for MkDocs, but also
 a template for your own projects. For convenience, these templates are also
 available as template repositories on GitHub.
 
-[public version]: ../getting-started.md
+[public version]: ../installation.md
 [creating your site]: ../creating-your-site.md
 
 !!! note "Feedback wanted!"

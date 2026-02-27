@@ -21,7 +21,7 @@ This will create the following structure:
 └─ mkdocs.yml
 ```
 
-  [installed]: getting-started.md
+  [installed]: installation.md
 
 ## Configuration
 
@@ -41,9 +41,6 @@ By default, MkDocs will assume that your site is hosted at the root of
 your domain. This is not the case, for example, when [publishing to GitHub
 pages] - unless you use a custom domain. Another reason is that some of the
 plugins require the `site_url` to be set, so you should always do this.
-
-  [publishing to GitHub pages]: publishing-your-site.md#github-pages
-  [installation methods]: getting-started.md#installation
 
 ??? tip "Recommended: [configuration validation and auto-complete]"
 

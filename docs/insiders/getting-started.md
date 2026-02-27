@@ -96,7 +96,7 @@ docker pull ghcr.io/${GH_USERNAME}/mkdocs-material-insiders
 ```
 
 Should you wish to add additional plugins to the insiders container image, follow the steps
-outlined in the [Getting Started guide](../getting-started.md#with-docker).
+outlined in the [Getting Started guide](../installation.md#with-docker).
 
   [^2]:
     Earlier, Insiders provided a dedicated Docker image which was available to

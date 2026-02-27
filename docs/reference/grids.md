@@ -171,8 +171,8 @@ there's more space available, grids will render in items of 3 and more, e.g.
 when [hiding both sidebars].
 
   [mkdocs-materialx]: https://pypistats.org/packages/mkdocs-materialx
-  [pip]: ../getting-started.md#with-pip
-  [getting started]: ../getting-started.md
+  [pip]: ../installation.md#with-pip
+  [getting started]: ../installation.md
   [reference]: ../reference/index.md
   [customization]: ../customization.md
   [license]: ../license.md
