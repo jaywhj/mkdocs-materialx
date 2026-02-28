@@ -24,7 +24,7 @@ Open up a terminal and install MaterialX for MkDocs with:
     pip install mkdocs-materialx
     ```
 
-=== "Specify"
+=== "Pin"
 
     ```
     pip install mkdocs-materialx==10.0.9
@@ -57,10 +57,10 @@ and pull the image with:
     docker pull squidfunk/mkdocs-material
     ```
 
-=== "Specify"
+=== "Pin"
 
     ```
-    docker pull squidfunk/mkdocs-material:9.7.0
+    docker pull squidfunk/mkdocs-material:9.7.1
     ```
 
 The following plugins are bundled with the Docker image:
@@ -77,28 +77,43 @@ The following plugins are bundled with the Docker image:
 Material for MkDocs only bundles selected plugins in order to keep the size of the official image small. If the plugin you want to use is not included, you can add them easily. Create a `Dockerfile` and extend the official image:
 
 ``` Dockerfile title="Dockerfile"
-FROM squidfunk/mkdocs-material:9.7.0
+FROM squidfunk/mkdocs-material:9.7.1
 RUN pip install mkdocs-materialx
 RUN pip install mkdocs-glightbox
 ```
 
-### Interim way
+### For MaterialX
 
-Due to time constraints, I haven't yet provided a separate Docker image for MaterialX, however, you can directly use the Material image.
+MaterialX does not yet provide an official Docker image, as a temporary solution, you can derive a custom image from `mkdocs-material`.
 
-After pulling the image, install MaterialX first, then install other plugins:
+> This approach reuses the official `mkdocs-material` image and installs MaterialX on top of it.
 
-``` Dockerfile title="Dockerfile" hl_lines="2"
-FROM squidfunk/mkdocs-material:9.7.0
-RUN pip install --upgrade mkdocs-materialx
+#### Create a Dockerfile
 
-# Then install other plugins
+```dockerfile title="Dockerfile" hl_lines="3"
+FROM squidfunk/mkdocs-material:9.7.1
 
+RUN pip install mkdocs-materialx
+
+# Install additional plugins if needed
+# RUN pip install mkdocs-glightbox ...
+```
+
+#### Build the image
+
+```
+docker build -t materialx .
+```
+
+#### Run the container
+
+```
+docker run -p 8000:8000 -v ${PWD}:/docs materialx
 ```
 
 !!! info
 
-    This is just an interim solution, I'll provide the official MaterialX image later when I have time.
+    This is a temporary workaround, an official MaterialX Docker image will be provided in the future.
 
 ## with git
 
