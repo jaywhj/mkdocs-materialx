@@ -85,8 +85,8 @@ class InfoPlugin(BasePlugin[InfoConfig]):
 
         # Check if we're running the latest version
         _, current = res.headers.get("location").rsplit("/", 1)
-        present = version("mkdocs-material")
-        if not present.startswith(current):
+        present = version("mkdocs-materialx")
+        if not present.startswith(current.strip().lower().lstrip('v').strip()):
             log.error("Please upgrade to the latest version.")
             self._help_on_versions_and_exit(present, current)
 
@@ -369,13 +369,13 @@ class InfoPlugin(BasePlugin[InfoConfig]):
     def _help_on_versions_and_exit(self, have, need):
         print(Fore.RED)
         print("  When reporting issues, please first upgrade to the latest")
-        print("  version of Material for MkDocs, as the problem might already")
+        print("  version of MaterialX for MkDocs, as the problem might already")
         print("  be fixed in the latest version. This helps reduce duplicate")
         print("  efforts and saves us maintainers time.")
         print(Style.NORMAL)
         print(f"  Please update from {have} to {need}.")
         print(Style.RESET_ALL)
-        print(f"  pip install --upgrade --force-reinstall mkdocs-material")
+        print(f"  pip install --upgrade --force-reinstall mkdocs-materialx")
         print(Style.NORMAL)
 
         # Exit, unless explicitly told not to
