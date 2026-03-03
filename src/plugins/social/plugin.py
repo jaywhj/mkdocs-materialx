@@ -401,14 +401,14 @@ class SocialPlugin(BasePlugin[SocialConfig]):
             # path = os.path.relpath(page.file.abs_src_path, docs)
             # raise PluginError(
             #     f"Couldn't render card for '{path}' in '{docs}': install "
-            #     f"required dependencies – pip install 'mkdocs-material[imaging]'"
+            #     f"required dependencies – pip install 'mkdocs-materialx[imaging]'"
             # )
             # @todo improve formatting of error handling
             raise PluginError(
                 "Required dependencies of \"social\" plugin not found:\n"
                 + str("\n".join(map(lambda x: "- " + x, import_errors)))
                 + "\n\n"
-                + "--> Install with: pip install \"mkdocs-material[imaging]\""
+                + "--> Install with: pip install \"mkdocs-materialx[imaging]\""
             )
         if cairosvg_error:
             # @todo improve formatting of error handling

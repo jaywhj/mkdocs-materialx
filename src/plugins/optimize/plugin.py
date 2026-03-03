@@ -352,7 +352,7 @@ class OptimizePlugin(BasePlugin[OptimizeConfig]):
             path = os.path.relpath(file.abs_src_path, docs)
             raise PluginError(
                 f"Couldn't optimize image '{path}' in '{docs}': install "
-                f"required dependencies – pip install 'mkdocs-material[imaging]'"
+                f"required dependencies – pip install 'mkdocs-materialx[imaging]'"
             )
 
         # Open and save optimized image

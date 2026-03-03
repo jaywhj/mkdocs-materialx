@@ -179,7 +179,7 @@ export function transformScript(
 
       /* Plugin to minify inlined CSS (e.g. for Mermaid.js) */
       {
-        name: "mkdocs-material/inline",
+        name: "mkdocs-materialx/inline",
         setup(build) {
           build.onLoad({ filter: /\.css/ }, async args => {
             const content = await fs.readFile(args.path, "utf8")
