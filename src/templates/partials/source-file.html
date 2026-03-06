@@ -116,37 +116,32 @@
 
 <!-- ---------------------------------------------------------------------- -->
 {% if page.meta %}
-  {% if page.meta.document_dates_created %}
-    {% set created = page.meta.document_dates_created %}
-  {% endif %}
-
-  {% if page.meta.document_dates_updated %}
-    {% set updated = page.meta.document_dates_updated %}
-  {% endif %}
-
-  {% if page.meta.document_dates_authors %}
-    {% set page_authors = page.meta.document_dates_authors %}
-  {% endif %}
+  {%- set dates = page.meta._mx.document_dates.dates %}
+  {%- set authors = page.meta._mx.document_dates.authors %}
 {% endif %}
 
 <!-- Source file information -->
+ {%- if dates or authors -%}
 <div class="document-dates-plugin">
+  {%- if dates %}
   <div class="dd-left">
-  {%- if created %}
-    {{ render_created(created) }}
+  {%- if dates.created %}
+    {{ render_created(dates.created) }}
   {%- endif %}
 
-  {%- if updated %}
-    {{ render_updated(updated) }}
+  {%- if dates.updated %}
+    {{ render_updated(dates.updated) }}
   {%- endif %}
   </div>
+  {%- endif %}
 
-  {%- if page_authors %}
+  {%- if authors %}
   <div class="dd-right">
-    {{ render_authors(page_authors) }}
+    {{ render_authors(authors) }}
   </div>
   {%- endif %}
 </div>
+{%- endif -%}
 
 {%- if committers %}
 <aside class="md-source-file">
