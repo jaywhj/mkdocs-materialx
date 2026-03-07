@@ -47,25 +47,18 @@
     {% endif %}
 
     <!-- Show table of contents -->
-    {% if "toc.integrate" not in features and page.toc %}
-      {% set toc = page.toc %}
-      {% set first = toc | first %}
-      {% if first and first.level == 1 %}
-        {% set toc = first.children %}
+    {% if "toc.integrate" not in features %}
+      {% set hidden = "" %}
+      {% if page.meta and page.meta.hide and "toc" in page.meta.hide %}
+        {% set hidden = "hidden" %}
       {% endif %}
-      {% if toc %}
-        {% set hidden = "" %}
-        {% if page.meta and page.meta.hide and "toc" in page.meta.hide %}
-          {% set hidden = "hidden" %}
-        {% endif %}
-        <label
-          class="md-top__button md-top__side md-top__side--toc"
-          for="__toc"
-          {{ hidden }}
-        >
-          {% include ".icons/material/dock-right.svg" %}
-        </label>
-      {% endif %}
+      <label
+        class="md-top__button md-top__side md-top__side--toc"
+        for="__toc"
+        {{ hidden }}
+      >
+        {% include ".icons/material/dock-right.svg" %}
+      </label>
     {% endif %}
 
   </div>
