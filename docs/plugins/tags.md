@@ -478,12 +478,12 @@ for case-insensitivity:
 ``` yaml
 plugins:
   - tags:
-      tags_sort_by: !!python/name:material.plugins.tags.tag_name_casefold
+      listings_tags_sort_by: !!python/name:material.plugins.tags.tag_name_casefold
 ```
 
 You can also define your own comparison function, which must return a string
 or number representing the tag, that is used for sorting, and reference it in
-[`tags_sort_by`][config.tags_sort_by].
+[`listings_tags_sort_by`][config.listings_tags_sort_by].
 
 ---
 
@@ -499,7 +499,7 @@ ordering as follows:
 ``` yaml
 plugins:
   - tags:
-      tags_sort_reverse: true
+      listings_tags_sort_reverse: true
 ```
 
 ---
