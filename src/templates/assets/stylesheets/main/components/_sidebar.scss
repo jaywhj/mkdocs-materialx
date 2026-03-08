@@ -179,6 +179,12 @@
             content: attr(aria-label);
             background: var(--md-default-bg-color);
             border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
+
+            [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
+              color: var(--mx-topbar-fg);
+              background-color: var(--mx-topbar-bg);
+              border-bottom: none;
+            }
           }
         }
       }

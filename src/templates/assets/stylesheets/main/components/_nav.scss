@@ -380,13 +380,24 @@
         // Safari, we need to set `z-index` here as - see https://bit.ly/3s5M2jm
         z-index: 1;
         display: flex;
-        padding: px2rem(7px) px2rem(calc(16px + 4px - 1px)) px2rem(10px);
+        padding: px2rem(7px) px2rem(calc(16px + 4px - 1px)) px2rem(12px);
         font-weight: 700;
         background: var(--md-default-bg-color);
 
         // Hide navigation icon
         .md-nav__icon {
           display: none;
+        }
+
+        @include break-to-device(tablet portrait) {
+          padding-top: px2rem(16px);
+          border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
+
+          [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
+            color: var(--mx-topbar-fg);
+            background-color: var(--mx-topbar-bg);
+            border-bottom: none;
+          }
         }
       }
 
@@ -402,17 +413,6 @@
         [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="black"] & {
           color: var(--md-primary-bg-color);
         }
-      }
-    }
-  }
-
-  @include break-to-device(tablet portrait) {
-    .md-nav__title[for="__toc"] {
-      padding-top: px2rem(16px);
-
-      [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
-        color: var(--mx-topbar-fg);
-        background-color: var(--mx-topbar-bg);
       }
     }
   }
@@ -434,7 +434,7 @@
       padding: px2rem(16px);
       font-size: px2rem(16px);
       font-weight: 700;
-      border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
+      // border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
 
       // Logo
       .md-logo {
