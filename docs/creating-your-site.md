@@ -148,6 +148,12 @@ technical writing experience.
   [Adding a comment system]: setup/adding-a-comment-system.md
   [Markdown extensions]: setup/extensions/index.md
 
+### Configuration Template
+
+If you find it tedious to configure them one by one, you can use the configuration template that this site uses itself to lower the barrier to entry.
+
+Download the template [mkdocs.yml](assets/mkdocs.yml), replace the personalized parts in the template with your own, and leave all other options unchanged.
+
 ## Previewing as you write
 
 MkDocs includes a live preview server, so you can preview your changes as you

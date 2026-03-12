@@ -197,14 +197,6 @@ nav:
     - Create your site: creating-your-site.md
     - Publish your site: publishing-your-site.md
     - Customization: customization.md
-    - Conventions: conventions.md
-    - Browser support: browser-support.md
-    # - Philosophy: philosophy.md
-    # - Alternatives: alternatives.md
-    - License: license.md
-    - Changelog:
-      - changelog/index.md
-      - How to upgrade: upgrade.md
   - Setup:
     - setup/index.md
     - Logo and icons: setup/changing-the-logo-and-icons.md
@@ -248,7 +240,7 @@ nav:
     - Requirements:
       - Image processing: plugins/requirements/image-processing.md
       - Caching: plugins/requirements/caching.md
-  - Reference:
+  - Authoring:
     - reference/index.md
     - Admonitions: reference/admonitions.md
     - Annotations: reference/annotations.md
@@ -293,3 +285,13 @@ nav:
       - tutorials/social/custom.md
   # - Blog:
     # - blog/index.md
+
+  - System:
+    - Conventions: conventions.md
+    - Browser support: browser-support.md
+    # - Philosophy: philosophy.md
+    # - Alternatives: alternatives.md
+    - License: license.md
+    - Changelog:
+      - changelog/index.md
+      - How to upgrade: upgrade.md
