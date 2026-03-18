@@ -39,8 +39,8 @@ For a more detailed description of the differences, see documentation: [Why Mate
 ## Key Update Highlights
 
 - Added the modern Liquid Glass theme, consistent with Zensical
-- Added the next-gen date and author plugin, see documentation: [Dates and Authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
-- Added the recent updates module, see documentation: [Recently updated](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module)
+- Added the next-gen date and author plugin, see documentation: [Add document dates & authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
+- Added the recent updates module, see documentation: [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module)
 - Refactor the TOC for mobile, enabling seamless NAV and TOC experiences on mobile (Zensical has no TOC on mobile)
 - Perfectly fixed the issue where swipe events would penetrate when the drawer was active on mobile (Zensical & Material failed to fix)
 - Added indentation guide lines and active link accent color for TOC
