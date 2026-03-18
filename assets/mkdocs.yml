@@ -1,0 +1,196 @@
+
+#---- 1. Site config ----
+
+site_name: MaterialX
+site_url: https://jaywhj.github.io/mkdocs-materialx/
+site_author: Aaron Wang
+site_description: >-
+  Born for documents, yet beyond documents. 
+  Accessible to everyone, extremely easy to use. 
+  Modern, lightweight, customizable, responsive.
+
+repo_name: jaywhj/mkdocs-materialx
+repo_url: https://github.com/jaywhj/mkdocs-materialx
+
+copyright: Copyright &copy; 2016 - 2026 Aaron Wang
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jaywhj
+      name: GitHub
+    - icon: material/email
+      link: mailto:junewhj@qq.com
+      name: Email
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/cvTfge4AUy
+      name: Discord
+
+
+#---- 2. Page tree ----
+
+# exclude_docs: |
+#   /drafts/
+# not_in_nav: |
+#   /tutorials/**/*.md
+
+nav:
+  - Home: index.md
+  - Get started:
+    - Differences: differences.md
+    - Installation: installation.md
+  - Setup:
+    - setup/index.md
+    - Colors: setup/changing-the-colors.md
+    - Extensions:
+      - setup/extensions/index.md
+      - Markdown: setup/extensions/python-markdown.md
+
+
+
+#---- 3. Theme ----
+
+theme:
+  name: materialx
+  custom_dir: material/overrides
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.footnote.tooltips
+    - content.tooltips
+
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.top
+    # - navigation.tracking
+    # - navigation.expand
+    # - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.footer
+
+    - search.highlight
+    - search.share
+    - search.suggest
+
+    - toc.follow
+    # - toc.integrate
+
+  # topbar_style: primary   # glass primary accent
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  language: en
+  font: false
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+    annotation: material/plus-circle-outline
+
+
+
+#---- 4. Plugins ----
+
+plugins:
+  # - blog
+  # - tags
+  - offline
+  - search
+
+  - document-dates:
+      type: timeago
+      exclude:
+        - index.md
+        - license.md
+        - '*/index.md'
+        - blog/*
+      recently-updated:
+        limit: 10
+        exclude:
+          - index.md
+          - blog/*
+
+  - glightbox
+
+
+
+#---- 5. Extensions ----
+
+markdown_extensions:
+  - nl2br
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      toc_depth: 4
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      # linenums: true
+      # linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+
+#---- 6. ----
+
+# extra_javascript:
+#   - javascripts/extra.js
+# extra_css:
+#   - stylesheets/extra.css
