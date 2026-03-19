@@ -355,12 +355,12 @@
 
   // Table of contents
   &--secondary {
-    margin-bottom: px2rem(12px);
+    padding-bottom: px2rem(12px);
 
-    // 设置 toc 的整体外边距，不影响嵌套的 list
+    // 设置 toc 的整体边距，不影响嵌套的 list
     > .md-nav__list {
-      margin-inline-start: px2rem(4px);
-      margin-top: px2rem(8px);
+      padding-inline-start: px2rem(4px);
+      padding-top: px2rem(12px);
     }
 
     // 给二级及以上的 list 添加缩进参考线 (被 .md-nav__item 包含时)
@@ -391,6 +391,7 @@
 
         @include break-to-device(tablet portrait) {
           padding-top: px2rem(16px);
+          padding-bottom: px2rem(15px);
           border-bottom: px2rem(1px) solid var(--md-default-fg-color--lightest);
 
           [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
