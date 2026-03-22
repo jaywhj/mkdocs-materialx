@@ -11,8 +11,8 @@
             2.full time zone datetime (2025-06-22T15:30:00+08:00)
         -#}
 
-        {%- if file.page.meta._mx %}
-        {%- set dates = file.page.meta._mx.document_dates.dates %}
+        {%- if file.page.meta.document_dates %}
+        {%- set dates = file.page.meta.document_dates.dates %}
         {%- if dates.updated %}
         <lastmod>{{ dates.updated[:10] }}</lastmod>
         {%- endif %}
