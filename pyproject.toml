@@ -86,19 +86,20 @@ Source = "https://github.com/jaywhj/mkdocs-materialx"
 Changelog = "https://github.com/jaywhj/mkdocs-materialx/changelog/"
 Issues = "https://github.com/jaywhj/mkdocs-materialx/issues"
 
-[project.entry-points."mkdocs.plugins"]
-"materialx/blog" = "material.plugins.blog.plugin:BlogPlugin"
-"materialx/group" = "material.plugins.group.plugin:GroupPlugin"
-"materialx/info" = "material.plugins.info.plugin:InfoPlugin"
-"materialx/meta" = "material.plugins.meta.plugin:MetaPlugin"
-"materialx/offline" = "material.plugins.offline.plugin:OfflinePlugin"
-"materialx/optimize" = "material.plugins.optimize.plugin:OptimizePlugin"
-"materialx/privacy" = "material.plugins.privacy.plugin:PrivacyPlugin"
-# "materialx/projects" = "material.plugins.projects.plugin:ProjectsPlugin"
-"materialx/search" = "material.plugins.search.plugin:SearchPlugin"
-"materialx/social" = "material.plugins.social.plugin:SocialPlugin"
-"materialx/tags" = "material.plugins.tags.plugin:TagsPlugin"
-# "materialx/typeset" = "material.plugins.typeset.plugin:TypesetPlugin"
+# # Not much use
+# [project.entry-points."mkdocs.plugins"]
+# "materialx/blog" = "material.plugins.blog.plugin:BlogPlugin"
+# "materialx/group" = "material.plugins.group.plugin:GroupPlugin"
+# "materialx/info" = "material.plugins.info.plugin:InfoPlugin"
+# "materialx/meta" = "material.plugins.meta.plugin:MetaPlugin"
+# "materialx/offline" = "material.plugins.offline.plugin:OfflinePlugin"
+# "materialx/optimize" = "material.plugins.optimize.plugin:OptimizePlugin"
+# "materialx/privacy" = "material.plugins.privacy.plugin:PrivacyPlugin"
+# # "materialx/projects" = "material.plugins.projects.plugin:ProjectsPlugin"
+# "materialx/search" = "material.plugins.search.plugin:SearchPlugin"
+# "materialx/social" = "material.plugins.social.plugin:SocialPlugin"
+# "materialx/tags" = "material.plugins.tags.plugin:TagsPlugin"
+# # "materialx/typeset" = "material.plugins.typeset.plugin:TypesetPlugin"
 
 [project.entry-points."mkdocs.themes"]
 materialx = "material.templates"
