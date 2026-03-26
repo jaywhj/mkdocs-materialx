@@ -25,6 +25,8 @@
   </p>
 </details>
 
+<br />
+
 ## Differences from Material
 
 | Aspect              |          mkdocs-material           |                       MaterialX                   |
@@ -47,8 +49,6 @@
 | **Extensibility** |  No low-level support, not open enough, no plugin support  |  Fully open source and extensible, with rich plugin support  |
 | **Core Focus** | Prioritizes customization and variety, which can lead to configuration bloat and increasing complexity | Prioritizes extreme simplicity, with smarter defaults and automation to lower usage overhead, becoming increasingly lightweight |
 
-<br />
-
 ## MaterialX Update Highlights
 
 - Added next-generation date & author plugin, see: [Add document dates & authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
@@ -68,6 +68,8 @@
 - Added the modern Liquid Glass theme, consistent with Zensical
 - Allow to set topbar background color in Liquid Glass theme, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors#topbar-style)
 - For more details, see [Changelog](https://github.com/jaywhj/mkdocs-materialx/releases)
+
+<br />
 
 ## Quick Start
 
