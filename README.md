@@ -73,13 +73,13 @@
 
 ## Quick Start
 
-⓵ Installation:
+1 - Installation:
 
 ``` sh
 pip install mkdocs-materialx
 ```
 
-② Configure `materialx` theme to properdocs.yml (mkdocs.yml):
+2 - Configure `materialx` theme to properdocs.yml (mkdocs.yml):
 
 ``` yaml
 theme:
@@ -89,7 +89,7 @@ theme:
 > [!NOTE]
 > The theme name is `materialx`, not material. Everything else is the same as when using material.
 
-③ Start a live preview server with the following command for automatic open and reload:
+3 - Start a live preview server with the following command for automatic open and reload:
 
 **for ProperDocs** :
 
