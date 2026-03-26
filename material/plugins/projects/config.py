@@ -56,7 +56,7 @@ class ProjectsConfig(Config):
     # Settings for projects
     projects = Type(bool, default = True)
     projects_dir = Type(str, default = "projects")
-    projects_config_files = Type(str, default = "*/mkdocs.yml")
+    projects_config_files = Type(str, default = "*/properdocs.yml")
     projects_config_transform = Optional(Type(Callable))
     projects_root_dir = Optional(Type(str))
 

@@ -157,7 +157,7 @@ class ProjectsPlugin(BasePlugin[ProjectsConfig]):
 
             # Retrieve top-level project and check if the current project uses
             # the same theme as the top-level project - if not, don't hoist
-            root = Project("mkdocs.yml", self.config)
+            root = Project("properdocs.yml", self.config)
             if config.theme.name != root.config.theme["name"]:
                 return
 

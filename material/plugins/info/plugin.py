@@ -131,7 +131,7 @@ class InfoPlugin(BasePlugin[InfoConfig]):
 
         # Extract the absolute path to projects plugin's directory to explicitly
         # support path validation and dynamic exclusion for the plugin
-        projects_plugin = config.plugins.get("material/projects")
+        projects_plugin = config.plugins.get("materialx/projects")
         if projects_plugin:
             abs_projects_dir = _convert_to_abs(
                 projects_plugin.config.projects_dir,

@@ -26,6 +26,9 @@ import yaml
 
 from copy import copy
 from markdown import Markdown
+from datetime import datetime
+from mkdocs_document_dates.plugin import DocumentDatesPlugin
+from mkdocs_document_dates.utils import load_file_creation_date
 from material.plugins.blog.author import Author
 from material.plugins.meta.plugin import MetaPlugin
 from mkdocs.config.defaults import MkDocsConfig
@@ -69,24 +72,27 @@ class Post(Page):
             # date formats are returned as strings and list are not properly
             # supported. Thus, we just use the relevants parts of `get_data`.
             match: Match = YAML_RE.match(self.markdown)
-            if not match:
-                raise PluginError(
-                    f"Error reading metadata of post '{path}' in '{docs}':\n"
-                    f"Expected metadata to be defined but found nothing"
-                )
+            if match:
+                try:
+                    self.meta = yaml.load(match.group(1), SafeLoader) or {}
+                    self.markdown = self.markdown[match.end():].lstrip("\n")
+                except Exception as e:
+                    raise PluginError(
+                        f"Error reading metadata of post '{path}' in '{docs}':\n"
+                        f"{e}"
+                    )
+            else:
+                self.meta = {}
 
-            # Extract metadata and parse as YAML
-            try:
-                self.meta = yaml.load(match.group(1), SafeLoader) or {}
-                self.markdown = self.markdown[match.end():].lstrip("\n")
-
-            # The post's metadata could not be parsed because of a syntax error,
-            # which we display to the author with a nice error message
-            except Exception as e:
-                raise PluginError(
-                    f"Error reading metadata of post '{path}' in '{docs}':\n"
-                    f"{e}"
-                )
+            # If date does not exist in self.meta, 
+            # no exception is thrown and the data is read from document-dates
+            ddPlugin: DocumentDatesPlugin = config.plugins.get("document-dates")
+            rel_path = getattr(file, 'src_uri', file.src_path)
+            if rel_path in ddPlugin.data_cached:
+                created = datetime.fromisoformat(ddPlugin.data_cached[rel_path]['created'])
+            else:
+                created = load_file_creation_date(file.abs_src_path).astimezone()
+            self.meta.setdefault("date", created)
 
             # Hack: if the meta plugin is registered, we need to move the call
             # to `on_page_markdown` here, because we need to merge the metadata
@@ -95,7 +101,7 @@ class Post(Page):
             # way to allow posts to receive metadata from meta files, because
             # posts must be loaded prior to constructing the navigation in
             # `on_files` but the meta plugin first runs in `on_page_markdown`.
-            plugin: MetaPlugin = config.plugins.get("material/meta")
+            plugin: MetaPlugin = config.plugins.get("materialx/meta")
             if plugin:
                 plugin.on_page_markdown(
                     self.markdown, page = self, config = config, files = None

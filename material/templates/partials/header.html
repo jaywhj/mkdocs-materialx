@@ -45,12 +45,8 @@
     {% if config.extra.alternate %}
       {% include "partials/alternate.html" %}
     {% endif %}
-    {% if "materialx/search" in config.plugins or "material/search" in config.plugins %}
-      {% if "materialx/search" in config.plugins %}
-        {% set search = config.plugins["materialx/search"] | attr("config") %}
-      {% else %}
-        {% set search = config.plugins["material/search"] | attr("config") %}
-      {% endif %}
+    {% if "materialx/search" in config.plugins %}
+      {% set search = config.plugins["materialx/search"] | attr("config") %}
       {% if search.enabled %}
         <label class="md-header__button md-icon" for="__search">
           {% set icon = config.theme.icon.search or "octicons/search-24" %}

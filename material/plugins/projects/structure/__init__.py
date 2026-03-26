@@ -165,7 +165,7 @@ class Project:
         # always stick to the syntaxes allowed by MkDocs (list and dictionary).
         plugins = Plugins._parse_configs(deepcopy(config.plugins))
         for index, (key, settings) in enumerate(plugins):
-            if not re.match(r"^(material/)?projects$", key):
+            if not re.match(r"^(materialx/)?projects$", key):
                 continue
 
             # Forward these settings of the plugin configuration to the project,
@@ -193,7 +193,7 @@ class Project:
 
         # If no plugin configuration was found, add the default configuration
         # and call this function recursively to ensure that it's present
-        config.plugins.append("material/projects")
+        config.plugins.append("materialx/projects")
         return self._resolve_plugin(config, plugin)
 
     # -------------------------------------------------------------------------
