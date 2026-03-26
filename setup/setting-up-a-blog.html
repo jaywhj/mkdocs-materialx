@@ -4259,7 +4259,7 @@ documentation). Install it with <code>pip</code>:</p>
 <dd>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span> This option specifies whether
 the plugin is enabled when building your project. If you want to speed up
-local builds, you can use an <a href="https://www.properdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+local builds, you can use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rss</span><span class="p">:</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
@@ -4518,7 +4518,7 @@ to add related links to a post:</p>
 </span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="c1"># Hello world!</span>
 </span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="nn">...</span>
 </span></code></pre></div>
-<p>You can use the exact same syntax as for the <a href="https://www.properdocs.org/user-guide/configuration/#nav"><code>nav</code></a> section in
+<p>You can use the exact same syntax as for the <a href="https://www.mkdocs.org/user-guide/configuration/#nav"><code>nav</code></a> section in
 <code>mkdocs.yml</code>, which means you can set explicit titles for links, add external
 links and even use nesting:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nn">---</span>
@@ -4536,10 +4536,10 @@ links and even use nesting:</p>
 </span></code></pre></div>
 <p>If you look closely, you'll realize that you can even use an anchor to link to
 a specific section of a document, extending the possibilities of the
-<a href="https://www.properdocs.org/user-guide/configuration/#nav"><code>nav</code></a> syntax in <code>mkdocs.yml</code>. The <a href="../plugins/blog.html">built-in blog plugin</a> resolves
+<a href="https://www.mkdocs.org/user-guide/configuration/#nav"><code>nav</code></a> syntax in <code>mkdocs.yml</code>. The <a href="../plugins/blog.html">built-in blog plugin</a> resolves
 the anchor and sets the title of the anchor as a <a href="../reference/index.html#setting-the-page-subtitle">subtitle</a> of the related link.</p>
-<p>Note that all links must be relative to <a href="https://www.properdocs.org/user-guide/configuration/#docs_dir"><code>docs_dir</code></a>, as is
-also the case for the <a href="https://www.properdocs.org/user-guide/configuration/#nav"><code>nav</code></a> setting.</p>
+<p>Note that all links must be relative to <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs_dir</code></a>, as is
+also the case for the <a href="https://www.mkdocs.org/user-guide/configuration/#nav"><code>nav</code></a> setting.</p>
 <h4 id="linking-from-and-to-posts">Linking from and to posts<a class="headerlink" href="#linking-from-and-to-posts" title="Permanent link">¶</a></h4>
 <p>While <a href="../plugins/blog.html#config.post_url_format">post URLs</a> are dynamically computed, the <a href="../plugins/blog.html">built-in blog
 plugin</a> ensures that all links from and to posts and a post's assets are
@@ -4637,7 +4637,7 @@ values defined for a post, which means you can define common properties in
 <code>.meta.yml</code> and then add specific properties or overrides for each post.</p>
 <h3 id="adding-pages">Adding pages<a class="headerlink" href="#adding-pages" title="Permanent link">¶</a></h3>
 <p>Besides posts, it's also possible to add static pages to your blog by listing
-the pages in the <a href="https://www.properdocs.org/user-guide/configuration/#nav"><code>nav</code></a> section of <code>mkdocs.yml</code>. All generated
+the pages in the <a href="https://www.mkdocs.org/user-guide/configuration/#nav"><code>nav</code></a> section of <code>mkdocs.yml</code>. All generated
 indexes are included after the last specified page. For example, to add a page
 on the authors of the blog, add the following to <code>mkdocs.yml</code>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nt">nav</span><span class="p">:</span>

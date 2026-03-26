@@ -3791,7 +3791,7 @@
 
 
 <h1 id="materialx">MaterialX<a class="headerlink" href="#materialx" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.634995+08:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2026-03-26"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-26T19:41:44+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.634995+08:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2026-03-26"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-26T23:35:18+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p><strong>MaterialX</strong>, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on <code>mkdocs-material-9.7.1</code> and named <code>X</code>, it provides ongoing maintenance and updates.</p>
 <details class="quote">
@@ -3835,7 +3835,7 @@
 <tr>
 <td><strong>Usage</strong></td>
 <td>mkdocs.yml + theme name <code>material</code></td>
-<td>properdocs.yml + new theme name <code>materialx</code> <br>everything else is the same as with material</td>
+<td>mkdocs.yml + new theme name <code>materialx</code> <br>everything else is the same as with material</td>
 </tr>
 <tr>
 <td><strong>Current Status</strong></td>
@@ -3926,7 +3926,7 @@ This includes: page date display / blog post dates / blog categorization by date
 <p>Installation:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-materialx
 </span></code></pre></div>
-<p>Configure <code>materialx</code> theme to properdocs.yml (mkdocs.yml):</p>
+<p>Configure <code>materialx</code> theme to mkdocs.yml:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">theme</span><span class="p">:</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">materialx</span>
 </span></code></pre></div>
@@ -3935,14 +3935,14 @@ This includes: page date display / blog post dates / blog categorization by date
 <p>The theme name is <code>materialx</code>, not material. Everything else is the same as when using material.</p>
 </div>
 <p>Start a live preview server with the following command for automatic open and reload:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="quick-start-properdocs" name="__tabbed_1" type="radio"><input id="quick-start-mkdocs" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="quick-start-properdocs">ProperDocs</label><label for="quick-start-mkdocs">MkDocs</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="quick-start-mkdocs" name="__tabbed_1" type="radio"><input id="quick-start-properdocs" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="quick-start-mkdocs">MkDocs</label><label for="quick-start-properdocs">ProperDocs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>properdocs serve -o
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs serve --livereload -o
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdocs serve --livereload -o
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>properdocs serve -o
 </span></code></pre></div>
 </div>
 </div>

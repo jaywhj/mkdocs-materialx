@@ -69,7 +69,7 @@
               "title": "Projects configuration files",
               "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/projects#config.projects_config_files",
               "type": "string",
-              "default": "\"*/properdocs.yml\""
+              "default": "\"*/mkdocs.yml\""
             },
             "projects_config_transform": {
               "title": "Projects configuration transform",

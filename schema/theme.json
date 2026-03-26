@@ -6,7 +6,7 @@
   "properties": {
     "name": {
       "title": "Theme name",
-      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#name",
+      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#name",
       "oneOf": [
         {
           "const": "material"
@@ -29,11 +29,11 @@
     },
     "static_templates": {
       "title": "Static templates to render",
-      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#static_templates",
+      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#static_templates",
       "type": "array",
       "items": {
         "title": "Path to HTML file",
-        "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#static_templates",
+        "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#static_templates",
         "pattern": "\\.html$"
       },
       "uniqueItems": true,

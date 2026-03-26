@@ -3988,7 +3988,7 @@ within Markdown files.</p>
 <h3 id="setting-the-page-title">Setting the page <code>title</code><a class="headerlink" href="#setting-the-page-title" title="Permanent link">¶</a></h3>
 <p>Each page has a designated title, which is used in the navigation sidebar, for
 <a href="../setup/setting-up-social-cards.html">social cards</a> and in other places. While MkDocs attempts to automatically
-determine the title of a page in a <a href="https://www.properdocs.org/user-guide/writing-your-docs/#meta-data">four step process</a>, the title can also be
+determine the title of a page in a <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data">four step process</a>, the title can also be
 explicitly set with the front matter <code>title</code> property:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lorem ipsum dolor sit amet</span><span class="w"> </span><span class="c1"># (1)!</span>
@@ -4000,13 +4000,13 @@ explicitly set with the front matter <code>title</code> property:</p>
 <ol>
 <li>This line sets the <a href="#setting-the-page-title"><code>title</code></a> inside the HTML document's
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"><code>head</code></a> for the generated page to the given value. Note that the
-    site title, which is set via <a href="https://www.properdocs.org/user-guide/configuration/#site_name"><code>site_name</code></a>, is appended with a
+    site title, which is set via <a href="https://www.mkdocs.org/user-guide/configuration/#site_name"><code>site_name</code></a>, is appended with a
     dash.</li>
 </ol>
 <h3 id="setting-the-page-description">Setting the page <code>description</code><a class="headerlink" href="#setting-the-page-description" title="Permanent link">¶</a></h3>
 <p>A Markdown file can include a description that is added to the <code>meta</code> tags of
 a page, and is also used for <a href="../setup/setting-up-social-cards.html">social cards</a>. It's a good idea to set a
-<a href="https://www.properdocs.org/user-guide/configuration/#site_description"><code>site_description</code></a> in <code>mkdocs.yml</code> as a fallback value if
+<a href="https://www.mkdocs.org/user-guide/configuration/#site_description"><code>site_description</code></a> in <code>mkdocs.yml</code> as a fallback value if
 the author does not explicitly define a description for a Markdown file:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nn">---</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Nullam urna elit, malesuada eget finibus ut, ac tortor.</span><span class="w"> </span><span class="c1"># (1)!</span>
