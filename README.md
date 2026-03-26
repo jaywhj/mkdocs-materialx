@@ -3,7 +3,7 @@
 
 <br />
 
-**MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates. (since mkdocs-material will cease maintenance)
+**MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates.
 
 <details>
   <summary> Why MaterialX ? </summary>
@@ -73,13 +73,13 @@
 
 ## Quick Start
 
-Installation:
+⓵ Installation:
 
 ``` sh
 pip install mkdocs-materialx
 ```
 
-Configure `materialx` theme to properdocs.yml (mkdocs.yml):
+② Configure `materialx` theme to properdocs.yml (mkdocs.yml):
 
 ``` yaml
 theme:
@@ -89,7 +89,7 @@ theme:
 > [!NOTE]
 > The theme name is `materialx`, not material. Everything else is the same as when using material.
 
-Start a live preview server with the following command for automatic open and reload:
+③ Start a live preview server with the following command for automatic open and reload:
 
 **for ProperDocs** :
 
