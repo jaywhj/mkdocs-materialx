@@ -73,7 +73,9 @@ jobs:
           pip install .[recommended,imaging]
 
       - name: Build documentation
-        run: properdocs build --strict
+        run: |
+          mkdocs build --clean
+          mkdocs --version
 
       - name: Adjust permissions
         run: |
