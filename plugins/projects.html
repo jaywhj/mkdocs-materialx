@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f6b47116.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
@@ -196,8 +196,6 @@
     
     
     
-      
-        
       
       
         <label class="md-header__button md-icon" for="__search">
@@ -3965,7 +3963,7 @@ installed.</p>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
 If you want to disable the plugin, e.g., for local builds, you can use an
-<a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a> in <code>mkdocs.yml</code>:</p>
+<a href="https://www.properdocs.org/user-guide/configuration/#environment-variables">environment variable</a> in <code>mkdocs.yml</code>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">projects</span><span class="p">:</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">CI</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
@@ -4047,7 +4045,7 @@ enabled. The following log levels are available:</p>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="nt">log_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warn</span>
 </span></code></pre></div>
 <p>Errors and warnings are reported, terminating the build in
-<a href="https://www.mkdocs.org/user-guide/configuration/#strict"><code>strict</code></a> mode.</p>
+<a href="https://www.properdocs.org/user-guide/configuration/#strict"><code>strict</code></a> mode.</p>
 </div>
 <div class="tabbed-block">
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">plugins</span><span class="p">:</span>
@@ -4155,7 +4153,7 @@ directory to the <a href="https://docs.python.org/3/using/cmdline.html#envvar-PY
 to a valid module and function name within Python's <a href="https://docs.python.org/3/library/sys_path_init.html">module search path</a>.
 The plugin passes the <code>project</code> and top-level <code>config</code> objects to the
 function.</p>
-<p>As an example, we can inherit the <a href="https://www.mkdocs.org/user-guide/configuration/#use_directory_urls"><code>use_directory_urls</code></a> setting for all projects from the top-level
+<p>As an example, we can inherit the <a href="https://www.properdocs.org/user-guide/configuration/#use_directory_urls"><code>use_directory_urls</code></a> setting for all projects from the top-level
 configuration:</p>
 <div class="language-py highlight"><span class="filename">projects/__init__.py</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mkdocs.config.defaults</span><span class="w"> </span><span class="kn">import</span> <span class="n">MkDocsConfig</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>

@@ -123,21 +123,14 @@ plugins:
   # - tags
   - offline
   - search
+  - glightbox
 
   - document-dates:
       type: timeago
-      exclude:
-        - index.md
-        - license.md
-        - '*/index.md'
-        - blog/*
+      exclude: ['index.md', 'license.md', '*/index.md', 'blog/*']
       recently-updated:
         limit: 10
-        exclude:
-          - index.md
-          - blog/*
-
-  - glightbox
+        exclude: ['index.md', 'blog/*']
 
 
 
@@ -186,6 +179,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 
 
 #---- 6. ----

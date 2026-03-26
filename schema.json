@@ -6,27 +6,27 @@
   "properties": {
     "INHERIT": {
       "title": "Inherit from configuration",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#configuration-inheritance",
       "pattern": "\\.yml$"
     },
     "site_name": {
       "title": "Site name, used in header, title and drawer",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#site_name",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#site_name",
       "type": "string"
     },
     "site_url": {
       "title": "Site URL",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#site_url",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#site_url",
       "type": "string"
     },
     "site_author": {
       "title": "Site author, used in document head",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#site_author",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#site_author",
       "type": "string"
     },
     "site_description": {
       "title": "Site description, used in document head and in social cards",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#site_description",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#site_description",
       "type": "string"
     },
     "repo_name": {
@@ -41,12 +41,12 @@
     },
     "edit_uri": {
       "title": "Path from repository root to directory containing Markdown",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#edit_uri",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#edit_uri",
       "type": "string"
     },
     "edit_uri_template": {
       "title": "More flexible variant of edit_uri",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#edit_uri_template",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#edit_uri_template",
       "type": "string"
     },
     "copyright": {
@@ -56,29 +56,29 @@
     },
     "docs_dir": {
       "title": "Directory containing the Markdown sources",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#docs_dir",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#docs_dir",
       "type": "string",
       "default": "docs"
     },
     "site_dir": {
       "title": "Directory containing the HTML output",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#site_dir",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#site_dir",
       "type": "string",
       "default": "site"
     },
     "use_directory_urls": {
       "title": "Pages are located in their own directories",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#use_directory_urls",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#use_directory_urls",
       "type": "boolean",
       "default": false
     },
     "extra_templates": {
       "title": "Additional HTML files to include",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#extra_templates",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#extra_templates",
       "type": "array",
       "items": {
         "title": "Path to HTML file",
-        "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#extra_templates",
+        "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#extra_templates",
         "pattern": "\\.html$"
       },
       "uniqueItems": true,
@@ -109,11 +109,11 @@
     },
     "hooks": {
       "title": "Hooks",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#hooks",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#hooks",
       "type": "array",
       "items": {
         "title": "Path to Python file",
-        "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#hooks",
+        "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#hooks",
         "pattern": "\\.py$"
       },
       "uniqueItems": true,
@@ -121,25 +121,25 @@
     },
     "strict": {
       "title": "Strict mode",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#strict",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#strict",
       "type": "boolean",
       "default": false
     },
     "dev_addr": {
       "title": "Development IP Address",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#dev_addr",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#dev_addr",
       "type": "string",
       "default": "127.0.0.1:8000"
     },
     "remote_branch": {
       "title": "Remote branch to deploy to",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#remote_branch",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#remote_branch",
       "type": "string",
       "default": "gh-pages"
     },
     "remote_name": {
       "title": "Remote origin to deploy to",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#remote_name",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#remote_name",
       "type": "string",
       "default": "origin"
     },
@@ -163,17 +163,17 @@
     },
     "exclude_docs": {
       "title": "Pattern to declare files to exclude from build",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#exclude_docs",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#exclude_docs",
       "type": "string"
     },
     "draft_docs": {
       "title": "Pattern to declare draft documents",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#draft_docs",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#draft_docs",
       "type": "string"
     },
     "not_in_nav": {
       "title": "Pattern to declare pages that do not appear in the navigation",
-      "markdownDescription": "https://www.mkdocs.org/user-guide/configuration/#not_in_nav",
+      "markdownDescription": "https://www.properdocs.org/user-guide/configuration/#not_in_nav",
       "type": "string"
     },
     "watch": {

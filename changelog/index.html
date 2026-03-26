@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f6b47116.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
@@ -200,8 +200,6 @@
     
     
     
-      
-        
       
       
         <label class="md-header__button md-icon" for="__search">
@@ -12980,11 +12978,13 @@
 <li>Fixed the version number matching bug for info plugin</li>
 <li>Fixed that back-to-top was not centered on the blog page</li>
 <li>Fixed blog page not showing return title in left sidebar on desktop</li>
-<li>Optimized user experience: </li>
+<li>Optimized user experience: <ul>
 <li>Adjusted the scope of scroll penetration prevention for the scrollfix container to mobile devices only</li>
 <li>Adjusted the top value of the admonition icon so that it is always aligned with the top line</li>
 <li>Adjusted the color depth of the indentation guide</li>
 <li>When the TOC is empty, do not hide the "Show TOC" button, instead, display a text prompt in the TOC sidebar</li>
+</ul>
+</li>
 <li>Adjusted the dependency configuration method: removed <code>requirements.txt</code> and migrated all dependency configurations to <code>pyproject.toml</code></li>
 <li>Optimized the build order in the Dockerfile to improve the utilization rate of Docker build cache, thereby enhancing build efficiency</li>
 <li>Updated the template examples for date plugin</li>
