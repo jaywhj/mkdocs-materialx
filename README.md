@@ -1,3 +1,10 @@
+
+## MaterialX
+
+<br />
+
+**MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates. (since mkdocs-material will cease maintenance)
+
 <style>
 /* ===== details 容器 ===== */
 details {
@@ -81,11 +88,6 @@ details[open] > summary {
 }
 </style>
 
-## MaterialX
-
-<br />
-
-**MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates. (since mkdocs-material will cease maintenance)
 
 <details>
   <summary>
