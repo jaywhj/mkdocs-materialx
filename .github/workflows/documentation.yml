@@ -29,12 +29,10 @@ env:
 
 permissions:
   contents: write
-  id-token: write
-  pages: write
 
 jobs:
   documentation:
-    name: Build documentation
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
 
@@ -45,7 +43,7 @@ jobs:
           sparse-checkout: |
             docs
             includes
-            material/overrides
+            material
             src/templates/partials/languages
 
       - name: Set up Python runtime
@@ -53,46 +51,16 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
-          cache-dependency-path: |
-            pyproject.toml
-
-      - name: Set up build cache
-        uses: actions/cache/restore@v4
-        with:
-          key: mkdocs-materialx-${{ hashfiles('.cache/**') }}
-          path: ~/.cache
-          restore-keys: |
-            mkdocs-materialx-
+          cache-dependency-path: pyproject.toml
 
       - name: Install dependencies
         run: sudo apt-get install pngquant
 
       - name: Install Python dependencies
         run: |
-          pip install mkdocs-materialx
           pip install .[recommended,imaging]
+          pip install mkdocs-glightbox
 
-      - name: Build documentation
-        run: |
-          mkdocs build --clean
-          mkdocs --version
+      - name: Deploy to gh-pages
+        run: mkdocs gh-deploy --force
 
-      - name: Adjust permissions
-        run: |
-          chmod -c -R +rX site/ | while read line; do
-            echo "::warning title=Invalid file permissions automatically fixed::$line"
-          done
-
-      - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: site
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-
-      - name: Save build cache
-        uses: actions/cache/save@v4
-        with:
-          key: mkdocs-materialx-${{ hashfiles('.cache/**') }}
-          path: ~/.cache
