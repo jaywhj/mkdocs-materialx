@@ -56,17 +56,17 @@
     
       <link rel="stylesheet" href="assets/document_dates/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="assets/document_dates/tippy/shift-away.css">
-    
-      <link rel="stylesheet" href="assets/document_dates/tippy/backdrop.css">
-    
       <link rel="stylesheet" href="assets/document_dates/tippy/tippy.css">
     
       <link rel="stylesheet" href="assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="assets/document_dates/tippy/material.css">
     
+      <link rel="stylesheet" href="assets/document_dates/tippy/shift-away.css">
+    
       <link rel="stylesheet" href="assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="assets/document_dates/tippy/backdrop.css">
     
       <link rel="stylesheet" href="assets/document_dates/core/core.css">
     
@@ -85,11 +85,6 @@
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
         </style></head>
   
   
@@ -167,7 +162,7 @@
     
     <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
       </label>
     
@@ -177,7 +172,7 @@
     
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
       </label>
     
@@ -187,7 +182,7 @@
     
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan" aria-label="Switch to system preference" type="radio" name="__palette" id="__palette_2">
     
-      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
       </label>
     
@@ -210,7 +205,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
@@ -219,7 +214,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard="" data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 5.5a3.498 3.498 0 0 1-6.062 2.385l-5.112 3.021a3.5 3.5 0 0 1 0 2.188l5.112 3.021a3.5 3.5 0 1 1-.764 1.29l-5.112-3.02a3.499 3.499 0 1 1-3.843-5.642 3.5 3.5 0 0 1 3.843.872l5.112-3.021A3.5 3.5 0 1 1 20 5.5m-1.5 13a2 2 0 1 0-3.999-.001 2 2 0 0 0 3.999.001m0-13a2 2 0 1 0-3.999-.001A2 2 0 0 0 18.5 5.5M5.5 14a2 2 0 1 0 .001-3.999A2 2 0 0 0 5.5 14"></path></svg>
           </a>
@@ -557,7 +552,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -3825,26 +3820,52 @@
 
 
 <h1 id="creating-your-site">Creating your site<a class="headerlink" href="#creating-your-site" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content data-tippy-raw="2020-05-31"><span class="material-icons" data-icon="doc_created"></span><time datetime="2020-05-31T15:40:41+02:00"></time></span><span class="dd-item" data-tippy-content data-tippy-raw="2026-03-26"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-26T23:35:18+08:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="TetraTheta" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:37061801+TetraTheta@users.noreply.github.com&quot;&gt;TetraTheta&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="37061801+TetraTheta@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Alexander Voss" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:alex@corealisation.com&quot;&gt;Alexander Voss&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="alex@corealisation.com"></a></div><div class="avatar-wrapper" data-name="Sigurd Spieckermann" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:sigurd.spieckermann@gmail.com&quot;&gt;Sigurd Spieckermann&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="sigurd.spieckermann@gmail.com"></a></div><div class="avatar-wrapper" data-name="DanielHabenicht" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:daniel-habenicht@outlook.de&quot;&gt;DanielHabenicht&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="daniel-habenicht@outlook.de"></a></div><div class="avatar-wrapper" data-name="Angaddeep Singh" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:angaddeep28@proton.me&quot;&gt;Angaddeep Singh&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="angaddeep28@proton.me"></a></div><div class="avatar-wrapper" data-name="Ju4tCode" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:42488585+yanyongyu@users.noreply.github.com&quot;&gt;Ju4tCode&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="42488585+yanyongyu@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2020-05-31"><span class="material-icons" data-icon="doc_created"></span><time datetime="2020-05-31T15:40:41+02:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-03-28"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-28T14:25:27+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="TetraTheta" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:37061801+TetraTheta@users.noreply.github.com&quot;&gt;TetraTheta&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="37061801+TetraTheta@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Alexander Voss" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:alex@corealisation.com&quot;&gt;Alexander Voss&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="alex@corealisation.com"></a></div><div class="avatar-wrapper" data-name="Sigurd Spieckermann" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:sigurd.spieckermann@gmail.com&quot;&gt;Sigurd Spieckermann&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="sigurd.spieckermann@gmail.com"></a></div><div class="avatar-wrapper" data-name="DanielHabenicht" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:daniel-habenicht@outlook.de&quot;&gt;DanielHabenicht&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="daniel-habenicht@outlook.de"></a></div><div class="avatar-wrapper" data-name="Angaddeep Singh" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:angaddeep28@proton.me&quot;&gt;Angaddeep Singh&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="angaddeep28@proton.me"></a></div><div class="avatar-wrapper" data-name="Ju4tCode" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:42488585+yanyongyu@users.noreply.github.com&quot;&gt;Ju4tCode&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="42488585+yanyongyu@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
-<p>After you've <a href="installation.html">installed</a> MaterialX for MkDocs, you can bootstrap your project
-documentation using the <code>mkdocs</code> executable. Go to the directory where you want
-your project to be located and enter:</p>
+<p>After you've <a href="installation.html">installed</a> MaterialX, navigate to the target directory 
+where you want your project to be located in the terminal and execute the following command:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>MaterialX supports both MkDocs and <a href="https://github.com/ProperDocs/properdocs" target="_blank">ProperDocs</a> (I recommend ProperDocs).</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="creating-your-site-mkdocs" name="__tabbed_1" type="radio"><input id="creating-your-site-properdocs" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="creating-your-site-mkdocs">MkDocs</label><label for="creating-your-site-properdocs">ProperDocs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs new .
 </span></code></pre></div>
-<p>This will create the following structure:</p>
-<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├─<span class="w"> </span>docs/
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>└─<span class="w"> </span>mkdocs.yml
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>properdocs new .
 </span></code></pre></div>
+</div>
+</div>
+</div>
+<p>This will create the following structure:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="creating-your-site-mkdocs_1" name="__tabbed_2" type="radio"><input id="creating-your-site-properdocs_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="creating-your-site-mkdocs_1">MkDocs</label><label for="creating-your-site-properdocs_1">ProperDocs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├─<span class="w"> </span>docs/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└─<span class="w"> </span>mkdocs.yml
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├─<span class="w"> </span>docs/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│<span class="w">  </span>└─<span class="w"> </span>index.md
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>└─<span class="w"> </span>properdocs.yml
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <h3 id="minimal-configuration">Minimal configuration<a class="headerlink" href="#minimal-configuration" title="Permanent link">¶</a></h3>
-<p>Simply set the <code>site_name</code> and add the following lines to <code>mkdocs.yml</code> to enable the theme:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My site</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="hll"><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mydomain.org/mysite</span>
-</span></span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="hll"><span class="nt">theme</span><span class="p">:</span>
-</span></span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="hll"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">materialx</span>
+<p>Simply set the <code>site_name</code> and add the following lines to <code>mkdocs.yml</code> / <code>properdocs.yml</code> to enable the theme:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My site</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="hll"><span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://mydomain.org/mysite</span>
+</span></span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="hll"><span class="nt">theme</span><span class="p">:</span>
+</span></span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="hll"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">materialx</span>
 </span></span></code></pre></div>
 <p>The <code>site_url</code> setting is important for a number of reasons.
 By default, MkDocs will assume that your site is hosted at the root of
@@ -3853,10 +3874,10 @@ pages] - unless you use a custom domain. Another reason is that some of the
 plugins require the <code>site_url</code> to be set, so you should always do this.</p>
 <details class="tip">
 <summary>Recommended: configuration validation and auto-complete</summary>
-<p>In order to minimize friction and maximize productivity, MaterialX for MkDocs
+<p>In order to minimize friction and maximize productivity, MaterialX
 provides its own <a href="schema.json">schema.json</a><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for <code>mkdocs.yml</code>. If your editor supports
 YAML schema validation, it's definitely recommended to set it up:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="minimal-configuration-visual-studio-code" name="__tabbed_1" type="radio"><input id="minimal-configuration-other" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="minimal-configuration-visual-studio-code">Visual Studio Code</label><label for="minimal-configuration-other">Other</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="minimal-configuration-visual-studio-code" name="__tabbed_3" type="radio"><input id="minimal-configuration-other" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="minimal-configuration-visual-studio-code">Visual Studio Code</label><label for="minimal-configuration-other">Other</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -3864,20 +3885,20 @@ YAML schema validation, it's definitely recommended to set it up:</p>
 <li>
 <p>Add the schema under the <code>yaml.schemas</code> key in your user or
     workspace <a href="https://code.visualstudio.com/docs/getstarted/settings"><code>settings.json</code></a>:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"yaml.schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">"https://jaywhj.github.io/mkdocs-materialx/schema.json"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mkdocs.yml"</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">"yaml.customTags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="c1">// (1)!</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="s2">"!ENV scalar"</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="s2">"!ENV sequence"</span><span class="p">,</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="s2">"!relative scalar"</span><span class="p">,</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg"</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji"</span><span class="p">,</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"</span><span class="p">,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="p">]</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">"yaml.schemas"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">"https://jaywhj.github.io/mkdocs-materialx/schema.json"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mkdocs.yml"</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">"yaml.customTags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="c1">// (1)!</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="s2">"!ENV scalar"</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="s2">"!ENV sequence"</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="s2">"!relative scalar"</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg"</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji"</span><span class="p">,</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="s2">"tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">}</span>
 </span></code></pre></div>
 <ol>
 <li>This setting is necessary if you plan to use <a href="reference/icons-emojis.html">icons and emojis</a>,
@@ -3891,7 +3912,7 @@ YAML schema validation, it's definitely recommended to set it up:</p>
 <li>Ensure your editor of choice has support for YAML schema validation.</li>
 <li>
 <p>Add the following lines at the top of <code>mkdocs.yml</code>:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># yaml-language-server: $schema=https://jaywhj.github.io/mkdocs-materialx/schema.json</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># yaml-language-server: $schema=https://jaywhj.github.io/mkdocs-materialx/schema.json</span>
 </span></code></pre></div>
 </li>
 </ol>
@@ -3933,7 +3954,10 @@ technical writing experience.</p>
 <p>MkDocs includes a live preview server, so you can preview your changes as you
 write your documentation. The server will automatically rebuild the site upon
 saving. Start it with:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span><span class="c1"># (1)!</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="previewing-as-you-write-mkdocs" name="__tabbed_4" type="radio"><input id="previewing-as-you-write-properdocs" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="previewing-as-you-write-mkdocs">MkDocs</label><label for="previewing-as-you-write-properdocs">ProperDocs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload<span class="w"> </span><span class="c1"># (1)!</span>
 </span></code></pre></div>
 <ol>
 <li>
@@ -3941,20 +3965,34 @@ saving. Start it with:</p>
     MkDocs has rebuilt all pages for you to preview. If you're only interested
     in the current page, the <a href="https://www.mkdocs.org/about/release-notes/#support-for-dirty-builds-990"><code>--dirtyreload</code></a> flag will make
     rebuilds much faster:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs serve --dirtyreload
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mkdocs serve --livereload --dirtyreload
 </span></code></pre></div>
 </li>
 </ol>
+</div>
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>properdocs<span class="w"> </span>serve
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Point your browser to <a href="http://localhost:8000">localhost:8000</a> and you should see:</p>
 <p><a href="assets/screenshots/creating-your-site.png"><img alt="Creating your site" src="assets/screenshots/creating-your-site.png"></a></p>
-<p>Alternatively, use the following command for <strong>automatic open and reload</strong>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdocs serve --livereload -o
-</span></code></pre></div>
 <h2 id="building-your-site">Building your site<a class="headerlink" href="#building-your-site" title="Permanent link">¶</a></h2>
 <p>When you're finished editing, you can build a static site from your Markdown
 files with:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mkdocs build
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="building-your-site-mkdocs" name="__tabbed_5" type="radio"><input id="building-your-site-properdocs" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="building-your-site-mkdocs">MkDocs</label><label for="building-your-site-properdocs">ProperDocs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkdocs<span class="w"> </span>build
 </span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>properdocs<span class="w"> </span>build
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <p>The contents of this directory make up your project documentation. There's no
 need for operating a database or server, as it is completely self-contained.
 The site can be hosted on <a href="publishing-your-site.html#github-pages">GitHub Pages</a>, <a href="publishing-your-site.html#gitlab-pages">GitLab Pages</a>, a CDN of your choice
@@ -3988,7 +4026,7 @@ reduce duplication, you can add it via <a href="https://json-schema.org/understa
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-          <div class="md-top" data-md-component="top" hidden>
+          <div class="md-top" data-md-component="top" hidden="">
   <div class="md-top__center">
     <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
       
@@ -4140,69 +4178,4 @@ reduce duplication, you can add it via <a href="https://json-schema.org/understa
 
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-
-(function () {
-  if (typeof MutationObserver === 'undefined') return;
-
-  // 用 observedImgs 做 img observer 绑定的去重
-  const observedImgs = new WeakSet();
-
-  let reloadScheduled = false;
-  function scheduleReload() {
-    if (reloadScheduled) return;
-    reloadScheduled = true;
-
-    requestAnimationFrame(() => {
-      try {
-        lightbox.reload();
-      } catch (e) {
-        console.warn('[glightbox] reload failed:', e);
-      }
-      reloadScheduled = false;
-    });
-  }
-
-  function getImgUrl(img) {
-    return img.currentSrc || img.src || img.getAttribute('src') || img.getAttribute('data-src') || '';
-  }
-
-  function syncAnchor(anchor) {
-    const img = anchor.querySelector('img');
-    if (!img) return;
-
-    // 同步 <a> 节点的 href
-    const url = getImgUrl(img);
-    if (url && anchor.getAttribute('href') !== url) {
-      anchor.setAttribute('href', url);
-    }
-
-    if (observedImgs.has(img)) return;
-
-    const observer = new MutationObserver(() => {
-      const nextUrl = getImgUrl(img);
-      if (!nextUrl) return;
-
-      if (anchor.getAttribute('href') !== nextUrl) {
-        anchor.setAttribute('href', nextUrl);
-        scheduleReload();
-      }
-    });
-
-    observer.observe(img, { attributes: true, attributeFilter: ['src', 'srcset'] });
-    observedImgs.add(img);
-  }
-
-  function update() {
-    document.querySelectorAll('a.glightbox').forEach(syncAnchor);
-    scheduleReload();
-  }
-
-  if (window.document$ && !window.document$.isStopped) {
-    window.document$.subscribe(update);
-  } else if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', update);
-  } else {
-    update();
-  }
-})();
-        </script></body></html>
+</script></body></html>
