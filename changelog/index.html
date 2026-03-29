@@ -12994,10 +12994,10 @@
 <ul>
 <li>Added support for ProperDocs</li>
 <li>Date &amp; time infrastructure<ul>
-<li>Completely resolved date &amp; time infrastructure issues, enabling automatic date handling across the project. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod for SEO improvements), RSS feeds, recently updated section, search ranking, and more</li>
+<li>Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more</li>
 <li>Added an override template for <code>sitemap.xml</code> that supports dynamically loading the exact lastmod to improve SEO, see <a href="https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/sitemap.xml" target="_blank">sitemap.xml
 </a></li>
-<li>No more manually specifying blog post dates</li>
+<li>Updated the processing logic for blog post dates, manual date specification is no longer required</li>
 <li>These date values can be accessed via template variables in any template or plugin, see <a href="../setup/adding-document-dates-authors.html#template-variables" target="_blank">Template Variables</a></li>
 </ul>
 </li>
