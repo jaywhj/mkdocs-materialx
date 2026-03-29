@@ -3582,6 +3582,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#10.1.1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1.1 March 29, 2026
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#10.1.0" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8305,6 +8316,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#10.1.1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1.1 March 29, 2026
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#10.1.0" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12968,6 +12990,35 @@
 
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <h2 id="materialx">MaterialX<a class="headerlink" href="#materialx" title="Permanent link">¶</a></h2>
+<h3 id="10.1.1">10.1.1 <small>March 29, 2026</small><a class="headerlink" href="#10.1.1" title="Permanent link">¶</a></h3>
+<ul>
+<li>Added support for ProperDocs</li>
+<li>Date &amp; time infrastructure<ul>
+<li>Completely resolved date &amp; time infrastructure issues, enabling automatic date handling across the project. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod for SEO improvements), RSS feeds, recently updated section, search ranking, and more</li>
+<li>Added an override template for <code>sitemap.xml</code> that supports dynamically loading the exact lastmod to improve SEO, see <a href="https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/sitemap.xml" target="_blank">sitemap.xml
+</a></li>
+<li>No more manually specifying blog post dates</li>
+<li>These date values can be accessed via template variables in any template or plugin, see <a href="../setup/adding-document-dates-authors.html#template-variables" target="_blank">Template Variables</a></li>
+</ul>
+</li>
+<li>Recently updated list<ul>
+<li>Added high-performance readtime &amp; summary parsers</li>
+<li>Added <code>readtime</code> and <code>tag</code> rendering, for readtime calculation details see <a href="../setup/adding-document-dates-authors.html#reading-time-estimation" target="_blank">Reading-Time-Estimation</a></li>
+<li>Added line count configuration for <code>summary</code>, see <a href="../setup/adding-document-dates-authors.html#summary-line-configuration" target="_blank">Summary-Line-Configuration</a></li>
+<li>Improved layout styling for mixed text and image content</li>
+</ul>
+</li>
+<li>Tags<ul>
+<li>Fixed a bug in tag list parsing</li>
+<li>Improved compatibility for sorting of the tags index list</li>
+<li>Corrected the incorrect example for listings tags sorting</li>
+<li>Moved tags display position from top to bottom</li>
+<li>Enable icon for tags by default to lower usage barriers</li>
+</ul>
+</li>
+<li>Updated template variables and removed the <code>_mx</code> node</li>
+<li>Fixed styling issues for admonition &amp; button</li>
+</ul>
 <h3 id="10.1.0">10.1.0 <small>March 8, 2026</small><a class="headerlink" href="#10.1.0" title="Permanent link">¶</a></h3>
 <ul>
 <li>Fixed the version number matching bug for info plugin</li>

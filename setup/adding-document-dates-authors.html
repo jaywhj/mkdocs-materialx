@@ -1408,6 +1408,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#summary-line-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Line Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-time-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading Time Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4406,6 +4428,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#summary-line-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Line Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-time-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading Time Estimation
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4487,7 +4531,7 @@
 
 
 <h1 id="add-document-dates-authors">Add document dates &amp; authors<a class="headerlink" href="#add-document-dates-authors" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.653692+08:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-03-22"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-22T13:10:30+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.653692+08:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-03-29"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-29T04:13:24+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#10.0.4">10.0.4</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="https://github.com/jaywhj/mkdocs-document-dates">document-dates</a></span></span></p>
@@ -4853,7 +4897,7 @@ flowchart LR
 </table>
 <p>You can also refer to the latest example file for free customization: <a href="https://github.com/jaywhj/mkdocs-document-dates/tree/main/mkdocs_document_dates/static/config">user.config</a></p>
 <h3 id="template-variables">Template Variables<a class="headerlink" href="#template-variables" title="Permanent link">¶</a></h3>
-<p>You can use the following variables in the template to access the document's meta-info:</p>
+<p>You can use these variables in any template or plugin to access document metadata:</p>
 <ul>
 <li>page.meta.document_dates.dates.created</li>
 <li>page.meta.document_dates.dates.updated</li>
@@ -4899,6 +4943,94 @@ flowchart LR
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nt">cover</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/cat.jpg</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nn">---</span>
 </span></code></pre></div>
+<h4 id="summary-line-configuration">Summary Line Configuration<a class="headerlink" href="#summary-line-configuration" title="Permanent link">¶</a></h4>
+<p>The plugin intelligently parses article content and simply refine the summary without manual configuration. The number of summary lines can be configured separately for <strong>grid</strong> and <strong>detail</strong> views:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">document-dates</span><span class="p">:</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timeago</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">      </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'index.md'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'*/index.md'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'blog/*'</span><span class="p p-Indicator">]</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">      </span><span class="nt">recently-updated</span><span class="p">:</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">        </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'index.md'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'tags.md'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'*/index.md'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'blog/*'</span><span class="p p-Indicator">]</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="hll"><span class="w">        </span><span class="nt">summary_lines</span><span class="p">:</span>
+</span></span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="hll"><span class="w">          </span><span class="nt">grid</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</span></span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="hll"><span class="w">          </span><span class="nt">detail</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+</span></span></code></pre></div>
+<h4 id="reading-time-estimation">Reading Time Estimation<a class="headerlink" href="#reading-time-estimation" title="Permanent link">¶</a></h4>
+<p>The plugin intelligently analyzes article content, extracts valid information, and estimates readtime. It supports all major languages and mixed-language content:</p>
+<ul>
+<li>CJK languages: Chinese, Japanese, Korean</li>
+<li>Space-delimited languages: English, Spanish, French, German, Portuguese, Russian ...</li>
+</ul>
+<p>Calculation Rules:</p>
+<table>
+<thead>
+<tr>
+<th>Valid Element</th>
+<th>Calculation Method</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CJK languages</td>
+<td>480 characters / min</td>
+<td>Based on common industry standards</td>
+</tr>
+<tr>
+<td>Space-delimited languages</td>
+<td>240 words / min</td>
+<td>Based on common industry standards</td>
+</tr>
+<tr>
+<td>Tables</td>
+<td>2s / row</td>
+<td>Simple row-based estimation for variable-length content</td>
+</tr>
+<tr>
+<td>Fence blocks</td>
+<td>1s / row</td>
+<td>Includes code blocks, text blocks, YAML blocks, etc.</td>
+</tr>
+<tr>
+<td>Math blocks</td>
+<td>4s / block</td>
+<td>Rough estimation based on individual blocks</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>2s / image</td>
+<td>Typical for blog post images: 2~3 seconds per image</td>
+</tr>
+<tr>
+<td>Front Matter</td>
+<td>Skipped</td>
+<td>Generally not visible after rendering</td>
+</tr>
+<tr>
+<td>HTML blocks</td>
+<td>Skipped</td>
+<td>Images inside HTML are counted, other content ignored (Markdown-focused)</td>
+</tr>
+<tr>
+<td>Quotes &amp; links</td>
+<td>Skipped</td>
+<td>Link text for href is generally not visible after rendering</td>
+</tr>
+<tr>
+<td>Other invalid characters</td>
+<td>Skipped</td>
+<td>For example, whitespace, blank lines, special symbols, markup characters, etc.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Estimation Rule Notes</p>
+<p>These rules cannot fully account for individual reading habits—reading speed varies by person, language, and content type. This is only a rough estimate designed to suit most users as closely as possible.</p>
+<p>That said, this is still the most full-featured Markdown readtime parser I have seen publicly available. It supports all major languages while maintaining extremely high parsing performance. By comparison, readtime implementations in the mkdocs-material blog only perform simple word and image counting with no special handling for Markdown content. Its image readtime rules are also highly unreasonable (starting at 12 seconds per image and decreasing), and it does not support CJK languages.</p>
+<p>To avoid discouraging clicks with overly long estimated times, the default values in this calculation logic are set conservatively.</p>
+</div>
 <h3 id="localization-language">Localization Language<a class="headerlink" href="#localization-language" title="Permanent link">¶</a></h3>
 <p>The plugin's <code>tooltip</code> and <code>timeago</code> have built-in multi-language support, and the <code>locale</code> is automatically detected, so you don't need to configure it manually. If any language is missing, you can add it for them.</p>
 <h4 id="for-tooltip">For tooltip<a class="headerlink" href="#for-tooltip" title="Permanent link">¶</a></h4>
@@ -4913,8 +5045,8 @@ flowchart LR
 <ul>
 <li>In <code>user.config.js</code>, refer to <a href="https://github.com/jaywhj/mkdocs-document-dates/blob/main/mkdocs_document_dates/static/config/user.config.js">Part 2</a> to add it by registering yourself</li>
 <li>In <code>mkdocs.yml</code>, configure the full version of <code>timeago.full.min.js</code> to reload <a href="https://github.com/hustcc/timeago.js/tree/master/src/lang">all locales</a>
-  <div class="language-yaml highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/document_dates/core/timeago.full.min.js</span>
+  <div class="language-yaml highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nt">extra_javascript</span><span class="p">:</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/document_dates/core/timeago.full.min.js</span>
 </span></code></pre></div></li>
 </ul>
 
