@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.2">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.07d82dd6.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
@@ -4531,7 +4531,7 @@
 
 
 <h1 id="add-document-dates-authors">Add document dates &amp; authors<a class="headerlink" href="#add-document-dates-authors" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.653692+08:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-03-30"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-03-30T08:01:37+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T21:26:22.653692+08:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-04-01"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-04-01T16:10:42+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#10.0.4">10.0.4</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="https://github.com/jaywhj/mkdocs-document-dates">document-dates</a></span></span></p>
@@ -4577,8 +4577,7 @@
 </li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
-<p>This plugin is built-in and does not require separate installation.</p>
-<p>If you wish to install it individually, you may use the following command:</p>
+<p>This plugin is built-in and does not require separate installation. If you wish to install it individually, you may use the following command:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="installation-install" name="__tabbed_1" type="radio"><input id="installation-upgrade" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="installation-install">Install</label><label for="installation-upgrade">Upgrade</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4592,6 +4591,11 @@
 </div>
 </div>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<p>This plugin completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more.</p>
+<div class="admonition tip">
+<p class="admonition-title">Prerequisite</p>
+<p>You need to configure it in the <code>plugins</code> section to enable it first.</p>
+</div>
 <p>Add the following lines to <code>mkdocs.yml</code>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">document-dates</span>
