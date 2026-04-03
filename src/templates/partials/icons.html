@@ -23,38 +23,40 @@
 <!-- Custom admonition icons -->
 {% set default_types = ["note", "abstract", "info", "tip", "success", "question", "warning", "failure", "danger", "bug", "example", "quote"] %}
 {% if config.theme.admonition %}
-  {% set vars = namespace(root = "", classes = "") %}
+  {% set _ = namespace(root = "", classes = "", style = "") %}
+  {% set _.root = _.root ~ ":root{" %}
 
   {% for type, keys in config.theme.admonition | items %}
     {% if keys.icon %}
       {% import ".icons/" ~ keys.icon ~ ".svg" as icon %}
-      {% set vars.root = vars.root ~ "--md-admonition-icon--" ~ type ~ ":url('data:image/svg+xml;charset=utf-8," ~ icon | replace("\n", "") | urlencode ~ "');" %}
+      {% set _.root = _.root ~ "--md-admonition-icon--" ~ type ~ ":url('data:image/svg+xml;charset=utf-8," ~ icon | replace("\n", "") | urlencode ~ "');" %}
     {% endif %}
 
     {% if keys.color %}
-      {% set vars.root = vars.root ~ "--md-admonition-color--" ~ type ~ ":" ~ keys.color ~ ";" %}
-      {% set vars.root = vars.root ~ "--md-admonition-title-bg-color--" ~ type ~ ":" ~ keys.color ~ "4d;" %}
+      {% set _.root = _.root ~ "--md-admonition-color--" ~ type ~ ":" ~ keys.color ~ ";" %}
     {% endif %}
 
-    {# 2. Handle Class Assignment (if not a standard MkDocs type) #}
     {% if type not in default_types %}
+      {% set style_rules = "" %}
       {% if keys.icon %}
-        {% set style_rules = "--md-admonition-icon:var(--md-admonition-icon--" ~ type ~ ");" %}
+        {% set style_rules = style_rules ~ "--md-admonition-icon:var(--md-admonition-icon--" ~ type ~ ");" %}
       {% endif %}
 
       {% if keys.color %}
         {% set style_rules = style_rules ~ "--md-admonition-color:var(--md-admonition-color--" ~ type ~ ");" %}
-        {% set style_rules = style_rules ~ "--md-admonition-title-bg-color:var(--md-admonition-title-bg-color--" ~ type ~ ");" %}
       {% endif %}
 
-      {% set vars.classes = vars.classes ~ ".md-typeset .admonition." ~ type ~ "{" ~ style_rules ~ "}" %}
+      {% set _.classes = _.classes ~ ".md-typeset .admonition." ~ type ~ ",.md-typeset details." ~ type ~ "{" ~ style_rules ~ "}" %}
     {% endif %}
   {% endfor %}
 
-  <style>
-    :root { {{ vars.root }} }
-    {{ vars.classes }}
-  </style>
+  {% set _.root = _.root ~ "}" %}
+
+  {% set _.style = _.style ~ "\u003cstyle\u003e" %}
+  {% set _.style = _.style ~ _.root %}
+  {% set _.style = _.style ~ _.classes %}
+  {% set _.style = _.style ~ "}\u003c/style\u003e" %}
+  {{ _.style }}
 {% endif %}
 
 <!-- Custom annotation icon -->
