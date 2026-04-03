@@ -52,7 +52,7 @@ dependencies = [
   "paginate>=0.5",
   "backrefs>=5.7.post1",
   "requests>=2.30",
-  "mkdocs-document-dates>=3.7.2"
+  "mkdocs-document-dates>=3.7.3"
 ]
 
 classifiers = [

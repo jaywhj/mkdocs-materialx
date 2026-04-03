@@ -43,18 +43,29 @@ $admonitions: (
   "quote":    format-quote-close    $clr-grey
 ) !default;
 
+
 // ----------------------------------------------------------------------------
-// Rules: layout
+// Rules: flavours
 // ----------------------------------------------------------------------------
 
 // Admonition variables
 :root {
   @each $name, $props in $admonitions {
-    --md-admonition-icon--#{$name}:
-      svg-load("material/#{list.nth($props, 1)}.svg");
+    --md-admonition-color--#{$name}: #{list.nth($props, 2)};
+    --md-admonition-icon--#{$name}: svg-load("material/#{list.nth($props, 1)}.svg");
   }
 }
 
+// Admonition flavour - sets color and icon variables for each type
+@each $name, $props in $admonitions {
+  .md-typeset .admonition.#{$name} {
+    --md-admonition-color: var(--md-admonition-color--#{$name});
+    --md-admonition-icon: var(--md-admonition-icon--#{$name});
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Rules: layout
 // ----------------------------------------------------------------------------
 
 // Scoped in typesetted content to match specificity of regular content
@@ -63,14 +74,20 @@ $admonitions: (
   // Admonition - note that all styles also apply to details tags, which are
   // rendered as collapsible admonitions with summary elements as titles.
   .admonition {
+    --md-admonition-color: var(--md-admonition-color--note);
+    --md-admonition-title-bg-color: color-mix(in srgb, var(--md-admonition-color), transparent 70%);
+    --md-admonition-icon: var(--md-admonition-icon--note);
+    --md-admonition-border-color: var(--md-admonition-title-bg-color);
+
     display: flow-root;
     padding: 0 px2rem(12px);
     margin: px2em(20px, 12.8px) 0;
     font-size: px2rem(12.8px);
     color: var(--md-admonition-fg-color);
     background-color: var(--md-admonition-bg-color);
-    border: px2rem(1px) solid $clr-blue-a200;
+    border: px2rem(1px) solid var(--md-admonition-border-color);
     border-radius: px2rem(8px);
+    overflow: hidden;
     // box-shadow: var(--md-shadow-z1);
     // transition: box-shadow 125ms;
     page-break-inside: avoid;
@@ -126,17 +143,13 @@ $admonitions: (
     margin-block: 0;
     margin-inline: px2rem(-12px);
     font-weight: 700;
-    background-color: color.adjust($clr-blue-a200, $alpha: -0.9);
+    background-color: var(--md-admonition-title-bg-color);
     border: none;
     border-inline-start-width: px2rem(4px);
-    border-start-start-radius: px2rem(8px);
-    border-start-end-radius: px2rem(8px);
 
     // Adjust spacing for title-only admonitions
     html &:last-child {
       margin-bottom: 0;
-      border-end-start-radius: px2rem(8px);
-      border-end-end-radius: px2rem(8px);
     }
 
     // Admonition icon
@@ -147,8 +160,8 @@ $admonitions: (
       width: px2rem(20px);
       height: px2rem(20px);
       content: "";
-      background-color: $clr-blue-a200;
-      mask-image: var(--md-admonition-icon--note);
+      background-color: var(--md-admonition-color);
+      mask-image: var(--md-admonition-icon);
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: contain;
@@ -157,41 +170,6 @@ $admonitions: (
     // Inline code block
     code {
       box-shadow: 0 0 0 px2rem(1px) var(--md-default-fg-color--lightest);
-    }
-  }
-}
-
-// ----------------------------------------------------------------------------
-// Rules: flavours
-// ----------------------------------------------------------------------------
-
-// Define admonition flavors
-@each $name, $props in $admonitions {
-  $tint: list.nth($props, 2);
-
-  // Admonition flavour
-  .md-typeset .admonition.#{$name} {
-    border-color: color.adjust($tint, $alpha: -0.7);
-
-    // // Admonition on focus
-    // &:focus-within {
-    //   box-shadow: 0 0 0 px2rem(4px) color.adjust($tint, $alpha: -0.9);
-    // }
-  }
-
-  // Admonition flavour title
-  .md-typeset .#{$name} > .admonition-title {
-    background-color: color.adjust($tint, $alpha: -0.7);
-
-    // Admonition icon
-    &::before {
-      background-color: $tint;
-      mask-image: var(--md-admonition-icon--#{$name});
-    }
-
-    // Details marker
-    &::after {
-      color: $tint;
     }
   }
 }

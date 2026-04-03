@@ -40,7 +40,11 @@
 
     display: flow-root;
     padding-top: 0;
-    overflow: visible;
+    overflow: hidden;
+
+    > summary {
+      border-radius: 0;
+    }
 
     // Details title icon - rotate icon on transition to open state
     &[open] > summary::after {
@@ -51,14 +55,6 @@
     &:not([open]) {
       padding-bottom: 0;
       // box-shadow: none;
-
-      // Hack: we cannot set `overflow: hidden` on the `details` element (which
-      // is why we set it to `overflow: visible`, as the outline would not be
-      // visible when focusing. Therefore, we must set the border radius on the
-      // summary explicitly.
-      > summary {
-        border-radius: px2rem(8px);
-      }
     }
   }
 
@@ -97,7 +93,7 @@
       width: px2rem(20px);
       height: px2rem(20px);
       content: "";
-      background-color: currentcolor;
+      background-color: var(--md-admonition-color);
       mask-image: var(--md-details-icon);
       mask-repeat: no-repeat;
       mask-position: center;

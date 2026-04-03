@@ -81,7 +81,7 @@ pipelines tailored to your project:
 
     ---
 
-    The offline plugin adds support for building [offline-capable documentation],
+    The offline plugin adds support for building offline-capable documentation,
     so you can distribute the [`site` directory][mkdocs.site_dir] as a `.zip`
     file that can be downloaded.
 
@@ -95,7 +95,6 @@ pipelines tailored to your project:
   [building your project]: ../creating-your-site.md#building-your-site
   [optimize]: optimize.md
   [offline]: offline.md
-  [offline-capable documentation]: ../setup/building-for-offline-usage.md
 
 ## Configuration
 

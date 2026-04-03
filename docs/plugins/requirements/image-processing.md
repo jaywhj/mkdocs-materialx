@@ -6,14 +6,13 @@ icon: material/image-sync-outline
 
 Some of the [built-in plugins] depend on external libraries for efficient image
 processing, most notably the [social] plugin to generate [social cards], and the
-[optimize] plugin for applying [image optimization]. This guide explains how to
+[optimize] plugin for applying image optimization. This guide explains how to
 install those libraries in different environments.
 
   [built-in plugins]: ../index.md
   [social]: ../social.md
   [social cards]: ../../setup/setting-up-social-cards.md
   [optimize]: ../optimize.md
-  [image optimization]: ../../setup/building-an-optimized-site.md
 
 ## Dependencies
 
@@ -37,7 +36,7 @@ This will install compatible versions of the following packages:
 
 [Cairo Graphics] is a graphics library and dependency of [Pillow], which
 Material for MkDocs makes use of for generating [social cards] and performing
-[image optimization]. See the following section which explains how to install
+image optimization. See the following section which explains how to install
 [Cairo Graphics] and its dependencies on your system:
 
 === ":material-apple: macOS"

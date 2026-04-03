@@ -136,7 +136,5 @@ page icon layer and adjust the horizontal position to 600 instead of 800.
 ## What's next?
 
 If you do not have a blog yet, why not check out the
-[blog tutorials](../index.md#blogs) and learn how to set one up? The social
+[blog tutorials](../blogs/basic.md) and learn how to set one up? The social
 plugin will help you draw attention to your posts on social media.
-
-Check out the [other tutorials](../index.md) we have prepared for you.

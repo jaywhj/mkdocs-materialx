@@ -200,14 +200,6 @@ After applying the customization, add the CSS class to the icon shortcode:
   [colors]: #with-colors
   [animations]: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 
-### Icons, emojis in sidebars :smile:
-
-With the help of the [built-in typeset plugin], you can use icons and emojis
-in headings, which will then be rendered in the sidebars. The plugin preserves
-Markdown and HTML formatting.
-
-  [built-in typeset plugin]: ../plugins/typeset.md
-
 ## Customization
 
 ### Using icons in templates

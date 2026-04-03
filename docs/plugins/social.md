@@ -48,7 +48,7 @@ images, a few [dependencies] need to be available on your system.
 ### When to use it
 
 There's one particular case when we don't recommend to use the plugin: when you
-build [offline-capable documentation] to offer it as a download. Otherwise, it
+build offline-capable documentation, to offer it as a download. Otherwise, it 
 always makes sense to enable the plugin, as links to your documentation shared
 on social media will appear much more appealing.
 
@@ -84,7 +84,6 @@ pipelines tailored to your project:
 
 </div>
 
-  [offline-capable documentation]: ../setup/building-for-offline-usage.md
   [blog]: blog.md
   [meta]: meta.md
 

@@ -6,10 +6,19 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+
+### 10.1.2 <small>April 1, 2026</small> { id="10.1.2" }
+
+- Fixed the robustness of the `document-dates` plugin when running with the blog plugin
+- Fixed the border gap issue for `admonitions` & `details`
+- Updated the usage documentation for the `document-dates` plugin, see [Configuration](../setup/adding-document-dates-authors.md#configuration){target="_blank"}
+- Updated project development setup
+- Archived unnecessary docs and exclude them from the build, see [Archives](https://github.com/jaywhj/mkdocs-materialx/tree/master/docs/archives){target="_blank"}
+
 ### 10.1.1 <small>March 29, 2026</small> { id="10.1.1" }
 
 - Added support for ProperDocs
-- Date & time infrastructure
+- Date & time infrastructure (provided by the built-in plugin `document-dates`; remember to enable it in the `plugins` section)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
     - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml
 ](https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/sitemap.xml){target="_blank"}
@@ -116,7 +125,7 @@ icon: material/layers-triple-outline
 This release includes all features that were previously exclusive to the
 Insiders edition. These features are now freely available to everyone.
 
-__Note on deprecated plugins__: The [projects] and [typeset] plugins are
+__Note on deprecated plugins__: The `projects` and `typeset` plugins are
 included in this release, but must be considered deprecated. Both plugins
 proved unsustainable to maintain and represent architectural dead ends. They
 are provided as-is without ongoing support.
@@ -146,8 +155,6 @@ __Changes__:
 
   [Zensical]: https://zensical.org
   [Read the full announcement on our blog]: ../blog/posts/zensical.md
-  [projects]: ../plugins/projects.md
-  [typeset]: ../plugins/typeset.md
 
 ### 9.6.23 <small>November 1, 2025</small> { id="9.6.23" }
 

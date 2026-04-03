@@ -81,18 +81,22 @@ class Post(Page):
                         f"Error reading metadata of post '{path}' in '{docs}':\n"
                         f"{e}"
                     )
-            else:
-                self.meta = {}
 
-            # If date does not exist in self.meta, 
-            # no exception is thrown and the data is read from document-dates
+            # If date does not exist in self.meta, try to read date from document-dates
             ddPlugin: DocumentDatesPlugin = config.plugins.get("document-dates")
-            rel_path = getattr(file, 'src_uri', file.src_path)
-            if rel_path in ddPlugin.data_cached:
-                created = datetime.fromisoformat(ddPlugin.data_cached[rel_path]['created'])
+            if ddPlugin:
+                rel_path = getattr(file, 'src_uri', file.src_path)
+                if rel_path in ddPlugin.data_cached:
+                    created = datetime.fromisoformat(ddPlugin.data_cached[rel_path]['created'])
+                else:
+                    created = load_file_creation_date(file.abs_src_path).astimezone()
+                self.meta.setdefault("date", created)
             else:
-                created = load_file_creation_date(file.abs_src_path).astimezone()
-            self.meta.setdefault("date", created)
+                if not self.meta:
+                    raise PluginError(
+                        f"Error reading metadata of post '{path}' in '{docs}':\n"
+                        f"Expected metadata to be defined but found nothing"
+                    )
 
             # Hack: if the meta plugin is registered, we need to move the call
             # to `on_page_markdown` here, because we need to merge the metadata
@@ -101,7 +105,7 @@ class Post(Page):
             # way to allow posts to receive metadata from meta files, because
             # posts must be loaded prior to constructing the navigation in
             # `on_files` but the meta plugin first runs in `on_page_markdown`.
-            plugin: MetaPlugin = config.plugins.get("materialx/meta")
+            plugin: MetaPlugin = config.plugins.get(f"{config.theme.name}/meta")
             if plugin:
                 plugin.on_page_markdown(
                     self.markdown, page = self, config = config, files = None

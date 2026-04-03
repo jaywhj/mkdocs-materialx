@@ -20,7 +20,7 @@ The plugin scans the [`docs` directory][mkdocs.docs_dir] for media files and
 assets, optimizing them automatically in order to reduce the final size of the
 [`site` directory][mkdocs.site_dir]. This leads to faster loading times as you
 ship less bytes to your users, as well as a smaller download for
-[offline-capable documentation].
+offline-capable documentation.
 
 Optimized images are [intelligently cached][intelligent caching], which is why
 the plugin will only optimize media files that changed since the last build.
@@ -30,7 +30,6 @@ about optimizing them, or even worse, forgetting to do so.
 In order to optimize media files, a few [dependencies] need to be available on
 your system.
 
-  [offline-capable documentation]: ../setup/building-for-offline-usage.md
   [dependencies]: #configuration
 
 ### When to use it

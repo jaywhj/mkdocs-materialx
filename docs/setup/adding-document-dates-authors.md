@@ -34,9 +34,7 @@ You can add date and author information to your documents via the plugin [docume
 
 ## Installation
 
-This plugin is built-in and does not require separate installation.
-
-If you wish to install it individually, you may use the following command:
+This plugin is built-in and does not require separate installation. If you wish to install it individually, you may use the following command:
 
 === "Install"
 
@@ -51,6 +49,12 @@ If you wish to install it individually, you may use the following command:
     ```
 
 ## Configuration
+
+This plugin completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more.
+
+!!! tip "Prerequisite"
+
+    You need to configure it in the `plugins` section to enable it first.
 
 Add the following lines to `mkdocs.yml`:
 

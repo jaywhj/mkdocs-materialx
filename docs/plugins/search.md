@@ -8,10 +8,9 @@ icon: octicons/search-24
 The search plugin adds a search bar to the header, allowing users to search your
 documentation. It's powered by [lunr.js], a lightweight full-text search engine
 for the browser, elimininating the need for external services, and even works
-when building [offline-capable documentation].
+when building offline-capable documentation.
 
   [lunr.js]: https://lunrjs.com/
-  [offline-capable documentation]: ../setup/building-for-offline-usage.md
 
 ## Objective
 

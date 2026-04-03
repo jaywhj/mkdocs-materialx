@@ -173,8 +173,10 @@ markdown_extensions:
 #---- 5. Page tree ----
 
 # use_directory_urls: false
-# exclude_docs: |
-#   /drafts/
+exclude_docs: |
+  archives/
+#  /drafts/
+
 # not_in_nav: |
 #   /tutorials/**/*.md
 

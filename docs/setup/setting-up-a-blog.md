@@ -9,15 +9,10 @@ your documentation or standalone. Focus on your content while the engine does
 all the heavy lifting, automatically generating [archive] and [category]
 indexes, [post slugs], configurable [pagination] and more.
 
----
-
-__Check out our [blog], which is created with the new [built-in blog plugin]!__
-
   [archive]: ../plugins/blog.md#archive
   [category]: ../plugins/blog.md#categories
   [post slugs]: ../plugins/blog.md#config.post_url_format
   [pagination]: ../plugins/blog.md#pagination
-  [blog]: ../blog/index.md
 
 ## Configuration
 

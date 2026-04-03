@@ -14,7 +14,7 @@ developing built-in plugins, we always adhere to the following design principles
 - **Modularity:** Built-in plugins are designed to be modular, so that they can
   be easily combined to implement sophisticated pipelines. For example, the
   [offline], [optimize] and [privacy] plugins can be used together to build
-  truly [offline-capable documentation].
+  truly offline-capable documentation.
 
 - **Interoperability:** Built-in plugins are designed to be as compatible as
   possible, so they can be used in combination with other plugins, including
@@ -28,7 +28,6 @@ developing built-in plugins, we always adhere to the following design principles
 
   [mkdocs]: https://www.mkdocs.org/
   [design principles]: ../design-principles.md
-  [offline-capable documentation]: ../setup/building-for-offline-usage.md
 
 ## Categories
 
@@ -65,37 +64,12 @@ minimal reproductions for bug reports:
 
     __Simpler organization, categorization and management of metadata__
 
--   :material-folder-open: &nbsp; __[Built-in projects plugin][projects]__
-
-    ---
-
-    The projects plugin allows to split your main project into multiple distinct
-    projects, build them concurrently and preview them together as one.
-
-    ---
-
-    __Connect multiple projects together, and build them separately or as one__
-
--   :material-information: &nbsp; __[Built-in info plugin][info]__
-
-    ---
-
-    The info plugin is a small and useful utility that helps to create
-    self-contained minimal reproductions, so we maintainers can fix reported
-    bugs more quickly.
-
-    ---
-
-    __Your bug reports are of the highest quality, so we can fix them as fast as
-    possible__
-
 
 </div>
 
   [group]: group.md
   [info]: info.md
   [meta]: meta.md
-  [projects]: projects.md
 
 ### Optimization
 
@@ -147,7 +121,7 @@ compliance with a few lines of configuration:
 
     ---
 
-    The offline plugin adds support for building [offline-capable documentation],
+    The offline plugin adds support for building offline-capable documentation,
     so you can distribute the [`site` directory][mkdocs.site_dir] as a `.zip`
     file that can be downloaded.
 
@@ -208,23 +182,11 @@ the main content:
 
     __Your pages are categorized with tags, yielding additional context__
 
--   :material-format-title: &nbsp; __[Built-in typeset plugin][typeset]__
-
-    ---
-
-    The typeset plugin allows to preserve the enriched presentation of titles
-    and headlines within the navigation and table of contents.
-
-    ---
-
-    __Sidebars preserve the same formatting as section titles in pages__
-
 </div>
 
   [blog]: blog.md
   [search]: search.md
   [tags]: tags.md
-  [typeset]: typeset.md
 
 ## Architecture
 
