@@ -13,7 +13,7 @@ icon: material/layers-triple-outline
 - Fixed the border gap issue for `admonitions` & `details`
 - Updated the usage documentation for the `document-dates` plugin, see [Configuration](../setup/adding-document-dates-authors.md#configuration){target="_blank"}
 - Updated project development setup
-- Archived unnecessary docs and exclude them from the build, see [Archives](https://github.com/jaywhj/mkdocs-materialx/tree/master/docs/archives){target="_blank"}
+- Archived unnecessary docs and exclude them from the build, see [Archives](https://github.com/jaywhj/mkdocs-materialx/tree/main/docs/archives){target="_blank"}
 
 ### 10.1.1 <small>March 29, 2026</small> { id="10.1.1" }
 
@@ -21,7 +21,7 @@ icon: material/layers-triple-outline
 - Date & time infrastructure (provided by the built-in plugin `document-dates`; remember to enable it in the `plugins` section)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
     - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml
-](https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/sitemap.xml){target="_blank"}
+](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
     - Updated the processing logic for blog post dates, manual date specification is no longer required
     - These date values can be accessed via template variables in any template or plugin, see [Template Variables](../setup/adding-document-dates-authors.md#template-variables){target="_blank"}
 - Recently updated list
