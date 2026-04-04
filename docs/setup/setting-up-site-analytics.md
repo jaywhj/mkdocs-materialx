@@ -201,7 +201,7 @@ The following properties are available for each rating:
   [analytics]: #google-analytics
   [feedback report]: ../assets/screenshots/feedback-report.png
   [custom feedback integration]: #custom-site-feedback
-  [custom icons]: https://github.com/jaywhj/mkdocs-materialx/tree/master/material/templates/.icons
+  [custom icons]: https://github.com/jaywhj/mkdocs-materialx/tree/main/material/templates/.icons
   [Google Forms]: https://www.google.com/forms/about/
 
 ## Usage

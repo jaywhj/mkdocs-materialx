@@ -551,5 +551,5 @@ After applying the customization, you can use the custom admonition type:
 
 </div>
 
-  [custom icons]: https://github.com/jaywhj/mkdocs-materialx/tree/master/material/templates/.icons
+  [custom icons]: https://github.com/jaywhj/mkdocs-materialx/tree/main/material/templates/.icons
   [additional style sheet]: ../customization.md#additional-css

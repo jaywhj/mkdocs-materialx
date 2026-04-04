@@ -261,7 +261,7 @@ carefully considered:
     China and Japan are both within the top 5 countries of origin of users of
     Material for MkDocs.
 
-  [truncated]: https://github.com/jaywhj/mkdocs-materialx/blob/master/src/templates/assets/javascripts/templates/search/index.tsx#L90
+  [truncated]: https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/assets/javascripts/templates/search/index.tsx#L90
   [search preview]: search-better-faster-smaller/search-preview.png
   [Just the Docs]: https://just-the-docs.com
   [Docusaurus]: https://github.com/lelouch77/docusaurus-lunr-search

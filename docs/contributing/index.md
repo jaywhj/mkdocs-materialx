@@ -163,7 +163,7 @@ with our community.
   respectful to our community and us maintainers? Could you just use a
   [:octicons-smiley-16: reaction][reaction] instead?
 
-  [Code of Conduct]: https://github.com/jaywhj/mkdocs-materialx/blob/master/CODE_OF_CONDUCT.md
+  [Code of Conduct]: https://github.com/jaywhj/mkdocs-materialx/blob/main/CODE_OF_CONDUCT.md
   [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
 
 ## Rights and responsibilities

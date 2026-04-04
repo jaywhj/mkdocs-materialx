@@ -116,8 +116,8 @@ plugins require the `site_url` to be set, so you should always do this.
   [schema.json]: schema.json
   [vscode-yaml]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
   [settings.json]: https://code.visualstudio.com/docs/getstarted/settings
-  [extension]: https://github.com/jaywhj/mkdocs-materialx/tree/master/docs/schema/extensions
-  [plugin]: https://github.com/jaywhj/mkdocs-materialx/tree/master/docs/schema/plugins
+  [extension]: https://github.com/jaywhj/mkdocs-materialx/tree/main/docs/schema/extensions
+  [plugin]: https://github.com/jaywhj/mkdocs-materialx/tree/main/docs/schema/plugins
   [$ref]: https://json-schema.org/understanding-json-schema/structuring.html#ref
   [icons and emojis]: reference/icons-emojis.md
 

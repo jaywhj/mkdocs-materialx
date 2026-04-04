@@ -15,20 +15,20 @@
           "properties": {
             "enabled": {
               "title": "Enable plugin",
-              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#+git-committers.enabled",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository#+git-committers.enabled",
               "type": "boolean",
               "default": true
             },
             "repository": {
               "title": "Repository slug",
-              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#+git-committers.repository",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository#+git-committers.repository",
               "type": "string"
             },
             "branch": {
               "title": "Repository branch",
-              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository/#+git-committers.branch",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository#+git-committers.branch",
               "type": "string",
-              "default": "master"
+              "default": "main"
             }
           },
           "additionalProperties": false,

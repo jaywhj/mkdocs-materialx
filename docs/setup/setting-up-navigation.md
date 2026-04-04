@@ -493,7 +493,7 @@ theme:
 
 Starting with <!-- md:version 10.0.4 -->, back-to-top will always be displayed as a container for displaying nav and toc navigation at the bottom on mobile, independent of the `navigation.top` configuration.
 
-??? quote "back-to-top button is deprecated"
+??? info "back-to-top button is deprecated"
 
     <div style="opacity: 0.5" markdown>
 

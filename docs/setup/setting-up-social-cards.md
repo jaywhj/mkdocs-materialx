@@ -285,7 +285,7 @@ The following sections explain how to create custom layouts.
   [built-in social plugin]: ../plugins/social.md
   [Google Fonts]: https://fonts.google.com/
   [Jinja templates]: https://jinja.palletsprojects.com/en/3.1.x/
-  [study the pre-designed layouts]: https://github.com/jaywhj/mkdocs-materialx/tree/master/src/plugins/social/layouts
+  [study the pre-designed layouts]: https://github.com/jaywhj/mkdocs-materialx/tree/main/src/plugins/social/layouts
 
 ### Size and offset
 
