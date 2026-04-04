@@ -88,7 +88,26 @@
       {% endif %}
 
       <!-- Favicon -->
-      <link rel="icon" href="{{ config.theme.favicon | url }}" />
+      {% if config.theme.favicon %}
+        {# 1. Try to capture the bundled icon if it exists #}
+        {% set svg_raw %}
+          {% include ".icons/" ~ config.theme.favicon ~ ".svg" ignore missing %}
+        {% endset %}
+
+        {% if svg_raw | trim %}
+          {% set svg_encoded = svg_raw
+              | replace("\"", "'")
+              | replace("#", "%23")
+              | replace("\u003c", "%3C")
+              | replace("\u003e", "%3E")
+              | trim
+          %}
+          <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,{{ svg_encoded }}" />
+
+        {% else %}
+          <link rel="icon" href="{{ config.theme.favicon | url }}" />
+        {% endif %}
+      {% endif %}
 
       <!-- Generator banner -->
       <meta
