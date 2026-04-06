@@ -120,10 +120,12 @@
           href="{{ 'assets/stylesheets/palette.css' | url }}"
         />
       {% endif %}
-
-      <!-- Custom icons -->
-      {% include "partials/icons.html" %}
     {% endblock %}
+
+    <!-- Custom admonitions -->
+    {% include "partials/admonitions.html" %}
+    <!-- Custom icons -->
+    {% include "partials/icons.html" %}
 
     <!-- JavaScript libraries -->
     {% block libs %}
