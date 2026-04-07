@@ -377,7 +377,7 @@
         },
         "admonition": {
           "title": "Admonition icon",
-          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/admonitions#admonition-icons",
+          "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/reference/admonitions#custom-icons-and-colors",
           "type": "object",
           "properties": {
             "note": {
