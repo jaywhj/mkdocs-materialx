@@ -6,7 +6,7 @@ icon: material/vector-difference-ab
 
 **MaterialX**, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on `mkdocs-material-9.7.1` and named `X`, it provides ongoing maintenance and updates.
 
-??? quote "Why MaterialX ?"
+??? desc "Why MaterialX ?"
 
     The MkDocs project is nearing its end due to personal issues involving its original author. He has ceased updates for MkDocs and intends to release a completely new 2.0 version as a replacement. However, this new version is entirely incompatible with the existing ecosystem. It is an entirely separate project that merely carries the MkDocs name, and an accidental upgrade will result in devastating damage.
 
@@ -24,7 +24,7 @@ MaterialX aims to be a **simple, zero-fuss** static site generator.
 
 Users can convert their regular notes and docs into professional sites with just light configuration, for easy sharing and communication.
 
-??? quote "Why the focus on simplicity and ease of use ?"
+??? desc "Why the focus on simplicity and ease of use ?"
 
     In my opinion, the beauty of technology lies in enabling more people to effortlessly achieve what was once difficult using the tools you provide.
 

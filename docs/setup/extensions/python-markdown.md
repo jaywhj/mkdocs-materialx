@@ -61,7 +61,7 @@ No configuration options are available. See reference for usage:
   [Adding admonitions]: ../../reference/admonitions.md#usage
   [Changing the title]: ../../reference/admonitions.md#changing-the-title
   [Removing the title]: ../../reference/admonitions.md#removing-the-title
-  [Supported types]: ../../reference/admonitions.md#supported-types
+  [Supported types]: ../../reference/admonitions.md#built-in-types
 
 ### Attribute Lists
 

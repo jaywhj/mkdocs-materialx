@@ -102,7 +102,7 @@ The following is a complete list of customizable icons used by the theme:
 | `edit`       | Edit current page                                                             |
 | `view`       | View page source                                                              |
 | `repo`       | Repository icon                                                               |
-| `admonition` | See [Admonition icons](../reference/admonitions.md#admonition-icons)          |
+| `admonition` | See [Admonition icons](../reference/admonitions.md#custom-icons-and-colors)          |
 | `tag`        | See [Tag icons and identifiers](setting-up-tags.md#tag-icons-and-identifiers) |
 | `previous`   | Previous page in footer, hide search on mobile                                |
 | `next`       | Next page in footer                                                           |

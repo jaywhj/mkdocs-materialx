@@ -172,7 +172,7 @@ The date data is retrieved using a combination of different methods to adapt to 
 - Uses **cache files** to ensure accurate original dates in Git environments
 - Front Matter: Manually specify the date in Front Matter if you prefer not to use automatic dates
 
-??? quote "Why not use filesystem timestamps in Git environments?"
+??? desc "Why not use filesystem timestamps in Git environments ?"
 
     Because files are recreated during git checkout or git clone, causing the original timestamps of branches/files to be lost after cloning or checking out.
 

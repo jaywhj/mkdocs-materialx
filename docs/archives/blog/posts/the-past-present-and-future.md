@@ -174,7 +174,7 @@ __55__ times, `mkdocs-material-insiders` was shipped __72__ times.
   [Content tabs: improved support]: ../../reference/content-tabs.md
   [Content tabs: auto-linking]: ../../reference/content-tabs.md#linked-content-tabs
   [Cookie consent]: ../../setup/ensuring-data-privacy.md#cookie-consent
-  [Custom admonition icons]: ../../reference/admonitions.md#admonition-icons
+  [Custom admonition icons]: ../../reference/admonitions.md#custom-icons-and-colors
   [Dark mode support for images]: ../../reference/images.md#light-and-dark-mode
   [Dismissable announcement bar]: ../../setup/setting-up-the-header.md#mark-as-read
   [Excluding content from search]: ../../setup/setting-up-site-search.md#search-exclusion

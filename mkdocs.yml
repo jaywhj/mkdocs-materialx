@@ -91,7 +91,19 @@ theme:
   icon:
     logo: logo
     annotation: material/plus-circle-outline
-
+  admonition:
+    git:
+      icon: simple/git
+      color: '#f34f29'
+    desc:
+      icon: octicons/sort-desc-24
+      color: rgba(158, 158, 158, 0.7)
+    pied-piper:
+      icon: fontawesome/brands/pied-piper-alt
+      color: '#2b9b46'
+    example-new:
+      icon: material/format-list-group
+      color: var(--md-admonition-color--example)
 
 #---- 3. Plugins & Hooks ----
 
