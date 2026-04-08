@@ -1,0 +1,30 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% set default_types = ["note", "abstract", "info", "tip", "success", "question", "warning", "failure", "danger", "bug", "example", "quote"] %}
+{% if config.theme.admonition %}
+  {% set _ = namespace(root = "", classes = "") %}
+  {% for type, keys in config.theme.admonition | items %}
+    {# ------------- root ------------- #}
+    {% if keys.icon %}
+      {% import ".icons/" ~ keys.icon ~ ".svg" as icon %}
+      {% set _.root = _.root ~ "--md-admonition-icon--" ~ type ~ ":url('data:image/svg+xml;charset=utf-8," ~ icon | replace("\n", "") | urlencode ~ "');" %}
+    {% endif %}
+    {% if keys.color %}
+      {% set _.root = _.root ~ "--md-admonition-color--" ~ type ~ ":" ~ keys.color ~ ";" %}
+    {% endif %}
+    {# ------------- class-specific rules ------------- #}
+    {% if type not in default_types %}
+      {% set rules = "" %}
+      {% if keys.icon %}
+        {% set rules = rules ~ "--md-admonition-icon:var(--md-admonition-icon--" ~ type ~ ");" %}
+      {% endif %}
+      {% if keys.color %}
+        {% set rules = rules ~ "--md-admonition-color:var(--md-admonition-color--" ~ type ~ ");" %}
+      {% endif %}
+      {% set _.classes = _.classes ~ ".md-typeset .admonition." ~ type ~ ",.md-typeset details." ~ type ~ "{" ~ rules ~ "}" %}
+    {% endif %}
+  {% endfor %}
+  {% set _.root = ":root{" ~ _.root ~ "}" %}
+  {{ ("\u003cstyle\u003e" ~ _.root ~ _.classes ~ "\u003c/style\u003e") | safe }}
+{% endif %}

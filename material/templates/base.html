@@ -36,7 +36,24 @@
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.created') }}" href="{{ 'feed_rss_created.xml' | url }}">
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.updated') }}" href="{{ 'feed_rss_updated.xml' | url }}">
       {% endif %}
-      <link rel="icon" href="{{ config.theme.favicon | url }}">
+      {% if config.theme.favicon %}
+        {# 1. Try to capture the bundled icon if it exists #}
+        {% set svg_raw %}
+          {% include ".icons/" ~ config.theme.favicon ~ ".svg" ignore missing %}
+        {% endset %}
+        {% if svg_raw | trim %}
+          {% set svg_encoded = svg_raw
+              | replace("\"", "'")
+              | replace("#", "%23")
+              | replace("\u003c", "%3C")
+              | replace("\u003e", "%3E")
+              | trim
+          %}
+          <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,{{ svg_encoded }}">
+        {% else %}
+          <link rel="icon" href="{{ config.theme.favicon | url }}">
+        {% endif %}
+      {% endif %}
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.1.3">
     {% endblock %}
     {% block htmltitle %}
@@ -54,8 +71,9 @@
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.204eaadb.min.css' | url }}">
       {% endif %}
-      {% include "partials/icons.html" %}
     {% endblock %}
+    {% include "partials/admonitions.html" %}
+    {% include "partials/icons.html" %}
     {% block libs %}
       {% for script in config.extra.polyfills %}
         {{ script | script_tag }}
