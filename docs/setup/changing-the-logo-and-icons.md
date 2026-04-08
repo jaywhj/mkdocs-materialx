@@ -67,7 +67,7 @@ extra:
 
 The favicon can be changed to a path pointing to a user-provided image located
 in the `docs` folder, to any icon bundled with the theme, or even a
-[custom icon]. Add the following lines to `mkdocs.yml`:
+[custom icon][additional icons]. Add the following lines to `mkdocs.yml`:
 
 === ":octicons-image-16: Image"
 
@@ -107,7 +107,6 @@ in the `docs` folder, to any icon bundled with the theme, or even a
         `.icons/bootstrap/envelope-paper.svg`, use `bootstrap/envelope-paper`.
 
   [Favicon default]: https://github.com/jaywhj/mkdocs-materialx/blob/main/material/templates/assets/images/favicon.png
-  [custom icon]: #additional-icons
 
 ### Site icons
 

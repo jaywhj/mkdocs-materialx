@@ -87,7 +87,7 @@ theme:
         name: Switch to system preference
 
   font: false
-  favicon: assets/favicon.png
+  favicon: octicons/milestone-24
   icon:
     logo: logo
     annotation: material/plus-circle-outline
