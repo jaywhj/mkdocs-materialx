@@ -66,7 +66,7 @@ MkDocs on GitHub Pages in a step-by-step guide.
   [Python package]: https://pypi.org/project/mkdocs-materialx/
   [virtual environment]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
   [semantic versioning]: https://semver.org/
-  [upgrade to the next major version]: upgrade.md
+  [upgrade to the next major version]: changelog/upgrade.md
   [Markdown]: https://python-markdown.github.io/
   [Pygments]: https://pygments.org/
   [Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/

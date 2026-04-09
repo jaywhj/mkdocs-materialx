@@ -216,7 +216,7 @@ const assets$ = concat(
     })),
 
   /* Copy Simple icons */
-  ...["**/*.svg", "../LICENSE.md"]
+  ...["**/*.svg", "../license.md"]
     .map(pattern => copyAll(pattern, {
       from: "node_modules/simple-icons/icons",
       to: `${base}/templates/.icons/simple`,

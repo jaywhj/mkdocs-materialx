@@ -16,6 +16,19 @@ Show the currently installed version with:
 pip show mkdocs-materialx
 ```
 
+## Upgrading from 9.x to 10.x
+
+Just update the theme name in mkdocs.yml to `materialx`:
+
+``` yaml
+theme:
+  name: materialx
+```
+
+!!! note
+
+    The theme name is `materialx`, not material. Everything else is the same as when using material.
+
 ## Upgrading from 8.x to 9.x
 
 This major release includes a brand new search implementation that is faster
@@ -149,7 +162,7 @@ viewports]:
       - pymdownx.tabbed
     ```
 
-  [Tabbed]: setup/extensions/python-markdown-extensions.md#tabbed
+  [Tabbed]: ../setup/extensions/python-markdown-extensions.md#tabbed
   [better behavior on mobile viewports]: https://x.com/squidfunk/status/1424740370596958214
 
 #### `pymdownx.superfences`
@@ -180,8 +193,8 @@ using [Mermaid.js]:
               format: !!python/name:pymdownx.superfences.fence_code_format
     ```
 
-  [SuperFences]: setup/extensions/python-markdown-extensions.md#superfences
-  [diagrams]: reference/diagrams.md
+  [SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+  [diagrams]: ../reference/diagrams.md
   [Mermaid.js]: https://mermaid-js.github.io/mermaid/
 
 #### `google_analytics`
@@ -881,8 +894,8 @@ function they apply to, e.g. `navigation.*`:
         - instant
     ```
 
-  [tabs]: setup/setting-up-navigation.md#navigation-tabs
-  [instant loading]: setup/setting-up-navigation.md#instant-loading
+  [tabs]: ../setup/setting-up-navigation.md#navigation-tabs
+  [instant loading]: ../setup/setting-up-navigation.md#instant-loading
 
 ### Changes to `*.html` files { data-search-exclude }
 
@@ -1121,9 +1134,9 @@ matches the new structure:
 - Reduced HTML and CSS footprint due to deprecation of Internet Explorer support
 - Slight facelifting of some UI elements (admonitions, tables, ...)
 
-  [CSS variables]: setup/changing-the-colors.md#custom-colors
-  [icon integration]: reference/icons-emojis.md#search
-  [prebuilt search indexes]: plugins/search.md
+  [CSS variables]: ../setup/changing-the-colors.md#custom-colors
+  [icon integration]: ../reference/icons-emojis.md#search
+  [prebuilt search indexes]: ../plugins/search.md
 
 ### Changes to `mkdocs.yml`
 
@@ -1221,7 +1234,7 @@ was renamed to `separator`:
         tokenizer: '[\s\-\.]+'
     ```
 
-  [plugin options]: plugins/search.md
+  [plugin options]: ../plugins/search.md
 
 #### `extra.social.*`
 

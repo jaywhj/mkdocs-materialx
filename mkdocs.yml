@@ -266,17 +266,6 @@ nav:
   #   - Changelog:
   #     - insiders/changelog/index.md
   #     - How to upgrade: insiders/upgrade.md
-  - Community:
-    - Contributing:
-      - contributing/index.md
-      - Reporting a bug: contributing/reporting-a-bug.md
-      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
-      - Requesting a change: contributing/requesting-a-change.md
-      - Adding translations: contributing/adding-translations.md
-      - Making a pull request: contributing/making-a-pull-request.md
-      - Asking a question: https://github.com/jaywhj/mkdocs-materialx/discussions
-    - Guides:
-      - Creating a reproduction: guides/creating-a-reproduction.md
   - Tutorials:
     # - tutorials/index.md
     - "Blogs":
@@ -290,11 +279,22 @@ nav:
     # - blog/index.md
 
   - System:
-    - Conventions: conventions.md
-    - Browser support: browser-support.md
-    # - Philosophy: philosophy.md
-    # - Alternatives: alternatives.md
-    - License: license.md
     - Changelog:
       - changelog/index.md
-      - How to upgrade: upgrade.md
+      - How to upgrade: changelog/upgrade.md
+    - Description:
+      - Conventions: conventions.md
+      - Browser support: browser-support.md
+      # - Philosophy: philosophy.md
+      # - Alternatives: alternatives.md
+      - License: license.md
+    - Contributing:
+      - contributing/index.md
+      - Reporting a bug: contributing/reporting-a-bug.md
+      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
+      - Requesting a change: contributing/requesting-a-change.md
+      - Adding translations: contributing/adding-translations.md
+      - Making a pull request: contributing/making-a-pull-request.md
+      - Asking a question: https://github.com/jaywhj/mkdocs-materialx/discussions
+    # - Guides:
+      - Creating a reproduction: guides/creating-a-reproduction.md

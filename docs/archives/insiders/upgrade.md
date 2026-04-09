@@ -12,7 +12,7 @@ If the major version increased, it's a good idea to consult the [upgrade
 guide] and go through the steps to ensure your configuration is up to date and
 all necessary changes have been made. 
 
-  [upgrade guide]: ../upgrade.md
+  [upgrade guide]: ../changelog/upgrade.md
   [list of tags]: https://github.com/squidfunk/mkdocs-material-insiders/tags
 
 Depending on how you installed and what you want to upgrade to you

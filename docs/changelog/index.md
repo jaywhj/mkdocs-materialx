@@ -54,7 +54,7 @@ icon: material/layers-triple-outline
 
 ### 10.0.9 <small>February 20, 2026</small> { id="10.0.9" }
 
-- Added configurable styles for topbar, allow to set topbar background color in Liquid Glass theme, see [Topbar style](../setup/changing-the-colors.md#topbar-style)
+- Added configurable styles for topbar, allow to set topbar background color in Liquid Glass theme, see [Topbar style](../setup/changing-the-colors.md#topbar-style){target="_blank"}
 - Make color-mix of navigation background compatible with iOS 14 and earlier
 - Optimized the css details of NAV and TOC on different platforms again to improve the aesthetics
 
@@ -72,7 +72,7 @@ icon: material/layers-triple-outline
 
 ### 10.0.6 <small>January 28, 2026</small> { id="10.0.6" }
 
-- New: The recently updated document list supports **summary mode** and automatically extracts article summaries, [preview](https://jaywhj.netlify.app/)
+- New: The recently updated document list supports **summary mode** and automatically extracts article summaries, [preview](https://jaywhj.netlify.app/){target="_blank"}
 - New: The recently updated document list supports **dynamic layout**, with multiple view modes added including list, detail and grid
 - Updated: Adjusted the UI style of `admonition`
 - Updated: Adjusted the UI style of `blockquote`
@@ -93,8 +93,8 @@ icon: material/layers-triple-outline
 
 - New: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
 - New: Show `git repo` in sidebar on mobile
-- New: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors.md)
-- New: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module.md)
+- New: Add a new generation date author plugin, see doc [Add document dates authors](../setup/adding-document-dates-authors.md){target="_blank"}
+- New: Add recent updates module, see doc [Add recent updates module](../setup/adding-recent-updates-module.md){target="_blank"}
 - Fixed: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
 - Fixed: Optimize the judgment of the direction of the swipe gesture, so as to adjust the sensitivity of showing the bottom menu
 - Fixed: Search function does not display properly on mobile

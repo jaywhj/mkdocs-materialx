@@ -57,7 +57,7 @@ __Don't be shy to ask on our [discussion board] for help if you run into
 problems.__
 
   [latest version]: ../changelog/index.md
-  [upgrade guide]: ../upgrade.md
+  [upgrade guide]: ../changelog/upgrade.md
   [Customizations]: ../customization.md
   [additional CSS]: ../customization.md#additional-css
   [JavaScript]: ../customization.md#additional-javascript
