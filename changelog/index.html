@@ -149,13 +149,13 @@
     
       <link rel="stylesheet" href="../assets/document_dates/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../assets/document_dates/tippy/tippy.css">
-    
-      <link rel="stylesheet" href="../assets/document_dates/tippy/scale.css">
-    
       <link rel="stylesheet" href="../assets/document_dates/tippy/material.css">
     
       <link rel="stylesheet" href="../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../assets/document_dates/tippy/scale.css">
     
       <link rel="stylesheet" href="../assets/document_dates/tippy/light.css">
     
@@ -3162,6 +3162,17 @@
   
     <nav class="md-nav" aria-label="MaterialX">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10.1.3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1.3 April 10, 2026
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#10.1.2" class="md-nav__link">
@@ -8349,6 +8360,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#10.1.3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1.3 April 10, 2026
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#10.1.2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -13034,6 +13056,19 @@
 
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <h2 id="materialx">MaterialX<a class="headerlink" href="#materialx" title="Permanent link">¶</a></h2>
+<h3 id="10.1.3">10.1.3 <small>April 10, 2026</small><a class="headerlink" href="#10.1.3" title="Permanent link">¶</a></h3>
+<ul>
+<li>Feature: Bundled icons can now be used as favicon, see <a href="../setup/changing-the-logo-and-icons.html#favicon" target="_blank">Favicon</a></li>
+<li>Feature: Modularized Admonition for easier extensibility<ul>
+<li>Customizing a new admonition can now be done simply by configuring it in <code>mkdocs.yml</code>, see <a href="../reference/admonitions.html#customization" target="_blank">Customization</a></li>
+</ul>
+</li>
+<li>Fixed compatibility issue with the <code>lastmod</code> value in <code>sitemap.xml</code><ul>
+<li>When used with the <code>document-dates</code> plugin, <code>sitemap.xml</code> can now generate the exact <code>lastmod</code>, see <a href="https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml" target="_blank">sitemap.xml</a></li>
+</ul>
+</li>
+<li>Optimized inline code block style</li>
+</ul>
 <h3 id="10.1.2">10.1.2 <small>April 1, 2026</small><a class="headerlink" href="#10.1.2" title="Permanent link">¶</a></h3>
 <ul>
 <li>Fixed the robustness of the <code>document-dates</code> plugin when running with the blog plugin</li>
@@ -13047,8 +13082,7 @@
 <li>Added support for ProperDocs</li>
 <li>Date &amp; time infrastructure (provided by the built-in plugin <code>document-dates</code>; remember to enable it in the <code>plugins</code> section)<ul>
 <li>Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more</li>
-<li>Added an override template for <code>sitemap.xml</code> that supports dynamically loading the exact lastmod to improve SEO, see <a href="https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml" target="_blank">sitemap.xml
-</a></li>
+<li>Added an override template for <code>sitemap.xml</code> that supports dynamically loading the exact lastmod to improve SEO, see <a href="https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml" target="_blank">sitemap.xml</a></li>
 <li>Updated the processing logic for blog post dates, manual date specification is no longer required</li>
 <li>These date values can be accessed via template variables in any template or plugin, see <a href="../setup/adding-document-dates-authors.html#template-variables" target="_blank">Template Variables</a></li>
 </ul>
