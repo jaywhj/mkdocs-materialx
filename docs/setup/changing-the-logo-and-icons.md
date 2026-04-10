@@ -62,7 +62,7 @@ extra:
 ### Favicon
 
 <!-- md:version 0.1.0 -->
-<!-- md:version 10.1.3 – Icon support -->
+<!-- md:version 10.1.3 -->
 <!-- md:default [`assets/images/favicon.png`][Favicon default] -->
 
 The favicon can be changed to a path pointing to a user-provided image located
