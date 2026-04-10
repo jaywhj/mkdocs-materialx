@@ -127,6 +127,7 @@ assets may also be put in the `overrides` directory:
 │  │  └─ analytics.html                # Analytics setup
 │  ├─ languages/                       # Translation languages
 │  ├─ actions.html                     # Actions
+│  ├─ admonitions.html                 # Admonitions
 │  ├─ alternate.html                   # Site language selector
 │  ├─ comments.html                    # Comment system (empty by default)
 │  ├─ consent.html                     # Consent

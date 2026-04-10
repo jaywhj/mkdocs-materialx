@@ -1,4 +1,14 @@
 
+
+mkdocs-materialx-10.1.3 (2026-04-10)
+
+- Feature: Bundled icons can now be used as favicon, see [Favicon](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-logo-and-icons#favicon){target="_blank"}
+- Feature: Modularized Admonition for easier extensibility
+    - Customizing a new admonition can now be done simply by configuring it in `mkdocs.yml`, see [Customization](https://jaywhj.github.io/mkdocs-materialx/reference/admonitions#customization){target="_blank"}
+- Fixed compatibility issue with the `lastmod` value in `sitemap.xml`
+    - When used with the `document-dates` plugin, `sitemap.xml` can now generate the exact `lastmod`, see [sitemap.xml](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
+- Optimized inline code block style
+
 mkdocs-materialx-10.1.2 (2026-04-01)
 
 - Fixed the robustness of the `document-dates` plugin when running with the blog plugin

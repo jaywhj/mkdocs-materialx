@@ -6,6 +6,14 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.3 <small>April 10, 2026</small> { id="10.1.3" }
+
+- Feature: Bundled icons can now be used as favicon, see [Favicon](../setup/changing-the-logo-and-icons.md#favicon){target="_blank"}
+- Feature: Modularized Admonition for easier extensibility
+    - Customizing a new admonition can now be done simply by configuring it in `mkdocs.yml`, see [Customization](../reference/admonitions.md#customization){target="_blank"}
+- Fixed compatibility issue with the `lastmod` value in `sitemap.xml`
+    - When used with the `document-dates` plugin, `sitemap.xml` can now generate the exact `lastmod`, see [sitemap.xml](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
+- Optimized inline code block style
 
 ### 10.1.2 <small>April 1, 2026</small> { id="10.1.2" }
 
@@ -20,8 +28,7 @@ icon: material/layers-triple-outline
 - Added support for ProperDocs
 - Date & time infrastructure (provided by the built-in plugin `document-dates`; remember to enable it in the `plugins` section)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
-    - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml
-](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
+    - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
     - Updated the processing logic for blog post dates, manual date specification is no longer required
     - These date values can be accessed via template variables in any template or plugin, see [Template Variables](../setup/adding-document-dates-authors.md#template-variables){target="_blank"}
 - Recently updated list
