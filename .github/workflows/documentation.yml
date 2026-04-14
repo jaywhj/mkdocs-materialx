@@ -23,6 +23,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'docs/**'
+      - 'includes/**'
+      - 'material/overrides/**'
+      - 'material/extensions/**'
+      - 'src/templates/partials/languages/**'
+      - 'mkdocs.yml'
 
 env:
   PYTHON_VERSION: 3.x
@@ -43,7 +50,8 @@ jobs:
           sparse-checkout: |
             docs
             includes
-            material
+            material/overrides
+            material/extensions
             src/templates/partials/languages
 
       - name: Set up Python runtime
