@@ -4,19 +4,19 @@ icon: material/cloud-upload-outline
 
 # Publishing your site
 
-The great thing about hosting project documentation in a `git` repository is
-the ability to deploy it automatically when new changes are pushed. MkDocs
-makes this ridiculously simple.
+You can choose either **automatic** mode or **manual** mode, depending on your scenario. Both are very simple to operate.
 
-## GitHub Pages
+## Automatic - Via Workflow
+
+Many cloud servers support automatic deployment via workflows, which greatly simplifies the deployment process, you only need to push your source documents to a cloud repository to complete automatic deployment.
+
+### GitHub Pages
 
 If you're already hosting your code on GitHub, [GitHub Pages] is certainly
 the most convenient way to publish your project documentation. It's free of
 charge and pretty easy to set up.
 
   [GitHub Pages]: https://pages.github.com/
-
-### with GitHub Actions
 
 Using [GitHub Actions] you can automate the deployment of your project
 documentation. At the root of your repository, create a new GitHub Actions
@@ -106,24 +106,7 @@ To publish your site on a custom domain, please refer to the [MkDocs documentati
   [caching]: plugins/requirements/caching.md
   [MkDocs documentation]: https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains
 
-### with MkDocs
-
-If you prefer to deploy your project documentation manually, you can just invoke
-the following command from the directory containing the `mkdocs.yml` file:
-
-```
-mkdocs gh-deploy --force
-```
-
-This will build your documentation and deploy it to a branch
-`gh-pages` in your repository. See [this overview in the MkDocs
-documentation] for more information. For a description of the
-arguments, see [the documentation for the command].
-
-  [this overview in the MkDocs documentation]: https://www.mkdocs.org/user-guide/deploying-your-docs/#project-pages
-  [the documentation for the command]: https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy
-
-## GitLab Pages
+### GitLab Pages
 
 If you're hosting your code on GitLab, deploying to [GitLab Pages] can be done
 by using the [GitLab CI] task runner. At the root of your repository, create a
@@ -172,7 +155,7 @@ Now you can reach your documentation under `<username>.gitlab.io/<repository>`.
 
 [^1]: [Release notes for Gitlab 17.4](https://about.gitlab.com/releases/2024/09/19/gitlab-17-4-released/)
 
-## Other
+### Other Platforms
 
 Since we can't cover all possible platforms, we rely on community contributed
 guides that explain how to deploy websites built with MaterialX for MkDocs to
@@ -198,3 +181,41 @@ other providers:
   [Scaleway]: https://www.scaleway.com/en/docs/tutorials/using-bucket-website-with-mkdocs/
   [Codeberg Pages]: https://andre601.ch/blog/2023/11-05-using-codeberg-pages/
 
+
+## Manual Deployment
+
+If you want to deploy your site **without uploading source documents** to a cloud repository (for sensitive documentation), you can instead upload only your locally built HTML site (`site/`) to a cloud server. The process is very straightforward.
+
+### GitHub Pages
+
+Navigate to your project directory in the terminal and run the following commands. No prior build is required - the commands will automatically build and upload your site:
+
+=== "MkDocs"
+
+    ```
+    mkdocs gh-deploy --force
+    ```
+
+=== "ProperDocs"
+
+    ```
+    properdocs gh-deploy --force
+    ```
+
+This will build your documentation and deploy it to a branch
+`gh-pages` in your repository. See [this overview in the MkDocs
+documentation] for more information. For a description of the
+arguments, see [the documentation for the command].
+
+  [this overview in the MkDocs documentation]: https://www.mkdocs.org/user-guide/deploying-your-docs/#project-pages
+  [the documentation for the command]: https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy
+
+### Other Platforms
+
+In the server dashboard of your chosen platform, select file upload deployment, then select and upload the project's `site` directory. 
+
+#### Netlify
+
+The manual deployment interface for Netlify is shown below:
+
+![netlify-manual](assets/screenshots/netlify-manual.png)

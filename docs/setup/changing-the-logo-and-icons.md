@@ -62,8 +62,8 @@ extra:
 ### Favicon
 
 <!-- md:version 0.1.0 -->
-<!-- md:version 10.1.3 -->
 <!-- md:default [`assets/images/favicon.png`][Favicon default] -->
+<!-- md:version 10.1.3 --> `icon support`
 
 The favicon can be changed to a path pointing to a user-provided image located
 in the `docs` folder, to any icon bundled with the theme, or even a

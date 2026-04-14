@@ -32,8 +32,10 @@ extra:
 
 #---- 2. Page tree ----
 
-# exclude_docs: |
-#   /drafts/
+use_directory_urls: false
+exclude_docs: |
+  archives/
+#  /drafts/
 # not_in_nav: |
 #   /tutorials/**/*.md
 
@@ -109,11 +111,20 @@ theme:
 
   language: en
   font: false
-  favicon: assets/favicon.png
+  favicon: octicons/milestone-24
   icon:
     logo: logo
     annotation: material/plus-circle-outline
-
+  admonition:
+    git:
+      icon: simple/git
+      color: '#f34f29'
+    desc:
+      icon: octicons/sort-desc-24
+      color: rgba(158, 158, 158, 0.7)
+    pied-piper:
+      icon: fontawesome/brands/pied-piper-alt
+      color: '#2b9b46'
 
 
 #---- 4. Plugins ----

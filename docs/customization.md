@@ -11,11 +11,9 @@ necessary to preserve your brand's style.
 
 ## Adding assets
 
-[MkDocs] provides several ways to customize a theme. In order to make a few
+MkDocs provides several ways to customize a theme. In order to make a few
 small tweaks to MaterialX for MkDocs, you can just add CSS and JavaScript files to
 the `docs` directory.
-
-  [MkDocs]: https://www.mkdocs.org
 
 ### Additional CSS
 
