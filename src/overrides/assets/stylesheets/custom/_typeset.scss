@@ -95,6 +95,9 @@
 
   // Badge
   .mdx-badge {
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
     font-size: 0.85em;
 
     // Badge with heart
@@ -119,6 +122,8 @@
 
     // Badge icon
     &__icon {
+      display: inline-flex;
+      align-items: center;
       padding: px2rem(4px);
       background: var(--md-accent-fg-color--transparent);
       border-start-start-radius: px2rem(2px);
@@ -132,6 +137,8 @@
 
     // Badge text
     &__text {
+      display: inline-flex;
+      align-items: center;
       padding: px2rem(4px) px2rem(6px);
       border-start-end-radius: px2rem(2px);
       border-end-end-radius: px2rem(2px);

@@ -9,7 +9,7 @@ where you want your project to be located in the terminal and execute the follow
 
 !!! tip "Tip"
 
-    MaterialX supports both MkDocs and [ProperDocs](https://github.com/ProperDocs/properdocs){target="_blank"} (I recommend ProperDocs).
+    MaterialX supports both MkDocs and [ProperDocs](https://github.com/ProperDocs/properdocs){target="_blank"} (ProperDocs recommended).
 
 === "MkDocs"
 
@@ -180,22 +180,15 @@ Download the template [mkdocs.yml](assets/mkdocs.yml), replace the personalized 
 
 MkDocs includes a live preview server, so you can preview your changes as you
 write your documentation. The server will automatically rebuild the site upon
-saving. Start it with:
+saving.
+
+### Live Preview
 
 === "MkDocs"
 
     ``` sh
-    mkdocs serve --livereload # (1)!
+    mkdocs serve --livereload
     ```
-
-    1.  If you have a large documentation project, it might take minutes until
-        MkDocs has rebuilt all pages for you to preview. If you're only interested
-        in the current page, the [`--dirtyreload`][--dirtyreload] flag will make
-        rebuilds much faster:
-
-        ```
-        mkdocs serve --livereload --dirtyreload
-        ```
 
 === "ProperDocs"
 
@@ -207,9 +200,45 @@ Point your browser to [localhost:8000][live preview] and you should see:
 
 [![Creating your site]][Creating your site]
 
+### Dirty Reload
+
+If you are editing and previewing in a library with a large number of documents, you can speed up the rebuild by choosing to focus only on changes to the current page with the [`--dirtyreload`][--dirtyreload] command:
+
+=== "MkDocs"
+
+    ``` sh
+    mkdocs serve --livereload --dirtyreload
+    ```
+
+=== "ProperDocs"
+
+    ``` sh
+    properdocs serve --dirtyreload
+    ```
+
+!!! warning
+
+    This method is only intended for page content development, as navigation and other links do not get updated on other pages.
+
   [--dirtyreload]: https://www.mkdocs.org/about/release-notes/#support-for-dirty-builds-990
   [live preview]: http://localhost:8000
   [Creating your site]: assets/screenshots/creating-your-site.png
+
+### Offline Preview
+
+If you don't need live preview or don't want to start a web server for previewing, you can also choose to open the built local HTML files directly for preview. After running the build command below, simply double-click `index.html` inside the `site/` directory of your project.
+
+=== "MkDocs"
+
+    ``` sh
+    mkdocs build
+    ```
+
+=== "ProperDocs"
+
+    ``` sh
+    properdocs build
+    ```
 
 ## Building your site
 

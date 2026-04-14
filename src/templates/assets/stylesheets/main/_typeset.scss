@@ -216,12 +216,12 @@ kbd {
 
   // Inline code block
   code {
-    padding: px2rem(2px) px2rem(4px, 13.6px);
-    font-size: px2rem(13.6px);
+    line-height: 1.4;
+    padding: 2px px2em(6px, 13.6px);
+    font-size: px2em(13.6px);
     word-break: break-word;
     background-color: var(--md-code-bg-color);
     border-radius: px2rem(4px);
-    vertical-align: middle;
     box-decoration-break: clone;
     transition:
       color            125ms,

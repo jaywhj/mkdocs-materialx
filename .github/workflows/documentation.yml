@@ -19,6 +19,7 @@
 # IN THE SOFTWARE.
 
 name: documentation
+
 on:
   push:
     branches:
@@ -41,8 +42,8 @@ jobs:
   documentation:
     name: Deploy docs
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
@@ -53,6 +54,7 @@ jobs:
             material/overrides
             material/extensions
             src/templates/partials/languages
+            mkdocs.yml
 
       - name: Set up Python runtime
         uses: actions/setup-python@v6

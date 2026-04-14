@@ -399,7 +399,7 @@ You can configure the icon and color for each built-in admonition type, and also
 
     <div class="result" markdown>
 
-    !!! example-new "← Reset icon for 'example'"
+    !!! example-new "← Reset icon for `example`"
 
     </div>
 

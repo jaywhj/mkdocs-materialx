@@ -40,6 +40,7 @@
   // grid-based rendering, which makes highlighted lines stretch.
   .md-typeset &__content {
     display: grid;
+    line-height: 1.4;
   }
 
   // Code block navigation

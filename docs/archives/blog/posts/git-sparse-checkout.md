@@ -5,7 +5,7 @@ categories:
   - Build
   - Performance
 links:
-  - publishing-your-site.md#with-github-actions
+  - publishing-your-site.md#github-pages
   - creating-your-site.md#building-your-site
 ---
 
@@ -27,7 +27,7 @@ leveraging [`git sparse-checkout`][git sparse-checkout] within [GitHub Actions],
 check out time was brought down to 2 seconds.
 
   [git sparse-checkout]: https://git-scm.com/docs/git-sparse-checkout
-  [GitHub Actions]: ../../publishing-your-site.md#with-github-actions
+  [GitHub Actions]: ../../publishing-your-site.md#github-pages
   [git-revision-date-localized]: https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
   [git-committers]: https://github.com/ojacques/mkdocs-git-committers-plugin-2
   [document contributors]: ../../setup/adding-a-git-repository.md#document-contributors
