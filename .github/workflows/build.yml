@@ -28,18 +28,25 @@ on:
     types:
       - published
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   NODE_VERSION: 18.x
   PYTHON_VERSION: 3.x
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: read
+  packages: write
+  id-token: write
 
 jobs:
   npm-build:
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -47,56 +54,20 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: npm
 
-      - name: Set up Node.js dependency cache
-        uses: actions/cache@v4
-        id: cache
-        with:
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-          path: node_modules
-
-      - name: Set up Node.js dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
-
-      - name: Build project
-        run: |
-          npm run build
-          git diff --name-only
-
-  npm-check:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-      - name: Set up Node.js runtime
-        uses: actions/setup-node@v5
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Set up Node.js dependency cache
-        uses: actions/cache@v4
-        id: cache
-        with:
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-          path: node_modules
-
-      - name: Set up Node.js dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
-
-      - name: Check project
-        run: npm run check
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - run: git diff --exit-code      
 
   python:
+    if: github.event_name == 'release'
+    needs: npm-build
     runs-on: ubuntu-latest
     environment: pypi
-    permissions:
-      id-token: write
-    steps:
 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -105,11 +76,10 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
-          cache-dependency-path: |
-            pyproject.toml
+          cache-dependency-path: pyproject.toml
 
       - name: Set up Python dependencies
-        run: pip install --upgrade build twine
+        run: pip install --upgrade build
 
       - name: Build Python package
         run: python -m build
@@ -118,9 +88,10 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
 
   docker:
+    needs: npm-build
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -142,62 +113,46 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate Docker tags and labels
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ github.event.repository.full_name }}
-            ghcr.io/${{ github.event.repository.full_name }}
+            ${{ github.repository.full_name }}
+            ghcr.io/${{ github.repository.full_name }}
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=ref,event=branch
             type=ref,event=pr
-          flavor: |
-            latest=${{ github.event.release.prerelease == false }}
 
       - name: Build Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
+          platforms: linux/amd64
           load: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: test-image:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Check Docker image
-        working-directory: /tmp
-        env:
-          REPO_FULL_NAME: '${{ github.event.repository.full_name }}'
+      - name: Test image
         run: |
-          docker run --rm -i -v ${PWD}:/docs ${REPO_FULL_NAME,,}:${{ steps.meta.outputs.version }} new .
-          docker run --rm -i -v ${PWD}:/docs ${REPO_FULL_NAME,,}:${{ steps.meta.outputs.version }} build
+          docker run --rm test-image:latest new .
+          docker run --rm test-image:latest build
 
-      - name: Set platforms
+      - name: Build & Push
         if: github.event_name == 'release'
-        run: |
-          echo "PLATFORMS=linux/amd64,linux/arm64,linux/arm/v7" >> $GITHUB_ENV
-
-      - name: Publish Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: ${{ env.PLATFORMS }}
-          push: ${{ github.event_name == 'release' }}
+          platforms: linux/amd64,linux/arm64
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Check manifest
-        if: github.event_name == 'release'
-        run: |
-          docker buildx imagetools inspect ${{ github.event.repository.full_name }}:${{ steps.meta.outputs.version }}
-
-      - name: Inspect image
-        if: github.event_name == 'release'
-        run: |
-          docker pull ${{ github.event.repository.full_name }}:${{ steps.meta.outputs.version }}
-          docker image inspect ${{ github.event.repository.full_name }}:${{ steps.meta.outputs.version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
