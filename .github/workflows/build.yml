@@ -142,9 +142,10 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Test image
+        working-directory: /tmp
         run: |
-          docker run --rm test-image:latest new .
-          docker run --rm test-image:latest build
+          docker run --rm -v ${PWD}:/docs test-image:latest new /docs
+          docker run --rm -v ${PWD}:/docs test-image:latest build /docs
 
       - name: Build & Push
         if: github.event_name == 'release'
