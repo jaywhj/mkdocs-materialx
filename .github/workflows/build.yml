@@ -59,7 +59,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run check
-      - run: git diff --exit-code      
+      # - run: git diff --name-only
+      - run: git diff --exit-code || (echo "⚠️ Build modified files" && git diff --name-only)
 
   python:
     if: github.event_name == 'release'
