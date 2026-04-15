@@ -19,11 +19,16 @@
 # IN THE SOFTWARE.
 
 name: build
+
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
-  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - 'mkdocs.yml'
   release:
     types:
       - published
@@ -44,6 +49,7 @@ permissions:
 
 jobs:
   npm-build:
+    if: github.event_name == 'release' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -141,13 +147,13 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Test image
+      - name: Check Docker image
         working-directory: /tmp
         run: |
           docker run --rm -v ${PWD}:/docs test-image:latest new /docs
           docker run --rm -v ${PWD}:/docs -w /docs test-image:latest build
 
-      - name: Build & Push
+      - name: Publish Docker image
         if: github.event_name == 'release'
         uses: docker/build-push-action@v6
         with:

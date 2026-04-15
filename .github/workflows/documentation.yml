@@ -21,15 +21,18 @@
 name: documentation
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
     paths:
       - 'docs/**'
-      - 'includes/**'
-      - 'material/**'
-      - 'src/templates/partials/languages/**'
       - 'mkdocs.yml'
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   PYTHON_VERSION: 3.x
@@ -39,7 +42,7 @@ permissions:
 
 jobs:
   documentation:
-    name: Deploy docs
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
