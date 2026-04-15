@@ -43,7 +43,6 @@ $admonitions: (
   "quote":    format-quote-close    $clr-grey
 ) !default;
 
-
 // ----------------------------------------------------------------------------
 // Rules: flavours
 // ----------------------------------------------------------------------------
@@ -82,12 +81,12 @@ $admonitions: (
     display: flow-root;
     padding: 0 px2rem(12px);
     margin: px2em(20px, 12.8px) 0;
+    overflow: hidden;
     font-size: px2rem(12.8px);
     color: var(--md-admonition-fg-color);
     background-color: var(--md-admonition-bg-color);
     border: px2rem(1px) solid var(--md-admonition-border-color);
     border-radius: px2rem(8px);
-    overflow: hidden;
     // box-shadow: var(--md-shadow-z1);
     // transition: box-shadow 125ms;
     page-break-inside: avoid;

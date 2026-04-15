@@ -279,12 +279,12 @@
     height: px2rem(18px);
     margin-top: px2rem(8px);
     color: var(--md-default-fg-color--light);
-    background-color: var(--md-default-bg-color--light);
-    backdrop-filter: blur(px2rem(8px));
-    box-shadow: var(--md-shadow-z2);
     pointer-events: initial;
     cursor: pointer;
+    background-color: var(--md-default-bg-color--light);
+    backdrop-filter: blur(px2rem(8px));
     border-radius: 100%;
+    box-shadow: var(--md-shadow-z2);
     transition: transform 125ms;
 
     // Tabbed button on hover

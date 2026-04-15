@@ -84,6 +84,7 @@
       &::before {
         margin-block-end: px2rem(4px);
       }
+
       &::after {
         margin-block-start: px2rem(4px);
       }
@@ -107,6 +108,7 @@
     > * + * {
       margin-inline-start: px2rem(10px);
     }
+
     border-radius: px2rem(8px);
     transition:
       color            250ms,
@@ -211,7 +213,7 @@
 
     // Styles for secondary navigation
     .md-nav--secondary & {
-      padding: px2rem(7px) px2rem(16px);
+      padding: px2rem(4px) px2rem(calc(16px - 4px));
       margin-inline: px2rem(4px);
 
       // Navigation link on focus/hover
@@ -400,11 +402,6 @@
             border-bottom: none;
           }
         }
-      }
-
-      // Navigation link
-      &__link {
-        padding: px2rem(4px) px2rem(calc(16px - 4px));
       }
 
       &__link--active {

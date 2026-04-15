@@ -86,8 +86,8 @@
 
       // [tablet portrait -]: Align to the right
       @include break-to-device(tablet portrait) {
-        left: initial;
         right: px2rem(20px);
+        left: initial;
       }
     }
   }

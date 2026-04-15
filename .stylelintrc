@@ -73,7 +73,8 @@
       {
         "ignoreProperties": [
           "line-clamp",
-          "box-orient"
+          "box-orient",
+          "backdrop-filter"
         ]
       }
     ],
@@ -94,7 +95,8 @@
       "ms",
       "px",
       "vh",
-      "vw"
+      "vw",
+      "dvh"
     ],
     "value-keyword-case": [
       "lower",

@@ -216,9 +216,9 @@ kbd {
 
   // Inline code block
   code {
-    line-height: 1.4;
     padding: 2px px2em(6px, 13.6px);
     font-size: px2em(13.6px);
+    line-height: 1.4;
     word-break: break-word;
     background-color: var(--md-code-bg-color);
     border-radius: px2rem(4px);
@@ -342,7 +342,7 @@ kbd {
   blockquote {
     padding-inline-start: px2rem(12px);
     margin-inline: 0;
-    font-size: 0.7rem;
+    font-size: px2rem(14px);
     color: var(--md-default-fg-color--light);
     border-inline-start: px2rem(4px) solid var(--md-default-fg-color--quote);
   }

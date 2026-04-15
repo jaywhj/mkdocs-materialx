@@ -27,17 +27,17 @@ import {
   combineLatest,
   distinctUntilChanged,
   endWith,
+  filter,
   finalize,
   fromEvent,
   map,
+  merge,
   repeat,
   scan,
-  filter,
-  merge,
-  withLatestFrom,
   skip,
   takeUntil,
-  tap
+  tap,
+  withLatestFrom
 } from "rxjs"
 
 import { Viewport } from "~/browser"
@@ -111,7 +111,7 @@ export function watchBackToTop(
           ? acc + delta
           : delta
 
-      // clamp，防止无限增大
+      // Clamp to prevent infinite growth
       return Math.max(
         -DIRECTION_THRESHOLD * 2,
         Math.min(DIRECTION_THRESHOLD * 2, next)
@@ -121,13 +121,13 @@ export function watchBackToTop(
     map(acc => {
       if (acc <= -DIRECTION_THRESHOLD) return true
       if (acc >=  DIRECTION_THRESHOLD) return false
-      return null
+      return undefined
     }),
 
-    // 保留“确认型语义”
-    filter((v): v is boolean => v !== null),
+    // Keep "confirmed" direction
+    filter((v): v is boolean => v !== undefined),
 
-    // 补充“非顶部”条件（仅在确认时判断）
+    // Add "not at top" condition (only when confirmed)
     withLatestFrom(viewport$),
     filter(([, vp]) => vp.offset.y > 0),
     map(([dir]) => dir),

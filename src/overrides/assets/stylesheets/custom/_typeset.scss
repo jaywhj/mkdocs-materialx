@@ -95,10 +95,10 @@
 
   // Badge
   .mdx-badge {
-    line-height: 1.2;
     display: inline-flex;
     align-items: center;
     font-size: 0.85em;
+    line-height: 1.2;
 
     // Badge with heart
     &--heart {

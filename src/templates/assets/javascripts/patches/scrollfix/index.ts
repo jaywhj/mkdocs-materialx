@@ -70,7 +70,7 @@ export function patchScrollfix(
     )
     .subscribe(el => {
       let startY = 0
-      let scrollable: HTMLElement | null = null
+      let scrollable: HTMLElement | undefined
       let isOverlay = false
 
       /* touchstart: intercept touch start to record position and prepare context */
@@ -83,7 +83,7 @@ export function patchScrollfix(
           if (!isOverlay) {
             scrollable = el.querySelector<HTMLElement>(
               ".md-sidebar__scrollwrap, .md-search__scrollwrap"
-            )
+            ) ?? undefined
           }
         })
 

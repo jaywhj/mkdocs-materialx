@@ -71,7 +71,6 @@
     cursor: pointer;
     border-radius: px2rem(8px) px2rem(8px) 0 0; // Top radius only when open (default)
 
-
     // Show outline for keyboard devices
     &.focus-visible {
       outline-color: var(--md-accent-fg-color);
@@ -89,9 +88,9 @@
       position: absolute;
       inset-inline-end: px2rem(8px);
       top: 50%;
-      margin-top: px2rem(-10px);
       width: px2rem(20px);
       height: px2rem(20px);
+      margin-top: px2rem(-10px);
       content: "";
       background-color: var(--md-admonition-color);
       mask-image: var(--md-details-icon);
