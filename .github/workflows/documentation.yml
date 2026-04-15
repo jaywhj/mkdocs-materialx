@@ -27,8 +27,7 @@ on:
     paths:
       - 'docs/**'
       - 'includes/**'
-      - 'material/overrides/**'
-      - 'material/extensions/**'
+      - 'material/**'
       - 'src/templates/partials/languages/**'
       - 'mkdocs.yml'
 
@@ -51,8 +50,7 @@ jobs:
           sparse-checkout: |
             docs
             includes
-            material/overrides
-            material/extensions
+            material
             src/templates/partials/languages
             mkdocs.yml
 

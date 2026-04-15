@@ -52,7 +52,7 @@
 ## MaterialX Update Highlights
 
 - Added next-generation date & author plugin, see: [Add document dates & authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
-    - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
+    - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
 - Added Recent Updated module, see: [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module)
     - Displays recently updated documents in descending order of update time, with dynamically refreshed list items
     - Supports multiple flexible layout styles (list, detail, grid)
@@ -64,8 +64,7 @@
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
     - Optimized the show/hide sensitivity of the "Back to top" container
     - Added indent guide lines and active link accent colors for the TOC
-- Added the modern Liquid Glass theme, consistent with Zensical
-- Allows setting the topbar background color in the Liquid Glass theme to support backgrounds with different color schemes, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors#topbar-style)
+- Added the modern Liquid Glass theme, allows setting the topbar background color in the Liquid Glass theme to support backgrounds with different color schemes, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors#topbar-style)
 - For more details, see [Changelog](https://github.com/jaywhj/mkdocs-materialx/releases)
 
 <br />
