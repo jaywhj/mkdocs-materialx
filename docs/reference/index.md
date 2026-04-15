@@ -1,4 +1,4 @@
-# Reference
+# Authoring
 
 Material for MkDocs is packed with many great features that make technical
 writing a joyful activity. This section of the documentation explains how to set up
