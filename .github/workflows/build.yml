@@ -145,7 +145,7 @@ jobs:
         working-directory: /tmp
         run: |
           docker run --rm -v ${PWD}:/docs test-image:latest new /docs
-          docker run --rm -v ${PWD}:/docs test-image:latest build /docs
+          docker run --rm -v ${PWD}:/docs -w /docs test-image:latest build
 
       - name: Build & Push
         if: github.event_name == 'release'
