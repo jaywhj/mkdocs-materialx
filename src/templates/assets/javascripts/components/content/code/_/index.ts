@@ -27,7 +27,6 @@ import {
   Subject,
   asyncScheduler,
   defer,
-  distinctUntilChanged,
   distinctUntilKeyChanged,
   filter,
   finalize,
@@ -246,12 +245,12 @@ export function mountCodeBlock(
       )) {
         const annotations$ = mountAnnotationList(list, el, options)
         content$.push(
-          watchElementSize(container)
+          watchElementVisibility(container)
             .pipe(
               takeUntil(done$),
-              map(({ width, height }) => width && height),
-              distinctUntilChanged(),
-              switchMap(active => active ? annotations$ : EMPTY)
+              filter(active => active),
+              take(1),
+              switchMap(() => annotations$)
             )
         )
       }
