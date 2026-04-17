@@ -78,15 +78,19 @@ $admonitions: (
     --md-admonition-icon: var(--md-admonition-icon--note);
     --md-admonition-border-color: var(--md-admonition-title-bg-color);
 
+    --md-admonition-border-width: #{px2rem(1px)};
+    --md-admonition-radius: #{px2rem(8px)};
+    --md-admonition-inner-radius:
+      calc(var(--md-admonition-radius) - var(--md-admonition-border-width));
+
     display: flow-root;
     padding: 0 px2rem(12px);
     margin: px2em(20px, 12.8px) 0;
-    overflow: hidden;
     font-size: px2rem(12.8px);
     color: var(--md-admonition-fg-color);
     background-color: var(--md-admonition-bg-color);
-    border: px2rem(1px) solid var(--md-admonition-border-color);
-    border-radius: px2rem(8px);
+    border: var(--md-admonition-border-width) solid var(--md-admonition-border-color);
+    border-radius: var(--md-admonition-radius);
     // box-shadow: var(--md-shadow-z1);
     // transition: box-shadow 125ms;
     page-break-inside: avoid;
@@ -145,10 +149,13 @@ $admonitions: (
     background-color: var(--md-admonition-title-bg-color);
     border: none;
     border-inline-start-width: px2rem(4px);
+    border-start-start-radius: var(--md-admonition-inner-radius);
+    border-start-end-radius: var(--md-admonition-inner-radius);
 
     // Adjust spacing for title-only admonitions
     html &:last-child {
       margin-bottom: 0;
+      border-radius: var(--md-admonition-inner-radius);
     }
 
     // Admonition icon
