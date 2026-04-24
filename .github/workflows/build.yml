@@ -130,7 +130,6 @@ jobs:
         with:
           images: |
             docker.io/${{ github.repository }}
-          #  docker.io/${{ secrets.DOCKER_USERNAME }}/mkdocs-materialx
             ghcr.io/${{ github.repository }}
           tags: |
             type=semver,pattern={{version}}
