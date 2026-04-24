@@ -16,7 +16,7 @@ copyright: Copyright &copy; 2016 - 2026 Aaron Wang
 
 extra:
   status:
-    new: Recently added
+    new: Recently updated
     deprecated: Deprecated
   social:
     - icon: fontawesome/brands/github
@@ -119,12 +119,18 @@ theme:
     git:
       icon: simple/git
       color: '#f34f29'
-    desc:
-      icon: octicons/sort-desc-24
-      color: rgba(158, 158, 158, 0.7)
-    pied-piper:
-      icon: fontawesome/brands/pied-piper-alt
-      color: '#2b9b46'
+    copyright:
+      icon: material/copyright
+      color: '#2b9b9b'
+    heart:
+      icon: octicons/heart-24
+      color: '#9b2b9b'
+    lyrics:
+      icon: material/microphone
+      color: '#2b2b9b'
+    soundcloud:
+      icon: simple/soundcloud
+      color: '#ff7700'
 
 
 #---- 4. Plugins ----

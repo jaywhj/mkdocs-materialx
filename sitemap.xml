@@ -27,7 +27,7 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/differences.html</loc>
-        <lastmod>2026-04-15</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -47,7 +47,7 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/changelog/index.html</loc>
-        <lastmod>2026-04-10</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -92,12 +92,17 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/index.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/blog.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <lastmod>2026-04-24</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/date-author.html</loc>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -157,12 +162,12 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/index.html</loc>
-        <lastmod>2026-04-15</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/reference/admonitions.html</loc>
-        <lastmod>2026-04-14</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -237,7 +242,7 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/index.html</loc>
-        <lastmod>2026-02-05</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -247,17 +252,17 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository.html</loc>
-        <lastmod>2026-03-26</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors.html</loc>
-        <lastmod>2026-04-09</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module.html</loc>
-        <lastmod>2026-03-30</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -287,7 +292,7 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/setup/setting-up-a-blog.html</loc>
-        <lastmod>2026-04-03</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>

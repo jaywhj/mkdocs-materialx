@@ -1,0 +1,23 @@
+/* Drawio Viewer uses color-scheme attribute to switch between light and dark mode
+   Let it synchronize with the Material for MkDocs theme color scheme */
+:root {
+  color-scheme: light;
+}
+
+/* Material for MkDocs Theme */
+[data-md-color-scheme="slate"] {
+  color-scheme: dark;
+}
+
+/* Mkdocs Theme */
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Override drawio's color-scheme 
+  to just inherit from what was set 
+  for the page in the code above */
+.mxgraph, 
+.geDiagramContainer {
+    color-scheme: inherit !important;
+}
