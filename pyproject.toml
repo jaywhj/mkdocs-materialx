@@ -52,7 +52,7 @@ dependencies = [
   "paginate>=0.5",
   "backrefs>=5.7.post1",
   "requests>=2.30",
-  "mkdocs-document-dates>=3.7.3"
+  "mkdocs-document-dates==3.8.0"
 ]
 
 classifiers = [
@@ -71,7 +71,8 @@ classifiers = [
 recommended = [
   "mkdocs-minify-plugin>=0.7",
   "mkdocs-redirects>=1.2",
-  "mkdocs-glightbox>=0.5"
+  "mkdocs-glightbox>=0.5",
+  "mkdocs-drawio>=1.15.0"
 ]
 git = [
   "mkdocs-git-committers-plugin-2>=1.1"

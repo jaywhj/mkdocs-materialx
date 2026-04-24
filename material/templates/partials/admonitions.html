@@ -19,6 +19,18 @@
       {% if keys.icon %}
         {% set rules = rules ~ "--md-admonition-icon:var(--md-admonition-icon--" ~ type ~ ");" %}
       {% endif %}
+      {# Per icon-family mask sizing to normalize visual weight across sets. #}
+      {% if keys.icon %}
+        {% set icon_family = keys.icon.split("/")[0] %}
+        {% if icon_family in ["octicons", "fontawesome"] %}
+          {% set rules = rules ~ "--md-admonition-icon-mask-size:82%;" %}
+        {% elif icon_family == "simple" %}
+          {% set rules = rules ~ "--md-admonition-icon-mask-size:88%;" %}
+        {% elif icon_family != "material" %}
+          {# Fallback for unknown families (e.g. future lucide/*) #}
+          {% set rules = rules ~ "--md-admonition-icon-mask-size:85%;" %}
+        {% endif %}
+      {% endif %}
       {% if keys.color %}
         {% set rules = rules ~ "--md-admonition-color:var(--md-admonition-color--" ~ type ~ ");" %}
       {% endif %}
