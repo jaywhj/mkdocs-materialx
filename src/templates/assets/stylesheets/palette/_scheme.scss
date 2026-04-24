@@ -79,7 +79,7 @@
     // Typeset `kbd` color shades
     --md-typeset-kbd-color:            hsla(var(--md-hue), 15%, 90%, 0.12);
     --md-typeset-kbd-accent-color:     hsla(var(--md-hue), 15%, 90%, 0.2);
-    --md-typeset-kbd-border-color:     hsla(var(--md-hue), 15%, 14%, 1);
+    --md-typeset-kbd-border-color:     hsla(var(--md-hue), 10%, 30%, 1);
 
     // Typeset `mark` color shades
     --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
