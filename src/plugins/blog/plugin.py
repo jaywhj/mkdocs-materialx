@@ -44,6 +44,8 @@ from shutil import rmtree
 from tempfile import mkdtemp
 from urllib.parse import urlparse
 from yaml import SafeLoader
+from pathlib import Path
+from mkdocs_document_dates.utils import load_dates_and_authors
 
 from . import view_name
 from .author import Author, Authors
@@ -431,8 +433,8 @@ class BlogPlugin(BasePlugin[BlogConfig]):
 
     # Resolve post - the caller must make sure that the given file points to an
     # actual post (and not a page), or behavior might be unpredictable
-    def _resolve_post(self, file: File, config: MkDocsConfig):
-        post = Post(file, config)
+    def _resolve_post(self, file: File, config: MkDocsConfig, created: datetime):
+        post = Post(file, config, created)
 
         # Compute path and create a temporary file for path resolution
         path = self._format_path_for_post(post, config)
@@ -459,6 +461,13 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         if not os.path.isdir(name):
             os.makedirs(name, exist_ok = True)
 
+        # load date data from plugin 'document-dates' API
+        ddPlugin = config.plugins.get("document-dates")
+        if ddPlugin:
+            data = ddPlugin.data_cached
+        else:
+            data = load_dates_and_authors(Path(config.docs_dir), files)
+
         # Filter posts from pages
         for file in files.documentation_pages():
             if not file.src_path.startswith(path):
@@ -471,7 +480,7 @@ class BlogPlugin(BasePlugin[BlogConfig]):
             # excluded, we must load it and analyze its metadata. All posts
             # marked as drafts are excluded, except for when the author has
             # configured drafts to be included in the navigation.
-            post = self._resolve_post(file, config)
+            post = self._resolve_post(file, config, data[getattr(file, 'src_uri')]['created'])
             if not self._is_excluded(post):
                 yield post
 

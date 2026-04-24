@@ -27,8 +27,6 @@ import yaml
 from copy import copy
 from markdown import Markdown
 from datetime import datetime
-from mkdocs_document_dates.plugin import DocumentDatesPlugin
-from mkdocs_document_dates.utils import load_file_creation_date
 from material.plugins.blog.author import Author
 from material.plugins.meta.plugin import MetaPlugin
 from mkdocs.config.defaults import MkDocsConfig
@@ -53,7 +51,7 @@ class Post(Page):
 
     # Initialize post - posts are never listed in the navigation, which is why
     # they will never include a title that was manually set, so we can omit it
-    def __init__(self, file: File, config: MkDocsConfig):
+    def __init__(self, file: File, config: MkDocsConfig, created: datetime):
         super().__init__(None, file, config)
 
         # Resolve path relative to docs directory
@@ -82,21 +80,8 @@ class Post(Page):
                         f"{e}"
                     )
 
-            # If date does not exist in self.meta, try to read date from document-dates
-            ddPlugin: DocumentDatesPlugin = config.plugins.get("document-dates")
-            if ddPlugin:
-                rel_path = getattr(file, 'src_uri', file.src_path)
-                if rel_path in ddPlugin.data_cached:
-                    created = datetime.fromisoformat(ddPlugin.data_cached[rel_path]['created'])
-                else:
-                    created = load_file_creation_date(file.abs_src_path).astimezone()
-                self.meta.setdefault("date", created)
-            else:
-                if not self.meta:
-                    raise PluginError(
-                        f"Error reading metadata of post '{path}' in '{docs}':\n"
-                        f"Expected metadata to be defined but found nothing"
-                    )
+            # created date from plugin 'document-dates' API
+            self.meta.setdefault("date", created)
 
             # Hack: if the meta plugin is registered, we need to move the call
             # to `on_page_markdown` here, because we need to merge the metadata
