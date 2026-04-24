@@ -65,14 +65,7 @@ and pull the image with:
     docker pull jaywhj/mkdocs-materialx:10.1.4
     ```
 
-The following plugins are bundled with the Docker image:
-
-- [mkdocs-minify-plugin]{target="_blank"}
-- [mkdocs-redirects]{target="_blank"}
-
   [Docker image]: https://hub.docker.com/r/jaywhj/mkdocs-materialx
-  [mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
-  [mkdocs-redirects]: https://github.com/datarobot/mkdocs-redirects
 
 ### add more plugins
 
