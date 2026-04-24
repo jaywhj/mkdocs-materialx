@@ -8,7 +8,7 @@ icon: material/layers-triple-outline
 
 ### 10.1.4 <small>April 26, 2026</small> { id="10.1.4" }
 
-- Added official Docker image
+- Added official Docker image, see [installation with docker](../installation.md#with-docker){target="_blank"}
 - Updated documentation workflow
 - Restored build workflow
 - Optimized the date loading mechanism of the blog plugin
@@ -16,7 +16,7 @@ icon: material/layers-triple-outline
 - Fixed inconsistent icon rendering sizes across different icon families when customizing Admonitions
 - Fixed the issue where annotation tooltips inside admonitions were clipped
 - Fixed issues arising from incorrect mounting logic for Code Annotations
-- Significantly updated project documentation, including plugins, setup, admonitions and more
+- Significantly updated project documentation, including [plugins](../plugins/index.md#graphics-charts), [setup](../setup/adding-document-dates-authors.md), [admonitions](../reference/admonitions.md#custom-icons-and-colors-example-2-create-new-admonitions) and more
 
 ### 10.1.3 <small>April 10, 2026</small> { id="10.1.3" }
 

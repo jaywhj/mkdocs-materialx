@@ -1,4 +1,15 @@
 
+mkdocs-materialx-10.1.4 (2026-04-26)
+
+- Added official Docker image, see [installation with docker](https://jaywhj.github.io/mkdocs-materialx/installation#with-docker)
+- Updated documentation workflow
+- Restored build workflow
+- Optimized the date loading mechanism of the blog plugin
+    - Manual date configuration for each post is no longer required, and the date plugin no longer needs to be enabled
+- Fixed inconsistent icon rendering sizes across different icon families when customizing Admonitions
+- Fixed the issue where annotation tooltips inside admonitions were clipped
+- Fixed issues arising from incorrect mounting logic for Code Annotations
+- Significantly updated project documentation, including [plugins](https://jaywhj.github.io/mkdocs-materialx/plugins/index#graphics-charts), [setup](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors), [admonitions](https://jaywhj.github.io/mkdocs-materialx/reference/admonitions#custom-icons-and-colors-example-2-create-new-admonitions) and more
 
 mkdocs-materialx-10.1.3 (2026-04-10)
 
@@ -13,7 +24,7 @@ mkdocs-materialx-10.1.2 (2026-04-01)
 
 - Fixed the robustness of the `document-dates` plugin when running with the blog plugin
 - Fixed the border gap issue for `admonitions` & `details`
-- Updated the usage documentation for the `document-dates` plugin, see [Configuration](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors#configuration){target="_blank"}
+- Updated the usage documentation for the `document-dates` plugin, see [Configuration](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#configuration){target="_blank"}
 - Updated project development setup
 - Archived unnecessary docs and exclude them from the build, see [Archives](https://github.com/jaywhj/mkdocs-materialx/tree/main/docs/archives){target="_blank"}
 
@@ -25,11 +36,11 @@ mkdocs-materialx-10.1.1 (2026-03-29)
     - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml
 ](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
     - Updated the processing logic for blog post dates, manual date specification is no longer required
-    - These date values can be accessed via template variables in any template or plugin, see [Template Variables](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors#template-variables){target="_blank"}
+    - These date values can be accessed via template variables in any template or plugin, see [Template Variables](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#template-variables){target="_blank"}
 - Recently updated list
     - Added high-performance readtime & summary parsers
-    - Added `readtime` and `tag` rendering, for readtime calculation details see [Reading-Time-Estimation](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors#reading-time-estimation){target="_blank"}
-    - Added line count configuration for `summary`, see [Summary-Line-Configuration](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors#summary-line-configuration){target="_blank"}
+    - Added `readtime` and `tag` rendering, for readtime calculation details see [Reading-Time-Estimation](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#reading-time-estimation){target="_blank"}
+    - Added line count configuration for `summary`, see [Summary-Line-Configuration](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#summary-line-configuration){target="_blank"}
     - Improved layout styling for mixed text and image content
 - Tags
     - Fixed a bug in tag list parsing
@@ -95,8 +106,8 @@ mkdocs-materialx-10.0.4 (2026-01-02)
 
 - New: Refactor the TOC components for mobile, now you can experience TOC perfectly on mobile!
 - New: Show `git repo` in sidebar on mobile
-- New: Add a new generation date author plugin, see doc [Add document dates authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors/)
-- New: Add recent updates module, see doc [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module/)
+- New: Add a new generation date author plugin, see doc [Add document dates authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
+- New: Add recent updates module, see doc [Add recent updates module](https://jaywhj.github.io/mkdocs-materialx/setup/adding-recent-updates-module)
 - Fixed: Placing the back-to-top button at the bottom, this is more in line with the interaction logic of proximity operation
 - Fixed: Optimize the judgment of the direction of the swipe gesture, so as to adjust the sensitivity of showing the bottom menu
 - Fixed: Search function does not display properly on mobile

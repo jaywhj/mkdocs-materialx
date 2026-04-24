@@ -47,73 +47,53 @@ This will automatically install compatible versions of all dependencies:
 
 ## with docker
 
-The official [Docker image] is a great way to get up and running in a few
+### official docker image
+
+The official [Docker image]{target="_blank"} is a great way to get up and running in a few
 minutes, as it comes with all dependencies pre-installed. Open up a terminal
 and pull the image with:
 
 === "Latest"
 
     ```
-    docker pull squidfunk/mkdocs-material
+    docker pull jaywhj/mkdocs-materialx
     ```
 
 === "Pin"
 
     ```
-    docker pull squidfunk/mkdocs-material:9.7.1
+    docker pull jaywhj/mkdocs-materialx:10.1.4
     ```
 
 The following plugins are bundled with the Docker image:
 
-- [mkdocs-minify-plugin]
-- [mkdocs-redirects]
+- [mkdocs-minify-plugin]{target="_blank"}
+- [mkdocs-redirects]{target="_blank"}
 
-  [Docker image]: https://hub.docker.com/r/squidfunk/mkdocs-material/
+  [Docker image]: https://hub.docker.com/r/jaywhj/mkdocs-materialx
   [mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
   [mkdocs-redirects]: https://github.com/datarobot/mkdocs-redirects
 
-### Add more plugins
+### add more plugins
 
 Material for MkDocs only bundles selected plugins in order to keep the size of the official image small. If the plugin you want to use is not included, you can add them easily. Create a `Dockerfile` and extend the official image:
 
 ``` Dockerfile title="Dockerfile"
-FROM squidfunk/mkdocs-material:9.7.1
-RUN pip install mkdocs-materialx
+FROM jaywhj/mkdocs-materialx
 RUN pip install mkdocs-glightbox
 ```
 
-### For MaterialX
-
-MaterialX does not yet provide an official Docker image, as a temporary solution, you can derive a custom image from `mkdocs-material`.
-
-> This approach reuses the official `mkdocs-material` image and installs MaterialX on top of it.
-
-#### Create a Dockerfile
-
-```dockerfile title="Dockerfile" hl_lines="3"
-FROM squidfunk/mkdocs-material:9.7.1
-
-RUN pip install mkdocs-materialx
-
-# Install additional plugins if needed
-# RUN pip install mkdocs-glightbox ...
-```
-
-#### Build the image
+#### build the image
 
 ```
 docker build -t materialx .
 ```
 
-#### Run the container
+#### run the container
 
 ```
 docker run -p 8000:8000 -v ${PWD}:/docs materialx
 ```
-
-!!! info
-
-    This is a temporary workaround, an official MaterialX Docker image will be provided in the future.
 
 ## with git
 
