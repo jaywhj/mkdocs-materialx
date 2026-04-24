@@ -220,6 +220,8 @@ kbd {
     font-size: px2em(13.6px);
     line-height: 1.4;
     word-break: break-word;
+    // Fix baseline issue caused by different fonts
+    vertical-align: 0.02em;
     background-color: var(--md-code-bg-color);
     border-radius: px2rem(4px);
     box-decoration-break: clone;

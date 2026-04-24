@@ -194,9 +194,9 @@
 
     // [screen]: Render annotation markers as icons
     @media screen {
-      width: 2.2ch;
-      height: 2.2ch;
-      line-height: 2.2ch;
+      width: 2ch;
+      height: 2ch;
+      line-height: 2ch;
 
       // Annotation is visible
       [data-md-visible] > & {
@@ -208,8 +208,8 @@
         position: absolute;
         top: 50%;
         z-index: -1;
-        width: 2.2ch;
-        height: 2.2ch;
+        width: 2ch;
+        height: 2ch;
         content: "";
         background: var(--md-default-bg-color);
         mask-image: var(--md-annotation-bg-icon);
@@ -227,8 +227,8 @@
         position: absolute;
         top: 50%;
         z-index: -1;
-        width: 2.2ch;
-        height: 2.2ch;
+        width: 2ch;
+        height: 2ch;
         content: "";
         background-color: var(--md-default-fg-color--lighter);
         mask-image: var(--md-annotation-icon);
