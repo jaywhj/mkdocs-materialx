@@ -16,7 +16,7 @@ copyright: Copyright &copy; 2016 - 2026 Aaron Wang
 # Additional configuration
 extra:
   status:
-    new: Recently added
+    new: Recently updated
     deprecated: Deprecated
   social:
     - icon: fontawesome/brands/github
@@ -96,14 +96,23 @@ theme:
       icon: simple/git
       color: '#f34f29'
     desc:
-      icon: octicons/sort-desc-24
+      icon: octicons/question-16
       color: rgba(158, 158, 158, 0.7)
-    pied-piper:
-      icon: fontawesome/brands/pied-piper-alt
-      color: '#2b9b46'
     example-new:
       icon: material/format-list-group
       color: var(--md-admonition-color--example)
+    copyright:
+      icon: material/copyright
+      color: '#2b9b9b'
+    heart:
+      icon: octicons/heart-24
+      color: '#9b2b9b'
+    lyrics:
+      icon: material/microphone
+      color: '#2b2b9b'
+    soundcloud:
+      icon: simple/soundcloud
+      color: '#ff7700'
 
 #---- 3. Plugins & Hooks ----
 
@@ -122,6 +131,8 @@ plugins:
       exclude: ['index.md', 'license.md', '*/index.md', 'blog/*']
 
   - glightbox
+  - drawio:
+      darkmode: true
 
 # Hooks
 hooks:
@@ -207,7 +218,7 @@ nav:
     - Fonts: setup/changing-the-fonts.md
     - Language: setup/changing-the-language.md
     - Navigation: setup/setting-up-navigation.md
-    - Dates & authors: setup/adding-document-dates-authors.md
+    - Date & authors: setup/adding-document-dates-authors.md
     - Recently updated: setup/adding-recent-updates-module.md
     - Repository: setup/adding-a-git-repository.md
     - Site search: setup/setting-up-site-search.md
@@ -227,24 +238,26 @@ nav:
       - Markdown: setup/extensions/python-markdown.md
       - Markdown Extensions: setup/extensions/python-markdown-extensions.md
   - Plugins:
-    - plugins/index.md
-    - Tags: plugins/tags.md
-    - Blog: plugins/blog.md
-    - Meta: plugins/meta.md
-    - Search: plugins/search.md
-    - Social: plugins/social.md
-    - Offline: plugins/offline.md
-    - Optimize: plugins/optimize.md
-    - Privacy: plugins/privacy.md
-    - Group: plugins/group.md
-    - Info: plugins/info.md
-    # - Projects: plugins/projects.md
-    # - Typeset: plugins/typeset.md
+    - Recommendation: plugins/index.md
+    - Built-in plugins:
+      - Date: plugins/date-author.md
+      - Tags: plugins/tags.md
+      - Blog: plugins/blog.md
+      - Meta: plugins/meta.md
+      - Search: plugins/search.md
+      - Social: plugins/social.md
+      - Offline: plugins/offline.md
+      - Optimize: plugins/optimize.md
+      - Privacy: plugins/privacy.md
+      - Group: plugins/group.md
+      - Info: plugins/info.md
+      # - Projects: plugins/projects.md
+      # - Typeset: plugins/typeset.md
     - Requirements:
       - Image processing: plugins/requirements/image-processing.md
       - Caching: plugins/requirements/caching.md
   - Authoring:
-    - reference/index.md
+    - Overview: reference/index.md
     - Admonitions: reference/admonitions.md
     - Annotations: reference/annotations.md
     - Buttons: reference/buttons.md

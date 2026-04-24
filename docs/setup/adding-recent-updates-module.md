@@ -5,9 +5,6 @@ icon: simple/lastpass
 
 # Add recent updates module
 
-<!-- md:version 10.0.4 -->
-<!-- md:plugin [document-dates] -->
-
 The recent updates module displays site documentation information in a structured way, which is ideal for sites with **a large number of documents or frequent updates**, allowing readers to **quickly see what's new**.
 
 ![recently-updated](../assets/screenshots/recently-updated-en.gif)
@@ -26,11 +23,11 @@ The recent updates module displays site documentation information in a structure
 
 This feature is provided by the built-in plugin [document-dates] and requires no separate installation.
 
-  [document-dates]: https://github.com/jaywhj/mkdocs-document-dates
+  [document-dates]: ../plugins/date-author.md
 
 ## Configuration
 
-Configure the switch `recently-updated` in `mkdocs.yml`:
+Configure the switch `recently-updated` in `document-dates`:
 
 ```yaml title="mkdocs.yml"
 - document-dates:
@@ -42,28 +39,6 @@ Configure the switch `recently-updated` in `mkdocs.yml`:
         - '*/index.md'      # Example: exclude all index.md files in any subfolders
         - blog/*            # Example: exclude all files in blog folder, including subfolders
 ```
-
-The following configuration options are supported:
-
-<!-- md:option recently-updated.limit -->
-
-:   <!-- md:default 10 --> This option specifies the number of documents to be displayed.
-
-<!-- md:option recently-updated.exclude -->
-
-:   <!-- md:default none --> This option specifies a list of documents to be excluded, supporting unix shell-style wildcards,  such as `*`, `?`, `[]` etc.
-
-<!-- md:option recently-updated.summary_lines -->
-
-:   This option configures the number of rows displayed in the summary for the grid and detail views.
-
-    <!-- md:option recently-updated.summary_lines.grid -->
-
-    :   <!-- md:default 4 --> Default 4 lines
-
-    <!-- md:option recently-updated.summary_lines.detail -->
-
-    :   <!-- md:default 6 --> Default 6 lines
 
 ## Add to sidebar navigation
 
@@ -104,3 +79,7 @@ plugins:
           grid: 4
           detail: 6
 ```
+
+<br />
+
+For a more complete and systematic introduction, please refer to [Built-in Date Plugin][document-dates].

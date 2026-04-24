@@ -1,4 +1,5 @@
 ---
+status: new
 icon: material/alert-outline
 ---
 
@@ -399,7 +400,7 @@ You can configure the icon and color for each built-in admonition type, and also
 
     <div class="result" markdown>
 
-    !!! example-new "← Reset icon for `example`"
+    !!! example-new "← Reset icon for type `example`"
 
     </div>
 
@@ -411,19 +412,27 @@ You can configure the icon and color for each built-in admonition type, and also
         git:
           icon: simple/git
           color: '#f34f29'
-        desc:
-          icon: octicons/sort-desc-24
-          color: rgba(158, 158, 158, 0.7)
-        pied-piper:
-          icon: fontawesome/brands/pied-piper-alt
-          color: '#2b9b46'
+        copyright:
+          icon: material/copyright
+          color: '#2b9b9b'
+        heart:
+          icon: octicons/heart-24
+          color: '#9b2b9b'
+        lyrics:
+          icon: material/microphone
+          color: '#2b2b9b'
+        soundcloud:
+          icon: simple/soundcloud
+          color: '#ff7700'
     ```
 
     <div class="result" markdown>
 
     !!! git "git"
-    !!! desc "desc"
-    !!! pied-piper "pied-piper"
+    !!! copyright "copyright"
+    !!! heart "heart"
+    !!! lyrics "lyrics"
+    !!! soundcloud "soundcloud"
 
     </div>
 

@@ -12,7 +12,7 @@ icon: material/vector-difference-ab
 
     As a result, to move away from reliance on MkDocs, the team behind the popular mkdocs-material theme framework has discontinued its maintenance and shifted to developing an entirely new alternative project named Zensical. While it features a modern architecture, it is incompatible with the original MkDocs ecosystem (no plugin support), incurs high migration costs (all configurations must be rebuilt from scratch), and still lacks many essential features.
 
-    To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: [ProperDocs](https://github.com/ProperDocs/properdocs){target="_blank"} (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
+    To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: ProperDocs (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
 
     Similarly, mkdocs-material also has a new successor: **MaterialX** (based on mkdocs-material 9.7.1). It will also receive ongoing updates and maintenance, with full compatibility with the original ecosystem and zero migration costs.
 
@@ -62,9 +62,10 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 ## MaterialX Update Highlights
 
-- Added next-generation date & author plugin, see: [Adding Document Dates and Authors](setup/adding-document-dates-authors.md){target="_blank"}
+- Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
+    - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
-- Added Recent Updated module, see: [Adding Recent Updates Module](setup/adding-recent-updates-module.md){target="_blank"}
+- Added Recent Updated module, see: [Recently updated](setup/adding-recent-updates-module.md){target="_blank"}
     - Displays recently updated documents in descending order of update time, with dynamically refreshed list items
     - Supports multiple flexible layout styles (list, detail, grid)
     - Automatically generates document summaries (no manual configuration needed)

@@ -250,8 +250,10 @@ categories:
     # Hello world!
     ```
 
-    Note that the creation date __must__ be set under `date.created`, as each
-    blog post must have a creation date set.
+    ~~Note that the creation date __must__ be set under `date.created`, as each
+    blog post must have a creation date set.~~
+
+    As of version <!-- md:version 10.1.4 -->, this attribute is no longer required, as the plugin will intelligently read document dates.
 
 When you spin up the [live preview server], you should be greeted by your first
 post! You'll also realize, that [archive] and [category] indexes have been

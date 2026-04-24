@@ -6,11 +6,23 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.4 <small>April 26, 2026</small> { id="10.1.4" }
+
+- Added official Docker image
+- Updated documentation workflow
+- Restored build workflow
+- Optimized the date loading mechanism of the blog plugin
+    - Manual date configuration for each post is no longer required, and the date plugin no longer needs to be enabled
+- Fixed inconsistent icon rendering sizes across different icon families when customizing Admonitions
+- Fixed the issue where annotation tooltips inside admonitions were clipped
+- Fixed issues arising from incorrect mounting logic for Code Annotations
+- Significantly updated project documentation, including plugins, setup, admonitions and more
+
 ### 10.1.3 <small>April 10, 2026</small> { id="10.1.3" }
 
-- Feature: Bundled icons can now be used as favicon, see [Favicon](../setup/changing-the-logo-and-icons.md#favicon){target="_blank"}
+- Feature: Bundled icons can now be used as favicon, see [Favicon](../setup/changing-the-logo-and-icons.md#favicon-icon-bundled){target="_blank"}
 - Feature: Modularized Admonition for easier extensibility
-    - Customizing a new admonition can now be done simply by configuring it in `mkdocs.yml`, see [Customization](../reference/admonitions.md#customization){target="_blank"}
+    - Customizing a new admonition can now be done simply by configuring it in `mkdocs.yml`, see [Customization](../reference/admonitions.md#custom-icons-and-colors-example-2-create-new-admonitions){target="_blank"}
 - Fixed compatibility issue with the `lastmod` value in `sitemap.xml`
     - When used with the `document-dates` plugin, `sitemap.xml` can now generate the exact `lastmod`, see [sitemap.xml](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
 - Optimized inline code block style
@@ -19,22 +31,22 @@ icon: material/layers-triple-outline
 
 - Fixed the robustness of the `document-dates` plugin when running with the blog plugin
 - Fixed the border gap issue for `admonitions` & `details`
-- Updated the usage documentation for the `document-dates` plugin, see [Configuration](../setup/adding-document-dates-authors.md#configuration){target="_blank"}
 - Updated project development setup
 - Archived unnecessary docs and exclude them from the build, see [Archives](https://github.com/jaywhj/mkdocs-materialx/tree/main/docs/archives){target="_blank"}
 
 ### 10.1.1 <small>March 29, 2026</small> { id="10.1.1" }
 
 - Added support for ProperDocs
-- Date & time infrastructure (provided by the built-in plugin `document-dates`; remember to enable it in the `plugins` section)
+- Date & time infrastructure (provided by the built-in plugin [Date and Authors](../setup/adding-document-dates-authors.md))
+    - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. Manual date configuration is no longer required for any feature, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
     - Added an override template for `sitemap.xml` that supports dynamically loading the exact lastmod to improve SEO, see [sitemap.xml](https://github.com/jaywhj/mkdocs-materialx/blob/main/src/templates/sitemap.xml){target="_blank"}
     - Updated the processing logic for blog post dates, manual date specification is no longer required
-    - These date values can be accessed via template variables in any template or plugin, see [Template Variables](../setup/adding-document-dates-authors.md#template-variables){target="_blank"}
+    - These date values can be accessed via template variables in any template or plugin, see [Template Variables](../plugins/date-author.md#template-variables){target="_blank"}
 - Recently updated list
     - Added high-performance readtime & summary parsers
-    - Added `readtime` and `tag` rendering, for readtime calculation details see [Reading-Time-Estimation](../setup/adding-document-dates-authors.md#reading-time-estimation){target="_blank"}
-    - Added line count configuration for `summary`, see [Summary-Line-Configuration](../setup/adding-document-dates-authors.md#summary-line-configuration){target="_blank"}
+    - Added `readtime` and `tag` rendering, for readtime calculation details see [Reading-Time-Estimation](../plugins/date-author.md#reading-time-estimation){target="_blank"}
+    - Added line count configuration for `summary`, see [Summary-Line-Configuration](../plugins/date-author.md#summary-line-configuration){target="_blank"}
     - Improved layout styling for mixed text and image content
 - Tags
     - Fixed a bug in tag list parsing

@@ -1502,11 +1502,13 @@ the [`categories_allowed`][config.categories_allowed] setting.
 
 <!-- md:version 9.2.0 -->
 <!-- md:flag metadata -->
-<!-- md:flag required -->
 
-Use this property to specify a post's date. Note that this property is required,
-which means the build fails when it's not set. Additional dates can be set by
+Use this property to specify a post's date. ~~Note that this property is required,
+which means the build fails when it's not set.~~ (1) Additional dates can be set by
 using a slightly different syntax:
+{ .annotate }
+
+1.  As of version <!-- md:version 10.1.4 -->, this attribute is no longer required, as the plugin will intelligently read document dates.
 
 === "Date"
 
@@ -1524,15 +1526,13 @@ using a slightly different syntax:
     ``` yaml
     ---
     date:
-      created: 2024-01-31 # (1)!
+      created: 2024-01-31
       updated: 2024-02-01
     ---
 
     # Post title
     ...
     ```
-
-    1.  Each post must have a creation date set.
 
 === "Custom date"
 
