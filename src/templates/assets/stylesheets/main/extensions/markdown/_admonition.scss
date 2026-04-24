@@ -76,6 +76,7 @@ $admonitions: (
     --md-admonition-color: var(--md-admonition-color--note);
     --md-admonition-title-bg-color: color-mix(in srgb, var(--md-admonition-color), transparent 70%);
     --md-admonition-icon: var(--md-admonition-icon--note);
+    --md-admonition-icon-mask-size: contain;
     --md-admonition-border-color: var(--md-admonition-title-bg-color);
 
     --md-admonition-border-width: #{px2rem(1px)};
@@ -170,7 +171,7 @@ $admonitions: (
       mask-image: var(--md-admonition-icon);
       mask-repeat: no-repeat;
       mask-position: center;
-      mask-size: contain;
+      mask-size: var(--md-admonition-icon-mask-size);
     }
 
     // Inline code block
