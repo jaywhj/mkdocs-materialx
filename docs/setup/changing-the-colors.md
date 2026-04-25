@@ -1,10 +1,10 @@
 ---
-icon: material/palette-outline
+icon: lucide/palette
 ---
 
 # Changing the colors
 
-As any proper Material Design implementation, Material for MkDocs supports
+As any proper Material Design implementation, MaterialX for MkDocs supports
 Google's original [color palette], which can be easily configured through
 `mkdocs.yml`. Furthermore, colors can be customized with a few lines of CSS to
 fit your brand's identity by using [CSS variables][custom colors].
@@ -21,7 +21,7 @@ fit your brand's identity by using [CSS variables][custom colors].
 <!-- md:version 5.2.0 -->
 <!-- md:default `default` -->
 
-Material for MkDocs supports two color schemes: a __light mode__, which is just
+MaterialX for MkDocs supports two color schemes: a __light mode__, which is just
 called `default`, and a __dark mode__, which is called `slate`. The color scheme
 can be set via `mkdocs.yml`:
 
@@ -283,7 +283,7 @@ default color palette.
 <!-- md:example color-palette-system-preference -->
 
 Newer operating systems allow to automatically switch between light and dark
-appearance during day and night times. Material for MkDocs adds support for
+appearance during day and night times. MaterialX for MkDocs adds support for
 automatic light / dark mode, delegating color palette selection to the user's
 operating system. Add the following lines to `mkdocs.yml`:
 
@@ -320,7 +320,7 @@ theme:
     [`accent`][palette.accent] per color palette, i.e. different colors for
     light and dark mode.
 
-Material for MkDocs will now change the color palette each time the operating
+MaterialX for MkDocs will now change the color palette each time the operating
 system switches between light and dark appearance, even when the user doesn't
 reload the site.
 
@@ -349,7 +349,7 @@ In Liquid Glass theme, the topbar (header + tabs) will always be frosted transpa
 <!-- md:version 5.0.0 -->
 <!-- md:example custom-colors -->
 
-Material for MkDocs implements colors using [CSS variables] (custom
+MaterialX for MkDocs implements colors using [CSS variables] (custom
 properties). If you want to customize the colors beyond the palette (e.g. to
 use your brand-specific colors), you can add an [additional style sheet] and
 tweak the values of the CSS variables.

@@ -24,10 +24,10 @@
         {% set icon_family = keys.icon.split("/")[0] %}
         {% if icon_family in ["octicons", "fontawesome"] %}
           {% set rules = rules ~ "--md-admonition-icon-mask-size:82%;" %}
-        {% elif icon_family == "simple" %}
+        {% elif icon_family in ["simple", "lucide"] %}
           {% set rules = rules ~ "--md-admonition-icon-mask-size:88%;" %}
         {% elif icon_family != "material" %}
-          {# Fallback for unknown families (e.g. future lucide/*) #}
+          {# Fallback for unknown families #}
           {% set rules = rules ~ "--md-admonition-icon-mask-size:85%;" %}
         {% endif %}
       {% endif %}

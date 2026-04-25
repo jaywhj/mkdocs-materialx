@@ -54,7 +54,7 @@
           <link rel="icon" href="{{ config.theme.favicon | url }}">
         {% endif %}
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.1.3">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.1.4">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -262,7 +262,7 @@
             "search.result.term.missing": lang.t("search.result.term.missing"),
             "select.version": lang.t("select.version")
           },
-          "search": "assets/javascripts/workers/search.7a47a382.min.js" | url,
+          "search": "assets/javascripts/workers/search.2c215733.min.js" | url,
           "annotate": _.annotate or none,
           "tags": _.tags or none,
           "version": _.version or none
@@ -270,7 +270,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.af6d90d5.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.3c4058f5.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}

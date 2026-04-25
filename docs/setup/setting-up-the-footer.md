@@ -1,5 +1,5 @@
 ---
-icon: material/dock-bottom
+icon: lucide/panel-bottom
 ---
 
 # Setting up the footer

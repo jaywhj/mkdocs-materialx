@@ -1,10 +1,10 @@
 ---
-icon: material/dock-top
+icon: lucide/panel-top
 ---
 
 # Setting up the header
 
-Material for MkDocs' header can be customized to show an announcement bar that
+MaterialX for MkDocs' header can be customized to show an announcement bar that
 disappears upon scrolling, and provides some options for further configuration.
 It also includes the [search bar] and a place to display your project's
 [git repository], as explained in those dedicated guides.
@@ -34,7 +34,7 @@ theme:
 <!-- md:version 5.0.0 -->
 <!-- md:flag customization -->
 
-Material for MkDocs includes an announcement bar, which is the perfect place to
+MaterialX for MkDocs includes an announcement bar, which is the perfect place to
 display project news or other important information to the user. When the user
 scrolls past the header, the bar will automatically disappear. In order to add
 an announcement bar, [extend the theme] and [override the `announce`

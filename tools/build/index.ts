@@ -223,6 +223,14 @@ const assets$ = concat(
       transform: async data => minsvg(data)
     })),
 
+  /* Copy Lucide icons */
+  ...["*.svg", "../LICENSE"]
+    .map(pattern => copyAll(pattern, {
+      from: "node_modules/lucide-static/icons",
+      to: `${base}/templates/.icons/lucide`,
+      transform: async data => minsvg(data)
+    })),
+
   /* Copy Lunr.js search stemmers and segmenters */
   ...["min/*.js", "tinyseg.js", "wordcut.js"]
     .map(pattern => copyAll(pattern, {

@@ -4,7 +4,7 @@ icon: material/emoticon-happy-outline
 
 # Icons, Emojis
 
-One of the best features of Material for MkDocs is the possibility to use [more
+One of the best features of MaterialX for MkDocs is the possibility to use [more
 than 10,000 icons][icon search] and thousands of emojis in your project
 documentation with practically zero additional effort. Moreover, [custom icons
 can be added] and used in `mkdocs.yml`, documents and templates.
@@ -53,8 +53,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 ```
 
-The following icon sets are bundled with Material for MkDocs:
+The following icon sets are bundled with MaterialX for MkDocs:
 
+- :simple-lucide: – [Lucide]
 - :material-material-design: – [Material Design]
 - :fontawesome-brands-font-awesome: – [FontAwesome]
 - :octicons-mark-github-16: – [Octicons]
@@ -66,6 +67,7 @@ See additional configuration options:
 - [Emoji]
 - [Emoji with custom icons]
 
+  [Lucide]: https://lucide.dev/
   [Material Design]: https://pictogrammers.com/library/mdi/
   [FontAwesome]: https://fontawesome.com/search?m=free
   [Octicons]: https://octicons.github.com/
@@ -225,7 +227,7 @@ reference any icon that's [bundled with the theme][icon search] with Jinja's
       </div>
     </div>
 
-This is exactly what Material for MkDocs does in its templates.
+This is exactly what MaterialX for MkDocs does in its templates.
 
   [extending the theme]: ../customization.md#extending-the-theme
   [include]: https://jinja.palletsprojects.com/en/2.11.x/templates/#include
