@@ -33,5 +33,11 @@
     width: px2rem(24px);
     height: px2rem(24px);
     fill: currentcolor;
+
+    // Override for Lucide icons, which use strokes
+    &.lucide {
+      fill: transparent;
+      stroke: currentcolor;
+    }
   }
 }

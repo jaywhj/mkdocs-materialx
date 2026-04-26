@@ -40,6 +40,12 @@
       width: var(--md-icon-size);
       max-height: 100%;
       fill: currentcolor;
+
+      // Override for Lucide icons, which use strokes
+      &.lucide {
+        fill: transparent;
+        stroke: currentcolor;
+      }
     }
   }
 

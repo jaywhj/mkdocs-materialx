@@ -194,6 +194,12 @@
       max-height: px2rem(16px);
       vertical-align: -25%;
       fill: currentcolor;
+
+      // Override for Lucide icons, which use strokes
+      &.lucide {
+        fill: transparent;
+        stroke: currentcolor;
+      }
     }
   }
 }

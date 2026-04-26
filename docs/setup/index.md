@@ -18,9 +18,9 @@ setting up site search, and more.
 <div class="grid cards" markdown>
 
 - :simple-lastpass: __[Recent Updates]__ – Display a list of recently updated documents anywhere
-- :material-page-layout-sidebar-left: __[Navigation]__ – Create a clear, concise, and comprehensive navigation structure
-- :material-page-layout-header: __[Header]__ – Customize the behavior of the header, add an announcement bar
-- :material-page-layout-footer: __[Footer]__ – Add links to your social media profiles or websites in the footer
+- :lucide-panel-left: __[Navigation]__ – Create a clear, concise, and comprehensive navigation structure
+- :lucide-panel-top: __[Header]__ – Customize the behavior of the header, add an announcement bar
+- :lucide-panel-bottom: __[Footer]__ – Add links to your social media profiles or websites in the footer
 - :material-tab-search: __[Search]__ – Set up and configure search, running entirely in the user's browser
 - :material-tag-plus-outline: __[Tags]__ – Categorize your pages with tags and group related pages
 
