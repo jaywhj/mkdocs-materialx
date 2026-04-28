@@ -1,5 +1,5 @@
 ---
-icon: material/navigation-variant-outline
+icon: lucide/panel-left
 ---
 
 # Setting up navigation

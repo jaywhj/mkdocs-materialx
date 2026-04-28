@@ -1,5 +1,5 @@
 ---
-icon: material/cloud-upload-outline
+icon: lucide/cloud-upload
 ---
 
 # Publishing your site

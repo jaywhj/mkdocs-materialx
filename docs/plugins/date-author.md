@@ -615,9 +615,14 @@ You can use this function to retrieve the date and author information for all si
 An example of calling the function is shown below:
 
 ``` py
-from mkdocs_document_dates.utils import load_dates_and_authors
 from pathlib import Path
 from datetime import datetime
+
+try:
+    from mkdocs_document_dates.utils import load_dates_and_authors
+except ImportError:
+    load_dates_and_authors = None
+
 
 def __init__(self):
     super().__init__()
@@ -626,23 +631,27 @@ def __init__(self):
 # First, call the API in `Global Events` to read data and store it
 def on_files(self, files, config):
 
-    ddPlugin = config.plugins.get("document-dates")
-    if ddPlugin:
-        self.date_data = ddPlugin.data_cached
-    else:
-        self.date_data = load_dates_and_authors(Path(config.docs_dir), files)    
+    if load_dates_and_authors is not None:
+        # If the date plugin is enabled, load the data directly from the plugin; otherwise, get it from the API
+        dd_plugin = config.plugins.get("document-dates")
+        if dd_plugin:
+            self.date_data = dd_plugin.data_cached
+        else:
+            self.date_data = load_dates_and_authors(Path(config.docs_dir), files)
+
+    # Continue with the original logic
 
     return files
 
 # Then, access the data via the relative path of page.file in `Page Events`
 def on_page_markdown(self, markdown, page: Page, config, files):
 
-    rel_path = getattr(page.file, 'src_uri')
+    entry = self.date_data.get(page.file.src_uri, {})
 
-    created: datetime = self.date_data[rel_path]['created']
-    updated: datetime = self.date_data[rel_path]['updated']
+    created = entry.get("created")
+    updated = entry.get("updated")
 
-    authors = self.date_data[rel_path]['authors']
+    authors = entry.get("authors", [])
     for author in authors:
         author.name
         author.email
@@ -660,14 +669,21 @@ def on_page_markdown(self, markdown, page: Page, config, files):
     ``` py
     ...
 
+    def _parse_date(self, value: str | None, default: datetime | None) -> datetime | None:
+        if not value:
+            return default
+        try:
+            return datetime.fromisoformat(value).astimezone()
+        except ValueError:
+            return default
+
     def on_page_markdown(self, markdown, page: Page, config, files):
 
-        created_str = page.meta.get('created')
-        if created_str:
-            created: datetime = datetime.fromisoformat(created_str).astimezone()
-        else:
-            rel_path = getattr(page.file, 'src_uri')
-            created: datetime = self.date_data[rel_path]['created']
+        entry = self.date_data.get(page.file.src_uri, {})
+
+        # Overrides default values via meta fields
+        created = self._parse_date(page.meta.get("created"), entry.get("created"))
+        updated = self._parse_date(page.meta.get("updated"), entry.get("updated"))
 
         ...
     ```

@@ -10,6 +10,7 @@ site_description: >-
 
 repo_name: jaywhj/mkdocs-materialx
 repo_url: https://github.com/jaywhj/mkdocs-materialx
+edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; 2016 - 2026 Aaron Wang
 

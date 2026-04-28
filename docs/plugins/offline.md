@@ -1,6 +1,6 @@
 ---
 title: Built-in offline plugin
-icon: material/connection
+icon: lucide/wifi-off
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Built-in optimize plugin
-icon: material/rabbit
+icon: material/bike-fast
 ---
 
 # Built-in optimize plugin

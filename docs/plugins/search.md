@@ -1,6 +1,6 @@
 ---
 title: Built-in search plugin
-icon: octicons/search-24
+icon: lucide/search
 ---
 
 # Built-in search plugin

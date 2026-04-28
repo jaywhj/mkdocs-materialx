@@ -1,5 +1,5 @@
 ---
-icon: material/tooltip-plus-outline
+icon: material/tooltip-text-outline
 ---
 
 # Tooltips
