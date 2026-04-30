@@ -36,6 +36,14 @@
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.created') }}" href="{{ 'feed_rss_created.xml' | url }}">
         <link rel="alternate" type="application/rss+xml" title="{{ lang.t('rss.updated') }}" href="{{ 'feed_rss_updated.xml' | url }}">
       {% endif %}
+      {% if "content.action.agents" in config.theme.features and page.edit_url %}
+        {% if "/blob/" in page.edit_url %}
+          {% set part = "blob" %}
+        {% else %}
+          {% set part = "edit" %}
+        {% endif %}
+        <link rel="alternate" type="text/markdown" href="{{ page.edit_url | replace(part, 'raw') }}">
+      {% endif %}
       {% if config.theme.favicon %}
         {# 1. Try to capture the bundled icon if it exists #}
         {% set svg_raw %}
