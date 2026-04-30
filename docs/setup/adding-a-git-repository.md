@@ -39,7 +39,7 @@ automatically requested and rendered.
     sorted by update time], the [equivalent API endpoint] is used. So, make sure
     you also [create a release for GitLab repositories].
 
-  [repo_url]: https://www.mkdocs.org/user-guide/configuration/#repo_url
+  [repo_url]: https://properdocs.org/user-guide/configuration/#repo_url
   [latest release]: https://docs.github.com/en/rest/reference/releases#get-the-latest-release
   [create a release]: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release
   [list of tags sorted by update time]: https://docs.gitlab.com/ee/api/tags.html#list-project-repository-tags
@@ -160,7 +160,29 @@ theme:
   [GitLab]: https://about.gitlab.com/
   [Bitbucket]: https://bitbucket.org/
   [MkDocs]: https://www.mkdocs.org
-  [edit_uri]: https://www.mkdocs.org/user-guide/configuration/#edit_uri
+  [edit_uri]: https://properdocs.org/user-guide/configuration/#edit_uri
+
+#### Markdown for AI agents
+
+<!-- md:version 10.1.5 -->
+<!-- md:feature -->
+
+Now, GEO (*SEO applied to AI agents*) is becoming an important stake for websites discoverability.
+To allow AI agents (Claude Code, ChatGPT, etc.) to access pages more effectively, you can use the following configuration to let AI agents directly fetch the page Markdown source.
+
+This provides AI with well-structured content, **reduces token consumption by over 80%**, and greatly cuts down irrelevant noise.
+
+``` yaml
+theme:
+  features:
+    - content.action.agents
+```
+
+!!! warning "Note"
+    - This feature relies on the [`repo_url`][repo_url]{target="_blank"} and [`edit_uri`][edit_uri]{target="_blank"} settings, you need to configure both properties correctly
+    - If the default branch of your GitHub repository is `main`, add the configuration: `edit_uri: edit/main/docs/`
+
+Related introduction: [Introducing Markdown for Agents](https://blog.cloudflare.com/zh-cn/markdown-for-agents/){target="_blank"}
 
 ### Document dates & authors
 

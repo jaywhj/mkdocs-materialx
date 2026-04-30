@@ -167,7 +167,7 @@ show_author: text
 ---
 ```
 
-!!! tip "Note"
+!!! warning "Note"
 
     When used in combination, the global toggle acts as the master switch, and the local toggle only takes effect when the master switch is enabled. This does not follow the logic of local configurations overriding global ones.
 
