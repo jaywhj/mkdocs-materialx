@@ -28,6 +28,7 @@
 :root {
   --md-code-select-icon: svg-load("material/focus-field.svg");
   --md-code-copy-icon: svg-load("material/content-copy.svg");
+  --md-code-download-icon: svg-load("material/download.svg");
   // --md-code-wrap-icon: svg-load("material/wrap-disabled.svg");
 }
 
@@ -111,6 +112,11 @@
     // Code block button icon for copying
     &[data-md-type="copy"]::after {
       mask-image: var(--md-code-copy-icon);
+    }
+
+    // Code block button icon for downloading
+    &[data-md-type="download"]::after {
+      mask-image: var(--md-code-download-icon);
     }
   }
 }

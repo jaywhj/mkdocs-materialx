@@ -55,6 +55,16 @@ export function renderSelectionButton(): HTMLElement {
   )
 }
 
+export function renderDownloadButton(): HTMLElement {
+  return (
+    <button
+      class="md-code__button"
+      title="Download code"
+      data-md-type="download"
+    ></button>
+  )
+}
+
 export function renderCodeBlockNavigation() {
   return (
     <nav class="md-code__nav"></nav>

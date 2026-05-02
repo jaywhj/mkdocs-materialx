@@ -67,6 +67,7 @@ import {
 import {
   renderClipboardButton,
   renderCodeBlockNavigation,
+  renderDownloadButton,
   renderSelectionButton
 } from "~/templates"
 
@@ -156,6 +157,48 @@ function findList(el: HTMLElement): HTMLElement | undefined {
 
   /* Everything else */
   return undefined
+}
+
+/**
+ * Extract code text
+ *
+ * @param el - Code block element
+ *
+ * @returns Extracted text
+ */
+function extractCodeText(el: HTMLElement): string {
+  el.setAttribute("data-md-copying", "")
+  const text = el.innerText
+  el.removeAttribute("data-md-copying")
+  return text.trimEnd()
+}
+
+/**
+ * Extract language from highlighted container classes
+ *
+ * @param el - Highlight container
+ *
+ * @returns Language shortcode or empty string
+ */
+function extractCodeLanguage(el: HTMLElement): string {
+  for (const name of Array.from(el.classList)) {
+    if (name.startsWith("language-"))
+      return name.slice("language-".length)
+  }
+  return ""
+}
+
+/**
+ * Sanitize filename for download attribute
+ *
+ * @param value - Suggested filename
+ *
+ * @returns Sanitized filename
+ */
+function sanitizeFilename(value: string): string {
+  return value
+    .replace(/[\\/:*?"<>|]/g, "_")
+    .trim()
 }
 
 /* ----------------------------------------------------------------------------
@@ -478,6 +521,74 @@ export function mountCodeBlock(
         if (feature("content.tooltips"))
           content$.push(mountInlineTooltip2(button, { viewport$ }))
       }
+    }
+
+    /* Render code download button */
+    const blockDownloadMode = container instanceof HTMLElement
+      ? container.getAttribute("data-download")
+      : undefined
+    if (blockDownloadMode !== null) {
+      const button = renderDownloadButton()
+      buttons.push(button)
+      if (feature("content.tooltips"))
+        content$.push(mountInlineTooltip2(button, { viewport$ }))
+
+      fromEvent(button, "click").subscribe(event => {
+        event.preventDefault()
+        button.blur()
+
+        const mode = (blockDownloadMode || "blob").toLowerCase()
+        const type = mode === "blob" || mode === "data-download"
+          ? "blob"
+          : "url"
+
+        const language = container instanceof HTMLElement
+          ? extractCodeLanguage(container)
+          : ""
+        const extension = language ? `.${language}` : ""
+        const title = container instanceof HTMLElement
+          ? getOptionalElement(".filename", container)?.textContent?.trim()
+          : undefined
+        const suggestedFilename = container instanceof HTMLElement
+          ? container.getAttribute("data-download-filename")
+          : undefined
+        const filename = sanitizeFilename(
+          suggestedFilename?.trim() ||
+          (title ? `${title}${extension}` : `download${extension}`)
+        ) || "download"
+
+        if (type === "blob") {
+          const blob = new Blob([extractCodeText(el)], {
+            type: "text/plain;charset=utf-8"
+          })
+          const url = URL.createObjectURL(blob)
+          const link = document.createElement("a")
+          link.href = url
+          link.download = filename
+          link.click()
+          URL.revokeObjectURL(url)
+          return
+        }
+
+        const source = blockDownloadMode?.trim()
+        if (!source)
+          return
+
+        try {
+          const hasScheme = /^[a-z][a-z\d+\-.]*:/i.test(source)
+          const url = hasScheme
+            ? new URL(source)
+            : new URL(source, window.location.href)
+
+          const link = document.createElement("a")
+          link.href = url.toString()
+          link.download = filename
+          link.rel = "noopener"
+          link.click()
+        } catch {
+          // Invalid URL, skip download gracefully.
+        }
+      })
     }
 
     // @hack Render code navigation and buttons

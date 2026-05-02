@@ -184,6 +184,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - material.extensions.code_download
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
