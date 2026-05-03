@@ -31,6 +31,11 @@ class CodeDownloadPreprocessor(Preprocessor):
 
         for line in lines:
             if not in_fence:
+                stripped = line.lstrip(" \t")
+                if not stripped or stripped[0] not in ("`", "~"):
+                    result.append(line)
+                    continue
+
                 match = _FENCE_RE.match(line)
                 if not match:
                     result.append(line)
@@ -49,8 +54,8 @@ class CodeDownloadPreprocessor(Preprocessor):
             # inside fence
             result.append(line)
 
-            # fast path（避免每行 regex）
-            if line and line[0] == fence_char:
+            stripped = line.lstrip(" \t")
+            if stripped and stripped[0] == fence_char:
                 match = _FENCE_RE.match(line)
                 if match:
                     _, fence, _ = match.groups()
@@ -78,7 +83,6 @@ class CodeDownloadExtension(Extension):
 # -----------------------------------------------------------------------------
 
 def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
-    # fast skip（性能关键）
     if not info or info.startswith("{") or "data-download" not in info:
         return f"{indent}{fence} {info}" if info else f"{indent}{fence}"
 

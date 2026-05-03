@@ -329,7 +329,9 @@
     "jsdoc/no-defaults": "warn",
     "jsdoc/no-types": "warn",
     "jsdoc/require-hyphen-before-param-description": "warn",
-    "jsdoc/require-jsdoc": "warn",
+    "jsdoc/require-jsdoc": ["warn", {
+      "publicOnly": true
+    }],
     "jsdoc/require-param-description": "warn",
     "jsdoc/require-param-name": "warn",
     "jsdoc/require-param": [
