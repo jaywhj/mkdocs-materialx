@@ -23,7 +23,7 @@ documentation. At the root of your repository, create a new GitHub Actions
 workflow, e.g. `.github/workflows/ci.yml`, and copy and paste the following
 contents:
 
-``` yaml
+``` yaml { title=".github/workflows/ci.yaml" data-download }
 name: ci # (1)!
 on:
   push:
@@ -113,7 +113,7 @@ by using the [GitLab CI] task runner. At the root of your repository, create a
 task definition named `.gitlab-ci.yml` and copy and paste the following
 contents:
 
-``` yaml
+``` yaml { title=".gitlab-ci.yml" data-download }
 pages:
   stage: deploy
   image: python:latest

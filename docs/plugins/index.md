@@ -72,7 +72,7 @@ External plugins are developed by third-party developers and require manual inst
 
     **Usage**: use `markmap` fence blocks to enclose markdown content
 
-    `````
+    ````` md { data-download }
     ````markmap
 
     ## Mind Map

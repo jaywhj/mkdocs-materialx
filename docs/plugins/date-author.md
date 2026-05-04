@@ -614,7 +614,7 @@ You can use this function to retrieve the date and author information for all si
 
 An example of calling the function is shown below:
 
-``` py
+``` py { data-download }
 from pathlib import Path
 from datetime import datetime
 

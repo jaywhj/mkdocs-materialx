@@ -42,6 +42,7 @@ theme:
     - content.action.agents
     - content.code.annotate
     - content.code.copy
+    - content.code.download
     # - content.code.select
     # - content.tabs.link
     - content.footnote.tooltips
@@ -180,11 +181,11 @@ markdown_extensions:
       auto_append:
         - includes/mkdocs.md
   - pymdownx.superfences:
+      relaxed_headers: true
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - material.extensions.code_download
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
@@ -194,6 +195,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  # - material.extensions.code_download
 
 
 #---- 5. Page tree ----
