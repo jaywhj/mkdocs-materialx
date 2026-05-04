@@ -83,22 +83,43 @@ class CodeDownloadExtension(Extension):
 # -----------------------------------------------------------------------------
 
 def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
-    if not info or info.startswith("{") or "data-download" not in info:
+    if not info or "data-download" not in info:
         return f"{indent}{fence} {info}" if info else f"{indent}{fence}"
 
+    # 1. 提取 attr_list（支持混合语法）
+    attr_tokens: list[str] = []
+
+    if "{" in info and "}" in info:
+        start = info.find("{")
+        end = info.rfind("}")
+        if start < end:
+            inner = info[start + 1:end].strip()
+            try:
+                attr_tokens.extend(shlex.split(inner, posix=True))
+            except ValueError:
+                return f"{indent}{fence} {info}"
+
+            # 去掉 attr_block，剩下外部部分
+            info = (info[:start] + info[end + 1:]).strip()
+
+    # 2. 解析外部 tokens（shell 风格）
     try:
         tokens = shlex.split(info, posix=True)
     except ValueError:
         return f"{indent}{fence} {info}"
 
-    if not tokens:
+    if not tokens and not attr_tokens:
         return f"{indent}{fence} {info}"
 
+    # 3. language 识别
     language = None
-    if _looks_like_language(tokens[0]):
+    if tokens and _looks_like_language(tokens[0]):
         language = tokens[0]
         tokens = tokens[1:]
 
+    tokens.extend(attr_tokens)
+
+    # 4. 构建 attrs
     attrs: list[str] = []
     has_download = False
 
@@ -120,6 +141,7 @@ def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
     if not has_download:
         return f"{indent}{fence} {info}"
 
+    # 5. 统一输出 attr_list
     parts: list[str] = []
     if language:
         parts.append(f".{language}")
