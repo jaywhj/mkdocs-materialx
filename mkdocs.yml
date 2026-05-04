@@ -42,7 +42,6 @@ theme:
     - content.action.agents
     - content.code.annotate
     - content.code.copy
-    - content.code.download
     # - content.code.select
     # - content.tabs.link
     - content.footnote.tooltips

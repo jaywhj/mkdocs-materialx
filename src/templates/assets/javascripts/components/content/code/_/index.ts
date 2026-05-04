@@ -578,7 +578,7 @@ export function mountCodeBlock(
       container.hasAttribute("data-download")
     )
 
-    if (hasBlockDownload && feature("content.code.download")) {
+    if (hasBlockDownload) {
       const config = resolveDownloadStrategy(
         container.getAttribute("data-download")
       )
