@@ -1,20 +1,19 @@
-from __future__ import annotations
-
 import re
 import shlex
 from typing import Iterable
-
 from markdown import Markdown
 from markdown.extensions import Extension
 from markdown.preprocessors import Preprocessor
 
-# -----------------------------------------------------------------------------
-# Regex
-# -----------------------------------------------------------------------------
 
-_FENCE_RE = re.compile(
+_FENCE_OPEN_RE = re.compile(
     r'^([ \t]*)(`{3,}|~{3,})([^\n`]*)$'
 )
+_FENCE_CLOSE_RE = re.compile(
+    r'^([ \t]*)(`{3,}|~{3,})[ \t]*$'
+)
+_ATTR_RE = re.compile(r'\{([^}]*)\}')
+
 
 # -----------------------------------------------------------------------------
 # Preprocessor
@@ -36,7 +35,7 @@ class CodeDownloadPreprocessor(Preprocessor):
                     result.append(line)
                     continue
 
-                match = _FENCE_RE.match(line)
+                match = _FENCE_OPEN_RE.match(line)
                 if not match:
                     result.append(line)
                     continue
@@ -56,9 +55,9 @@ class CodeDownloadPreprocessor(Preprocessor):
 
             stripped = line.lstrip(" \t")
             if stripped and stripped[0] == fence_char:
-                match = _FENCE_RE.match(line)
+                match = _FENCE_CLOSE_RE.match(line)
                 if match:
-                    _, fence, _ = match.groups()
+                    _, fence = match.groups()
                     if fence[0] == fence_char and len(fence) >= fence_len:
                         in_fence = False
 
@@ -83,43 +82,46 @@ class CodeDownloadExtension(Extension):
 # -----------------------------------------------------------------------------
 
 def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
-    if not info or "data-download" not in info:
-        return f"{indent}{fence} {info}" if info else f"{indent}{fence}"
+    if not info:
+        return f"{indent}{fence}"
 
-    # 1. 提取 attr_list（支持混合语法）
-    attr_tokens: list[str] = []
+    if "data-download" not in info:
+        return f"{indent}{fence} {info}"
 
-    if "{" in info and "}" in info:
-        start = info.find("{")
-        end = info.rfind("}")
-        if start < end:
-            inner = info[start + 1:end].strip()
-            try:
-                attr_tokens.extend(shlex.split(inner, posix=True))
-            except ValueError:
-                return f"{indent}{fence} {info}"
-
-            # 去掉 attr_block，剩下外部部分
-            info = (info[:start] + info[end + 1:]).strip()
-
-    # 2. 解析外部 tokens（shell 风格）
+    # 按顺序解析 tokens
+    tokens: list[str] = []
+    pos = 0
     try:
-        tokens = shlex.split(info, posix=True)
+        for m in _ATTR_RE.finditer(info):
+            # 非 attr_list 部分
+            before = info[pos:m.start()].strip()
+            if before:
+                tokens.extend(shlex.split(before, posix=True))
+
+            # attr_list 内部
+            inner = m.group(1)
+            if inner:
+                tokens.extend(shlex.split(inner, posix=True))
+
+            pos = m.end()
+
+        # 尾部
+        tail = info[pos:].strip()
+        if tail:
+            tokens.extend(shlex.split(tail, posix=True))
     except ValueError:
         return f"{indent}{fence} {info}"
 
-    if not tokens and not attr_tokens:
+    if not tokens:
         return f"{indent}{fence} {info}"
 
-    # 3. language 识别
+    # language 识别
     language = None
     if tokens and _looks_like_language(tokens[0]):
         language = tokens[0]
         tokens = tokens[1:]
 
-    tokens.extend(attr_tokens)
-
-    # 4. 构建 attrs
+    # 构建 attrs
     attrs: list[str] = []
     has_download = False
 
@@ -141,7 +143,7 @@ def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
     if not has_download:
         return f"{indent}{fence} {info}"
 
-    # 5. 统一输出 attr_list
+    # 统一输出 attr_list
     parts: list[str] = []
     if language:
         parts.append(f".{language}")
@@ -156,15 +158,17 @@ def _normalize_fence_opening(indent: str, fence: str, info: str) -> str:
 def _looks_like_language(token: str) -> bool:
     return (
         "=" not in token and
-        not token.startswith(".") and
-        token not in ("{", "}")
+        not token.startswith((".", "#")) and
+        not token.startswith("data-") and
+        "{" not in token and
+        "}" not in token
     )
 
 def _split_token(token: str) -> tuple[str, str | None]:
     if "=" not in token:
         return token, None
     key, value = token.split("=", 1)
-    return key, value
+    return key, value.strip('"\'')
 
 def _normalize_data_download(value: str | None) -> str:
     if value not in (None, "", "data-download"):
