@@ -213,8 +213,8 @@ For example, the following formats are all supported:
 ``` data-download="blob"
 ``` py data-download
 ``` py title="title" data-download="blob"
+``` py title="title" data-download="blob" .no-copy
 
-``` py { data-download }
 ``` py { data-download="blob" }
 ``` py { title="title0 linenums="10" hl_lines="2" data-download }
 
@@ -223,7 +223,7 @@ For example, the following formats are all supported:
 ``` py title="title3" { data-download } { hl_lines="2" } linenums="30"
 ````
 
-1.  Equivalent to blob
+1.  Equivalent to `data-download="blob"`
 
   [attr_list]: https://python-markdown.github.io/extensions/attr_list/
   [superfences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#injecting-classes-ids-and-attributes
