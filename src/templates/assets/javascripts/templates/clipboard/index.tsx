@@ -49,8 +49,18 @@ export function renderSelectionButton(): HTMLElement {
   return (
     <button
       class="md-code__button"
-      title="Toggle line selection"
+      title={translation("code.select")}
       data-md-type="select"
+    ></button>
+  )
+}
+
+export function renderDownloadButton(): HTMLElement {
+  return (
+    <button
+      class="md-code__button"
+      title={translation("code.download")}
+      data-md-type="download"
     ></button>
   )
 }

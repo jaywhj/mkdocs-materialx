@@ -180,6 +180,7 @@ markdown_extensions:
       auto_append:
         - includes/mkdocs.md
   - pymdownx.superfences:
+      relaxed_headers: true
       custom_fences:
         - name: mermaid
           class: mermaid
@@ -193,6 +194,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  # - material.extensions.code_download
 
 
 #---- 5. Page tree ----

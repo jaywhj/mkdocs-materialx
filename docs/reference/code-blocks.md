@@ -1,5 +1,6 @@
 ---
 icon: material/code-json
+status: new
 ---
 
 # Code blocks
@@ -122,6 +123,110 @@ theme:
     ````
 
   [line highlighting]: #highlighting-specific-lines
+
+### Code download button
+
+<!-- md:version 10.1.5 -->
+<!-- md:feature -->
+
+Code blocks can include a download button that supports blobs, URLs, and local file downloads.
+
+#### Enable Button
+
+Add the `data-download` attribute to the fence block header to enable download:
+
+=== "Blob"
+
+    ```` yaml { data-download="blob" }
+    ``` yaml { data-download="blob" }
+
+    markdown_extensions:
+      - material.extensions.code_download
+    ```
+    ````
+
+=== "Local File"
+
+    ```` yaml { data-download="../assets/mkdocs.yml" }
+    ``` yaml { data-download="assets/xxx.yaml" }
+
+    markdown_extensions:
+      - material.extensions.code_download
+    ```
+    ````
+
+=== "URL"
+
+    ```` yaml { data-download="https://jaywhj.github.io/mkdocs-materialx/assets/mkdocs.yml" }
+    ``` yaml { data-download="https://example.com/xxx.yaml" }  # (1)!
+
+    markdown_extensions:
+      - material.extensions.code_download
+    ```
+    ````
+
+    1.  Note: Cross-origin downloads may fall back to page redirection due to browser permission restrictions.
+
+The filename is determined by the following priority:
+
+  1. Original filename
+  2. `<title>.<lang>`
+  3. `download.<lang>` or `<title>.text`
+  4. `download.text`
+
+!!! warning "Note"
+
+    If you need to add more attributes such as `title`, `hl_lines`, and `linenums` in the fence block header, follow the standard [attr_list]{target="_blank"} syntax - **wrap all attributes inside `{ }`**:
+
+    ```` yaml
+    ``` yaml { title="config.yaml" data-download="blob" }
+    # Code block content
+    ```
+    ````
+
+    Or enable the Enhanced Extension below.
+
+#### Enhanced Extension
+
+This project upstream dependencies - [attr_list]{target="_blank"} from Python-Markdown and [superfences]{target="_blank"} from PyMdown Extensions, 
+the standard way to add attributes is to **wrap all attributes inside { }**.
+
+Previously, attributes such as `title`, `hl_lines`, and `linenums` could be used without curly braces because PyMdown added special compatibility handling exclusively for these three attributes.
+
+If you want to use this simplified syntax for **all custom attributes**, you can enable the following extension:
+
+``` yaml
+markdown_extensions:
+  - material.extensions.code_download
+```
+
+This extension supports:
+
+- Attributes defined via attr_list syntax: `{ .class key=value }`
+- Attributes declared directly in fence info strings: `linenos=true`
+- Mixed combination of the two formats: `linenos=true { .class key=value }`
+
+For example, the following formats are all supported:
+
+```` yaml
+``` data-download # (1)!
+``` data-download="blob"
+``` py data-download
+``` py title="title" data-download="blob"
+``` py title="title" data-download="blob" .no-copy
+
+``` py { data-download="blob" }
+``` py { title="title0 linenums="10" hl_lines="2" data-download }
+
+``` py title="title1" { data-download="blob" }
+``` py title="title2" { data-download hl_lines="2" } linenums="20"
+``` py title="title3" { data-download } { hl_lines="2" } linenums="30"
+````
+
+1.  Equivalent to `data-download="blob"`
+
+  [attr_list]: https://python-markdown.github.io/extensions/attr_list/
+  [superfences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#injecting-classes-ids-and-attributes
 
 ### Code annotations
 

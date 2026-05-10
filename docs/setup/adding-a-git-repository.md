@@ -49,7 +49,7 @@ automatically requested and rendered.
 #### Repository name
 
 <!-- md:version 0.1.0 -->
-<!-- md:default _automatically set to_ `GitHub`, `GitLab` _or_ `Bitbucket` -->
+<!-- md:default `GitHub`, `GitLab` _or_ `Bitbucket` -->
 
 MkDocs will infer the source provider by examining the URL and try to set the
 _repository name_ automatically. If you wish to customize the name, set
