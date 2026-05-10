@@ -186,7 +186,11 @@ After applying this configuration, an HTML link relation of type `text/markdown`
 
 !!! warning "Note"
     - This feature relies on the [`repo_url`][repo_url]{target="_blank"} and [`edit_uri`][edit_uri]{target="_blank"} settings, you need to configure both properties correctly
-    - If the default branch of your GitHub repository is `main`, add the configuration: `edit_uri: edit/main/docs/`
+    - If the default branch of your GitHub repository is `main`, add the configuration:
+
+        ``` yaml
+        edit_uri: edit/main/docs/
+        ```
 
 Related introduction: [Introducing Markdown for Agents](https://blog.cloudflare.com/zh-cn/markdown-for-agents/){target="_blank"}
 
