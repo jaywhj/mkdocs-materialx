@@ -1,4 +1,11 @@
 
+mkdocs-materialx-10.1.5 (2026-05-10)
+
+- Added Markdown page support for AI agents, see [Markdown for AI agents](https://jaywhj.github.io/mkdocs-materialx/setup/adding-a-git-repository#markdown-for-ai-agents)
+- Added download functionality for fenced code blocks, see [Code download button](https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks#code-download-button)
+- Added Lucide icons, see [Search](https://jaywhj.github.io/mkdocs-materialx/reference/icons-emojis#search)
+- Updated dependency versions
+
 mkdocs-materialx-10.1.4 (2026-04-26)
 
 - Added official Docker image, see [installation with docker](https://jaywhj.github.io/mkdocs-materialx/installation#with-docker)

@@ -178,6 +178,12 @@ theme:
     - content.action.agents
 ```
 
+After applying this configuration, an HTML link relation of type `text/markdown` will be automatically generated in the page header:
+
+``` html
+<link rel="alternate" type="text/markdown" href="https://github.com/xxx.md">
+```
+
 !!! warning "Note"
     - This feature relies on the [`repo_url`][repo_url]{target="_blank"} and [`edit_uri`][edit_uri]{target="_blank"} settings, you need to configure both properties correctly
     - If the default branch of your GitHub repository is `main`, add the configuration: `edit_uri: edit/main/docs/`

@@ -6,6 +6,13 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.5 <small>May 10, 2026</small> { id="10.1.5" }
+
+- Added Markdown page support for AI agents, see [Markdown for AI agents](../setup/adding-a-git-repository.md#markdown-for-ai-agents){target="_blank"}
+- Added download functionality for fenced code blocks, see [Code download button](../reference/code-blocks.md#code-download-button){target="_blank"}
+- Added Lucide icons, see [Search](../reference/icons-emojis.md#search){target="_blank"}
+- Updated dependency versions
+
 ### 10.1.4 <small>April 26, 2026</small> { id="10.1.4" }
 
 - Added official Docker image, see [installation with docker](../installation.md#with-docker){target="_blank"}
