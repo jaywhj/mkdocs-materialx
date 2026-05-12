@@ -120,18 +120,18 @@
 
     // Search form
     .md-search__form {
-      background-color: hsla(var(--md-hue), 0%, 0%, 0.07);
+      // background-color: hsla(var(--md-hue), 0%, 0%, 0.07);
 
       // Search form on hover
       &:hover {
-        background-color: hsla(var(--md-hue), 0%, 0%, 0.32);
+        background-color: hsla(var(--md-hue), 0%, 0%, 0.2);
       }
     }
 
-    // Search icon
-    .md-search__input + .md-search__icon {
-      color: hsla(var(--md-hue), 0%, 0%, 0.87);
-    }
+    // // Search icon
+    // .md-search__input + .md-search__icon {
+    //   color: hsla(var(--md-hue), 0%, 0%, 0.87);
+    // }
   }
 
   // [screen +]: Add bottom border for tabs
@@ -177,21 +177,21 @@
   //   background-color: hsla(var(--md-hue), 15%, 9%, 1);
   // }
 
-  // [tablet portrait -]: Layered navigation
-  @include break-to-device(tablet portrait) {
+  // // [tablet portrait -]: Layered navigation
+  // @include break-to-device(tablet portrait) {
 
-    // Repository information container
-    .md-nav__source {
-      background-color: hsla(var(--md-hue), 15%, 11%, 0.87);
-    }
-  }
+  //   // Repository information container
+  //   .md-nav__source {
+  //     background-color: hsla(var(--md-hue), 15%, 11%, 0.87);
+  //   }
+  // }
 
-  // [tablet -]: Layered navigation
-  @include break-to-device(tablet) {
+  // // [tablet -]: Layered navigation
+  // @include break-to-device(tablet) {
 
-    // Site title in main navigation
-    html & .md-nav--primary .md-nav__title[for="__drawer"] {
-      background-color: hsla(var(--md-hue), 15%, 9%, 1);
-    }
-  }
+  //   // Site title in main navigation
+  //   html & .md-nav--primary .md-nav__title[for="__drawer"] {
+  //     background-color: hsla(var(--md-hue), 15%, 9%, 1);
+  //   }
+  // }
 }

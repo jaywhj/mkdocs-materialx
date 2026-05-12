@@ -259,8 +259,9 @@
     width: px2rem(20px);
     height: px2rem(20px);
   }
-}
 
-[data-mx-topbar]:not([data-mx-topbar="glass"]) .md-header {
-  backdrop-filter: none;
+  [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
+    backdrop-filter: none;
+    box-shadow: none;
+  }
 }
