@@ -426,6 +426,7 @@
         [data-md-color-primary="yellow"]:not([data-md-color-scheme="slate"]) & {
           color: var(--md-primary-fg-color--dark);
         }
+
         // Fix contrast issues for neutral colors in specific schemes
         [data-md-color-primary="black"]:not([data-md-color-scheme="slate"]) &,
         [data-md-color-primary="white"][data-md-color-scheme="slate"] & {
