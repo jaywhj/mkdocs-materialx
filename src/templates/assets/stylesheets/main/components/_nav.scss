@@ -140,14 +140,25 @@
         background-color: var(--md-primary-fg-color--transparent);
         // Safari 15.4 之前不支持 color-mix()
         // background: color-mix(in srgb, var(--md-primary-fg-color), transparent 90%);
-      }
 
-      [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="white"] .md-nav--primary &,
-      [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="black"] .md-nav--primary & {
-        color: var(--md-primary-bg-color);
+        [data-md-color-primary="white"] &,
+        [data-md-color-primary="black"] & {
+          color: var(--md-primary-bg-color);
+  
+          @supports (color: color-mix(in srgb, black, white)) {
+            background-color: color-mix(in srgb, var(--md-primary-bg-color), transparent 90%);
+          }
+        }
 
-        @supports (color: color-mix(in srgb, black, white)) {
-          background-color: color-mix(in srgb, var(--md-primary-bg-color), transparent 90%);
+        // Use darker yellow for better readability in light mode
+        [data-md-color-primary="yellow"]:not([data-md-color-scheme="slate"]) & {
+          color: var(--md-primary-fg-color--dark);
+        }
+
+        // Fix contrast issues for neutral colors in specific schemes
+        [data-md-color-primary="black"]:not([data-md-color-scheme="slate"]) &,
+        [data-md-color-primary="white"][data-md-color-scheme="slate"] & {
+          background-color: var(--md-default-fg-color--lighter);
         }
       }
 
@@ -407,9 +418,17 @@
       &__link--active {
         color: var(--md-primary-fg-color);
 
-        [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="white"] &,
-        [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary="black"] & {
+        [data-md-color-primary="white"] &,
+        [data-md-color-primary="black"] & {
           color: var(--md-primary-bg-color);
+        }
+        [data-md-color-primary="yellow"]:not([data-md-color-scheme="slate"]) & {
+          color: var(--md-primary-fg-color--dark);
+        }
+        // Fix contrast issues for neutral colors in specific schemes
+        [data-md-color-primary="black"]:not([data-md-color-scheme="slate"]) &,
+        [data-md-color-primary="white"][data-md-color-scheme="slate"] & {
+          color: var(--md-default-fg-color);
         }
       }
     }

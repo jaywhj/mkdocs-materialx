@@ -151,9 +151,9 @@
       transform: translateY(50%);
     }
   }
-}
 
-[data-mx-topbar]:not([data-mx-topbar="glass"]) .md-tabs {
-  backdrop-filter: none;
-  box-shadow: none;
+  [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
+    backdrop-filter: none;
+    box-shadow: none;
+  }
 }
