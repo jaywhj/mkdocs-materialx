@@ -71,27 +71,27 @@ theme:
 Click on a tile to change the primary color:
 
 <div class="mdx-switch">
-  <button data-md-color-primary="red"><code>red</code></button>
-  <button data-md-color-primary="pink"><code>pink</code></button>
-  <button data-md-color-primary="purple"><code>purple</code></button>
-  <button data-md-color-primary="deep-purple"><code>deep purple</code></button>
-  <button data-md-color-primary="indigo"><code>indigo</code></button>
-  <button data-md-color-primary="blue"><code>blue</code></button>
-  <button data-md-color-primary="light-blue"><code>light blue</code></button>
-  <button data-md-color-primary="cyan"><code>cyan</code></button>
-  <button data-md-color-primary="teal"><code>teal</code></button>
-  <button data-md-color-primary="green"><code>green</code></button>
-  <button data-md-color-primary="light-green"><code>light green</code></button>
-  <button data-md-color-primary="lime"><code>lime</code></button>
-  <button data-md-color-primary="yellow"><code>yellow</code></button>
-  <button data-md-color-primary="amber"><code>amber</code></button>
-  <button data-md-color-primary="orange"><code>orange</code></button>
-  <button data-md-color-primary="deep-orange"><code>deep orange</code></button>
-  <button data-md-color-primary="brown"><code>brown</code></button>
-  <button data-md-color-primary="grey"><code>grey</code></button>
-  <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
-  <button data-md-color-primary="black"><code>black</code></button>
-  <button data-md-color-primary="white"><code>white</code></button>
+  <button data-md-color-primary="red" data-mx-topbar="glass"><code>red</code></button>
+  <button data-md-color-primary="pink" data-mx-topbar="glass"><code>pink</code></button>
+  <button data-md-color-primary="purple" data-mx-topbar="glass"><code>purple</code></button>
+  <button data-md-color-primary="deep-purple" data-mx-topbar="glass"><code>deep purple</code></button>
+  <button data-md-color-primary="indigo" data-mx-topbar="glass"><code>indigo</code></button>
+  <button data-md-color-primary="blue" data-mx-topbar="glass"><code>blue</code></button>
+  <button data-md-color-primary="light-blue" data-mx-topbar="glass"><code>light blue</code></button>
+  <button data-md-color-primary="cyan" data-mx-topbar="glass"><code>cyan</code></button>
+  <button data-md-color-primary="teal" data-mx-topbar="glass"><code>teal</code></button>
+  <button data-md-color-primary="green" data-mx-topbar="glass"><code>green</code></button>
+  <button data-md-color-primary="light-green" data-mx-topbar="glass"><code>light green</code></button>
+  <button data-md-color-primary="lime" data-mx-topbar="glass"><code>lime</code></button>
+  <button data-md-color-primary="yellow" data-mx-topbar="glass"><code>yellow</code></button>
+  <button data-md-color-primary="amber" data-mx-topbar="glass"><code>amber</code></button>
+  <button data-md-color-primary="orange" data-mx-topbar="glass"><code>orange</code></button>
+  <button data-md-color-primary="deep-orange" data-mx-topbar="glass"><code>deep orange</code></button>
+  <button data-md-color-primary="brown" data-mx-topbar="glass"><code>brown</code></button>
+  <button data-md-color-primary="grey" data-mx-topbar="glass"><code>grey</code></button>
+  <button data-md-color-primary="blue-grey" data-mx-topbar="glass"><code>blue grey</code></button>
+  <button data-md-color-primary="black" data-mx-topbar="glass"><code>black</code></button>
+  <button data-md-color-primary="white" data-mx-topbar="glass"><code>white</code></button>
 </div>
 
 <script>
@@ -164,6 +164,74 @@ Click on a tile to change the accent color:
 </script>
 
 See our guide below to learn how to set [custom colors].
+
+#### Topbar style
+
+<!-- md:version 10.0.9 -->
+
+In Liquid Glass theme, the topbar (header + tabs) will always be frosted transparent color by default. If you need to set the background color of the topbar to follow `primary` or `accent`, configure it via `topbar_style`:
+
+<!-- md:option theme.topbar_style -->
+
+:   <!-- md:default `glass` --> This property is used to set the background color of the topbar.
+    Valid values are `glass`, `primary`, `accent`:
+
+    ``` yaml hl_lines="2"
+    theme:
+      topbar_style: primary   # glass primary accent
+      palette:
+        primary: indigo
+    ```
+
+Click on a tile to change the topbar style to `primary`:
+
+<div class="mdx-switch">
+  <button data-md-color-primary="red" data-mx-topbar="primary"><code>red</code></button>
+  <button data-md-color-primary="pink" data-mx-topbar="primary"><code>pink</code></button>
+  <button data-md-color-primary="purple" data-mx-topbar="primary"><code>purple</code></button>
+  <button data-md-color-primary="deep-purple" data-mx-topbar="primary"><code>deep purple</code></button>
+  <button data-md-color-primary="indigo" data-mx-topbar="primary"><code>indigo</code></button>
+  <button data-md-color-primary="blue" data-mx-topbar="primary"><code>blue</code></button>
+  <button data-md-color-primary="light-blue" data-mx-topbar="primary"><code>light blue</code></button>
+  <button data-md-color-primary="cyan" data-mx-topbar="primary"><code>cyan</code></button>
+  <button data-md-color-primary="teal" data-mx-topbar="primary"><code>teal</code></button>
+  <button data-md-color-primary="green" data-mx-topbar="primary"><code>green</code></button>
+  <button data-md-color-primary="light-green" data-mx-topbar="primary"><code>light green</code></button>
+  <button data-md-color-primary="lime" data-mx-topbar="primary"><code>lime</code></button>
+  <button data-md-color-primary="yellow" data-mx-topbar="primary"><code>yellow</code></button>
+  <button data-md-color-primary="amber" data-mx-topbar="primary"><code>amber</code></button>
+  <button data-md-color-primary="orange" data-mx-topbar="primary"><code>orange</code></button>
+  <button data-md-color-primary="deep-orange" data-mx-topbar="primary"><code>deep orange</code></button>
+  <button data-md-color-primary="brown" data-mx-topbar="primary"><code>brown</code></button>
+  <button data-md-color-primary="grey" data-mx-topbar="primary"><code>grey</code></button>
+  <button data-md-color-primary="blue-grey" data-mx-topbar="primary"><code>blue grey</code></button>
+  <button data-md-color-primary="black" data-mx-topbar="primary"><code>black</code></button>
+  <button data-md-color-primary="white" data-mx-topbar="primary"><code>white</code></button>
+</div>
+
+Click on a tile to change the topbar style to `glass`:
+
+<div class="mdx-switch">
+  <button data-mx-topbar="glass"><code>glass</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-mx-topbar]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var topbarAttr = this.getAttribute("data-mx-topbar")
+      document.body.setAttribute("data-mx-topbar", topbarAttr)
+      var primaryAttr = this.getAttribute("data-md-color-primary")
+      if (primaryAttr) {
+        document.body.setAttribute("data-md-color-primary", primaryAttr)
+        var name = document.querySelector("#__span-3-4 .l-Scalar-Plain")
+        if (name) {
+          name.textContent = primaryAttr.replace("-", " ")
+        }
+      }
+    })
+  })
+</script>
 
 ### Color palette toggle
 
@@ -323,24 +391,6 @@ theme:
 MaterialX for MkDocs will now change the color palette each time the operating
 system switches between light and dark appearance, even when the user doesn't
 reload the site.
-
-### Topbar style
-
-<!-- md:version 10.0.9 -->
-
-In Liquid Glass theme, the topbar (header + tabs) will always be frosted transparent color by default. If you need to set the background color of the topbar to follow `primary` or `accent`, configure it via `topbar_style`:
-
-<!-- md:option theme.topbar_style -->
-
-:   <!-- md:default `glass` --> This property is used to set the background color of the topbar.
-    Valid values are `glass`, `primary`, `accent`:
-
-    ``` yaml hl_lines="2"
-    theme:
-      topbar_style: primary   # glass primary accent
-      palette:
-        primary: indigo
-    ```
 
 ## Customization
 
