@@ -129,12 +129,10 @@ icon: material/layers-triple-outline
 - Fixed: Replace the gap attribute to increase compatibility
 - Fixed: Adjust the style of kbd shortcuts
 - Fixed: Adjust UI shadow effect
-- Fixed: Merge the upstream 9.7.1 update
-- Fixed: Update Doc Site, see [MaterialX](https://jaywhj.github.io/mkdocs-materialx/)
 
 ### 10.0.3 <small>December 11, 2025</small> { id="10.0.3" }
 
-- New: Added Liquid Glass theme, a modern theme identical to Zensical
+- New: Added Liquid Glass theme
 - New: Adjusted the maximum height of the language selection box to display more language options without scrolling
 - New: Added indentation guide lines to the TOC for more intuitive navigation
 - New: Applied the same accent color as the nav to active links in the TOC for clear progress tracking
