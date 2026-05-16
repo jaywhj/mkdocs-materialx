@@ -29,6 +29,8 @@
   --md-code-select-icon: svg-load("lucide/focus.svg");
   --md-code-copy-icon: svg-load("lucide/copy.svg");
   --md-code-download-icon: svg-load("lucide/download.svg");
+  --md-code-expand-icon: svg-load("material/arrow-expand.svg");
+  --md-code-collapse-icon: svg-load("material/arrow-collapse.svg");
   // --md-code-wrap-icon: svg-load("material/wrap-disabled.svg");
 }
 
@@ -118,5 +120,76 @@
     &[data-md-type="download"]::after {
       mask-image: var(--md-code-download-icon);
     }
+  }
+}
+
+// Collapsible code blocks
+.md-code--collapsible {
+  position: relative;
+
+  > code {
+    transition: max-height 250ms ease;
+  }
+
+  &.md-code--collapsed {
+    > code {
+      max-height: var(--md-code-fold-max-height);
+      overflow: hidden;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      height: px2rem(80px);
+      pointer-events: none;
+      content: "";
+      background:
+        linear-gradient(to bottom, transparent, var(--md-default-bg-color) 90% 100%);
+    }
+  }
+}
+
+.md-code__toggle {
+  position: absolute;
+  right: 3%;
+  bottom: px2rem(4px);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: px2em(32px);
+  height: px2em(32px);
+  color: var(--md-accent-fg-color);
+  // background-color: var(--md-accent-fg-color--transparent);
+  cursor: pointer;
+  border: 0;
+  outline-color: var(--md-accent-fg-color);
+  outline-offset: px2rem(2px);
+  transition:
+    background-color 250ms,
+    color 250ms;
+  transform: translateX(50%);
+
+  &:is(.focus-visible, :hover) {
+    color: var(--md-accent-fg-color);
+  }
+
+  &::after {
+    display: block;
+    width: px2em(18px);
+    height: px2em(18px);
+    content: "";
+    background-color: currentcolor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: var(--md-code-collapse-icon);
+  }
+
+  .md-code--collapsed &::after {
+    mask-image: var(--md-code-expand-icon);
   }
 }

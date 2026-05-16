@@ -476,7 +476,8 @@
           "search": "assets/javascripts/workers/search.js" | url,
           "annotate": _.annotate or none,
           "tags": _.tags or none,
-          "version": _.version or none
+          "version": _.version or none,
+          "code": config.theme.code or none
         } | tojson -}}
       </script>
     {% endblock %}

@@ -50,7 +50,7 @@ import {
   withLatestFrom
 } from "rxjs"
 
-import { feature } from "~/_"
+import { configuration, feature } from "~/_"
 import {
   getElement,
   getElementContentSize,
@@ -249,6 +249,55 @@ function downloadBlob(text: string, filename: string) {
 function downloadFromUrl(source: string) {
   const url = new URL(source, window.location.href)
   triggerDownload(url.toString(), "")
+}
+
+/* ----------------------------------------------------------------------------
+ * Code folding helpers
+ * ------------------------------------------------------------------------- */
+
+const DEFAULT_CODE_FOLD_LINES = 12
+
+function parseFoldLines(value: string | null | undefined): number | undefined {
+  const raw = (value || "").trim()
+  if (!raw)
+    return undefined
+
+  const lines = Number(raw)
+  if (!Number.isFinite(lines))
+    return undefined
+
+  return Math.max(0, Math.round(lines))
+}
+
+function resolveFoldThreshold(container?: HTMLElement): number | undefined {
+  const foldConfig = configuration().code?.fold
+  if (!foldConfig?.enabled) {
+    return undefined
+  }
+
+  const fromConfig = foldConfig.lines
+  let threshold = Number.isFinite(fromConfig)
+    ? Math.max(0, Math.round(fromConfig!))
+    : DEFAULT_CODE_FOLD_LINES
+
+  const fromContainer = parseFoldLines(
+    container?.getAttribute("data-fold")
+  )
+
+  if (typeof fromContainer !== "undefined")
+    threshold = fromContainer
+
+  return threshold
+}
+
+function getCodeLineCount(el: HTMLElement, spans: HTMLElement[]): number {
+  if (spans.length)
+    return spans.length
+
+  const text = getCodeText(el)
+  return text
+    ? text.split(/\r?\n/).length
+    : 0
 }
 
 /* ----------------------------------------------------------------------------
@@ -557,6 +606,48 @@ export function mountCodeBlock(
           }))
         })
       }
+    }
+
+    /* Mount code folding toggle for long code blocks */
+    const foldThreshold = resolveFoldThreshold(
+      container instanceof HTMLElement
+        ? container
+        : undefined
+    )
+    const lineCount = getCodeLineCount(el, spans)
+    if (foldThreshold && foldThreshold > 0 && lineCount > foldThreshold) {
+      const style = getComputedStyle(el)
+      const fontSize = parseFloat(style.fontSize) || 13.6
+      const lineHeight = parseFloat(style.lineHeight) || (fontSize * 1.4)
+      const paddingTop = parseFloat(style.paddingTop) || 0
+      const paddingBottom = parseFloat(style.paddingBottom) || 0
+      const visibleHeight = Math.ceil(
+        lineHeight * foldThreshold +
+        paddingTop +
+        paddingBottom
+      )
+
+      parent.classList.add("md-code--collapsible", "md-code--collapsed")
+      parent.style.setProperty("--md-code-fold-max-height", `${visibleHeight}px`)
+
+      const button = document.createElement("button")
+      button.type = "button"
+      button.className = "md-code__toggle"
+      button.setAttribute("aria-controls", parent.id)
+
+      const setCollapsed = (collapsed: boolean) => {
+        parent.classList.toggle("md-code--collapsed", collapsed)
+        button.setAttribute("aria-expanded", (!collapsed).toString())
+      }
+
+      setCollapsed(true)
+      fromEvent(button, "click")
+        .pipe(takeUntil(done$))
+        .subscribe(() => {
+          setCollapsed(!parent.classList.contains("md-code--collapsed"))
+        })
+
+      parent.append(button)
     }
 
     /* Render button for Clipboard.js integration */

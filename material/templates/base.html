@@ -74,7 +74,11 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
+<<<<<<< HEAD
       <link rel="stylesheet" href="{{ 'assets/stylesheets/main.de79a566.min.css' | url }}">
+=======
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.6096c974.min.css' | url }}">
+>>>>>>> 9137a93d8 (Collapse code blocks)
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.ffc1733b.min.css' | url }}">
@@ -275,12 +279,13 @@
           "search": "assets/javascripts/workers/search.2c215733.min.js" | url,
           "annotate": _.annotate or none,
           "tags": _.tags or none,
-          "version": _.version or none
+          "version": _.version or none,
+          "code": config.theme.code or none
         } | tojson -}}
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.1a8646e9.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.f3b9f308.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}

@@ -93,6 +93,21 @@ export interface Versioning {
 }
 
 /**
+ * Code folding configuration
+ */
+export interface CodeFolding {
+  enabled?: boolean                    // Global fold switch
+  lines?: number                       // Fold line threshold
+}
+
+/**
+ * Code configuration
+ */
+export interface Code {
+  fold?: CodeFolding                   /* Code folding */
+}
+
+/**
  * Configuration
  */
 export interface Config {
@@ -103,6 +118,7 @@ export interface Config {
   annotate?: Record<string, string[]>  /* Annotation mappings */
   tags?: Record<string, string>        /* Tags mapping */
   version?: Versioning                 /* Versioning */
+  code?: Code                          /* Code settings */
 }
 
 /* ----------------------------------------------------------------------------

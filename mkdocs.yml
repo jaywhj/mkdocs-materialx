@@ -36,6 +36,9 @@ extra:
 theme:
   name: materialx
   custom_dir: material/overrides
+  code:
+    fold:
+      enabled: true
   features:
     - content.action.edit
     - content.action.view
