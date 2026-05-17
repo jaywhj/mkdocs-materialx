@@ -29,8 +29,6 @@
   --md-code-select-icon: svg-load("lucide/focus.svg");
   --md-code-copy-icon: svg-load("lucide/copy.svg");
   --md-code-download-icon: svg-load("lucide/download.svg");
-  --md-code-expand-icon: svg-load("material/arrow-expand.svg");
-  --md-code-collapse-icon: svg-load("material/arrow-collapse.svg");
   // --md-code-wrap-icon: svg-load("material/wrap-disabled.svg");
 }
 
@@ -152,44 +150,25 @@
   }
 }
 
+// Code block toggle button
 .md-code__toggle {
-  position: absolute;
-  right: 3%;
-  bottom: px2rem(4px);
-  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: px2em(32px);
-  height: px2em(32px);
-  color: var(--md-accent-fg-color);
-  // background-color: var(--md-accent-fg-color--transparent);
+  padding: px2rem(6px) px2rem(12px);
+  margin: px2rem(8px) auto 0;
+  font-size: px2em(13.6px);
+  color: var(--md-default-fg-color--light);
   cursor: pointer;
-  border: 0;
-  outline-color: var(--md-accent-fg-color);
-  outline-offset: px2rem(2px);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: px2rem(8px);
   transition:
     background-color 250ms,
-    color 250ms;
-  transform: translateX(50%);
+    color 250ms,
+    border-color 250ms;
 
   &:is(.focus-visible, :hover) {
     color: var(--md-accent-fg-color);
-  }
-
-  &::after {
-    display: block;
-    width: px2em(18px);
-    height: px2em(18px);
-    content: "";
-    background-color: currentcolor;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    mask-image: var(--md-code-collapse-icon);
-  }
-
-  .md-code--collapsed &::after {
-    mask-image: var(--md-code-expand-icon);
+    border-color: var(--md-accent-fg-color);
   }
 }
