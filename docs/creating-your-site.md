@@ -174,7 +174,11 @@ technical writing experience.
 
 If you find it tedious to configure them one by one, you can use the configuration template that this site uses itself to lower the barrier to entry.
 
-Download the template [mkdocs.yml](assets/mkdocs.yml), replace the personalized parts in the template with your own, and leave all other options unchanged.
+Download mkdocs.yml and replace the personalized parts in the template with your own, and leave all other options unchanged.
+
+```yaml { title="mkdocs.yaml" data-download }
+-8<- "assets/mkdocs.yml"
+```
 
 ## Previewing as you write
 

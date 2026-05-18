@@ -50,7 +50,7 @@ import {
   withLatestFrom
 } from "rxjs"
 
-import { configuration, feature } from "~/_"
+import { configuration, feature, translation } from "~/_"
 import {
   getElement,
   getElementContentSize,
@@ -647,10 +647,10 @@ export function mountCodeBlock(
         button.classList.toggle("md-code__toggle--collapsed", collapsed)
         button.setAttribute("aria-expanded", (!collapsed).toString())
         if (collapsed) {
-          textSpan.textContent = `展开剩余 ${remainingLines} 行`
+          textSpan.textContent = translation("code.expand", remainingLines)
           // parent.scrollIntoView({ behavior: "auto", block: "start" })
         } else {
-          textSpan.textContent = "收起"
+          textSpan.textContent = translation("code.collapse")
         }
       }
 

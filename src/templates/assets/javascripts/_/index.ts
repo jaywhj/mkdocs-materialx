@@ -65,6 +65,8 @@ export type Translation =
   | "clipboard.copy"                   /* Copy to clipboard */
   | "clipboard.copied"                 /* Copied to clipboard */
   | "code.download"                    /* Download code block */
+  | "code.collapse"                    /* Collapse code block */
+  | "code.expand"                      /* Expand code block */
   | "code.select"                      /* Toggle line selection */
   | "search.result.placeholder"        /* Type to start searching */
   | "search.result.none"               /* No matching documents */

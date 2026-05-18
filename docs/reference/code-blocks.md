@@ -228,6 +228,74 @@ For example, the following formats are all supported:
   [attr_list]: https://python-markdown.github.io/extensions/attr_list/
   [superfences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#injecting-classes-ids-and-attributes
 
+### Code collapse & expand
+
+<!-- md:version 10.1.6 -->
+<!-- md:feature -->
+
+Enable automatic long code block folding to improve the reading experience of articles containing lengthy code snippets:
+
+``` yaml { hl_lines="3-5" }
+theme:
+  name: materialx
+  code:
+    fold:
+      enabled: true
+```
+
+The default value is `false`, code folding is enabled when set to `true`, and all code blocks exceeding **12** lines (the default threshold) will be automatically folded.
+
+#### Change Default Threshold
+
+To modify the default folding threshold of **12** lines, configure it via `code.fold.lines`:
+
+``` yaml { hl_lines="6" }
+theme:
+  name: materialx
+  code:
+    fold:
+      enabled: true
+      lines: 15
+```
+
+#### Set Individual Threshold
+
+To specify a separate folding threshold for a single code block, use the `data-fold-lines` attribute in the fence block header:
+
+```` yaml { hl_lines="1" data-fold-lines="0" }
+``` yaml { data-fold-lines="10" }
+theme:
+  admonition:
+    git:
+      icon: simple/git
+      color: '#f34f29'
+    copyright:
+      icon: material/copyright
+      color: '#2b9b9b'
+    heart:
+      icon: octicons/heart-24
+      color: '#9b2b9b'
+    lyrics:
+      icon: material/microphone
+      color: '#2b2b9b'
+    soundcloud:
+      icon: simple/soundcloud
+      color: '#ff7700'
+```
+````
+
+In this case, this code block uses a threshold of 10 lines, while others remain at the default value.
+
+#### Disable Folding for Specific Blocks
+
+To disable folding for a code block that exceeds the global threshold, set `data-fold-lines` to `0` in its fence block header:
+
+```` yaml { hl_lines="1" data-fold-lines="0" }
+``` yaml { data-fold-lines="0" }
+
+```
+````
+
 ### Code annotations
 
 <!-- md:version 8.0.0 -->
