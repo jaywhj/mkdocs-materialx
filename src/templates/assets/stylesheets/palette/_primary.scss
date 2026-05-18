@@ -134,14 +134,14 @@
     // }
   }
 
-  // [screen +]: Add bottom border for tabs
-  @include break-from-device(screen) {
+  // // [screen +]: Add bottom border for tabs
+  // @include break-from-device(screen) {
 
-    // Navigation tabs
-    .md-tabs {
-      border-bottom: px2rem(1px) solid hsla(0, 0%, 0%, 0.07);
-    }
-  }
+  //   // Navigation tabs
+  //   .md-tabs {
+  //     border-bottom: px2rem(1px) solid hsla(0, 0%, 0%, 0.07);
+  //   }
+  // }
 }
 
 // ----------------------------------------------------------------------------

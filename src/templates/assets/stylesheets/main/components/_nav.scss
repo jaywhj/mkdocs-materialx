@@ -410,6 +410,9 @@
           [data-mx-topbar]:not([data-mx-topbar="glass"]) & {
             color: var(--mx-topbar-fg);
             background-color: var(--mx-topbar-bg);
+          }
+
+          [data-mx-topbar]:not([data-mx-topbar="glass"])[data-md-color-primary]:not([data-md-color-primary="white"]) & {
             border-bottom: none;
           }
         }
