@@ -262,6 +262,8 @@
             "clipboard.copy": lang.t("clipboard.copy"),
             "clipboard.copied": lang.t("clipboard.copied"),
             "code.download": lang.t("code.download"),
+            "code.collapse": lang.t("code.collapse"),
+            "code.expand": lang.t("code.expand"),
             "code.select": lang.t("code.select"),
             "search.result.placeholder": lang.t("search.result.placeholder"),
             "search.result.none": lang.t("search.result.none"),
@@ -281,7 +283,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.5b34b4f3.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.ecbf6a72.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}
