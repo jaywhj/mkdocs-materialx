@@ -406,7 +406,7 @@ You can configure the icon and color for each built-in admonition type, and also
 
 === "Example 2: Create new admonitions"
 
-    ``` yaml
+    ``` yaml { data-fold-lines="0" }
     theme:
       admonition:
         git:

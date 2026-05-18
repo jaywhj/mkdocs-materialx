@@ -281,7 +281,7 @@ function resolveFoldThreshold(container?: HTMLElement): number | undefined {
     : DEFAULT_CODE_FOLD_LINES
 
   const fromContainer = parseFoldLines(
-    container?.getAttribute("data-fold")
+    container?.getAttribute("data-fold-lines")
   )
 
   if (typeof fromContainer !== "undefined")
@@ -648,6 +648,7 @@ export function mountCodeBlock(
         button.setAttribute("aria-expanded", (!collapsed).toString())
         if (collapsed) {
           textSpan.textContent = `展开剩余 ${remainingLines} 行`
+          // parent.scrollIntoView({ behavior: "auto", block: "start" })
         } else {
           textSpan.textContent = "收起"
         }
@@ -657,7 +658,24 @@ export function mountCodeBlock(
       fromEvent(button, "click")
         .pipe(takeUntil(done$))
         .subscribe(() => {
-          setCollapsed(!parent.classList.contains("md-code--collapsed"))
+          button.blur()
+
+          const collapsed = parent.classList.contains("md-code--collapsed")
+          // Expand
+          if (collapsed) {
+            setCollapsed(false)
+            return
+          }
+
+          // Collapse and scroll back to code block top
+          const header = document.querySelector(".md-header")
+          const headerHeight = header ? (header as HTMLElement).offsetHeight : 0
+          const top = parent.getBoundingClientRect().top + window.scrollY - headerHeight
+          setCollapsed(true)
+          window.scrollTo({
+            top,
+            behavior: "auto"
+          })
         })
 
       // Insert button after the parent (code block)
