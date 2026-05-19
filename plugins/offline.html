@@ -43,10 +43,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.de79a566.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca5a345c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ffc1733b.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a45159b5.min.css">
       
     
     
@@ -4123,14 +4123,14 @@
 <h1 id="built-in-offline-plugin">Built-in offline plugin<a class="headerlink" href="#built-in-offline-plugin" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00"></time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-04-28"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-04-28T16:41:22+00:00"></time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Edwin Amsler" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:EdwinGuy@GMail.com&quot;&gt;Edwin Amsler&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="EdwinGuy@GMail.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
-<p><a href="https://www.mkdocs.org">MkDocs</a> is one of the few frameworks that supports building
+<p>[MkDocs][mkdocs] is one of the few frameworks that supports building
 offline-capable documentation that can be directly viewed by the user – no
 server needed. With the offline plugin, you can distribute the
-<a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a> as a downloadable <code>.zip</code> file while
+[<code>site</code> directory][mkdocs.site_dir] as a downloadable <code>.zip</code> file while
 retaining most interactive functionality.</p>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
 <h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
-<p>After <a href="../creating-your-site.html#building-your-site">building your project</a>, switch to the <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a>
+<p>After <a href="../creating-your-site.html#building-your-site">building your project</a>, switch to the [<code>site</code> directory][mkdocs.site_dir]
 and open <code>index.html</code> in your browser – you're now viewing your documentation
 from your local file system! Most browsers will denote this by showing <code>file://</code>
 in the address bar. However, you'll realize that the site search is gone.</p>
@@ -4144,7 +4144,8 @@ message like:</p>
 interactivity of your project. The offline plugin makes sure that site search
 keeps working by moving the search index to a JavaScript file, and leveraging
 <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/squidfunk" title="GitHub User: squidfunk">@squidfunk</a>'s <a href="https://github.com/squidfunk/iframe-worker">iframe-worker</a> shim.</p>
-<p>Additionally, the plugin automatically disables the <a href="https://www.mkdocs.org/user-guide/configuration/#use_directory_urls"><code>use_directory_urls</code></a> setting, ensuring that users can open your
+<p>Additionally, the plugin automatically disables the [<code>use_directory_urls</code>]
+[mkdocs.use_directory_urls] setting, ensuring that users can open your
 documentation directly from the local file system.</p>
 <p>There are some <a href="#limitations">limitations</a>.</p>
 <h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
@@ -4193,7 +4194,7 @@ installed.</p>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
 If you want to build online- as well as offline-capable documentation, it's a
-good idea to use an <a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">environment variable</a>:</p>
+good idea to use an [environment variable][mkdocs.env]:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">offline</span><span class="p">:</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">OFFLINE</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
@@ -4363,11 +4364,11 @@ of configuration.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump b
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.action.view", "content.action.agents", "content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tooltips", "navigation.tabs", "navigation.sections", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "code.download": "Download", "code.select": "Toggle line selection", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "code": {"fold": {"enabled": true, "lines": 15}}, "features": ["content.action.edit", "content.action.view", "content.action.agents", "content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tooltips", "navigation.tabs", "navigation.sections", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "code.collapse": "Collapse", "code.download": "Download", "code.expand": "Expand remaining # lines", "code.select": "Toggle line selection", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
   
-      <script src="../assets/javascripts/bundle.1a8646e9.min.js"></script>
+      <script src="../assets/javascripts/bundle.ecbf6a72.min.js"></script>
       
         <script src="../assets/document_dates/core/timeago.min.js"></script>
       
@@ -4386,7 +4387,7 @@ of configuration.&nbsp;<a class="footnote-backref" href="#fnref:1" title="Jump b
         <script src="../assets/document_dates/core/core.js"></script>
       
     
-  <script src="../assets/javascripts/custom.ce511e7e.min.js"></script>
+  <script src="../assets/javascripts/custom.c41085fd.min.js"></script>
 
   
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
