@@ -233,7 +233,7 @@ For example, the following formats are all supported:
 <!-- md:version 10.1.6 -->
 <!-- md:feature -->
 
-Enable automatic long code block folding to improve the reading experience of articles containing lengthy code snippets:
+When an article contains long code blocks, you can enable automatic code folding to improve the overall reading experience:
 
 ``` yaml { hl_lines="3-5" }
 theme:
@@ -247,7 +247,7 @@ The default value is `false`, code folding is enabled when set to `true`, and al
 
 #### Change Default Threshold
 
-To modify the default folding threshold of **12** lines, configure it via `code.fold.lines`:
+If you want to change the default folding threshold (12 lines), you can configure it via `code.fold.lines`.
 
 ``` yaml { hl_lines="6" }
 theme:
@@ -260,9 +260,9 @@ theme:
 
 #### Set Individual Threshold
 
-To specify a separate folding threshold for a single code block, use the `data-fold-lines` attribute in the fence block header:
+If you want to set a custom folding threshold for a specific code block, you can use the `data-fold-lines` attribute in the fence block header:
 
-```` yaml { hl_lines="1" data-fold-lines="0" }
+```` yaml { hl_lines="1" data-fold-lines="10" }
 ``` yaml { data-fold-lines="10" }
 theme:
   admonition:
@@ -288,11 +288,27 @@ In this case, this code block uses a threshold of 10 lines, while others remain 
 
 #### Disable Folding for Specific Blocks
 
-To disable folding for a code block that exceeds the global threshold, set `data-fold-lines` to `0` in its fence block header:
+If you want to disable folding for a specific code block that exceeds the threshold, set `data-fold-lines` to `0` in its fence block header:
 
 ```` yaml { hl_lines="1" data-fold-lines="0" }
 ``` yaml { data-fold-lines="0" }
-
+theme:
+  admonition:
+    git:
+      icon: simple/git
+      color: '#f34f29'
+    copyright:
+      icon: material/copyright
+      color: '#2b9b9b'
+    heart:
+      icon: octicons/heart-24
+      color: '#9b2b9b'
+    lyrics:
+      icon: material/microphone
+      color: '#2b2b9b'
+    soundcloud:
+      icon: simple/soundcloud
+      color: '#ff7700'
 ```
 ````
 
