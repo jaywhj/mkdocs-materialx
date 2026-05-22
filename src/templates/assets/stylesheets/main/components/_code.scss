@@ -167,8 +167,20 @@
     color 250ms,
     border-color 250ms;
 
-  &:is(.focus-visible, :hover) {
+  &.focus-visible {
     color: var(--md-accent-fg-color);
     border-color: var(--md-accent-fg-color);
+  }
+
+  &:active {
+    color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--md-accent-fg-color);
+      border-color: var(--md-accent-fg-color);
+    }
   }
 }
