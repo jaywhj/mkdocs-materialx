@@ -62,6 +62,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 ## MaterialX Update Highlights
 
+- Markdown page support for AI agents and enhanced sitemap
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
     - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
@@ -70,13 +71,14 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Supports multiple flexible layout styles (list, detail, grid)
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK + space-separated languages)
-- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (Zensical has no TOC feature on mobile)
+- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (Better interactive experience)
 - Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (severely harmed UX and caused frequent misoperations, unresolved in both Zensical and Material)
 - Significantly polished the UX and details on mobile devices
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
     - Optimized the show/hide sensitivity of the "Back to top" container
     - Added indent guide lines and active link accent colors for the TOC
 - Added the modern Liquid Glass theme, allows setting the topbar background color in this theme to support backgrounds with different color schemes, see [Topbar style](setup/changing-the-colors.md#topbar-style){target="_blank"}
+- Code block download & automatic collapse/expand for long code blocks
 - For more details, see [Changelog](changelog/index.md){target="_blank"}
 
 ## Quick Start
