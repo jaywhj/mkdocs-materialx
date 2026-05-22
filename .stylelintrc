@@ -72,6 +72,9 @@
       true,
       {
         "ignoreProperties": [
+          "mask-image",
+          "mask-repeat",
+          "mask-size",
           "line-clamp",
           "box-orient",
           "backdrop-filter"

@@ -123,30 +123,30 @@
 
 // Collapsible code blocks
 .md-code--collapsible {
-  position: relative;
-
   > code {
+    // Safari / iOS compatibility
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
     transition: max-height 250ms ease;
   }
 
-  &.md-code--collapsed {
-    > code {
-      max-height: var(--md-code-fold-max-height);
-      overflow: hidden;
-    }
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 3;
-      height: px2rem(80px);
-      pointer-events: none;
-      content: "";
-      background:
-        linear-gradient(to bottom, transparent, var(--md-default-bg-color) 90% 100%);
-    }
+  &.md-code--collapsed > code {
+    max-height: var(--md-code-fold-max-height);
+    overflow: hidden;
+    -webkit-mask-image:
+      linear-gradient(
+        to bottom,
+        #000000 calc(100% - #{px2rem(80px)}),
+        transparent 96% 100%
+      );
+    mask-image:
+      linear-gradient(
+        to bottom,
+        #000000 calc(100% - #{px2rem(80px)}),
+        transparent 96% 100%
+      );
   }
 }
 
