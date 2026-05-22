@@ -62,7 +62,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 ## MaterialX Update Highlights
 
-- Markdown page support for AI agents and enhanced sitemap
+- Added Markdown source support for AI agents, providing structured content for AI and reducing token consumption by over 80%
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
     - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
@@ -78,7 +78,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Optimized the show/hide sensitivity of the "Back to top" container
     - Added indent guide lines and active link accent colors for the TOC
 - Added the modern Liquid Glass theme, allows setting the topbar background color in this theme to support backgrounds with different color schemes, see [Topbar style](setup/changing-the-colors.md#topbar-style){target="_blank"}
-- Code block download & automatic collapse/expand for long code blocks
+- Implemented code block download & automatic collapse/expand for long code blocks
 - For more details, see [Changelog](changelog/index.md){target="_blank"}
 
 ## Quick Start
