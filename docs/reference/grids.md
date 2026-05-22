@@ -87,7 +87,7 @@ List elements can contain arbitrary Markdown, as long as the surrounding `div`
 defines the `markdown` attribute. Following is a more complex example, which
 includes icons and links:
 
-``` html title="Card grid, complex example"
+``` html { title="Card grid, complex example" data-fold-lines="0" }
 <div class="grid cards" markdown>
 
 -   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
@@ -232,7 +232,7 @@ Generic grids allow for arranging arbitrary block elements in a grid, including
 [admonitions], [code blocks], [content tabs] and more. Just wrap a set of blocks
 by using a `div` with the `grid` class:
 
-```` html title="Generic grid"
+```` html { title="Generic grid" data-fold-lines="0" }
 <div class="grid" markdown>
 
 === "Unordered list"

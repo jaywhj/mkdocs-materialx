@@ -59,7 +59,7 @@ A simple [feedback widget] can be included at the bottom of each page,
 encouraging users to give instant feedback whether a page was helpful or not.
 Add the following lines to `mkdocs.yml`:
 
-``` yaml
+``` yaml { data-fold-lines="0" }
 extra:
   analytics: # (1)!
     feedback:
