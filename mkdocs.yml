@@ -183,6 +183,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path:
         - docs
+        - .
       auto_append:
         - includes/mkdocs.md
   - pymdownx.superfences:
