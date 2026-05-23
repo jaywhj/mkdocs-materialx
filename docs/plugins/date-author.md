@@ -664,7 +664,7 @@ def on_page_markdown(self, markdown, page: Page, config, files):
     - Do not call the API function in [Page Events](https://properdocs.org/dev-guide/plugins/#page-events){target="_blank"}, it should only be called **once** in [Global Events](https://properdocs.org/dev-guide/plugins/#global-events){target="_blank"}. For the event lifecycle, please refer to [Events](https://properdocs.org/dev-guide/plugins/#events){target="_blank"}.
     - The API function does not parse markdown content, so the date and author in frontmatter need to be handled separately by you. For example, you can get the date and author configured by the user in frontmatter via `page.meta.xxx` in `on_page_markdown`, like this:
 
-    ``` py { data-fold-lines="0" }
+    ``` py { data-fold="0" }
     ...
 
     def _parse_date(self, value: str | None, default: datetime | None) -> datetime | None:

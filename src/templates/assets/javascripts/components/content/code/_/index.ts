@@ -281,7 +281,7 @@ function resolveFoldThreshold(container?: HTMLElement): number | undefined {
     : DEFAULT_CODE_FOLD_LINES
 
   const fromContainer = parseFoldLines(
-    container?.getAttribute("data-fold-lines")
+    container?.getAttribute("data-fold")
   )
 
   if (typeof fromContainer !== "undefined")

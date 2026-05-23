@@ -260,10 +260,10 @@ theme:
 
 #### Set individual threshold
 
-If you want to set a custom folding threshold for a specific code block, you can use the `data-fold-lines` attribute in the fence block header:
+If you want to set a custom folding threshold for a specific code block, you can use the `data-fold` attribute in the fence block header:
 
-```` yaml { hl_lines="1" data-fold-lines="10" }
-``` yaml { data-fold-lines="10" }
+```` yaml { hl_lines="1" data-fold="10" }
+``` yaml { data-fold="10" }
 theme:
   admonition:
     git:
@@ -288,10 +288,10 @@ In this case, this code block uses a threshold of 10 lines, while others remain 
 
 #### Disable folding for specific blocks
 
-If you want to disable folding for a specific code block that exceeds the threshold, set `data-fold-lines` to `0` in its fence block header:
+If you want to disable folding for a specific code block that exceeds the threshold, set `data-fold` to `0` in its fence block header:
 
-```` yaml { hl_lines="1" data-fold-lines="0" }
-``` yaml { data-fold-lines="0" }
+```` yaml { hl_lines="1" data-fold="0" }
+``` yaml { data-fold="0" }
 theme:
   admonition:
     git:

@@ -108,7 +108,7 @@ Code blocks are one of the primary targets to be grouped, and can be considered
 a special case of content tabs, as tabs with a single code block are always
 rendered without horizontal spacing:
 
-``` { title="Content tabs with code blocks" data-fold-lines="0" }
+``` { title="Content tabs with code blocks" data-fold="0" }
 === "C"
 
     ``` c
@@ -200,7 +200,7 @@ When [SuperFences] is enabled, content tabs can contain arbitrary nested
 content, including further content tabs, and can be nested in other blocks like
 [admonitions] or blockquotes:
 
-``` { title="Content tabs in admonition" data-fold-lines="0" }
+``` { title="Content tabs in admonition" data-fold="0" }
 !!! example
 
     === "Unordered List"
