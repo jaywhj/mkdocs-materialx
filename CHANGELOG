@@ -1,3 +1,11 @@
+mkdocs-materialx-10.1.6 (2026-05-24)
+
+- Added automatic collapse for long code blocks, see: [code-collapse-expand](https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks#code-collapse-expand)
+    - Supports global configuration for the line‑count threshold to trigger collapse
+    - Allows individual code blocks to have custom collapse thresholds or disable collapsing entirely
+- Added `co-author` support for git authors
+- Updated date formatting tool to babel
+- Optimized color schemes
 
 mkdocs-materialx-10.1.5 (2026-05-10)
 

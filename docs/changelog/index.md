@@ -6,6 +6,15 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.6 <small>May 24, 2026</small> { id="10.1.6" }
+
+- Added automatic collapse for long code blocks, see: [code-collapse-expand](../reference/code-blocks.md#code-collapse-expand){target="_blank"}
+    - Supports global configuration for the line‑count threshold to trigger collapse
+    - Allows individual code blocks to have custom collapse thresholds or disable collapsing entirely
+- Added `co-author` support for git authors
+- Updated date formatting tool to babel
+- Optimized color schemes
+
 ### 10.1.5 <small>May 10, 2026</small> { id="10.1.5" }
 
 - Added Markdown page support for AI agents, see [Markdown for AI agents](../setup/adding-a-git-repository.md#markdown-for-ai-agents){target="_blank"}

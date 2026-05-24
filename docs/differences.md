@@ -48,6 +48,12 @@ Therefore, MaterialX will adhere to the following goals and principles:
 | **Current Status**  |     Stopped maintenance     |          Active maintenance and updates           |
 | **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new features, UX improvements<br />see [Changelog](changelog/index.md){target="_blank"} |
 
+??? quote "Note: The later‑installed package will overwrite the earlier one"
+
+    To lower the barrier for users, MaterialX is designed to share the same package name with `mkdocs-material`. You may treat MaterialX and `mkdocs-material` as different versions of the same project — only one version can be installed in a single environment, and the later‑installed package will overwrite the earlier one. 
+
+    Since `mkdocs-material` will soon be deprecated, coexistence was not considered.
+
 ## Differences from Zensical
 
 | Aspect         |                    Zensical                  |                        MaterialX                  |

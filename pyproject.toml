@@ -47,12 +47,12 @@ dependencies = [
   "mkdocs-material-extensions>=1.3",
   "pygments>=2.16",
   "pymdown-extensions>=10.2",
-  "babel>=2.10",
+  "babel>=2.16",
   "colorama>=0.4",
   "paginate>=0.5",
   "backrefs>=5.7.post1",
   "requests>=2.30",
-  "mkdocs-document-dates==3.8.2"
+  "mkdocs-document-dates==3.8.5"
 ]
 
 classifiers = [
