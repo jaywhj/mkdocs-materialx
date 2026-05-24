@@ -2,7 +2,7 @@
     Tooltip 配置
 */
 const ttDefaultConfig = {
-    // 可配置: light material, 或在 user.config.css 中自定义的主题
+    // 可配置: light material, 或在 config.css 中自定义的主题
     theme: {
         light: 'light',
         dark: 'material'
