@@ -1,7 +1,6 @@
 {#-
   This file was automatically generated - do not edit
 -#}
-{#-
 {% macro render_updated(date) %}
   <span class="dd-item">
     <span class="material-icons" data-icon="doc_updated" title="{{ lang.t('source.file.date.updated') }}"></span>
@@ -67,6 +66,7 @@
     </nav>
   </span>
 {% endmacro %}
+{#-
 {% if page.meta %}
   {%- set dates = page.meta.document_dates.dates %}
   {%- set authors = page.meta.document_dates.authors %}
@@ -90,9 +90,9 @@
   {%- endif %}
 </div>
 {%- endif -%}
+-#}
 {%- if committers %}
 <aside class="md-source-file">
   {{ render_committers(committers) }}
 </aside>
 {%- endif %}
--#}
