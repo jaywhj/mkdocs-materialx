@@ -22,7 +22,7 @@
   </p>
   <hr>
   <p>
-    In short: <strong><code>MaterialX + ProperDocs`</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
+    In short: <strong><code>MaterialX + ProperDocs</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
   </p>
 </details>
 
