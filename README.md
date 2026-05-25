@@ -12,44 +12,25 @@
     The MkDocs project is nearing its end due to personal issues involving its original author. He has ceased updates for MkDocs and intends to release a completely new 2.0 version as a replacement. However, this new version is entirely incompatible with the existing ecosystem. It is an entirely separate project that merely carries the MkDocs name, and an accidental upgrade will result in devastating damage.
   </p>
   <p>
-    As a result, to move away from reliance on MkDocs, the team behind the popular mkdocs-material theme framework has discontinued its maintenance and shifted to developing an entirely new alternative project named Zensical. While it features a modern architecture, it is incompatible with the original MkDocs ecosystem (no plugin support), incurs high migration costs (all configurations must be rebuilt from scratch), and still lacks many essential features.
+    As a result, to break free from dependency on MkDocs, the team behind the popular mkdocs-material theme framework has discontinued its maintenance and shifted to developing an entirely new alternative project named Zensical. While it adopts a new architecture and eliminates dependency on MkDocs, it still lacks many features. In addition, it is incompatible with the existing MkDocs ecosystem, making many existing plugins unavailable. This imposes certain migration costs on users, and its stability remains unproven.
   </p>
   <p>
-    To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: <a href="https://github.com/ProperDocs/properdocs">ProperDocs</a> (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
+    To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: ProperDocs (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
   </p>
   <p>
     Similarly, mkdocs-material also has a new successor: <strong>MaterialX</strong> (based on mkdocs-material 9.7.1). It will also receive ongoing updates and maintenance, with full compatibility with the original ecosystem and zero migration costs.
   </p>
+  <hr>
   <p>
-    <strong>MaterialX</strong> preserves the <strong>rich features</strong> and <strong>stability</strong> of the mkdocs-material project, while delivering <strong>new features</strong> and <strong>broad compatibility</strong>, and will adopt the following brand-new vision and positioning.
+    In short: <strong><code>MaterialX + ProperDocs`</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
   </p>
 </details>
 
+**MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and will adopt the following brand-new vision and positioning.
+
 <br />
 
-## Differences from Material
-
-| Aspect              |          mkdocs-material           |                       MaterialX                   |
-| ------------------- |  --------------------------------  |  -----------------------------------------------  |
-| **Latest Version**  |       mkdocs-material-9.7.1        | mkdocs-materialx-10.x <br />(based on mkdocs-material-9.7.1) |
-| **Usage**           | mkdocs.yml + theme name `material` | mkdocs.yml + new theme name `materialx` <br />everything else is the same as with material |
-| **Current Status**  |     Stopped maintenance     |          Active maintenance and updates           |
-| **Feature Updates** |      None (with legacy bugs)       | Bug fixes, new features, UX improvements<br />see [Changelog](https://github.com/jaywhj/mkdocs-materialx/releases) |
-
-
-## Differences from Zensical
-
-| Aspect         |                    Zensical                  |                        MaterialX                  |
-| -------------- | -------------------------------------------- | ------------------------------------------------- |
-| **Audience**   | Technical developers <br /> Technical documentation | All markdown users <br /> Markdown notes & documentation |
-| **Language**   |                      Rust + Python           |                  Python               |
-| **Stage**      | Launched a few months ago, in early stages, incomplete basic features | Over a decade old, mature, stable, and rich in features |
-| **Usage**      | Uses the new TOML configuration format, all configurations must be rewritten from scratch in the new format | Continues to use YAML format, zero migration cost |
-| **Ecosystem**  | New tool built entirely from the ground up. Incompatible with the original MkDocs ecosystem and add-ons | Built on mkdocs-material 9.7.1 <br />Seamlessly compatible with the original tech ecosystem |
-| **Extensibility** |  No low-level support, not open enough, no plugin support  |  Fully open source and extensible, with rich plugin support  |
-| **Core Focus** | Prioritizes customization and variety, which can lead to configuration bloat and increasing complexity | Prioritizes extreme simplicity, with smarter defaults and automation to lower usage overhead, becoming increasingly lightweight |
-
-## MaterialX Update Highlights
+## Update Highlights
 
 - Added Markdown source support for AI agents, providing structured content for AI and reducing token consumption by over 80%
 - Added next-generation date & author plugin, see: [Add document dates & authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
@@ -67,7 +48,7 @@
     - Optimized the show/hide sensitivity of the "Back to top" container
     - Added indent guide lines and active link accent colors for the TOC
 - Added the modern Liquid Glass theme, allows setting the topbar background color in the Liquid Glass theme to support backgrounds with different color schemes, see [Topbar style](https://jaywhj.github.io/mkdocs-materialx/setup/changing-the-colors#topbar-style)
-- Implemented code block download & automatic collapse/expand for long code blocks
+- Added code block download & auto-collapse/expand long code blocks features
 - For more details, see [Changelog](https://github.com/jaywhj/mkdocs-materialx/releases)
 
 <br />
