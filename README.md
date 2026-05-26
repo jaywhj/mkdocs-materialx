@@ -18,11 +18,11 @@
     To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: ProperDocs (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
   </p>
   <p>
-    Similarly, mkdocs-material also has a new successor: <strong>MaterialX</strong> (based on mkdocs-material 9.7.1). It will also receive ongoing updates and maintenance, with full compatibility with the original ecosystem and zero migration costs.
+    Similarly, mkdocs-material also has a new successor: <strong>MaterialX</strong> (based on mkdocs-material 9.7.1). It provides ongoing maintenance and updates, with full compatibility with the original ecosystem and zero migration costs.
   </p>
   <hr>
   <p>
-    In short: <strong><code>MaterialX + ProperDocs`</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
+    In short: <strong><code>MaterialX + ProperDocs</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
   </p>
 </details>
 
@@ -42,7 +42,7 @@
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK + space-separated languages)
 - Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (Better interactive experience)
-- Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (severely harmed UX and caused frequent misoperations, unresolved in both Zensical and Material)
+- Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (prone to accidental operations and poor user experience; unresolved in Zensical and Material)
 - Significantly polished the UX and details on mobile devices
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
     - Optimized the show/hide sensitivity of the "Back to top" container
