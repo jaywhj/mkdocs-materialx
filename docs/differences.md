@@ -14,7 +14,7 @@ icon: material/vector-difference-ab
 
     To ensure the continued stable operation of existing MkDocs projects and ecosystem, a new community-driven successor to MkDocs has emerged: ProperDocs (based on MkDocs 1.6.1). It will provide ongoing updates and maintenance while remaining fully compatible with the original MkDocs ecosystem.
 
-    Similarly, mkdocs-material also has a new successor: **MaterialX** (based on mkdocs-material 9.7.1). It will also receive ongoing updates and maintenance, with full compatibility with the original ecosystem and zero migration costs.
+    Similarly, mkdocs-material also has a new successor: **MaterialX** (based on mkdocs-material 9.7.1). It provides ongoing maintenance and updates, with full compatibility with the original ecosystem and zero migration costs.
 
     ---
 
@@ -53,7 +53,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK + space-separated languages)
 - Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (Better interactive experience)
-- Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (severely harmed UX and caused frequent misoperations, unresolved in both Zensical and Material)
+- Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (prone to accidental operations and poor user experience; unresolved in Zensical and Material)
 - Significantly polished the UX and details on mobile devices
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
     - Optimized the show/hide sensitivity of the "Back to top" container
