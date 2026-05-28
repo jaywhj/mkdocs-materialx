@@ -128,7 +128,7 @@
 
 .md-code--collapsible.md-code--collapsed {
   max-height: var(--md-code-fold-max-height);
-  overflow: clip;
+  overflow: hidden;
   -webkit-mask-image:
     linear-gradient(
       to bottom,
@@ -161,7 +161,7 @@
   align-items: center;
   justify-content: center;
   padding: px2rem(6px) px2rem(12px);
-  margin: px2rem(12px) auto 0;
+  margin: px2rem(12px) auto;
   font-size: px2em(13.6px);
   color: var(--md-default-fg-color--light);
   cursor: pointer;

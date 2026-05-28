@@ -623,7 +623,6 @@ export function mountCodeBlock(
             lastVisibleLine.getBoundingClientRect().bottom -
             container.getBoundingClientRect().top
           )
-
           if (visibleHeight <= 0)
             return
 
