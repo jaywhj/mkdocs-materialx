@@ -614,19 +614,37 @@ export function mountCodeBlock(
       const lineCount = getCodeLineCount(el, spans)
 
       if (foldThreshold && foldThreshold > 0 && lineCount > foldThreshold) {
-        container.id ||= `__code_fold_${id}`
+        const updateFoldHeight = () => {
+          const lastVisibleLine = spans[foldThreshold - 1] as HTMLElement
+          if (!lastVisibleLine)
+            return
 
-        const lastVisibleLine = spans[foldThreshold - 1] as HTMLElement
-        const visibleHeight = Math.ceil(
-          lastVisibleLine.getBoundingClientRect().bottom -
-          container.getBoundingClientRect().top
-        )
+          const visibleHeight = Math.ceil(
+            lastVisibleLine.getBoundingClientRect().bottom -
+            container.getBoundingClientRect().top
+          )
 
-        container.classList.add("md-code--collapsible", "md-code--collapsed")
-        container.style.setProperty("--md-code-fold-max-height", `${visibleHeight}px`)
+          if (visibleHeight <= 0)
+            return
+
+          container.style.setProperty("--md-code-fold-max-height", `${visibleHeight}px`)
+        }
+
+        const scheduleFoldHeightUpdate = () => {
+          requestAnimationFrame(() => {
+            requestAnimationFrame(updateFoldHeight)
+          })
+        }
+
+        container.classList.add("md-code--collapsible")
+        scheduleFoldHeightUpdate()
+        requestAnimationFrame(() => {
+          container.classList.add("md-code--collapsed")
+        })
 
         const remainingLines = lineCount - foldThreshold
 
+        container.id ||= `__code_fold_${id}`
         const button = document.createElement("button")
         button.type = "button"
         button.className = "md-code__toggle"
@@ -670,6 +688,16 @@ export function mountCodeBlock(
 
         // Insert button after the container (code block)
         container.insertAdjacentElement("afterend", button)
+
+        // for .tabbed-block { display: none; }, from 'none' to 'block'
+        watchElementVisibility(container)
+          .pipe(
+            filter(Boolean),
+            takeUntil(done$)
+          )
+          .subscribe(() => {
+            scheduleFoldHeightUpdate()
+          })
       }
     }
 
