@@ -255,7 +255,7 @@ function downloadFromUrl(source: string) {
  * Code folding helpers
  * ------------------------------------------------------------------------- */
 
-const DEFAULT_CODE_FOLD_LINES = 12
+const DEFAULT_CODE_FOLD_LINES = 15
 
 function parseFoldLines(value: string | null | undefined): number | undefined {
   const raw = (value || "").trim()
@@ -271,9 +271,9 @@ function parseFoldLines(value: string | null | undefined): number | undefined {
 
 function resolveFoldThreshold(container?: HTMLElement): number | undefined {
   const foldConfig = configuration().code?.fold
-  if (!foldConfig?.enabled) {
-    return undefined
-  }
+
+  if (foldConfig?.enabled !== true)
+    return
 
   const fromConfig = foldConfig.lines
   let threshold = Number.isFinite(fromConfig)
@@ -284,7 +284,7 @@ function resolveFoldThreshold(container?: HTMLElement): number | undefined {
     container?.getAttribute("data-fold")
   )
 
-  if (typeof fromContainer !== "undefined")
+  if (fromContainer !== undefined)
     threshold = fromContainer
 
   return threshold
@@ -609,77 +609,92 @@ export function mountCodeBlock(
     }
 
     /* Mount code folding toggle for long code blocks */
-    const foldThreshold = resolveFoldThreshold(
-      container instanceof HTMLElement
-        ? container
-        : undefined
-    )
-    const lineCount = getCodeLineCount(el, spans)
-    if (foldThreshold && foldThreshold > 0 && lineCount > foldThreshold) {
-      const style = getComputedStyle(el)
-      const fontSize = parseFloat(style.fontSize) || 13.6
-      const lineHeight = parseFloat(style.lineHeight) || (fontSize * 1.4)
-      const paddingTop = parseFloat(style.paddingTop) || 0
-      const paddingBottom = parseFloat(style.paddingBottom) || 0
-      const visibleHeight = Math.ceil(
-        lineHeight * foldThreshold +
-        paddingTop +
-        paddingBottom
-      )
+    if (container instanceof HTMLElement) {
+      const foldThreshold = resolveFoldThreshold(container)
+      const lineCount = getCodeLineCount(el, spans)
 
-      parent.classList.add("md-code--collapsible", "md-code--collapsed")
-      parent.style.setProperty("--md-code-fold-max-height", `${visibleHeight}px`)
-      parent.style.setProperty("margin-bottom", "0")
-
-      const remainingLines = lineCount - foldThreshold
-
-      const button = document.createElement("button")
-      button.type = "button"
-      button.className = "md-code__toggle"
-      button.setAttribute("aria-controls", parent.id)
-
-      const textSpan = document.createElement("span")
-      textSpan.className = "md-code__toggle-text"
-      button.appendChild(textSpan)
-
-      const setCollapsed = (collapsed: boolean) => {
-        parent.classList.toggle("md-code--collapsed", collapsed)
-        button.classList.toggle("md-code__toggle--collapsed", collapsed)
-        button.setAttribute("aria-expanded", (!collapsed).toString())
-        if (collapsed) {
-          textSpan.textContent = translation("code.expand", remainingLines)
-          // parent.scrollIntoView({ behavior: "auto", block: "start" })
-        } else {
-          textSpan.textContent = translation("code.collapse")
-        }
-      }
-
-      setCollapsed(true)
-      fromEvent(button, "click")
-        .pipe(takeUntil(done$))
-        .subscribe(() => {
-          button.blur()
-
-          const collapsed = parent.classList.contains("md-code--collapsed")
-          // Expand
-          if (collapsed) {
-            setCollapsed(false)
+      if (foldThreshold && foldThreshold > 0 && lineCount > foldThreshold) {
+        const updateFoldHeight = () => {
+          const lastVisibleLine = spans[foldThreshold - 1] as HTMLElement
+          if (!lastVisibleLine)
             return
-          }
 
-          // Collapse and scroll back to code block top
-          const header = document.querySelector(".md-header")
-          const headerHeight = header ? (header as HTMLElement).offsetHeight : 0
-          const top = parent.getBoundingClientRect().top + window.scrollY - headerHeight
-          setCollapsed(true)
-          window.scrollTo({
-            top,
-            behavior: "auto"
+          const visibleHeight = Math.ceil(
+            lastVisibleLine.getBoundingClientRect().bottom -
+            container.getBoundingClientRect().top
+          )
+          if (visibleHeight <= 0)
+            return
+
+          container.style.setProperty("--md-code-fold-max-height", `${visibleHeight}px`)
+        }
+
+        const scheduleFoldHeightUpdate = () => {
+          requestAnimationFrame(() => {
+            requestAnimationFrame(updateFoldHeight)
           })
-        })
+        }
 
-      // Insert button after the parent (code block)
-      parent.insertAdjacentElement("afterend", button)
+        container.classList.add("md-code--collapsible", "md-code--collapsed")
+        scheduleFoldHeightUpdate()
+
+        const remainingLines = lineCount - foldThreshold
+
+        container.id ||= `__code_fold_${id}`
+        const button = document.createElement("button")
+        button.type = "button"
+        button.className = "md-code__toggle"
+        button.setAttribute("aria-controls", container.id)
+
+        const textSpan = document.createElement("span")
+        textSpan.className = "md-code__toggle-text"
+        button.appendChild(textSpan)
+
+        const setCollapsed = (collapsed: boolean) => {
+          container.classList.toggle("md-code--collapsed", collapsed)
+          // button.classList.toggle("md-code__toggle--collapsed", collapsed)
+          button.setAttribute("aria-expanded", (!collapsed).toString())
+          if (collapsed) {
+            textSpan.textContent = translation("code.expand", remainingLines)
+          } else {
+            textSpan.textContent = translation("code.collapse")
+          }
+        }
+
+        setCollapsed(true)
+        // for .tabbed-block { display: none; }, from 'none' to 'block'
+        watchElementVisibility(container)
+          .pipe(
+            filter(Boolean),
+            takeUntil(done$)
+          )
+          .subscribe(() => {
+            scheduleFoldHeightUpdate()
+          })
+
+        fromEvent(button, "click")
+          .pipe(takeUntil(done$))
+          .subscribe(() => {
+            button.blur()
+
+            const collapsed = container.classList.contains("md-code--collapsed")
+            // Expand
+            if (collapsed) {
+              setCollapsed(false)
+              return
+            }
+
+            // Collapse and scroll back to code block top
+            const header = document.querySelector(".md-header")
+            const headerHeight = header ? (header as HTMLElement).offsetHeight : 0
+            const top = container.getBoundingClientRect().top + window.scrollY - headerHeight
+            setCollapsed(true)
+            window.scrollTo({ top })
+          })
+
+        // Insert button after the container (code block)
+        container.insertAdjacentElement("afterend", button)
+      }
     }
 
     /* Render button for Clipboard.js integration */
