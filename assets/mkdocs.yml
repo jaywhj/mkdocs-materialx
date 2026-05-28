@@ -61,7 +61,6 @@ theme:
   code:
     fold:
       enabled: true
-      lines: 15
   features:
     - content.action.edit
     - content.action.view
