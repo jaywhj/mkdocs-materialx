@@ -340,6 +340,14 @@
     direction: ltr;
 
     // Remove rounded borders on code blocks
+    > tbody > tr:not(:first-child) > .linenos {
+      border-top-left-radius: 0;
+    }
+
+    > tbody > tr:not(:first-child) > .code > div > pre > code {
+      border-top-right-radius: 0;
+    }
+
     > tbody > tr > .code > div > pre > code {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -375,6 +383,10 @@
   // Top-level code block
   .md-content__inner > .highlight {
     margin: 1em px2rem(-16px);
+
+    &.md-code--collapsible {
+      margin-bottom: 0;
+    }
 
     // Remove rounded borders
     > .filename,

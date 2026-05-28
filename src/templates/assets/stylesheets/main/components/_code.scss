@@ -123,31 +123,37 @@
 
 // Collapsible code blocks
 .md-code--collapsible {
-  > code {
-    // Safari / iOS compatibility
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    transition: max-height 250ms ease;
-  }
+  transition: max-height 250ms ease;
+}
 
-  &.md-code--collapsed > code {
-    max-height: var(--md-code-fold-max-height);
-    overflow: hidden;
-    -webkit-mask-image:
-      linear-gradient(
-        to bottom,
-        #000000 calc(100% - #{px2rem(80px)}),
-        transparent 96% 100%
-      );
-    mask-image:
-      linear-gradient(
-        to bottom,
-        #000000 calc(100% - #{px2rem(80px)}),
-        transparent 96% 100%
-      );
-  }
+.md-code--collapsible.md-code--collapsed {
+  max-height: var(--md-code-fold-max-height);
+  overflow: clip;
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      #000000 calc(100% - #{px2rem(80px)}),
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000000 calc(100% - #{px2rem(80px)}),
+      transparent 100%
+    );
+
+  // Safari / iOS compatibility
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+// Adjusts the margin-bottom of the preceding element when the toggle button is enabled
+// .md-code--collapsible,
+.md-code--collapsible > pre,
+.md-code--collapsible > table.highlighttable {
+  margin-bottom: 0;
 }
 
 // Code block toggle button
@@ -156,7 +162,7 @@
   align-items: center;
   justify-content: center;
   padding: px2rem(6px) px2rem(12px);
-  margin: px2rem(8px) auto 0;
+  margin: px2rem(12px) auto 0;
   font-size: px2em(13.6px);
   color: var(--md-default-fg-color--light);
   cursor: pointer;
