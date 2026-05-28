@@ -636,11 +636,8 @@ export function mountCodeBlock(
           })
         }
 
-        container.classList.add("md-code--collapsible")
+        container.classList.add("md-code--collapsible", "md-code--collapsed")
         scheduleFoldHeightUpdate()
-        requestAnimationFrame(() => {
-          container.classList.add("md-code--collapsed")
-        })
 
         const remainingLines = lineCount - foldThreshold
 
@@ -666,6 +663,16 @@ export function mountCodeBlock(
         }
 
         setCollapsed(true)
+        // for .tabbed-block { display: none; }, from 'none' to 'block'
+        watchElementVisibility(container)
+          .pipe(
+            filter(Boolean),
+            takeUntil(done$)
+          )
+          .subscribe(() => {
+            scheduleFoldHeightUpdate()
+          })
+
         fromEvent(button, "click")
           .pipe(takeUntil(done$))
           .subscribe(() => {
@@ -688,16 +695,6 @@ export function mountCodeBlock(
 
         // Insert button after the container (code block)
         container.insertAdjacentElement("afterend", button)
-
-        // for .tabbed-block { display: none; }, from 'none' to 'block'
-        watchElementVisibility(container)
-          .pipe(
-            filter(Boolean),
-            takeUntil(done$)
-          )
-          .subscribe(() => {
-            scheduleFoldHeightUpdate()
-          })
       }
     }
 
