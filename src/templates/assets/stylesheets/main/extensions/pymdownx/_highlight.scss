@@ -190,6 +190,10 @@
     }
   }
 
+  &.md-code--collapsible > span.filename {
+    margin-top: 0;
+  }
+
   // Code block line numbers (pymdownx-inline)
   [data-linenos]::before {
     position: sticky;
