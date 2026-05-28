@@ -43,7 +43,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 ## Update Highlights
 
-- Added Markdown source support for AI agents, providing structured content for AI and reducing token consumption by over 80%
+- Added Markdown source support for AI agents to provide structured content, reducing token consumption by over 80%
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
     - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
@@ -52,7 +52,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Supports multiple flexible layout styles (list, detail, grid)
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK + space-separated languages)
-- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (Better interactive experience)
+- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (better interactive experience)
 - Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (prone to accidental operations and poor user experience; unresolved in Zensical and Material)
 - Significantly polished the UX and details on mobile devices
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
@@ -80,7 +80,7 @@ theme:
 !!! note
 
     - The theme name is `materialx`, not material. Everything else is the same as when using material.
-    - To lower the barrier for users, MaterialX is designed to share the same package name with `mkdocs-material`, you may treat MaterialX and `mkdocs-material` as different versions of the same project — only one version can be installed in a single environment, and the later‑installed package will overwrite the earlier one. Since `mkdocs-material` will soon be deprecated, coexistence was not considered.
+    - To lower the barrier for users, MaterialX is designed to share the same package name with `mkdocs-material`, you may treat MaterialX and `mkdocs-material` as different versions of the same project, only one version can be installed in a single environment, and the later‑installed package will overwrite the earlier one. Since `mkdocs-material` will soon be deprecated, coexistence was not considered.
 
 Start a live preview server with the following command for automatic open and reload:
 
