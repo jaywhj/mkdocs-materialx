@@ -137,7 +137,7 @@ Add the `data-download` attribute to the fence block header to enable download:
 
 === "Blob"
 
-    ```` yaml { data-download="blob" }
+    ```` yaml { hl_lines="1" data-download="blob" }
     ``` yaml { data-download="blob" }
 
     markdown_extensions:
@@ -147,7 +147,7 @@ Add the `data-download` attribute to the fence block header to enable download:
 
 === "Local File"
 
-    ```` yaml { data-download="../assets/mkdocs.yml" }
+    ```` yaml { hl_lines="1" data-download="../assets/mkdocs.yml" }
     ``` yaml { data-download="assets/xxx.yaml" }
 
     markdown_extensions:
@@ -157,7 +157,7 @@ Add the `data-download` attribute to the fence block header to enable download:
 
 === "URL"
 
-    ```` yaml { data-download="https://jaywhj.github.io/mkdocs-materialx/assets/mkdocs.yml" }
+    ```` yaml { hl_lines="1" data-download="https://jaywhj.github.io/mkdocs-materialx/assets/mkdocs.yml" }
     ``` yaml { data-download="https://example.com/xxx.yaml" }  # (1)!
 
     markdown_extensions:

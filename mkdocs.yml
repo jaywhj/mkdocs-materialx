@@ -95,7 +95,7 @@ theme:
   favicon: octicons/milestone-24
   icon:
     logo: logo
-    annotation: material/plus-circle-outline
+    annotation: material/information-outline
   admonition:
     git:
       icon: simple/git
