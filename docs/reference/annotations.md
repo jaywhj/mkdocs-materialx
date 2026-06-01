@@ -1,5 +1,5 @@
 ---
-icon: material/plus-circle-outline
+icon: material/information-outline
 ---
 
 # Annotations
