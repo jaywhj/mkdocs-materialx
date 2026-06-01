@@ -54,6 +54,7 @@ import { configuration, feature, translation } from "~/_"
 import {
   getElement,
   getElementContentSize,
+  getElementSize,
   getElements,
   getOptionalElement,
   watchElementHover,
@@ -387,7 +388,14 @@ export function mountCodeBlock(
       )) {
         const annotations$ = mountAnnotationList(list, el, options)
         content$.push(
-          watchElementSize(container)
+          merge(
+            watchElementSize(container),
+            // Recompute dimensions when a hidden tab is shown again.
+            watchElementVisibility(container)
+              .pipe(
+                map(() => getElementSize(container))
+              )
+          )
             .pipe(
               takeUntil(done$),
               map(({ width, height }) => width && height),

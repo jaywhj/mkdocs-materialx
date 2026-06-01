@@ -243,11 +243,11 @@ theme:
       enabled: true
 ```
 
-The default value is `false`, code folding is enabled when set to `true`, and all code blocks exceeding **12** lines (the default threshold) will be automatically folded.
+The default value is `false`, code folding is enabled when set to `true`, and all code blocks exceeding **15** lines (the default threshold) will be automatically folded.
 
 #### Change default threshold
 
-If you want to change the default folding threshold (12 lines), you can configure it via `code.fold.lines`.
+If you want to change the default folding threshold (15 lines), you can configure it via `code.fold.lines`.
 
 ``` yaml { hl_lines="6" }
 theme:

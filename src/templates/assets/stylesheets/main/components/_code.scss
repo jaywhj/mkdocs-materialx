@@ -42,6 +42,10 @@
   .md-typeset &__content {
     display: grid;
     line-height: 1.4;
+
+    > span {
+      min-width: max-content;
+    }
   }
 
   // Code block navigation

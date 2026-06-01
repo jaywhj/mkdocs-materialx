@@ -369,7 +369,8 @@ text.actor > tspan {
 }
 
 /* Sequence arrow head */
-#arrowhead path {
+#arrowhead path,
+[id$="-arrowhead"] path {
   fill: var(--md-mermaid-sequence-message-line-color);
   stroke: none;
 }
