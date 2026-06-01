@@ -103,8 +103,8 @@ in the `docs` folder, to any icon bundled with the theme, or even a
 
     1.  Set up a [custom icon set][additional icons] and reference the icon by
         taking the path of the `*.svg` file starting at the `.icons` folder and
-        dropping the file extension, e.g. for
-        `.icons/bootstrap/envelope-paper.svg`, use `bootstrap/envelope-paper`.
+        dropping the file extension, e.g. for `.icons/bootstrap/envelope-paper.svg`, 
+        use `bootstrap/envelope-paper`.
 
   [Favicon default]: https://github.com/jaywhj/mkdocs-materialx/blob/main/material/templates/assets/images/favicon.png
 
