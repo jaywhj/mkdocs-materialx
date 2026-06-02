@@ -45,8 +45,8 @@
 
 // Tooltip variables
 :root {
-  --md-annotation-bg-icon: svg-load("material/circle.svg");
-  --md-annotation-icon: svg-load("material/plus-circle.svg");
+  --md-annotation-bg-icon: svg-load("material/circle-outline.svg");
+  --md-annotation-icon: svg-load("material/information-outline.svg");
   --md-tooltip-width: #{px2rem(400px)};
 }
 
@@ -243,7 +243,7 @@
 
         // Annotation marker for active tooltip
         .md-tooltip--active + & {
-          transform: translateY(-54%) rotate(45deg);
+          transform: translateY(-54%) rotate(180deg);
         }
 
         // Annotation marker for active tooltip or on hover

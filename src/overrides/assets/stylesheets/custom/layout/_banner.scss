@@ -24,43 +24,43 @@
 // Rules
 // ----------------------------------------------------------------------------
 
-// // Banner for announcements and warnings
-// .md-banner {
-//   color: var(--md-footer-fg-color--lighter);
+// Banner for announcements and warnings
+.md-banner {
+  color: var(--md-footer-fg-color--lighter);
 
-//   // Don't wrap name of blog article
-//   strong {
-//     color: var(--md-footer-fg-color);
-//     white-space: nowrap;
-//   }
+  // Don't wrap name of blog article
+  strong {
+    color: var(--md-footer-fg-color);
+    white-space: nowrap;
+  }
 
-//   a {
-//     color: var(--md-footer-fg-color);
+  a {
+    color: var(--md-footer-fg-color);
 
-//     &:focus,
-//     &:hover {
-//       color: currentcolor;
+    &:focus,
+    &:hover {
+      color: currentcolor;
 
-//       .twemoji {
-//         background-color: var(--md-footer-fg-color);
-//         box-shadow: none;
-//       }
-//     }
-//   }
+      .twemoji {
+        background-color: var(--md-footer-fg-color);
+        box-shadow: none;
+      }
+    }
+  }
 
-//   .twemoji {
-//     display: inline-block;
-//     width: px2rem(24px);
-//     height: px2rem(24px);
-//     padding: px2rem(5px);
-//     vertical-align: bottom;
-//     border-radius: 100%;
-//     box-shadow: 0 0 0 px2rem(1px) currentcolor inset;
-//     transition: all 250ms;
+  .twemoji {
+    display: inline-block;
+    width: px2rem(24px);
+    height: px2rem(24px);
+    padding: px2rem(5px);
+    vertical-align: bottom;
+    border-radius: 100%;
+    box-shadow: 0 0 0 px2rem(1px) currentcolor inset;
+    transition: all 250ms;
 
-//     svg {
-//       display: block;
-//       max-height: initial;
-//     }
-//   }
-// }
+    svg {
+      display: block;
+      max-height: initial;
+    }
+  }
+}
