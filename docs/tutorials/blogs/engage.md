@@ -264,7 +264,7 @@ That is all the preparation you will need for the repository. Next, it is time
 to generate a piece of code that embeds Giscus in your site. The resulting code
 snippet will look something like this:
 
-```html
+```html { data-fold=0 }
 <script src="https://giscus.app/client.js"
         data-repo="<username>/<repository>"
         data-repo-id="..."
