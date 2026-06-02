@@ -75,6 +75,7 @@
           "mask-image",
           "mask-repeat",
           "mask-size",
+          "appearance",
           "line-clamp",
           "box-orient",
           "backdrop-filter"

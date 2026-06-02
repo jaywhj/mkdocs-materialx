@@ -69,7 +69,7 @@ and pull the image with:
 
 ### add more plugins
 
-Material for MkDocs only bundles selected plugins in order to keep the size of the official image small. If the plugin you want to use is not included, you can add them easily. Create a `Dockerfile` and extend the official image:
+MaterialX for MkDocs only bundles selected plugins in order to keep the size of the official image small. If the plugin you want to use is not included, you can add them easily. Create a `Dockerfile` and extend the official image:
 
 ``` Dockerfile title="Dockerfile"
 FROM jaywhj/mkdocs-materialx

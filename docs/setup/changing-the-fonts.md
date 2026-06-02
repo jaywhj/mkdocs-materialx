@@ -4,7 +4,7 @@ icon: material/format-text
 
 # Changing the fonts
 
-Material for MkDocs makes it easy to change the typeface of your project
+MaterialX for MkDocs makes it easy to change the typeface of your project
 documentation, as it directly integrates with [Google Fonts]. Alternatively,
 fonts can be custom-loaded if self-hosting is preferred for data privacy reasons
 or another destination should be used.

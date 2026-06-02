@@ -47,7 +47,7 @@
       {% if keys.icon %}
         {% set icon_family = keys.icon.split("/")[0] %}
         {% if icon_family in ["octicons", "fontawesome"] %}
-          {% set rules = rules ~ "--md-admonition-icon-mask-size:82%;" %}
+          {% set rules = rules ~ "--md-admonition-icon-mask-size:80%;" %}
         {% elif icon_family in ["simple", "lucide"] %}
           {% set rules = rules ~ "--md-admonition-icon-mask-size:88%;" %}
         {% elif icon_family != "material" %}

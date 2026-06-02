@@ -6,7 +6,7 @@ icon: material/graph-outline
 
 Diagrams help to communicate complex relationships and interconnections between
 different technical components, and are a great addition to project
-documentation. Material for MkDocs integrates with [Mermaid.js], a very
+documentation. MaterialX for MkDocs integrates with [Mermaid.js], a very
 popular and flexible solution for drawing diagrams.
 
   [Mermaid.js]: https://mermaid.js.org/
@@ -302,7 +302,7 @@ you can do so by adding a custom JavaScript file to your `mkdocs.yml`:
       layout: "elk",
     });
 
-    // Important: necessary to make it visible to Material for MkDocs
+    // Important: necessary to make it visible to MaterialX for MkDocs
     window.mermaid = mermaid;
     ```
 

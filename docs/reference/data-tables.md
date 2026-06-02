@@ -4,7 +4,7 @@ icon: material/table-edit
 
 # Data tables
 
-Material for MkDocs defines default styles for data tables – an excellent way
+MaterialX for MkDocs defines default styles for data tables – an excellent way
 of rendering tabular data in project documentation. Furthermore, customizations
 like [sortable tables] can be achieved with a third-party library and some
 [additional JavaScript].
@@ -127,7 +127,7 @@ and/or end of the divider.
 ### Sortable tables
 
 If you want to make data tables sortable, you can add [tablesort], which is
-natively integrated with Material for MkDocs and will also work with [instant
+natively integrated with MaterialX for MkDocs and will also work with [instant
 loading] via [additional JavaScript]:
 
 === ":octicons-file-code-16: `docs/javascripts/tablesort.js`"

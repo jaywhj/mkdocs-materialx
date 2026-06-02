@@ -8,7 +8,7 @@ icon: material/square-root
 mathematical content in browsers. Although both libraries offer similar
 functionality, they use different syntaxes and have different configuration
 options. This documentation site provides information on how to integrate them
-with Material for MkDocs easily.
+with MaterialX for MkDocs easily.
 
   [MathJax]: https://www.mathjax.org/
   [LaTeX]: https://en.wikibooks.org/wiki/LaTeX/Mathematics

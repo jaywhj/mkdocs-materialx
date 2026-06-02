@@ -4,7 +4,7 @@ icon: material/translate
 
 # Changing the language
 
-Material for MkDocs supports internationalization (i18n) and provides
+MaterialX for MkDocs supports internationalization (i18n) and provides
 translations for template variables and labels in 60+ languages. Additionally,
 the site search can be configured to use a language-specific stemmer, if
 available.
@@ -24,7 +24,7 @@ theme:
 ```
 
 1.  HTML5 only allows to set a [single language per document], which is why
-    Material for MkDocs only supports setting a canonical language for the
+    MaterialX for MkDocs only supports setting a canonical language for the
     entire project, i.e. one per `mkdocs.yml`.
 
     The easiest way to build a multi-language documentation is to create one
@@ -114,7 +114,7 @@ No configuration is necessary.
 <!-- md:version 2.5.0 -->
 <!-- md:default computed -->
 
-While many languages are read `ltr` (left-to-right), Material for MkDocs also
+While many languages are read `ltr` (left-to-right), MaterialX for MkDocs also
 supports `rtl` (right-to-left) directionality which is deduced from the
 selected language, but can also be set with:
 
