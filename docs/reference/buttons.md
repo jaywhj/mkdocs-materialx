@@ -4,7 +4,7 @@ icon: material/button-cursor
 
 # Buttons
 
-Material for MkDocs provides dedicated styles for primary and secondary buttons
+MaterialX for MkDocs provides dedicated styles for primary and secondary buttons
 that can be added to any link, `label` or `button` element. This is especially
 useful for documents or landing pages with dedicated _call-to-actions_.
 
@@ -50,7 +50,7 @@ In order to render a link as a button, suffix it with curly braces and add the
 ### Adding primary buttons
 
 If you want to display a filled, primary button (like on the [landing page]
-of Material for MkDocs), add both, the `.md-button` and `.md-button--primary`
+of MaterialX for MkDocs), add both, the `.md-button` and `.md-button--primary`
 CSS class selectors.
 
 ``` markdown title="Button, primary"

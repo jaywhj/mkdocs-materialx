@@ -6,7 +6,7 @@ icon: material/tooltip-text-outline
 
 Technical documentation often incurs the usage of many acronyms, which may
 need additional explanation, especially for new user of your project. For these
-matters, Material for MkDocs uses a combination of Markdown extensions to
+matters, MaterialX for MkDocs uses a combination of Markdown extensions to
 enable site-wide glossaries.
 
 ## Configuration
@@ -37,7 +37,7 @@ See additional configuration options:
 <!-- md:version 9.5.0 -->
 <!-- md:flag experimental -->
 
-When improved tooltips are enabled, Material for MkDocs replaces the browser's
+When improved tooltips are enabled, MaterialX for MkDocs replaces the browser's
 rendering logic for `title` attribute with beautiful little tooltips.
 Add the following lines to `mkdocs.yml`:
 

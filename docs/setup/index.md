@@ -4,7 +4,7 @@ title: Overview
 
 # Setup
 
-Material for MkDocs offers a wide range of options for customizing your
+MaterialX for MkDocs offers a wide range of options for customizing your
 documentation. In this section, we will explain how you can create a meaningful
 structure for your site, change the look and feel, add a blog and comment system,
 and build a highly optimized site.
@@ -37,7 +37,7 @@ setting up site search, and more.
 ## Appearance
 
 Match your brand's colors, fonts, icons, logo, and more with a few lines of
-configuration – Material for MkDocs makes it easy to extend the basic
+configuration – MaterialX for MkDocs makes it easy to extend the basic
 configuration or alter the appearance.
 
 <div class="grid cards" markdown>

@@ -4,7 +4,7 @@ icon: material/information-outline
 
 # Annotations
 
-One of the flagship features of Material for MkDocs is the ability to inject
+One of the flagship features of MaterialX for MkDocs is the ability to inject
 annotations – little markers that can be added almost anywhere in a document
 and expand a tooltip containing arbitrary Markdown on click or keyboard focus.
 

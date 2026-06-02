@@ -58,7 +58,7 @@ hasn't happened yet).
 ### <!-- md:plugin --> – Plugin { data-toc-label="Plugin" }
 
 Several features are implemented through MkDocs excellent plugin architecture,
-some of which are built-in and distributed with Material for MkDocs, so no
+some of which are built-in and distributed with MaterialX for MkDocs, so no
 installation is required.
 
 ### <!-- md:extension --> – Markdown extension { data-toc-label="Markdown extension" #extension }

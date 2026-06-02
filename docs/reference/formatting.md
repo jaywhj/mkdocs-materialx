@@ -4,7 +4,7 @@ icon: material/format-font
 
 # Formatting
 
-Material for MkDocs provides support for several HTML elements that can be used
+MaterialX for MkDocs provides support for several HTML elements that can be used
 to highlight sections of a document or apply specific formatting. Additionally,
 [Critic Markup] is supported, adding the ability to display suggested changes
 for a document.

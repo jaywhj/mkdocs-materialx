@@ -6,7 +6,7 @@ status: new
 # Code blocks
 
 Code blocks and examples are an essential part of technical project
-documentation. Material for MkDocs provides different ways to set up syntax
+documentation. MaterialX for MkDocs provides different ways to set up syntax
 highlighting for code blocks, either during build time using [Pygments] or
 during runtime using a JavaScript syntax highlighter.
 
@@ -634,7 +634,7 @@ last 4 years
 
 ### Custom syntax theme
 
-If [Pygments] is used, Material for MkDocs provides the [styles for code blocks]
+If [Pygments] is used, MaterialX for MkDocs provides the [styles for code blocks]
 [colors], which are built with a custom and well-balanced palette that works
 equally well for both [color schemes]:
 

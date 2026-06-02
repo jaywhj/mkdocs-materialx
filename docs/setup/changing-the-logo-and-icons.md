@@ -4,7 +4,7 @@ icon: octicons/image-24
 
 # Changing the logo and icons
 
-When installing Material for MkDocs, you immediately get access to _over 8,000
+When installing MaterialX for MkDocs, you immediately get access to _over 8,000
 icons_ ready to be used for customization of specific parts of the theme and/or
 when writing your documentation in Markdown. Not enough? You can also add
 [additional icons] with minimal effort.
