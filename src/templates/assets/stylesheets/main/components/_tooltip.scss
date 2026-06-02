@@ -76,10 +76,10 @@
   border-radius: px2rem(8px);
   box-shadow: var(--md-shadow-z2);
   opacity: 0;
-  transition:
-    transform 0ms 250ms,
-    opacity 250ms,
-    z-index 250ms;
+  // transition:
+  //   transform 0ms 250ms,
+  //   opacity 250ms,
+  //   z-index 250ms;
   transform: translateY(px2rem(-8px));
   // Hack: promote to own layer to reduce jitter
   backface-visibility: hidden;
@@ -192,11 +192,13 @@
       transition: z-index 250ms;
     }
 
+    $annotation-size: px2rem(18px);
+
     // [screen]: Render annotation markers as icons
     @media screen {
-      width: 2ch;
-      height: 2ch;
-      line-height: 2ch;
+      width: $annotation-size;
+      height: $annotation-size;
+      line-height: $annotation-size;
 
       // Annotation is visible
       [data-md-visible] > & {
@@ -208,15 +210,16 @@
         position: absolute;
         top: 50%;
         z-index: -1;
-        width: 2ch;
-        height: 2ch;
+        width: $annotation-size;
+        height: $annotation-size;
         content: "";
         background: var(--md-default-bg-color);
         mask-image: var(--md-annotation-bg-icon);
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: contain;
-        transform: translateY(-54%);
+        transform: translateY(-50%);
+        will-change: transform;
       }
 
       // Annotation marker – the marker must be positioned absolutely behind
@@ -227,8 +230,8 @@
         position: absolute;
         top: 50%;
         z-index: -1;
-        width: 2ch;
-        height: 2ch;
+        width: $annotation-size;
+        height: $annotation-size;
         content: "";
         background-color: var(--md-default-fg-color--lighter);
         mask-image: var(--md-annotation-icon);
@@ -239,11 +242,12 @@
           background-color 250ms,
           transform        250ms;
         // Hack: promote to own layer to reduce jitter
-        transform: translateY(-54%) scale(1.0001);
+        transform: translateY(-50%) scale(1.0001);
+        will-change: transform;
 
         // Annotation marker for active tooltip
         .md-tooltip--active + & {
-          transform: translateY(-54%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
         }
 
         // Annotation marker for active tooltip or on hover
@@ -256,6 +260,8 @@
     // Annotation index for active tooltip
     .md-tooltip--active + & {
       z-index: 2;
+      background: var(--md-default-bg-color);
+      border-radius: 50%;
       transition-duration: 0ms;
       animation-play-state: paused;
     }
