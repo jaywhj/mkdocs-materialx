@@ -184,6 +184,9 @@
     // Hack: Work around Firefox bug that renders a subpixel outline when
     // rotating a mask image element - see https://t.ly/qA1s4
     overflow: hidden; // stylelint-disable-line order/properties-order
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0.01px;
 
     // Hack: increase specificity to override default for anchors in typesetted
