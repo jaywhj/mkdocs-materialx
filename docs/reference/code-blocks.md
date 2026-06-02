@@ -611,12 +611,12 @@ The `#!python range()` function is used to generate a sequence of numbers.
 ### Embedding external files
 
 When [Snippets] is enabled, content from other files (including source files)
-can be embedded by using the [`--8<--` notation][Snippets notation] directly
+can be embedded by using the [`-8<-` notation][Snippets notation] directly
 from within a code block:
 
 ```` markdown title="Code block with external content"
 ``` title=".browserslistrc"
-;--8<-- ".browserslistrc"
+;-8<- ".browserslistrc"
 ```
 ````
 
