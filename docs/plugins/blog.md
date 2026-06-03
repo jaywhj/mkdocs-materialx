@@ -51,7 +51,7 @@ allowing for easy integration with other [built-in plugins], e.g., the
 [social] and [tags] plugin.
 
 Posts can be organized in nested folders with a directory layout that suits your
-specific needs, and can make use of all components and syntax that Material for
+specific needs, and can make use of all components and syntax that MaterialX for
 MkDocs offers, including [admonitions], [annotations], [code blocks],
 [content tabs], [diagrams], [icons], [math], and more.
 

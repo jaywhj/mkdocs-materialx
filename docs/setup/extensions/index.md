@@ -78,7 +78,7 @@ your documentation project.
 
 ### Minimal configuration
 
-This configuration is a good starting point for when you're using Material for
+This configuration is a good starting point for when you're using MaterialX for
 MkDocs for the first time. The best idea is to explore the [reference], and
 gradually add what you want to use:
 

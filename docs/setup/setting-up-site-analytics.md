@@ -5,7 +5,7 @@ icon: material/chart-box-outline
 # Setting up site analytics
 
 As with any other service offered on the web, understanding how your project
-documentation is actually used can be an essential success factor. Material for
+documentation is actually used can be an essential success factor. MaterialX for
 MkDocs natively integrates with [Google Analytics] and offers a customizable
 [cookie consent] and a [feedback widget].
 

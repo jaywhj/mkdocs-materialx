@@ -544,7 +544,7 @@ mode, as `Regular` is included with all font families.
 
 ### Icons
 
-Authors can leverage the full range of icons that are shipped with Material for
+Authors can leverage the full range of icons that are shipped with MaterialX for
 MkDocs, or even provide custom icons by using theme extension and going through
 the process described in the guide on [additional icons]. Icons can even be
 tinted by using the `color` property:

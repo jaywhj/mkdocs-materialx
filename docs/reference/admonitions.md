@@ -6,7 +6,7 @@ icon: material/alert-outline
 # Admonitions
 
 Admonitions, also known as _call-outs_, are an excellent choice for including
-side content without significantly interrupting the document flow. Material for
+side content without significantly interrupting the document flow. MaterialX for
 MkDocs provides several different types of admonitions and allows for the
 inclusion and nesting of arbitrary content.
 
