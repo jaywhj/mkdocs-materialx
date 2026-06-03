@@ -63,7 +63,7 @@ Check out the versioning example to see it in action –
 ### Stay on the same page when switching versions
 
 When the user chooses a version in the version selector, they usually want to go
-to the page corresponding to the page they were previously viewing. Material for
+to the page corresponding to the page they were previously viewing. MaterialX for
 MkDocs implements this behavior by default, but there are a few caveats:
 
 - the [`site_url`][mkdocs.site_url] must be set correctly in `mkdocs.yml`.

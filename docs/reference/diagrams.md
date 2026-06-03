@@ -36,7 +36,7 @@ No further configuration is necessary. Advantages over a custom integration:
 - [x] Support for both, light and dark color schemes – _try it on this page!_
 
   [^1]:
-    While all [Mermaid.js] features should work out-of-the-box, Material for
+    While all [Mermaid.js] features should work out-of-the-box, MaterialX for
     MkDocs will currently only adjust the fonts and colors for flowcharts,
     sequence diagrams, class diagrams, state diagrams and entity relationship
     diagrams. See the section on [other diagrams] for more information why this

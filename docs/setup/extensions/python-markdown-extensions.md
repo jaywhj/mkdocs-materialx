@@ -108,7 +108,7 @@ markdown_extensions:
   - pymdownx.betterem
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. See the [BetterEm
 documentation][BetterEm] for more information.
 
@@ -127,7 +127,7 @@ markdown_extensions:
   - pymdownx.blocks.caption
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. See the [Caption
 documentation][Caption] for more information.
 
@@ -149,7 +149,7 @@ markdown_extensions:
   - pymdownx.tilde
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. See the [Caret], [Mark]
 and [Tilde documentation][Tilde] for guidance.
 
@@ -515,7 +515,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. The only exception is
 the [`css_class`][InlineHilite options] option, which must not be changed. See the
 [InlineHilite documentation][InlineHilite] for guidance.
@@ -542,7 +542,7 @@ markdown_extensions:
   - pymdownx.keys
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. The only exception is
 the [`class`][Keys options] option, which must not be changed. See the
 [Keys documentation][Keys] for more information.
@@ -569,7 +569,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. See the [SmartSymbols
 documentation][SmartSymbols] for guidance.
 
@@ -589,7 +589,7 @@ markdown_extensions:
   - pymdownx.snippets
 ```
 
-The configuration options of this extension are not specific to Material for
+The configuration options of this extension are not specific to MaterialX for
 MkDocs, as they only impact the Markdown parsing stage. See the [Snippets
 documentation][Snippets] for more information.
 
