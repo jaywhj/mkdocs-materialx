@@ -6,6 +6,15 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.7 <small>June 5, 2026</small> { id="10.1.7" }
+
+- Fixed the legacy issue where code highlighting failed to fully cover long lines
+- Fixed the bug where annotation would not remount when a tabbed block is toggled from hidden to visible
+- Fixed the issue where arrows in Mermaid sequence diagrams lacked visibility under dark themes
+- Refactored the implementation for collapsing long code blocks to improve robustness, added compatibility with iOS 14
+- Changed the default collapse threshold for long code blocks from 12 to 15
+- Updated annotation default icon to info
+
 ### 10.1.6 <small>May 24, 2026</small> { id="10.1.6" }
 
 - Added automatic collapse for long code blocks, see: [code-collapse-expand](../reference/code-blocks.md#code-collapse-expand){target="_blank"}

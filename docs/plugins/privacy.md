@@ -51,7 +51,7 @@ There are some [limitations].
 
 The plugin was developed to make compliance with the 2018 European
 __General Data Protection Regulation__ (GDPR) as simple as possible, while
-retaining the flexibility and power that Material for MkDocs offers, like for
+retaining the flexibility and power that MaterialX for MkDocs offers, like for
 example its tight integration with [Google Fonts].
 
 But, that's only the start. For example, if your project includes a lot of
@@ -60,7 +60,7 @@ the plugin will automatically download and store them in the [`site` directory]
 [mkdocs.site_dir] when [building your project].
 
 Even more interestingly, the plugin can be combined with other built-in plugins
-that Material for MkDocs offers, in order to create sophisticated build
+that MaterialX for MkDocs offers, in order to create sophisticated build
 pipelines tailored to your project:
 
 <div class="grid cards" markdown>
@@ -112,7 +112,7 @@ plugins:
   - privacy
 ```
 
-The privacy plugin is built into Material for MkDocs and doesn't need to be
+The privacy plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [privacy]: privacy.md

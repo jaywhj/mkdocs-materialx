@@ -21,7 +21,7 @@ and open `index.html` in your browser – you're now viewing your documentation
 from your local file system! Most browsers will denote this by showing `file://`
 in the address bar. However, you'll realize that the site search is gone.
 
-Material for MkDocs offers many interactive features, some of which will not
+MaterialX for MkDocs offers many interactive features, some of which will not
 work from the local file system due to the restrictions of modern browsers. More
 specifically and technically, all calls to the [Fetch API] will error with a
 message like:
@@ -88,7 +88,7 @@ create even better offline-capable documentation:
     the offline plugin, this functionality is already fully implemented in the
     privacy plugin and is its very raison d'être.
 
-    Material for MkDocs follows a modular approach for its plugin system – many
+    MaterialX for MkDocs follows a modular approach for its plugin system – many
     of the plugins work perfectly together and enhance each others
     functionalities, allowing to solve complex problems with a few lines
     of configuration.
@@ -110,7 +110,7 @@ plugins:
   - offline
 ```
 
-The offline plugin is built into Material for MkDocs and doesn't need to be
+The offline plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [offline]: offline.md

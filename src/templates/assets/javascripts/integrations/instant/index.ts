@@ -255,7 +255,7 @@ function inject(next: Document): Observable<Document> {
  * Set up instant navigation
  *
  * This is a heavily orchestrated operation - see inline comments to learn how
- * this works with Material for MkDocs, and how you can hook into it.
+ * this works with MaterialX for MkDocs, and how you can hook into it.
  *
  * @param options - Options
  *

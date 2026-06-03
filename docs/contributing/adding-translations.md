@@ -1,11 +1,11 @@
 # Translations
 
 It's unbelievable – with the help of international community contributions,
-Material for MkDocs has been translated into 60+ languages. As you can imagine,
+MaterialX for MkDocs has been translated into 60+ languages. As you can imagine,
 it's impossible for us maintainers to keep all languages up-to-date, and new
 features sometimes require new translations.
 
-If you would like to help us to make Material for MkDocs even more globally
+If you would like to help us to make MaterialX for MkDocs even more globally
 accessible and have noticed a missing translation in your language, or would
 like to add a new language, you can help us by following the steps of the guide
 below.
@@ -19,7 +19,7 @@ the following things:
 ### Check language availability
 
 With more than 60 languages, the chances are good that your language is already
-supported by Material for MkDocs. You can check if your language is available,
+supported by MaterialX for MkDocs. You can check if your language is available,
 or needs improvements or additional translations by inspecting the list of
 [supported languages]:
 
@@ -27,7 +27,7 @@ or needs improvements or additional translations by inspecting the list of
   are translations missing, and click the link underneath your language to add them, which takes 5 minutes.
 
 - __Your language is missing__ – in that case, you can help us add support
-  for your language to Material for MkDocs! Read on, to learn how to do this.
+  for your language to MaterialX for MkDocs! Read on, to learn how to do this.
 
   [supported languages]: ../setup/changing-the-language.md#site-language
 
@@ -42,7 +42,7 @@ maintainers. To avoid investing your time in duplicated work, please search the
 
 ---
 
-At this point, when you have made sure that Material for MkDocs doesn't already
+At this point, when you have made sure that MaterialX for MkDocs doesn't already
 support your language, you can add new translations for it by following the
 issue template.
 
@@ -121,5 +121,5 @@ __We'll take it from here.__
 
 If you submit a translation using the template above, you will be __credited as
 a co-author__ in the commit, so you don't need to open a pull request. You have
-done a significant contribution to the project, making Material for MkDocs
+done a significant contribution to the project, making MaterialX for MkDocs
 accessible to more people around the world. Thank you!

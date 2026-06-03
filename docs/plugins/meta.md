@@ -50,7 +50,7 @@ dictionary on arbitrary levels.
 
 While the plugin itself doesn't offer much functionality beyond adding and
 merging metadata, it is a perfect companion for many of the other built-in
-plugins that Material for MkDocs offers. Some of the most powerful combinations
+plugins that MaterialX for MkDocs offers. Some of the most powerful combinations
 of the meta plugin and other built-in plugins are:
 
 <div class="grid cards" markdown>
@@ -138,7 +138,7 @@ plugins:
   - meta
 ```
 
-The meta plugin is included with Material for MkDocs and doesn't need to be
+The meta plugin is included with MaterialX for MkDocs and doesn't need to be
 installed.
 
   [meta]: meta.md

@@ -40,7 +40,7 @@ as fast as possible. Optimized media files are one of the key components for a
 high and consistent ranking in search engines.
 
 Additionally, the plugin can be combined with other built-in plugins
-that Material for MkDocs offers, in order to create sophisticated
+that MaterialX for MkDocs offers, in order to create sophisticated
 build pipelines tailored to your project:
 
 <div class="grid cards" markdown>
@@ -90,7 +90,7 @@ plugins:
   - optimize
 ```
 
-The optimize plugin is built into Material for MkDocs and doesn't need to be
+The optimize plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
 However, in order to optimize all media files, it's necessary to install the

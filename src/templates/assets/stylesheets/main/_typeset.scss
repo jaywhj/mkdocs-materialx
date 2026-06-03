@@ -262,11 +262,11 @@ kbd {
         scrollbar-color: var(--md-accent-fg-color) transparent;
       }
 
-      // Webkit scrollbar
-      &::-webkit-scrollbar {
-        width: px2rem(4px);
-        height: px2rem(4px);
-      }
+      // // Webkit scrollbar
+      // &::-webkit-scrollbar {
+      //   width: px2rem(4px);
+      //   height: px2rem(4px);
+      // }
 
       // Webkit scrollbar thumb
       &::-webkit-scrollbar-thumb {

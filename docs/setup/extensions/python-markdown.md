@@ -4,7 +4,7 @@ icon: octicons/package-24
 
 # Python Markdown
 
-Material for MkDocs supports a large number of [Python Markdown] extensions,
+MaterialX for MkDocs supports a large number of [Python Markdown] extensions,
 which is part of what makes it so attractive for technical writing. Following
 is a list of all supported extensions, linking to the relevant sections of the
 reference for which features they need to be enabled.
@@ -179,7 +179,7 @@ No configuration options are available. See reference for usage:
 <!-- md:extension [toc][Table of Contents] -->
 
 The [Table of Contents] extension automatically generates a table of contents
-from a document, which Material for MkDocs will render as part of the resulting
+from a document, which MaterialX for MkDocs will render as part of the resulting
 page. Enable it via `mkdocs.yml`:
 
 ``` yaml
@@ -208,7 +208,7 @@ The following configuration options are supported:
 :   <!-- md:default `false` --> This option adds an anchor link
     containing the paragraph symbol `¶` or another custom symbol at the end of
     each headline, exactly like on the page you're currently viewing, which
-    Material for MkDocs will make appear on hover:
+    MaterialX for MkDocs will make appear on hover:
 
     === "¶"
 
@@ -288,7 +288,7 @@ The following configuration options are supported:
         ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
   [Table of Contents]: https://python-markdown.github.io/extensions/toc/

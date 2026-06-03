@@ -132,7 +132,7 @@ copyright: Copyright &copy; 2016 - 2020 Martin Donath
 <!-- md:version 7.3.0 -->
 <!-- md:default `true` -->
 
-The footer displays a _Made with Material for MkDocs_ notice to denote how
+The footer displays a _Made with MaterialX for MkDocs_ notice to denote how
 the site was generated. The notice can be removed with the following option
 via `mkdocs.yml`:
 
@@ -143,7 +143,7 @@ extra:
 
 !!! info "Please read this before removing the generator notice"
 
-    The subtle __Made with Material for MkDocs__ hint in the footer is one of
+    The subtle __Made with MaterialX for MkDocs__ hint in the footer is one of
     the reasons why this project is so popular, as it tells the user how the
     site is generated, helping new users to discover this project. Before
     removing please consider that you're enjoying the benefits of @squidfunk's

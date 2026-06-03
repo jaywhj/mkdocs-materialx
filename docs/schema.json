@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
-  "title": "Material for MkDocs",
+  "title": "MaterialX for MkDocs",
   "markdownDescription": "Configuration",
   "type": "object",
   "properties": {

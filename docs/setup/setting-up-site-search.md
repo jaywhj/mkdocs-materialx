@@ -6,7 +6,7 @@ search:
 
 # Setting up site search
 
-Material for MkDocs provides an excellent client-side search implementation,
+MaterialX for MkDocs provides an excellent client-side search implementation,
 omitting the need for the integration of third-party services, which might
 not be compliant with privacy regulations. Moreover, search even works
 [offline], allowing users to download your documentation.
@@ -20,7 +20,7 @@ not be compliant with privacy regulations. Moreover, search even works
 <!-- md:version 0.1.0 -->
 <!-- md:plugin -->
 
-The built-in search plugin integrates seamlessly with Material for MkDocs,
+The built-in search plugin integrates seamlessly with MaterialX for MkDocs,
 adding multilingual client-side search with [lunr] and [lunr-languages]. It's
 enabled by default, but must be re-added to `mkdocs.yml` when other plugins
 are used:
@@ -65,7 +65,7 @@ yields ^^search suggestions^^ as a suggestion.
 <!-- md:flag experimental -->
 
 When search highlighting is enabled and a user clicks on a search result,
-Material for MkDocs will highlight all occurrences after following the link.
+MaterialX for MkDocs will highlight all occurrences after following the link.
 Add the following lines to `mkdocs.yml`:
 
 ``` yaml

@@ -70,7 +70,7 @@ MkDocs offers, including [admonitions], [annotations], [code blocks],
 ### When to use it
 
 If you want to add a blog to your project, or migrate from another blog
-framework to Material for MkDocs because of its excellent technical writing
+framework to MaterialX for MkDocs because of its excellent technical writing
 capabilities, this plugin is a great choice, as it integrates perfectly with
 many other built-in plugins:
 
@@ -147,7 +147,7 @@ plugins:
   - blog
 ```
 
-The blog plugin is built into Material for MkDocs and doesn't need to be
+The blog plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [blog]: blog.md

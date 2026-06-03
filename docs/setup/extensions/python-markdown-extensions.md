@@ -14,7 +14,7 @@ installed with a supported version.
 ## Supported extensions
 
 In general, all extensions that are part of [Python Markdown Extensions] should
-work with Material for MkDocs. The following list includes all extensions that
+work with MaterialX for MkDocs. The following list includes all extensions that
 are natively supported, meaning they work without any further adjustments.
 
 ### Arithmatex
@@ -29,7 +29,7 @@ mathematical typesetting. Enable it via `mkdocs.yml`:
   [^1]:
     Other libraries like [KaTeX] are also supported and can be integrated with
     some additional effort. See the [Arithmatex documentation on KaTeX] for
-    further guidance, as this is beyond the scope of Material for MkDocs.
+    further guidance, as this is beyond the scope of MaterialX for MkDocs.
 
 ``` yaml
 markdown_extensions:
@@ -77,7 +77,7 @@ of [additional JavaScript]:
     ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
@@ -302,7 +302,7 @@ The following configuration options are supported:
     ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
@@ -435,7 +435,7 @@ markdown_extensions:
 
 :   <!-- md:default `table` --> The [Highlight] extension
     provides three ways to add line numbers, two of which are supported by
-    Material for MkDocs. While `table` wraps a code block in a `<table>`
+    MaterialX for MkDocs. While `table` wraps a code block in a `<table>`
     element, `pymdownx-inline` renders line numbers as part of the line itself:
 
     ``` yaml
@@ -475,7 +475,7 @@ markdown_extensions:
     ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
@@ -635,10 +635,10 @@ The following configuration options are supported:
 
     Note that this will primarily prevent syntax highlighting from being
     applied. See the reference on [diagrams] to learn how Mermaid.js is
-    integrated with Material for MkDocs.
+    integrated with MaterialX for MkDocs.
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
@@ -732,7 +732,7 @@ The following configuration options are supported:
         ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
@@ -792,7 +792,7 @@ The following configuration options are supported:
     ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use
 them at your own risk.
 
 See reference for usage:
