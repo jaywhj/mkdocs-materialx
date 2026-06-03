@@ -20,12 +20,12 @@ MkDocs natively integrates with [Google Analytics] and offers a customizable
 <!-- md:version 7.1.8 -->
 <!-- md:default none -->
 
-Material for MkDocs integrates natively with Google Analytics 4[^1]. If you
+MaterialX for MkDocs integrates natively with Google Analytics 4[^1]. If you
 already set up Google Analytics and have a property, enable it by adding the
 following lines to `mkdocs.yml`:
 
   [^1]:
-    Prior to Material for MkDocs 9.2.0, Universal Analytics was supported as
+    Prior to MaterialX for MkDocs 9.2.0, Universal Analytics was supported as
     well. However, since Universal Analytics has been sunset, this integration
     was removed in 9.2.0.
 

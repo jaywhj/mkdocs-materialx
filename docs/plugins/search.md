@@ -30,7 +30,7 @@ your documentation, yielding accurate results.
 
 It's generally recommended to use the plugin, as interactive search functionality
 is a vital part of every good documentation. Additionally, the plugin integrates
-perfectly with several of the other [built-in plugins] that Material for MkDocs
+perfectly with several of the other [built-in plugins] that MaterialX for MkDocs
 offers:
 
 <div class="grid cards" markdown>
@@ -79,7 +79,7 @@ plugins:
   - search
 ```
 
-The search plugin is built into Material for MkDocs and doesn't need to be
+The search plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [search]: search.md

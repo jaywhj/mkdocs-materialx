@@ -53,7 +53,7 @@ always makes sense to enable the plugin, as links to your documentation shared
 on social media will appear much more appealing.
 
 Even more interestingly, the plugin can be combined with other built-in plugins
-that Material for MkDocs offers, in order to create sophisticated build
+that MaterialX for MkDocs offers, in order to create sophisticated build
 pipelines tailored to your project:
 
 <div class="grid cards" markdown>
@@ -95,7 +95,7 @@ pipelines tailored to your project:
 <!-- md:flag experimental -->
 
 In order to get started with the social plugin, just add the following lines to
-`mkdocs.yml`, and observe how Material for MkDocs generates beautiful social
+`mkdocs.yml`, and observe how MaterialX for MkDocs generates beautiful social
 cards for you:
 
 ``` yaml
@@ -103,7 +103,7 @@ plugins:
   - social
 ```
 
-The social plugin is built into Material for MkDocs and doesn't need to be
+The social plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
 However, in order to generate social card images, it's necessary to install the

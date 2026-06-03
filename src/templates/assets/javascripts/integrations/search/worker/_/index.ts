@@ -52,7 +52,7 @@ import {
  * allows the author to implement custom search functionality, by providing a
  * custom web worker via configuration.
  *
- * Material for MkDocs' built-in search implementation makes use of Lunr.js, an
+ * MaterialX for MkDocs' built-in search implementation makes use of Lunr.js, an
  * efficient and fast implementation for client-side search. Leveraging a tiny
  * iframe-based web worker shim, search is even supported for the `file://`
  * protocol, enabling search for local non-hosted builds.

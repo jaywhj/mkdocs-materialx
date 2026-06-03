@@ -4,7 +4,7 @@ icon: octicons/share-android-24
 
 # Setting up social cards
 
-Material for MkDocs can automatically create beautiful social cards for your
+MaterialX for MkDocs can automatically create beautiful social cards for your
 documentation, which appear as link previews on social media platforms. You
 can select from several [pre-designed layouts][default layouts] or create
 [custom layouts] to match your unique style and branding.

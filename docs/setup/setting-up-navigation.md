@@ -5,7 +5,7 @@ icon: lucide/panel-left
 # Setting up navigation
 
 A clear and concise navigation structure is an important aspect of good project
-documentation. Material for MkDocs provides a multitude of options to configure
+documentation. MaterialX for MkDocs provides a multitude of options to configure
 the behavior of navigational elements, including [tabs] and [sections], and one
 of its flagship features: [instant loading].
 
@@ -38,7 +38,7 @@ theme:
 ```
 
 The resulting page is parsed and injected and all event handlers and components
-are rebound automatically, i.e., __Material for MkDocs now behaves like a Single
+are rebound automatically, i.e., __MaterialX for MkDocs now behaves like a Single
 Page Application__. Now, the search index survives navigation, which is
 especially useful for large documentation sites.
 
@@ -132,7 +132,7 @@ with the `data-preview` attribute:
 <!-- md:flag experimental -->
 
 The recommended way to work with instant previews is to use the Markdown
-extension that is included with Material for MkDocs, as it allows you to enable
+extension that is included with MaterialX for MkDocs, as it allows you to enable
 instant previews on a per-page or per-section level for your documentation:
 
 ``` yaml
@@ -575,7 +575,7 @@ hide:
 
 ### Keyboard shortcuts
 
-Material for MkDocs includes several keyboard shortcuts that make it possible
+MaterialX for MkDocs includes several keyboard shortcuts that make it possible
 to navigate your project documentation via keyboard. There are two modes:
 
 <!-- md:option mode:search -->

@@ -105,7 +105,7 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
                     file = self._queue(url, config, concurrent = True)
 
                     # If site URL is not given, ensure that Mermaid.js is always
-                    # present. This is a special case, as Material for MkDocs
+                    # present. This is a special case, as MaterialX for MkDocs
                     # automatically loads Mermaid.js when a Mermaid diagram is
                     # found in the page - https://bit.ly/36tZXsA.
                     if "mermaid.min.js" in url.path and not config.site_url:

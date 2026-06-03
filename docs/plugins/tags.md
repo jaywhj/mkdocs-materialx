@@ -24,7 +24,7 @@ allowing for maximum flexibility when adding tags to your project.
 If you want to add one or multiple tags indexes to your project, the tags
 plugin is a perfect choice as it makes this process ridiculously simple.
 Additionally, it integrates perfectly with several of the other
-[built-in plugins] that Material for MkDocs offers:
+[built-in plugins] that MaterialX for MkDocs offers:
 
 <div class="grid cards" markdown>
 
@@ -73,7 +73,7 @@ plugins:
   - tags
 ```
 
-The tags plugin is built into Material for MkDocs and doesn't need to be
+The tags plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [tags]: tags.md

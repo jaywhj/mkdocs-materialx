@@ -57,7 +57,7 @@ plugins:
   - info
 ```
 
-The info plugin is built into Material for MkDocs and doesn't need to be
+The info plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [info]: info.md

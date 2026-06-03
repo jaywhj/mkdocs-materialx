@@ -138,7 +138,7 @@ class PreviewExtension(Extension):
     A Markdown extension to enable instant previews on links.
 
     This extensions allows to automatically add the `data-preview` attribute to
-    internal links matching specific criteria, so Material for MkDocs renders a
+    internal links matching specific criteria, so MaterialX for MkDocs renders a
     nice preview on hover as part of a tooltip. It is the recommended way to
     add previews to links in a programmatic way.
     """

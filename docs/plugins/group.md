@@ -50,7 +50,7 @@ plugins:
   - group
 ```
 
-The group plugin is built into Material for MkDocs and doesn't need to be
+The group plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.
 
   [group]: group.md

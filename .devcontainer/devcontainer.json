@@ -1,5 +1,5 @@
 {
-	"name": "Material for MkDocs - VS Code dev container",
+	"name": "MaterialX for MkDocs - VS Code dev container",
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {

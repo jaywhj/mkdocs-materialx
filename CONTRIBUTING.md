@@ -1,6 +1,6 @@
 # Contributing
 
-Material for MkDocs is an actively maintained and constantly improved project
+MaterialX for MkDocs is an actively maintained and constantly improved project
 that serves a diverse user base with varying backgrounds and needs. In order to
 effectively address the needs of all our users, evaluate change requests, and
 fix bugs, we maintainers need to put in a lot of work. We have devoted
@@ -11,7 +11,7 @@ changes, contribute to the project, or exchange with our community.
 Given the wealth of valuable knowledge contained in numerous issues and
 discussions, we consider our [issue tracker] and [discussion board] to serve as
 a crucial __knowledge base__ that is an important addition to our [documentation]
-and brings value to both new and experienced users of Material for MkDocs.
+and brings value to both new and experienced users of MaterialX for MkDocs.
 
   [discussion board]: https://github.com/jaywhj/mkdocs-materialx/discussions
   [issue tracker]: https://github.com/jaywhj/mkdocs-materialx/issues
@@ -23,7 +23,7 @@ and brings value to both new and experienced users of Material for MkDocs.
 
 -   #### [Report a bug]
 
-    __Something is not working?__ Report a bug in Material for MkDocs by
+    __Something is not working?__ Report a bug in MaterialX for MkDocs by
     creating an issue with a reproduction
 
 -   #### [Report a docs issue]

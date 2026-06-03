@@ -35,7 +35,7 @@ This will install compatible versions of the following packages:
 ### Cairo Graphics
 
 [Cairo Graphics] is a graphics library and dependency of [Pillow], which
-Material for MkDocs makes use of for generating [social cards] and performing
+MaterialX for MkDocs makes use of for generating [social cards] and performing
 image optimization. See the following section which explains how to install
 [Cairo Graphics] and its dependencies on your system:
 

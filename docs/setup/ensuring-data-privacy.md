@@ -4,7 +4,7 @@ icon: octicons/lock-24
 
 # Ensuring data privacy
 
-Material for MkDocs makes compliance with data privacy regulations very easy,
+MaterialX for MkDocs makes compliance with data privacy regulations very easy,
 as it offers a native [cookie consent] solution to seek explicit consent from
 users before setting up [analytics]. Additionally, external assets can be
 automatically downloaded for [self-hosting].
@@ -22,7 +22,7 @@ automatically downloaded for [self-hosting].
 <!-- md:flag experimental -->
 <!-- md:example cookie-consent -->
 
-Material for MkDocs ships a native and extensible cookie consent form which
+MaterialX for MkDocs ships a native and extensible cookie consent form which
 asks the user for consent prior to sending requests to third parties. Add the
 following to `mkdocs.yml`:
 
@@ -186,9 +186,9 @@ For a list of all settings, please consult the [plugin documentation].
     differently from others or exclude some images from downloading, you can
     use multiple instances of the [built-in privacy plugin].
 
-!!! question "Why can't Material for MkDocs bundle all assets by design?"
+!!! question "Why can't MaterialX for MkDocs bundle all assets by design?"
 
-    The primary reason why Material for MkDocs can't just bundle all of its own
+    The primary reason why MaterialX for MkDocs can't just bundle all of its own
     assets is the integration with [Google Fonts], which offers over a thousand
     different fonts that can be used to render your documentation. Most of the
     fonts include several weights and are split up into different character sets
@@ -196,7 +196,7 @@ For a list of all settings, please consult the [plugin documentation].
     really needed. For Roboto, our default [regular font], this results in [42
     `*.woff2` files in total][example].
 
-    If Material for MkDocs would bundle all font files, the download size would
+    If MaterialX for MkDocs would bundle all font files, the download size would
     be in the hundreds of megabytes, slowing down automated builds. Furthermore,
     authors might add external assets like third-party scripts or style sheets
     that would need to be remembered to be defined as further local assets.

@@ -4,7 +4,7 @@ icon: material/newspaper-variant-outline
 
 # Setting up a blog
 
-Material for MkDocs makes it very easy to build a blog, either as a sidecar to
+MaterialX for MkDocs makes it very easy to build a blog, either as a sidecar to
 your documentation or standalone. Focus on your content while the engine does
 all the heavy lifting, automatically generating [archive] and [category]
 indexes, [post slugs], configurable [pagination] and more.
@@ -147,11 +147,11 @@ The following configuration options are supported:
           comments_path: "#__comments"
     ```
 
-Material for MkDocs will automatically add the [necessary metadata] to your site
+MaterialX for MkDocs will automatically add the [necessary metadata] to your site
 which will make the RSS feed discoverable by browsers and feed readers.
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use them
+by MaterialX for MkDocs, which is why they may yield unexpected results. Use them
 at your own risk.
 
   [rss]: https://guts.github.io/mkdocs-rss-plugin/
@@ -663,7 +663,7 @@ All post excerpts belonging to the category are automatically appended.
 
 ### Overriding templates
 
-The [built-in blog plugin] is built on the same basis as Material for MkDocs,
+The [built-in blog plugin] is built on the same basis as MaterialX for MkDocs,
 which means you can override all templates used for the blog by using
 [theme extension] as usual.
 

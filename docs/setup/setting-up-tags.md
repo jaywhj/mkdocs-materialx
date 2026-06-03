@@ -4,7 +4,7 @@ icon: octicons/tag-24
 
 # Setting up tags
 
-Material for MkDocs adds first-class support for categorizing pages with tags,
+MaterialX for MkDocs adds first-class support for categorizing pages with tags,
 which adds the possibility to group related pages and make them discoverable
 via search and a dedicated [tags index]. If your documentation is large, tags
 can help to discover relevant information faster.
