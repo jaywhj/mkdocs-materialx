@@ -85,7 +85,7 @@ imaging = [
 [project.urls]
 Documentation = "https://jaywhj.github.io/mkdocs-materialx/"
 Source = "https://github.com/jaywhj/mkdocs-materialx"
-Changelog = "https://github.com/jaywhj/mkdocs-materialx/changelog/"
+Changelog = "https://jaywhj.github.io/mkdocs-materialx/changelog/index"
 Issues = "https://github.com/jaywhj/mkdocs-materialx/issues"
 
 [project.entry-points."mkdocs.plugins"]
