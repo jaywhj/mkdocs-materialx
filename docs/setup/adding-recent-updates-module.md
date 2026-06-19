@@ -15,7 +15,7 @@ The recent updates module displays site documentation information in a structure
 - Support multiple view modes including list, detail and grid
 - Support automatic extraction of article summaries
 - Support for customizing article cover in Front Matter
-- Support automatic readtime estimation, compatible with all major languages and mixed-language content
+- Support automatic readtime estimation, compatible with all mainstream languages and mixed-language content
 - Support custom display quantity
 - Support exclude specified files or folders
 

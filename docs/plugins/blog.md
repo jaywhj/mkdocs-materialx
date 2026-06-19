@@ -599,20 +599,49 @@ plugins:
       post_readtime: false
 ```
 
-!!! warning "Chinese, Japanese and Korean characters"
+<!-- md:version 10.1.8 -->
 
-    Reading time computation currently does not take segmentation of Chinese,
-    Japanese and Korean characters into account. This means that the reading
-    time for posts in these languages may be inaccurate. We're planning on
-    adding support in the future. In the meantime, please use the `readtime`
-    front matter property to set the reading time.
+##### New features
+
+- Supports calculation for various Markdown blocks, including tables, fenced blocks, math blocks, images and more
+- Supports all mainstream languages and mixed-language
+    - Space-delimited languages: English, Spanish, French, German, Portuguese, Russian ...
+    - CJK languages: Chinese, Japanese, Korean
+
+##### Calculation Rules
+
+| Valid Element | Calculation Method | Notes |
+| --- | --- | --- |
+| Space-delimited languages | 240 words / min | Based on common industry standards |
+| CJK languages | 480 characters / min | Based on common industry standards |
+| Tables | 2s / row | Simple row-based estimation for variable-length content |
+| Fence blocks | 1s / row | Includes code blocks, text blocks, YAML blocks, etc. |
+| Math blocks | 4s / block | Rough estimation based on individual blocks |
+| Images | 2s / image | Typical for blog post images: 2~3 seconds per image |
+| Front Matter | Skipped | Generally not visible after rendering |
+| HTML blocks | Skipped | Images inside HTML are counted, other content ignored (Markdown-focused) |
+| Quotes & links | Skipped | Link text for href is generally not visible after rendering |
+| Other invalid characters | Skipped | For example, whitespace, blank lines, special symbols, markup characters, etc. |
+
+This reading time calculation function is exposed publicly. You may call it from any plugin or hook to get the estimated reading time and concise summary of Markdown content. Refer to [analyze_markdown](date-author.md#analyze_markdown).
+
+##### Configure Reading Speed
+
+Reading speed varies by language, content type and personal reading habits. The default values are set based on average user behavior. You may manually adjust the speed if the defaults do not match your actual usage.
+
+```yaml
+plugins:
+  - blog:
+      post_readtime_words_per_minute: 240         # for Space-delimited languages
+      post_readtime_words_per_minute_cjk: 480     # for CJK languages
+```
 
 ---
 
 #### <!-- md:setting config.post_readtime_words_per_minute -->
 
 <!-- md:version 9.2.0 -->
-<!-- md:default `265` -->
+<!-- md:default `240` -->
 
 Use this setting to change the number of words that a reader is expected to read
 per minute when computing the reading time of a post. If you want to fine-tune
@@ -624,10 +653,30 @@ plugins:
       post_readtime_words_per_minute: 300
 ```
 
-A reading time of 265 words per minute is considered to be the
+A reading time of 240 words per minute is considered to be the
 [average reading time of an adult].
 
   [average reading time of an adult]: https://help.medium.com/hc/en-us/articles/214991667-Read-time
+
+---
+
+#### <!-- md:setting config.post_readtime_words_per_minute_cjk -->
+
+<!-- md:version 10.1.8 -->
+<!-- md:default `480` -->
+
+Use this setting to change the number of characters in Chinese, Japanese and Korean posts 
+that a reader is expected to read per minute when computing the reading time of a post. 
+If you want to fine-tune it, use:
+
+``` yaml
+plugins:
+  - blog:
+      post_readtime_words_per_minute_cjk: 500
+```
+
+A reading time of 480 characters per minute is considered to be the
+[average reading time of an adult].
 
 ### Archive
 
