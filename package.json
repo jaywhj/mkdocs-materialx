@@ -1,6 +1,6 @@
 {
   "name": "mkdocs-materialx",
-  "version": "10.1.7",
+  "version": "10.1.8",
   "description": "Documentation that simply works",
   "keywords": [
     "mkdocs",
@@ -47,7 +47,7 @@
     "focus-visible": "^5.2.1",
     "fuzzaldrin-plus": "^0.6.0",
     "lunr": "^2.3.9",
-    "lunr-languages": "^1.14.0",
+    "lunr-languages": "^1.20.0",
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
