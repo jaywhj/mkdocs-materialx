@@ -149,7 +149,13 @@
               "title": "Post reading time words per minute",
               "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.post_readtime_words_per_minute",
               "type": "number",
-              "default": 265
+              "default": 240
+            },
+            "post_readtime_words_per_minute_cjk": {
+              "title": "Post reading time words per minute for Chinese, Japanese and Korean posts",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.post_readtime_words_per_minute_cjk",
+              "type": "number",
+              "default": 480
             },
             "archive": {
               "title": "Archive",
