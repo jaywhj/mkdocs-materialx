@@ -516,17 +516,19 @@ plugins:
 
 #### Reading Time Estimation
 
-The plugin intelligently analyzes article content, extracts valid information, and estimates readtime. It **supports all major languages** and mixed-language content:
+The plugin intelligently analyzes article content, extracts valid information and estimates reading time.
 
-- CJK languages: Chinese, Japanese, Korean
-- Space-delimited languages: English, Spanish, French, German, Portuguese, Russian ...
+- Supports calculation for various Markdown blocks, including tables, fenced blocks, math blocks, images and more
+- Supports all mainstream languages and mixed-language
+    - Space-delimited languages: English, Spanish, French, German, Portuguese, Russian ...
+    - CJK languages: Chinese, Japanese, Korean
 
-Calculation Rules:
+**Calculation Rules**
 
 | Valid Element | Calculation Method | Notes |
 | --- | --- | --- |
-| CJK languages | 480 characters / min | Based on common industry standards |
 | Space-delimited languages | 240 words / min | Based on common industry standards |
+| CJK languages | 480 characters / min | Based on common industry standards |
 | Tables | 2s / row | Simple row-based estimation for variable-length content |
 | Fence blocks | 1s / row | Includes code blocks, text blocks, YAML blocks, etc. |
 | Math blocks | 4s / block | Rough estimation based on individual blocks |
@@ -536,14 +538,19 @@ Calculation Rules:
 | Quotes & links | Skipped | Link text for href is generally not visible after rendering |
 | Other invalid characters | Skipped | For example, whitespace, blank lines, special symbols, markup characters, etc. |
 
+This reading time calculation function is exposed publicly. You may call it from any plugin or hook to get the estimated reading time and concise summary of Markdown content. Refer to [analyze_markdown](#analyze_markdown).
 
-!!! info "Estimation Rule Notes"
+**Configure Reading Speed**
 
-    These rules cannot fully account for individual reading habits—reading speed varies by person, language, and content type. This is only a rough estimate designed to suit most users as closely as possible.
+Reading speed varies by language, content type and personal reading habits. The default values are set based on average user behavior. You may manually adjust the speed if the defaults do not match your actual usage.
 
-    That said, this is still the most full-featured Markdown readtime parser I have seen publicly available. It supports all major languages while maintaining extremely high parsing performance. By comparison, readtime implementations in the mkdocs-material blog only perform simple word and image counting with no special handling for Markdown content. Its image readtime rules are also highly unreasonable (starting at 12 seconds per image and decreasing), and it does not support CJK languages.
+```yaml
+plugins:
 
-    To avoid discouraging clicks with overly long estimated times, the default values in this calculation logic are set conservatively.
+  - document-dates:
+      readtime_wpm: 240        # for Space-delimited languages
+      readtime_wpm_cjk: 480    # for CJK languages
+```
 
 ### Localization Language
 
@@ -571,7 +578,11 @@ When `type: timeago` is set, the timeago.js library is enabled for dynamic time 
 
 ## Developer API
 
-This plugin also provides a date data API for developers, making it easy to retrieve exact dates in other plugins or hooks:
+This plugin also exposes the following APIs for developers, making it easy to retrieve exact dates, reading time and other information in other plugins or hooks.
+
+### load_dates_and_authors
+
+You can use this function to retrieve the date and author information for all site documents at once, it returns either Git or file-system-based dates and authors for each document.
 
 !!! quote ""
 
@@ -586,7 +597,7 @@ This plugin also provides a date data API for developers, making it easy to retr
 
     - `Dict[str, Dict[str, Any]]` - a dictionary containing all documents, built from the document relative path, date, author, and other information
 
-You can use this function to retrieve the date and author information for all site documents at once, it returns either Git or file-system-based dates and authors for each document, with the data structure as follows:
+The return data structure is as follows:
 
 ``` json
 {
@@ -598,14 +609,7 @@ You can use this function to retrieve the date and author information for all si
             ...
         ]
     },
-    'website.md': {
-        'created': datetime.datetime(2025,5,19,3,20,39,tzinfo=datetime.timezone.utc),
-        'updated': datetime.datetime(2026,3,3,3,52,50,364383,tzinfo=datetime.timezone.utc),
-        'authors': [
-            {'name': name, 'email': email, 'avatar': avatar, 'url': url, 'description': description},
-            ...
-        ]
-    },
+
     ...
 }
 ```
@@ -642,7 +646,7 @@ def on_files(self, files, config):
     return files
 
 # Then, access the data via the relative path of page.file in `Page Events`
-def on_page_markdown(self, markdown, page: Page, config, files):
+def on_page_markdown(self, markdown, page, config, files):
 
     entry = self.date_data.get(page.file.src_uri, {})
 
@@ -661,9 +665,8 @@ def on_page_markdown(self, markdown, page: Page, config, files):
 
 !!! warning "Note"
 
-    - Do not call the API function in [Page Events](https://properdocs.org/dev-guide/plugins/#page-events){target="_blank"}, it should only be called **once** in [Global Events](https://properdocs.org/dev-guide/plugins/#global-events){target="_blank"}. For the event lifecycle, please refer to [Events](https://properdocs.org/dev-guide/plugins/#events){target="_blank"}.
-    - The API function does not parse markdown content, so the date and author in frontmatter need to be handled separately by you. For example, you can get the date and author configured by the user in frontmatter via `page.meta.xxx` in `on_page_markdown`, like this:
-
+    - Do not call this function in [Page Events](https://properdocs.org/dev-guide/plugins/#page-events){target="_blank"}, it should only be called **once** in [Global Events](https://properdocs.org/dev-guide/plugins/#global-events){target="_blank"}. For the event lifecycle, please refer to [Events](https://properdocs.org/dev-guide/plugins/#events){target="_blank"}.
+    - This function does not parse Markdown content, so dates and authors defined in frontmatter need to be handled separately. For example, you may first try to retrieve manually configured dates and authors from frontmatter, and fall back to calling this function to get such information if those values are not present, like this:
     ``` py { data-fold="0" }
     ...
 
@@ -675,7 +678,7 @@ def on_page_markdown(self, markdown, page: Page, config, files):
         except ValueError:
             return default
 
-    def on_page_markdown(self, markdown, page: Page, config, files):
+    def on_page_markdown(self, markdown, page, config, files):
 
         entry = self.date_data.get(page.file.src_uri, {})
 
@@ -685,3 +688,47 @@ def on_page_markdown(self, markdown, page: Page, config, files):
 
         ...
     ```
+
+### analyze_markdown
+
+You can use this function to get the estimated reading time and concise summary of Markdown content.
+
+!!! quote ""
+
+    **analyze_markdown(md: str, readtime_wpm: int = 240, readtime_wpm_cjk: int = 480)**
+
+    Parameters:
+
+    - `md` (str) - markdown text
+    - `readtime_wpm` (int, **optional**) - reading speed per minute for Space-delimited languages (English, Spanish, French, German, Portuguese, Russian, etc.), default is 240 words/min
+    - `readtime_wpm_cjk` (int, **optional**) - reading speed per minute for CJK languages (Chinese, Japanese, Korean), default is 480 chars/min
+
+    Returns:
+
+    - `tuple[int, str]`
+        - `readtime` (int) - reading time in minutes
+        - `summary` (str) - a concise summary of Markdown content
+
+A sample call is shown below:
+
+```py
+from mkdocs_document_dates.utils import analyze_markdown
+
+def on_page_markdown(self, markdown, page, config, files):
+
+    readtime, summary = analyze_markdown(markdown)
+    ...
+```
+
+If you only need the reading time, call it like this:
+
+```py
+from mkdocs_document_dates.utils import analyze_markdown
+
+def on_page_markdown(self, markdown, page, config, files):
+
+    readtime, *_ = analyze_markdown(markdown)
+    ...
+```
+
+Refer to [Reading Time Estimation](#reading-time-estimation) for reading time calculation rules.

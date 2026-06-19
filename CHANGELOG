@@ -1,3 +1,12 @@
+mkdocs-materialx-10.1.8 (2026-06-19)
+
+- Enhanced reading time calculation for blog posts, see [post_readtime](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#new-features)
+    - Supports calculation for various Markdown blocks, including tables, fenced blocks, math blocks, images and more
+    - Supports all mainstream languages and mixed-language, including Space-delimited languages & CJK languages
+    - Improved parsing performance for faster computation
+    - Exposed API for reading time calculation, facilitating invocation and integration by other plugins and hooks, see [analyze_markdown](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#analyze_markdown)
+- Optimized styles for collapsible code blocks with compatibility for the `result` class style
+
 mkdocs-materialx-10.1.7 (2026-06-05)
 
 - Fixed the legacy issue where code highlighting failed to fully cover long lines

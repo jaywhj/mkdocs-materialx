@@ -6,6 +6,15 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.1.8 <small>June 19, 2026</small> { id="10.1.8" }
+
+- Enhanced reading time calculation for blog posts, see [post_readtime](../plugins/blog.md#new-features)
+    - Supports calculation for various Markdown blocks, including tables, fenced blocks, math blocks, images and more
+    - Supports all mainstream languages and mixed-language, including Space-delimited languages & CJK languages
+    - Improved parsing performance for faster computation
+    - Exposed API for reading time calculation, facilitating invocation and integration by other plugins and hooks, see [analyze_markdown](../plugins/date-author.md#analyze_markdown)
+- Optimized styles for collapsible code blocks with compatibility for the `result` class style
+
 ### 10.1.7 <small>June 5, 2026</small> { id="10.1.7" }
 
 - Fixed the legacy issue where code highlighting failed to fully cover long lines

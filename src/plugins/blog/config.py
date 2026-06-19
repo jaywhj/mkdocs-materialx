@@ -50,7 +50,8 @@ class BlogConfig(Config):
     post_excerpt_max_categories = Type(int, default = 5)
     post_excerpt_separator = Type(str, default = "<!-- more -->")
     post_readtime = Type(bool, default = True)
-    post_readtime_words_per_minute = Type(int, default = 265)
+    post_readtime_words_per_minute = Type(int, default = 240)
+    post_readtime_words_per_minute_cjk = Type(int, default = 480)
 
     # Settings for archive
     archive = Type(bool, default = True)

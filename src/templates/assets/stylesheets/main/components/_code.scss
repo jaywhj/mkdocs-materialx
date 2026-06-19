@@ -153,7 +153,16 @@
   mask-size: 100% 100%;
 }
 
-// Adjusts the margin-bottom of the preceding element when the toggle button is enabled
+// Restore spacing when collapsible code blocks are placed inside .result
+.result > .md-code--collapsible {
+  margin-top: 1em;
+}
+
+.result > .md-code__toggle {
+  margin-bottom: 1em;
+}
+
+// Remove inner code block margins, as spacing is handled by the collapsible container
 .md-code--collapsible > pre,
 .md-code--collapsible > table.highlighttable {
   margin: 0;
@@ -165,7 +174,7 @@
   align-items: center;
   justify-content: center;
   padding: px2rem(6px) px2rem(12px);
-  margin: px2rem(12px) auto;
+  margin: px2rem(12px) auto 0;
   font-size: px2em(13.6px);
   color: var(--md-default-fg-color--light);
   cursor: pointer;

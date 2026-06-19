@@ -45,12 +45,11 @@ from tempfile import mkdtemp
 from urllib.parse import urlparse
 from yaml import SafeLoader
 from pathlib import Path
-from mkdocs_document_dates.utils import load_dates_and_authors
+from mkdocs_document_dates.utils import load_dates_and_authors, analyze_markdown
 
 from . import view_name
 from .author import Author, Authors
 from .config import BlogConfig
-from .readtime import readtime
 from .structure import (
   Archive, Category, Profile,
   Excerpt, Post, View,
@@ -303,21 +302,12 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         page.excerpt.authors    = page.authors[:max_authors]
         page.excerpt.categories = page.categories[:max_categories]
 
-    # Process posts
-    def on_page_content(self, html, *, page, config, files):
-        if not self.config.enabled:
-            return
-
-        # Skip if page is not a post managed by this instance - this plugin has
-        # support for multiple instances, which is why this check is necessary
-        if page not in self.blog.posts:
-            return
-
-        # Compute readtime of post, if enabled and not explicitly set
+        # Analyze markdown content to extract readtime
         if self.config.post_readtime:
             words_per_minute = self.config.post_readtime_words_per_minute
+            words_per_minute_cjk = self.config.post_readtime_words_per_minute_cjk
             if not page.config.readtime:
-                page.config.readtime = readtime(html, words_per_minute)
+                page.config.readtime, *_ = analyze_markdown(markdown, words_per_minute, words_per_minute_cjk)
 
     # Register template filters for plugin
     def on_env(self, env, *, config, files):
