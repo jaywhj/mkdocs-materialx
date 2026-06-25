@@ -294,14 +294,14 @@ post with one or multiple [authors]. First, create the
 
 ``` yaml
 authors:
-  squidfunk:
-    name: Martin Donath
+  jaywhj:
+    name: Aaron Wang
     description: Creator
-    avatar: https://github.com/squidfunk.png
+    avatar: https://github.com/jaywhj.png
 ```
 
 The [`.authors.yml`][authors_file] file associates each author with an
-identifier (in this example `squidfunk`), which can then be used in posts.
+identifier (in this example `jaywhj`), which can then be used in posts.
 Different attributes can be configured. For a list of all possible attributes,
 please consult the [`authors_file`][authors_file] documentation.
 
@@ -312,9 +312,8 @@ each post, as well as in post excerpts on index pages:
 
 ``` yaml
 ---
-date: 2024-01-31
 authors:
-  - squidfunk
+  - jaywhj
     ...
 ---
 
@@ -357,7 +356,6 @@ add them to the front matter `categories` property:
 
 ``` yaml
 ---
-date: 2024-01-31
 categories:
   - Hello
   - World
@@ -383,7 +381,6 @@ part of a post, the post is linked from the [tags index]:
 
 ``` yaml
 ---
-date: 2024-01-31
 tags:
   - Foo
   - Bar
@@ -425,7 +422,6 @@ to add related links to a post:
 
 ``` yaml
 ---
-date: 2024-01-31
 links:
   - plugins/search.md
   - insiders/how-to-sponsor.md
@@ -441,7 +437,6 @@ links and even use nesting:
 
 ``` yaml
 ---
-date: 2024-01-31
 links:
   - plugins/search.md
   - insiders/how-to-sponsor.md
@@ -496,7 +491,6 @@ and category indexes it is part of, you can use the front matter `pin` property:
 
 ``` yaml
 ---
-date: 2024-01-31
 pin: true
 ---
 
@@ -515,6 +509,11 @@ which is rendered as part of the post and post excerpt. Nowadays, many blogs
 show reading times, which is why the [built-in blog plugin] offers this
 capability as well.
 
+- Supports calculation for various Markdown blocks, including tables, fenced blocks, math blocks, images and more
+- Supports all mainstream languages and mixed-language
+    - Space-delimited languages: English, Spanish, French, German, Portuguese, Russian ...
+    - CJK languages: Chinese, Japanese, Korean
+
 Sometimes, however, the computed reading time might not feel accurate, or
 result in odd and unpleasant numbers. For this reason, reading time can be
 overridden and explicitly set with the front matter `readtime` property for a
@@ -522,7 +521,6 @@ post:
 
 ``` yaml
 ---
-date: 2024-01-31
 readtime: 15
 ---
 
@@ -531,14 +529,6 @@ readtime: 15
 ```
 
 This will disable automatic reading time computation.
-
-!!! warning "Chinese, Japanese and Korean characters"
-
-    Reading time computation currently does not take segmentation of Chinese,
-    Japanese and Korean characters into account. This means that the reading
-    time for posts in these languages may be inaccurate. We're planning on
-    adding support in the future. In the meantime, please use the `readtime`
-    front matter property to set the reading time.
 
   [enabled]: ../plugins/blog.md#config.post_readtime
 
@@ -569,7 +559,7 @@ authors, and add a `.meta.yml` file to set common properties:
 
     ``` yaml
     authors:
-      - squidfunk
+      - jaywhj
     categories:
       - Hello
       - World

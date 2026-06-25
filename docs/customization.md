@@ -265,15 +265,16 @@ directly in the source of the theme and recompile it.
 
 ### Environment setup
 
-First, clone the repository:
+<div class="steps" markdown>
+
+1. First, clone the repository:
 
 ```
 git clone https://github.com/jaywhj/mkdocs-materialx.git
 cd mkdocs-materialx
 ```
 
-Next, create a new [Python virtual environment][venv] and
-[activate][venv-activate] it:
+2. Next, create a new [Python virtual environment][venv] and [activate][venv-activate] it:
 
 ```
 python -m venv venv
@@ -297,19 +298,19 @@ source venv/bin/activate
   [venv]: https://docs.python.org/3/library/venv.html
   [venv-activate]: https://docs.python.org/3/library/venv.html#how-venvs-work
 
-Then, install all Python dependencies:
+3. Then, install all Python dependencies:
 
 ```
 pip install -e ".[git, recommended, imaging]"
 pip install nodeenv
 ```
 
-In addition, you will need to install the `cairo` and `pngquant` libraries in your
+4. In addition, you will need to install the `cairo` and `pngquant` libraries in your
 system, as described in the [image processing] requirements guide.
 
 [image processing]: plugins/requirements/image-processing.md
 
-Finally, install the [Node.js] LTS version into the Python virtual environment
+5. Finally, install the [Node.js] LTS version into the Python virtual environment
 and install all Node.js dependencies:
 
 ```
@@ -317,17 +318,21 @@ nodeenv -p -n lts
 npm install
 ```
 
+</div>
+
   [Node.js]: https://nodejs.org
 
 ### Development mode
 
-Start the watcher with:
+<div class="steps" markdown>
+
+1. Start the watcher with:
 
 ```
 npm start
 ```
 
-Then, in a second terminal window, start the MkDocs live preview server with:
+2. Then, in a second terminal window, start the MkDocs live preview server with:
 
 === "MkDocs"
     ```
@@ -338,6 +343,8 @@ Then, in a second terminal window, start the MkDocs live preview server with:
     ```
     properdocs serve --watch-theme
     ```
+
+</div>
 
 Point your browser to [localhost:8000][live preview] and you should see this
 very documentation in front of you.

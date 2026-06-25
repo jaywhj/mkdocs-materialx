@@ -92,14 +92,11 @@ that the index page shows.
     Create a file `docs/blog/posts/myfirst.md` with the following contents:
 
     ```
-    ---
-    date:
-      created: 2023-12-31
-    ---
 
     # Happy new years eve!
 
     We hope you are all having fun and wish you all the best for the new year!
+    
     <!-- more -->
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -139,10 +136,8 @@ header to indicate that a post is still in draft form.
     Create a second blog post in `docs/blogs/posts/draft.md` with the following
     contents:
 
-    ```hl_lines="4"
+    ```hl_lines="2"
     ---
-    date:
-      created: 2024-01-01
     draft: true
     ---
 
@@ -182,28 +177,6 @@ cover the Meta plugin later on.
 
 [Meta plugin]: ../../plugins/meta.md
 
-### Edits
-
-Sometimes, bloggers need to update a post. This might happen when you make
-a mistake or when something changes that you need to reflect in the post. To
-indicate you have edited a post, you can include an `updated` date in the page
-header.
-
-!!! example "Editing a post"
-
-    Make a change to your first blog post, then add an edit date to the header:
-
-    ```hl_lines="3 4"
-    ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
-    ---
-    ```
-
-The Metadata section of the blog post itself will contain the edit date,
-though the index page omits this detail by default.
-
 ### Reading time
 
 To give the reader some idea of how long it might take them to read a post,
@@ -215,11 +188,8 @@ your readers will take the read the post.
 
     Add a reading time override to your first blog post:
 
-    ```hl_lines="5"
+    ```hl_lines="2"
     ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
     readtime: 15
     ---
     ```
@@ -234,11 +204,8 @@ achieve this by adding the `pin` attribute in the page header:
 
     Add the `pin` attribute to your first blog post:
 
-    ```hl_lines="6"
+    ```hl_lines="3"
     ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
     readtime: 15
     pin: true
     ---
@@ -259,11 +226,8 @@ for you if you provide link targets in your page header:
 
     Add the following to a blog post:
 
-    ``` hl_lines="5-7"
+    ``` hl_lines="2-4"
     ---
-    date:
-      created: 2023-12-31
-    ...
     links:
       - index.md
       - blog/index.md
@@ -282,11 +246,8 @@ subsections:
 
     Change the link section to override the page titles:
 
-    ```hl_lines="6-9"
+    ```hl_lines="3-6"
     ---
-    date:
-      created: 2023-12-31
-    ...
     links:
       - Homepage: index.md
       - Blog index: blog/index.md
