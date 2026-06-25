@@ -181,11 +181,8 @@ the tag index and, from there, to other pages that carry the same tag.
 
     ``` hl_lines="9-12""
     ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
     authors:
-      - material
+      - materialx
     categories:
       - Holidays
     tags:
@@ -311,11 +308,8 @@ the page header.
     and then add a line to the header of the first post:
 
 
-    ```hl_lines="5-6"
+    ```hl_lines="2-3"
     ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
     authors:
       - team
     ---
@@ -500,11 +494,8 @@ be tedious.
     If, for example, you wanted the slug to be 'ny-eve'  instead of the somewhat
     lengthy 'happy-new-years-eve', you could add the following:
 
-    ```hl_lines="7"
+    ```hl_lines="4"
     ---
-    date:
-      created: 2023-12-31
-      updated: 2024-01-02
     readtime: 15
     pin: true
     slug: ny-eve

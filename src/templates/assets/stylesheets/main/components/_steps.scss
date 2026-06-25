@@ -1,0 +1,133 @@
+////
+/// Copyright (c) 2025-2028 Aaron Wang <aaronwqt@gmail.com>
+///
+/// Permission is hereby granted, free of charge, to any person obtaining a
+/// copy of this software and associated documentation files (the "Software"),
+/// to deal in the Software without restriction, including without limitation
+/// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+/// and/or sell copies of the Software, and to permit persons to whom the
+/// Software is furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+/// THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+/// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+/// DEALINGS
+////
+
+//  Steps Component for mkdocs-materialx
+
+.md-typeset {
+  .steps {
+    --md-steps-fg-color: var(--md-code-fg-color);   // 圆圈文本色
+    --md-steps-bg-color: var(--md-code-bg-color);   // 圆圈背景色
+    --md-steps-circle-border: 1px solid var(--md-typeset-kbd-border-color);   // 圆圈边框样式
+    --md-steps-line-color: var(--md-default-fg-color--quote);   // 连接线颜色
+    --md-steps-circle-size: 28px;   // 圆圈尺寸
+    --md-steps-gap: 8px;            // 圆圈与连接线之间的间隙
+    --md-steps-indent: 48px;        // 圆圈右侧的间隙
+
+    position: relative;
+    padding-left: var(--md-steps-indent);
+    margin: 2em 0;
+    counter-reset: step-counter;
+
+    // 连接线
+    &::before {
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      left: calc(var(--md-steps-circle-size) / 2);
+      z-index: 0;
+      width: 1px;
+      content: "";
+      background-color: var(--md-steps-line-color);
+    }
+
+    // 公共圆圈样式
+    > ol > li,
+    > ul > li,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      &::before {
+        position: absolute;
+        left: calc(-1 * var(--md-steps-indent));
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--md-steps-circle-size);
+        height: var(--md-steps-circle-size);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--md-steps-fg-color);
+        content: counter(step-counter);
+        background-color: var(--md-steps-bg-color);
+        border: var(--md-steps-circle-border);
+        border-radius: 50%;
+
+        // 给计数圆圈添加与背景色相同的 box-shadow，用来盖住圆圈附近的连接竖线，以实现圆圈与竖线之间的物理间隙
+        box-shadow: 0 0 0 var(--md-steps-gap) var(--md-default-bg-color);
+      }
+    }
+
+    // 列表模式
+    > ol,
+    > ul {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+
+      > li {
+        position: relative;
+        margin-inline-start: 0;
+        margin-bottom: 2em;
+        counter-increment: step-counter;
+
+        // 确保内容第一行的顶边不被 margin 推下，以便圆圈对齐
+        > :first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // 标题模式
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      position: relative;
+      // Flex 保证如果标题超长换行，整体依然是一个规整的 Block
+      display: flex;
+      align-items: center;
+      counter-increment: step-counter;
+
+      // 圆圈垂直居中
+      &::before {
+        // 无论 h1~h5 的上下 margin 或字体多大，50% 加 translateY 确保圆心始终对齐标题盒子中心
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    // 通用收尾
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

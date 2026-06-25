@@ -26,7 +26,7 @@
   </p>
 </details>
 
-**MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and will adopt the following brand-new vision and positioning.
+**MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and provides ongoing maintenance and updates.
 
 <br />
 
