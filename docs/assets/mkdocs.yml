@@ -118,7 +118,6 @@ theme:
   favicon: octicons/milestone-24
   icon:
     logo: logo
-    annotation: material/plus-circle-outline
   admonition:
     git:
       icon: simple/git
@@ -186,9 +185,6 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
   - pymdownx.superfences:
       relaxed_headers: true
       custom_fences:

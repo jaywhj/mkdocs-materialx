@@ -301,16 +301,16 @@ source venv/bin/activate
 3. Then, install all Python dependencies:
 
 ```
-pip install -e ".[git, recommended, imaging]"
+pip install -e ".[recommended, imaging]"
 pip install nodeenv
 ```
 
-4. In addition, you will need to install the `cairo` and `pngquant` libraries in your
+In addition, you will need to install the `cairo` and `pngquant` libraries in your
 system, as described in the [image processing] requirements guide.
 
 [image processing]: plugins/requirements/image-processing.md
 
-5. Finally, install the [Node.js] LTS version into the Python virtual environment
+4. Finally, install the [Node.js] LTS version into the Python virtual environment
 and install all Node.js dependencies:
 
 ```

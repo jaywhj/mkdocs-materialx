@@ -97,7 +97,7 @@ The following environments come with a preinstalled version of [Cairo Graphics]:
   [installation guide]: https://www.cairographics.org/download/
   [MSYS2]: https://www.msys2.org/
   [UCRT64]: https://www.msys2.org/docs/environments/
-  [Docker image]: https://hub.docker.com/r/squidfunk/mkdocs-material/
+  [Docker image]: https://hub.docker.com/r/jaywhj/mkdocs-materialx
   [GitHub Actions]: ../../publishing-your-site.md#github-pages
 
 ### pngquant
