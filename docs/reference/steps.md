@@ -104,7 +104,7 @@ You can also embed any Markdown content within list items, such as fenced blocks
 
     </div>
 
-### Heading Segmentation Mode
+### Heading Mode
 
 You can also wrap headings of the same level to construct step sequences, where each heading represents one individual step.
 

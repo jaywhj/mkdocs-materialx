@@ -74,9 +74,6 @@ recommended = [
   "mkdocs-glightbox>=0.5",
   "mkdocs-drawio>=1.15.0"
 ]
-git = [
-  "mkdocs-git-committers-plugin-2>=1.1"
-]
 imaging = [
   "pillow>=10.2",
   "cairosvg>=2.6"

@@ -60,7 +60,7 @@ RUN \
   pip install --no-cache-dir --upgrade pip \
 && \
   if [ "${WITH_PLUGINS}" = "true" ]; then \
-    pip install --no-cache-dir ".[recommended,git,imaging]"; \
+    pip install --no-cache-dir ".[recommended,imaging]"; \
   else \
     pip install --no-cache-dir .; \
   fi \
