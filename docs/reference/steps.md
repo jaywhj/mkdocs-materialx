@@ -110,7 +110,7 @@ You can also wrap headings of the same level to construct step sequences, where 
 
 === "Syntax"
 
-    ````markdown {hl_lines="1 20" data-fold="0"}
+    ````markdown {hl_lines="1 19" data-fold="0"}
     <div class="steps" markdown>
 
     #### Install
@@ -126,7 +126,6 @@ You can also wrap headings of the same level to construct step sequences, where 
     !!! quote ""
         === "Success"
             Everything is OK !
-        
         === "Failed"
             Something went wrong !
 
@@ -150,7 +149,6 @@ You can also wrap headings of the same level to construct step sequences, where 
     !!! quote ""
         === "Success"
             Everything is OK !
-        
         === "Failed"
             Something went wrong !
 
