@@ -21,7 +21,7 @@ installed if you want to use the [social] plugin or the [optimize] plugin. The
 libraries are listed under the `imaging` extra:
 
 ```
-pip install "mkdocs-material[imaging]"
+pip install "mkdocs-materialx[imaging]"
 ```
 
 This will install compatible versions of the following packages:
