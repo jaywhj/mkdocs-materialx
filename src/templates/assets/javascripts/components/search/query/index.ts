@@ -27,6 +27,7 @@ import {
   distinctUntilChanged,
   distinctUntilKeyChanged,
   endWith,
+  filter,
   finalize,
   first,
   fromEvent,
@@ -102,7 +103,11 @@ export function watchSearchQuery(
   /* Intercept focus and input events */
   const focus$ = watchElementFocus(el)
   const value$ = merge(
-    fromEvent(el, "keyup"),
+    fromEvent<InputEvent>(el, "input")
+      .pipe(
+        filter(ev => !ev.isComposing)
+      ),
+    fromEvent(el, "compositionend"),
     focus$
   )
     .pipe(

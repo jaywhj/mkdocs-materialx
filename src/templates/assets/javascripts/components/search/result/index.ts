@@ -144,9 +144,12 @@ export function mountSearchResult(
             zipWith(boundary$),
             switchMap(([chunk]) => chunk)
           )
-      )),
-      mergeMap(result => from(result.load())),
-      map(renderSearchResultItem),
+      )
+        .pipe(
+          mergeMap(result => from(result.load())),
+          map(renderSearchResultItem)
+        )
+      ),
       share()
     )
 
