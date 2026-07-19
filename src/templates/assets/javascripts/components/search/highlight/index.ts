@@ -21,20 +21,17 @@
  */
 
 import {
+  EMPTY,
   Observable,
-  ObservableInput,
-  combineLatest,
   filter,
+  from,
   map,
-  startWith
+  startWith,
+  switchMap
 } from "rxjs"
 
 import { getLocation } from "~/browser"
-import {
-  SearchIndex,
-  setupSearchHighlighter
-} from "~/integrations"
-import { h } from "~/utilities"
+import { SearchController } from "~/integrations"
 
 import { Component } from "../../_"
 
@@ -46,7 +43,7 @@ import { Component } from "../../_"
  * Search highlighting
  */
 export interface SearchHighlight {
-  nodes: Map<ChildNode, string>        /* Map of replacements */
+  active: boolean                      /* Highlighting was applied */
 }
 
 /* ----------------------------------------------------------------------------
@@ -57,7 +54,7 @@ export interface SearchHighlight {
  * Mount options
  */
 interface MountOptions {
-  index$: ObservableInput<SearchIndex> /* Search index observable */
+  search: SearchController             /* Search controller */
   location$: Observable<URL>           /* Location observable */
 }
 
@@ -66,7 +63,7 @@ interface MountOptions {
  * ------------------------------------------------------------------------- */
 
 /**
- * Mount search highlighting
+ * Mount provider-specific result-page highlighting
  *
  * @param el - Content element
  * @param options - Options
@@ -74,42 +71,18 @@ interface MountOptions {
  * @returns Search highlighting component observable
  */
 export function mountSearchHighlight(
-  el: HTMLElement, { index$, location$ }: MountOptions
+  el: HTMLElement, { search, location$ }: MountOptions
 ): Observable<Component<SearchHighlight>> {
-  return combineLatest([
-    index$,
-    location$
-      .pipe(
-        startWith(getLocation()),
-        filter(url => !!url.searchParams.get("h"))
-      )
-  ])
+  const { highlighter } = search
+  if (typeof highlighter === "undefined")
+    return EMPTY
+
+  return location$
     .pipe(
-      map(([index, url]) => setupSearchHighlighter(index.config)(
-        url.searchParams.get("h")!
-      )),
-      map(fn => {
-        const nodes = new Map<ChildNode, string>()
-
-        /* Traverse text nodes and collect matches */
-        const it = document.createNodeIterator(el, NodeFilter.SHOW_TEXT)
-        for (let node = it.nextNode(); node; node = it.nextNode()) {
-          if (node.parentElement?.offsetHeight) {
-            const original = node.textContent!
-            const replaced = fn(original)
-            if (replaced.length > original.length)
-              nodes.set(node as ChildNode, replaced)
-          }
-        }
-
-        /* Replace original nodes with matches */
-        for (const [node, text] of nodes) {
-          const { childNodes } = h("span", null, text)
-          node.replaceWith(...Array.from(childNodes))
-        }
-
-        /* Return component */
-        return { ref: el, nodes }
-      })
+      startWith(getLocation()),
+      map(url => url.searchParams.get("h") || ""),
+      filter(Boolean),
+      switchMap(query => from(highlighter.highlight(el, query))),
+      map(() => ({ ref: el, active: true }))
     )
 }

@@ -22,6 +22,6 @@
 
 export * from "./_"
 export * from "./config"
-export * from "./highlighter"
-export * from "./query"
+export * from "./controller"
+export * from "./provider"
 export * from "./worker"

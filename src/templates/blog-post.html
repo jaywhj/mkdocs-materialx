@@ -185,7 +185,12 @@
     </div>
 
     <!-- Page content -->
-    <article class="md-content__inner md-typeset">
+    {% set search_meta = page.meta.search if page.meta and page.meta.search else {} %}
+    {% set pagefind_body = "data-pagefind-body" if config.extra.search_config and config.extra.search_config.provider == "pagefind" and not search_meta.exclude else "" %}
+    <article
+      class="md-content__inner md-typeset"
+      {{ pagefind_body }}
+    >
       {% block content %}
         {% include "partials/content.html" %}
       {% endblock %}

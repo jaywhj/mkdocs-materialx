@@ -36,11 +36,7 @@ import {
 } from "rxjs"
 
 import { Keyboard } from "~/browser"
-import {
-  SearchMessage,
-  SearchResult,
-  isSearchResultMessage
-} from "~/integrations"
+import { SearchResponse } from "~/integrations"
 
 import { Component, getComponentElement } from "../../_"
 
@@ -62,7 +58,7 @@ export interface SearchSuggest {}
  */
 interface MountOptions {
   keyboard$: Observable<Keyboard>      /* Keyboard observable */
-  worker$: Subject<SearchMessage>      /* Search worker */
+  result$: Observable<SearchResponse>  /* Search result observable */
 }
 
 /* ----------------------------------------------------------------------------
@@ -81,9 +77,9 @@ interface MountOptions {
  * @returns Search result list component observable
  */
 export function mountSearchSuggest(
-  el: HTMLElement, { worker$, keyboard$ }: MountOptions
+  el: HTMLElement, { result$, keyboard$ }: MountOptions
 ): Observable<Component<SearchSuggest>> {
-  const push$ = new Subject<SearchResult>()
+  const push$ = new Subject<SearchResponse>()
 
   /* Retrieve query component and track all changes */
   const query  = getComponentElement("search-query")
@@ -136,13 +132,6 @@ export function mountSearchSuggest(
             break
         }
       })
-
-  /* Filter search result message */
-  const result$ = worker$
-    .pipe(
-      filter(isSearchResultMessage),
-      map(({ data }) => data)
-    )
 
   /* Create and return component */
   return result$

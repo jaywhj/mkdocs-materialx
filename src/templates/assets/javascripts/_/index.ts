@@ -21,6 +21,7 @@
  */
 
 import { getElement, getLocation } from "~/browser"
+import type { SearchRuntimeConfig } from "~/integrations/search/config"
 
 /* ----------------------------------------------------------------------------
  * Types
@@ -75,6 +76,7 @@ export type Translation =
   | "search.result.more.one"           /* 1 more on this page */
   | "search.result.more.other"         /* # more on this page */
   | "search.result.term.missing"       /* Missing */
+  | "search.offline"                   /* Offline search unavailable */
   | "select.version"                   /* Version selector */
 
 /**
@@ -116,7 +118,7 @@ export interface Config {
   base: string                         /* Base URL */
   features: Flag[]                     /* Feature flags */
   translations: Translations           /* Translations */
-  search: string                       /* Search worker URL */
+  search?: SearchRuntimeConfig         /* Search provider configuration */
   annotate?: Record<string, string[]>  /* Annotation mappings */
   tags?: Record<string, string>        /* Tags mapping */
   version?: Versioning                 /* Versioning */

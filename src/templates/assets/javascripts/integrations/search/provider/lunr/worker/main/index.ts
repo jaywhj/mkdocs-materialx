@@ -25,12 +25,16 @@ import lunr from "lunr"
 import { getElement } from "~/browser/element/_"
 import "~/polyfills"
 
-import { Search } from "../../_"
-import { SearchConfig } from "../../config"
+import type { SearchRequest } from "../../../../_"
 import {
-  SearchMessage,
-  SearchMessageType
-} from "../message"
+  type SearchWorkerEngine,
+  setupSearchWorkerHost
+} from "../../../../worker/host"
+import type { LunrConfig, LunrIndex } from "../../config"
+import {
+  LunrEngine,
+  type LunrSearchResult
+} from "../../engine"
 
 /* ----------------------------------------------------------------------------
  * Types
@@ -55,15 +59,6 @@ declare global {
 }
 
 /* ----------------------------------------------------------------------------
- * Data
- * ------------------------------------------------------------------------- */
-
-/**
- * Search index
- */
-let index: Search
-
-/* ----------------------------------------------------------------------------
  * Helper functions
  * ------------------------------------------------------------------------- */
 
@@ -83,7 +78,7 @@ let index: Search
  * @returns Promise resolving with no result
  */
 async function setupSearchLanguages(
-  config: SearchConfig
+  config: LunrConfig
 ): Promise<void> {
   let base = "../lunr"
 
@@ -131,51 +126,36 @@ async function setupSearchLanguages(
 }
 
 /* ----------------------------------------------------------------------------
- * Functions
+ * Class
  * ------------------------------------------------------------------------- */
 
 /**
- * Message handler
- *
- * @param message - Source message
- *
- * @returns Target message
+ * Lunr worker engine
  */
-export async function handler(
-  message: SearchMessage
-): Promise<SearchMessage> {
-  switch (message.type) {
+class LunrWorkerEngine implements SearchWorkerEngine<
+  LunrIndex, SearchRequest, LunrSearchResult
+> {
 
-    /* Search setup message */
-    case SearchMessageType.SETUP:
-      await setupSearchLanguages(message.data.config)
-      index = new Search(message.data)
-      return {
-        type: SearchMessageType.READY
-      }
+  /* Lunr search engine */
+  private engine?: LunrEngine
 
-    /* Search query message */
-    case SearchMessageType.QUERY:
-      const query = message.data
-      try {
-        return {
-          type: SearchMessageType.RESULT,
-          data: index.search(query)
-        }
+  /* Set up Lunr and build its in-memory index */
+  public async setup(index: LunrIndex): Promise<void> {
+    await setupSearchLanguages(index.config)
+    this.engine = new LunrEngine(index)
+  }
 
-      /* Return empty result in case of error */
-      } catch (err) {
-        console.warn(`Invalid query: ${query} – see https://bit.ly/2s3ChXG`)
-        console.warn(err)
-        return {
-          type: SearchMessageType.RESULT,
-          data: { items: [] }
-        }
-      }
-
-    /* All other messages */
-    default:
-      throw new TypeError("Invalid message type")
+  /* Search the Lunr index */
+  public async search({ query }: SearchRequest): Promise<LunrSearchResult> {
+    try {
+      if (typeof this.engine === "undefined")
+        throw new TypeError("Lunr search engine is not ready")
+      return this.engine.search(query)
+    } catch (err) {
+      console.warn(`Invalid query: ${query} – see https://bit.ly/2s3ChXG`)
+      console.warn(err)
+      return { items: [] }
+    }
   }
 }
 
@@ -189,7 +169,5 @@ self.lunr = lunr
 /* Monkey-patch Lunr.js to mitigate https://t.ly/68TLq */
 lunr.utils.warn = console.warn
 
-/* Handle messages */
-addEventListener("message", async ev => {
-  postMessage(await handler(ev.data))
-})
+/* Host Lunr through the generic search worker infrastructure */
+setupSearchWorkerHost(new LunrWorkerEngine())

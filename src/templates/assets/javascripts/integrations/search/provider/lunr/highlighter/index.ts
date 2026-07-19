@@ -22,7 +22,7 @@
 
 import escapeHTML from "escape-html"
 
-import { SearchConfig } from "../config"
+import { LunrConfig } from "../config"
 
 /* ----------------------------------------------------------------------------
  * Types
@@ -58,7 +58,7 @@ export type SearchHighlightFactoryFn = (query: string) => SearchHighlightFn
  * @returns Search highlight factory function
  */
 export function setupSearchHighlighter(
-  config: SearchConfig
+  config: LunrConfig
 ): SearchHighlightFactoryFn {
   // Hack: temporarily remove pure lookaheads and lookbehinds
   const regex = config.separator.split("|").map(term => {

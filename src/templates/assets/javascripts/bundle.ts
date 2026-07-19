@@ -24,8 +24,6 @@ import "focus-visible"
 
 import {
   EMPTY,
-  NEVER,
-  Observable,
   Subject,
   defer,
   delay,
@@ -42,7 +40,6 @@ import {
   at,
   getActiveElement,
   getOptionalElement,
-  requestJSON,
   setLocation,
   setToggle,
   watchDocument,
@@ -51,7 +48,6 @@ import {
   watchLocationTarget,
   watchMedia,
   watchPrint,
-  watchScript,
   watchViewport
 } from "./browser"
 import {
@@ -76,7 +72,7 @@ import {
   watchMain
 } from "./components"
 import {
-  SearchIndex,
+  createSearchController,
   fetchSitemap,
   setupAlternate,
   setupClipboardJS,
@@ -90,32 +86,6 @@ import {
   patchScrolllock
 } from "./patches"
 import "./polyfills"
-
-/* ----------------------------------------------------------------------------
- * Functions - @todo refactor
- * ------------------------------------------------------------------------- */
-
-/**
- * Fetch search index
- *
- * @returns Search index observable
- */
-function fetchSearchIndex(): Observable<SearchIndex> {
-  if (location.protocol === "file:") {
-    return watchScript(
-      `${new URL("search/search_index.js", config.base)}`
-    )
-      .pipe(
-        // @ts-ignore - @todo fix typings
-        map(() => __index),
-        shareReplay(1)
-      )
-  } else {
-    return requestJSON<SearchIndex>(
-      new URL("search/search_index.json", config.base)
-    )
-  }
-}
 
 /* ----------------------------------------------------------------------------
  * Application
@@ -137,11 +107,11 @@ const tablet$   = watchMedia("(min-width: 60em)")
 const screen$   = watchMedia("(min-width: 76.25em)")
 const print$    = watchPrint()
 
-// Retrieve search index, if search is enabled
+// Set up the configured search integration
 const config = configuration()
-const index$ = document.forms.namedItem("search")
-  ? fetchSearchIndex()
-  : NEVER
+const search = config.search
+  ? createSearchController(config.search)
+  : undefined
 
 // Set up Clipboard.js integration
 const alert$ = new Subject<string>()
@@ -244,7 +214,16 @@ const control$ = merge(
 
   // Search
   ...getComponentElements("search")
-    .map(el => mountSearch(el, { index$, keyboard$ })),
+    .map(el => search
+      ? mountSearch(el, {
+        search,
+        keyboard$,
+        alert$,
+        offline: location.protocol === "file:" &&
+          config.search?.provider === "pagefind"
+      })
+      : EMPTY
+    ),
 
   // Repository information
   ...getComponentElements("source")
@@ -264,8 +243,8 @@ const content$ = defer(() => merge(
 
   // Search highlighting
   ...getComponentElements("content")
-    .map(el => feature("search.highlight")
-      ? mountSearchHighlight(el, { index$, location$ })
+    .map(el => feature("search.highlight") && search
+      ? mountSearchHighlight(el, { search, location$ })
       : EMPTY
     ),
 
