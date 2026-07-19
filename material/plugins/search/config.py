@@ -23,6 +23,7 @@ from mkdocs.config.config_options import (
     Deprecated,
     Optional,
     ListOfItems,
+    SubConfig,
     Type
 )
 from mkdocs.config.base import Config
@@ -43,11 +44,7 @@ pipeline = ("stemmer", "stopWordFilter", "trimmer")
 class SearchFieldConfig(Config):
     boost = Type((int, float), default = 1.0)
 
-# Search plugin configuration
-class SearchConfig(Config):
-    enabled = Type(bool, default = True)
-
-    # Settings for search
+class LunrConfig(Config):
     lang = Optional(LangOption())
     separator = Optional(Type(str))
     pipeline = Optional(ListOfItems(Choice(pipeline)))
@@ -56,6 +53,12 @@ class SearchConfig(Config):
     # Settings for text segmentation (Chinese)
     jieba_dict = Optional(Type(str))
     jieba_dict_user = Optional(Type(str))
+
+
+class SearchConfig(Config):
+    provider = Choice(("pagefind", "lunr"), default = "pagefind")
+    pagefind = Type(dict, default = {})
+    lunr = SubConfig(LunrConfig)
 
     # Unsupported settings, originally implemented in MkDocs
     indexing = Deprecated(message = "Unsupported option")

@@ -62,7 +62,7 @@
           <link rel="icon" href="{{ config.theme.favicon | url }}">
         {% endif %}
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.1.8">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-materialx-10.2.0">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -74,7 +74,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.ad842579.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.fa6d3326.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.a45159b5.min.css' | url }}">
@@ -212,7 +212,9 @@
               {% if "navigation.path" in features %}
                 {% include "partials/path.html" %}
               {% endif %}
-              <article class="md-content__inner md-typeset">
+              {% set search_meta = page.meta.search if page.meta and page.meta.search else {} %}
+              {% set pagefind_body = "data-pagefind-body" if config.extra.search_config and config.extra.search_config.provider == "pagefind" and not search_meta.exclude else "" %}
+              <article class="md-content__inner md-typeset" {{ pagefind_body }}>
                 {% block content %}
                   {% include "partials/content.html" %}
                 {% endblock %}
@@ -248,6 +250,31 @@
       {% set _ = namespace() %}
       {% set _.annotate = config.extra.annotate %}
       {% set _.tags = config.extra.tags %}
+      {% if config.extra.search_config %}
+        {% set search = config.extra.search_config %}
+        {% if search.provider == "lunr" %}
+          {% set _.search = {
+            "provider": "lunr",
+            "options": {
+              "workerUrl": "assets/javascripts/workers/search.0af6d06b.min.js" | url,
+              "indexUrl": "search/search_index.json" | url,
+              "offlineIndexUrl": "search/search_index.js" | url,
+              "suggest": "search.suggest" in features
+            }
+          } %}
+        {% elif search.provider == "pagefind" %}
+          {% set output_subdir = search.pagefind.outputSubdir | d("search", true) %}
+          {% set _.search = {
+            "provider": "pagefind",
+            "options": {
+              "baseUrl": base_url,
+              "bundleUrl": (output_subdir ~ "/") | url,
+              "highlight": "search.highlight" in features,
+              "searchOptions": search.pagefind.options | d({}, true)
+            }
+          } %}
+        {% endif %}
+      {% endif %}
       {%- if config.extra.version -%}
         {%- set mike = config.plugins.mike -%}
         {%- if not mike or mike.config.version_selector -%}
@@ -272,9 +299,10 @@
             "search.result.more.one": lang.t("search.result.more.one"),
             "search.result.more.other": lang.t("search.result.more.other"),
             "search.result.term.missing": lang.t("search.result.term.missing"),
+            "search.offline": lang.t("search.offline"),
             "select.version": lang.t("select.version")
           },
-          "search": "assets/javascripts/workers/search.2c215733.min.js" | url,
+          "search": _.search or none,
           "annotate": _.annotate or none,
           "tags": _.tags or none,
           "version": _.version or none,
@@ -283,7 +311,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.fc193f93.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.fb83574b.min.js' | url }}"></script>
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}
