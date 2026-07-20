@@ -6,6 +6,10 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.2.0 <small>July 25, 2026</small> { id="10.2.0" }
+
+- Refactored search functionality, new architecture and design
+
 ### 10.1.8 <small>June 19, 2026</small> { id="10.1.8" }
 
 - Enhanced reading time calculation for blog posts, see [post_readtime](../plugins/blog.md#new-features)
