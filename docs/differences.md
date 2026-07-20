@@ -43,13 +43,14 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 ## Update Highlights
 
-- Added Markdown source support for AI agents to provide structured content, reducing token consumption by over 80%
+- Added Markdown source support for **AI agents** to provide structured content, reducing token consumption by over 80%
+- Refactored the search functionality with a brand-new architecture design, **drastically improving search quality and indexing efficiency**. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](plugins/search.md){target="_blank"}
+- Added code block download & **auto-collapse/expand** long code blocks features, see [Code blocks](reference/code-blocks.md#code-collapse-expand){target="_blank"}
+- Added the new **Steps** component for clearer, more intuitive display of procedures and workflows, see [Steps](reference/steps.md){target="_blank"}
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
     - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
 - Added Recent Updated module, see: [Recently updated](setup/adding-recent-updates-module.md){target="_blank"}
-    - Displays recently updated documents in descending order of update time, with dynamically refreshed list items
-    - Supports multiple flexible layout styles (list, detail, grid)
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK languages + Space-delimited languages)
 - Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (better interactive experience)
@@ -59,7 +60,6 @@ Therefore, MaterialX will adhere to the following goals and principles:
     - Optimized the show/hide sensitivity of the "Back to top" container
     - Added indent guide lines and active link accent colors for the TOC
 - Added the modern Liquid Glass theme, allows setting the topbar background color in this theme to support backgrounds with different color schemes, see [Topbar style](setup/changing-the-colors.md#topbar-style){target="_blank"}
-- Added code block download & auto-collapse/expand long code blocks features
 - For more details, see [Changelog](changelog/index.md){target="_blank"}
 
 ## Quick Start
