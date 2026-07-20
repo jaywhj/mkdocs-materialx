@@ -1,6 +1,8 @@
 mkdocs-materialx-10.2.0 (2026-07-25)
 
-- Refactored search functionality, new architecture and design
+- Refactored the search functionality with a brand-new architecture design, drastically improving search quality and indexing efficiency. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
+- Added the new Steps component for clearer, more intuitive display of procedures and workflows, see [Steps](https://jaywhj.github.io/mkdocs-materialx/reference/steps)
+- Brand-new MaterialX logo, courtesy of contributions from @johnpiers [Logo Set](https://github.com/jaywhj/mkdocs-materialx/discussions/29#discussioncomment-17476654)
 
 mkdocs-materialx-10.1.8 (2026-06-19)
 

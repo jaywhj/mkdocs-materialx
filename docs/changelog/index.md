@@ -8,7 +8,9 @@ icon: material/layers-triple-outline
 
 ### 10.2.0 <small>July 25, 2026</small> { id="10.2.0" }
 
-- Refactored search functionality, new architecture and design
+- Refactored the search functionality with a brand-new architecture design, drastically improving search quality and indexing efficiency. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](../plugins/search.md){target="_blank"}
+- Added the new Steps component for clearer, more intuitive display of procedures and workflows, see [Steps](../reference/steps.md){target="_blank"}
+- Brand-new MaterialX logo, courtesy of contributions from @johnpiers ([Logo Set](https://github.com/jaywhj/mkdocs-materialx/discussions/29#discussioncomment-17476654){target="_blank"})
 
 ### 10.1.8 <small>June 19, 2026</small> { id="10.1.8" }
 
