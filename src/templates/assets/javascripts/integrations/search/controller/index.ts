@@ -78,7 +78,7 @@ export class SearchController {
           ?.preload(query)
           .catch(() => undefined)
         ),
-        debounceTime(100),
+        debounceTime(50),
         distinctUntilChanged(),
         switchMap(query => from(this.search(query)).pipe(
           catchError(() => of({ total: 0, results: [] }))
