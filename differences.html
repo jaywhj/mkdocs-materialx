@@ -4037,7 +4037,7 @@
 
 
 <h1 id="materialx">MaterialX<a class="headerlink" href="#materialx" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T13:26:22+00:00">2026-02-09</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-25"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-25T04:59:32+00:00">2026-06-25</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-09"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-09T13:26:22+00:00">2026-02-09</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-07-20"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-07-20T15:54:43+00:00">2026-07-20</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p><strong>MaterialX</strong>, the next generation of mkdocs-material, build beautiful sites the way you already know and love, based on <code>mkdocs-material-9.7.1</code> and named <code>X</code>, it provides ongoing maintenance and updates.</p>
 <details class="desc">
@@ -4067,15 +4067,16 @@
 </ul>
 <h2 id="update-highlights">Update Highlights<a class="headerlink" href="#update-highlights" title="Permanent link">¶</a></h2>
 <ul>
-<li>Added Markdown source support for AI agents to provide structured content, reducing token consumption by over 80%</li>
+<li>Added Markdown source support for <strong>AI agents</strong> to provide structured content, reducing token consumption by over 80%</li>
+<li>Refactored the search functionality with a brand-new architecture design, <strong>drastically improving search quality and indexing efficiency</strong>. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see <a href="plugins/search.html" target="_blank">Search</a></li>
+<li>Added code block download &amp; <strong>auto-collapse/expand</strong> long code blocks features, see <a href="reference/code-blocks.html#code-collapse-expand" target="_blank">Code blocks</a></li>
+<li>Added the new <strong>Steps</strong> component for clearer, more intuitive display of procedures and workflows, see <a href="reference/steps.html" target="_blank">Steps</a></li>
 <li>Added next-generation date &amp; author plugin, see: <a href="setup/adding-document-dates-authors.html" target="_blank">Date and Authors</a><ul>
 <li>It's <strong>20-500 times faster</strong> than <code>git-revision-date-localized</code> and <code>git-authors</code>, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)</li>
 <li>Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. <strong>Manual date configuration is no longer required for any feature</strong>, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more</li>
 </ul>
 </li>
 <li>Added Recent Updated module, see: <a href="setup/adding-recent-updates-module.html" target="_blank">Recently updated</a><ul>
-<li>Displays recently updated documents in descending order of update time, with dynamically refreshed list items</li>
-<li>Supports multiple flexible layout styles (list, detail, grid)</li>
 <li>Automatically generates document summaries (no manual configuration needed)</li>
 <li>Intelligently estimates reading time, supporting all languages (CJK languages + Space-delimited languages)</li>
 </ul>
@@ -4089,7 +4090,6 @@
 </ul>
 </li>
 <li>Added the modern Liquid Glass theme, allows setting the topbar background color in this theme to support backgrounds with different color schemes, see <a href="setup/changing-the-colors.html#topbar-style" target="_blank">Topbar style</a></li>
-<li>Added code block download &amp; auto-collapse/expand long code blocks features</li>
 <li>For more details, see <a href="changelog/index.html" target="_blank">Changelog</a></li>
 </ul>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">¶</a></h2>
