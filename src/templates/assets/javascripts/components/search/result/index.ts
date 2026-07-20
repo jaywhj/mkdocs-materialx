@@ -27,14 +27,13 @@ import {
   bufferCount,
   filter,
   finalize,
-  first,
+  from,
   fromEvent,
   map,
   merge,
   mergeMap,
   of,
   share,
-  skipUntil,
   switchMap,
   takeUntil,
   tap,
@@ -49,12 +48,7 @@ import {
   watchElementBoundary,
   watchToggle
 } from "~/browser"
-import {
-  SearchMessage,
-  SearchResult,
-  isSearchReadyMessage,
-  isSearchResultMessage
-} from "~/integrations"
+import { SearchController, SearchResponse } from "~/integrations"
 import { renderSearchResultItem } from "~/templates"
 import { round } from "~/utilities"
 
@@ -70,7 +64,7 @@ import { SearchQuery } from "../query"
  */
 interface MountOptions {
   query$: Observable<SearchQuery>      /* Search query observable */
-  worker$: Subject<SearchMessage>      /* Search worker */
+  search: SearchController             /* Search controller */
 }
 
 /* ----------------------------------------------------------------------------
@@ -89,9 +83,9 @@ interface MountOptions {
  * @returns Search result list component observable
  */
 export function mountSearchResult(
-  el: HTMLElement, { worker$, query$ }: MountOptions
-): Observable<Component<SearchResult>> {
-  const push$ = new Subject<SearchResult>()
+  el: HTMLElement, { search, query$ }: MountOptions
+): Observable<Component<SearchResponse>> {
+  const push$ = new Subject<SearchResponse>()
   const boundary$ = watchElementBoundary(el.parentElement!)
     .pipe(
       filter(Boolean)
@@ -114,11 +108,10 @@ export function mountSearchResult(
   /* Update search result metadata */
   push$
     .pipe(
-      withLatestFrom(query$),
-      skipUntil(worker$.pipe(first(isSearchReadyMessage)))
+      withLatestFrom(query$)
     )
-      .subscribe(([{ items }, { value }]) => {
-        switch (items.length) {
+      .subscribe(([{ total }, { value }]) => {
+        switch (total) {
 
           /* No results */
           case 0:
@@ -134,7 +127,7 @@ export function mountSearchResult(
 
           /* Multiple result */
           default:
-            const count = round(items.length)
+            const count = round(total)
             meta.textContent = translation("search.result.other", count)
         }
       })
@@ -143,16 +136,20 @@ export function mountSearchResult(
   const render$ = push$
     .pipe(
       tap(() => list.innerHTML = ""),
-      switchMap(({ items }) => merge(
-        of(...items.slice(0, 10)),
-        of(...items.slice(10))
+      switchMap(({ results }) => merge(
+        of(...results.slice(0, 10)),
+        of(...results.slice(10))
           .pipe(
             bufferCount(4),
             zipWith(boundary$),
             switchMap(([chunk]) => chunk)
           )
-      )),
-      map(renderSearchResultItem),
+      )
+        .pipe(
+          mergeMap(result => from(result.load())),
+          map(renderSearchResultItem)
+        )
+      ),
       share()
     )
 
@@ -181,18 +178,17 @@ export function mountSearchResult(
           container.scrollTo({ top: details.offsetTop })
       })
 
-  /* Filter search result message */
-  const result$ = worker$
-    .pipe(
-      filter(isSearchResultMessage),
-      map(({ data }) => data)
-    )
+  /* Search through the provider-neutral controller */
+  const result$ = search.watch(query$.pipe(
+    map(({ value }) => value)
+  ))
 
   /* Create and return component */
   return result$
     .pipe(
       tap(state => push$.next(state)),
       finalize(() => push$.complete()),
-      map(state => ({ ref: el, ...state }))
+      map(state => ({ ref: el, ...state })),
+      share()
     )
 }

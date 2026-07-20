@@ -94,7 +94,7 @@ theme:
   font: false
   favicon: octicons/milestone-24
   icon:
-    logo: logo
+    logo: newlogo
   admonition:
     git:
       icon: simple/git
@@ -124,8 +124,7 @@ plugins:
   # - blog
   # - tags
   - offline
-  - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - search
   # - minify:
   #     minify_html: true
 

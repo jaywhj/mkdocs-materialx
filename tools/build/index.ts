@@ -235,7 +235,7 @@ const assets$ = concat(
   ...["min/*.js", "tinyseg.js", "wordcut.js"]
     .map(pattern => copyAll(pattern, {
       from: "node_modules/lunr-languages",
-      to: `${base}/templates/assets/javascripts/lunr`
+      to: `${base}/plugins/search/providers/lunr/assets`
     })),
 
   /* Copy images and configurations */

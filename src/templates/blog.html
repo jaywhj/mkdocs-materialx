@@ -25,7 +25,12 @@
 <!-- Page content -->
 {% block container %}
   <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
+    {% set search_meta = page.meta.search if page.meta and page.meta.search else {} %}
+    {% set pagefind_body = "data-pagefind-body" if config.extra.search_config and config.extra.search_config.provider == "pagefind" and not search_meta.exclude else "" %}
+    <div
+      class="md-content__inner"
+      {{ pagefind_body }}
+    >
 
       <!-- Header -->
       <header class="md-typeset">

@@ -1,3 +1,7 @@
+mkdocs-materialx-10.2.0 (2026-07-25)
+
+- Refactored search functionality, new architecture and design
+
 mkdocs-materialx-10.1.8 (2026-06-19)
 
 - Enhanced reading time calculation for blog posts, see [post_readtime](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#new-features)

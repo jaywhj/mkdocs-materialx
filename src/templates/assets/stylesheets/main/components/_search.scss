@@ -576,6 +576,24 @@
     }
   }
 
+  // Balance spacing inside Pagefind match links
+  &--pagefind &__item {
+    > .md-search-result__link:not(:first-child),
+    > .md-search-result__more > .md-search-result__link {
+      .md-search-result__article {
+        padding-bottom: px2rem(8px);
+      }
+    }
+
+    // Add space after each Pagefind page result
+    > .md-search-result__link:last-child,
+    > .md-search-result__more:last-child > .md-search-result__link:last-child {
+      .md-search-result__article {
+        padding-bottom: px2rem(12px);
+      }
+    }
+  }
+
   // Search result more container
   &__more > summary {
     position: sticky;

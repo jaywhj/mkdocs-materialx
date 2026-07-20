@@ -27,6 +27,7 @@ import {
   distinctUntilChanged,
   distinctUntilKeyChanged,
   endWith,
+  filter,
   finalize,
   first,
   fromEvent,
@@ -45,11 +46,6 @@ import {
   watchElementFocus,
   watchToggle
 } from "~/browser"
-import {
-  SearchMessage,
-  SearchMessageType,
-  isSearchReadyMessage
-} from "~/integrations"
 
 import { Component } from "../../_"
 
@@ -66,24 +62,6 @@ export interface SearchQuery {
 }
 
 /* ----------------------------------------------------------------------------
- * Helper types
- * ------------------------------------------------------------------------- */
-
-/**
- * Watch options
- */
-interface WatchOptions {
-  worker$: Subject<SearchMessage>      /* Search worker */
-}
-
-/**
- * Mount options
- */
-interface MountOptions {
-  worker$: Subject<SearchMessage>      /* Search worker */
-}
-
-/* ----------------------------------------------------------------------------
  * Functions
  * ------------------------------------------------------------------------- */
 
@@ -94,12 +72,11 @@ interface MountOptions {
  * is delayed by `1ms` so the input's empty state is allowed to propagate.
  *
  * @param el - Search query element
- * @param options - Options
  *
  * @returns Search query observable
  */
 export function watchSearchQuery(
-  el: HTMLInputElement, { worker$ }: WatchOptions
+  el: HTMLInputElement
 ): Observable<SearchQuery> {
 
   /* Support search deep linking */
@@ -126,8 +103,11 @@ export function watchSearchQuery(
   /* Intercept focus and input events */
   const focus$ = watchElementFocus(el)
   const value$ = merge(
-    worker$.pipe(first(isSearchReadyMessage)),
-    fromEvent(el, "keyup"),
+    fromEvent<InputEvent>(el, "input")
+      .pipe(
+        filter(ev => !ev.isComposing)
+      ),
+    fromEvent(el, "compositionend"),
     focus$
   )
     .pipe(
@@ -147,28 +127,14 @@ export function watchSearchQuery(
  * Mount search query
  *
  * @param el - Search query element
- * @param options - Options
  *
  * @returns Search query component observable
  */
 export function mountSearchQuery(
-  el: HTMLInputElement, { worker$ }: MountOptions
+  el: HTMLInputElement
 ): Observable<Component<SearchQuery, HTMLInputElement>> {
   const push$ = new Subject<SearchQuery>()
   const done$ = push$.pipe(ignoreElements(), endWith(true))
-
-  /* Handle value change */
-  combineLatest([
-    worker$.pipe(first(isSearchReadyMessage)),
-    push$
-  ], (_, query) => query)
-    .pipe(
-      distinctUntilKeyChanged("value")
-    )
-      .subscribe(({ value }) => worker$.next({
-        type: SearchMessageType.QUERY,
-        data: value
-      }))
 
   /* Handle focus change */
   push$
@@ -196,7 +162,7 @@ export function mountSearchQuery(
     .subscribe(() => el.focus())
 
   /* Create and return component */
-  return watchSearchQuery(el, { worker$ })
+  return watchSearchQuery(el)
     .pipe(
       tap(state => push$.next(state)),
       finalize(() => push$.complete()),

@@ -20,4 +20,4 @@
  * IN THE SOFTWARE.
  */
 
-import "~/integrations/search/worker/main"
+import "~/integrations/search/provider/lunr/worker/main"

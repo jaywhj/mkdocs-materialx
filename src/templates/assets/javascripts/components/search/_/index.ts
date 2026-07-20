@@ -23,14 +23,18 @@
 import {
   NEVER,
   Observable,
-  ObservableInput,
+  Subject,
   filter,
+  from,
   fromEvent,
+  map,
   merge,
-  mergeWith
+  mergeWith,
+  switchMap,
+  take
 } from "rxjs"
 
-import { configuration } from "~/_"
+import { translation } from "~/_"
 import {
   Keyboard,
   getActiveElement,
@@ -38,9 +42,8 @@ import {
   setToggle
 } from "~/browser"
 import {
-  SearchIndex,
-  SearchResult,
-  setupSearchWorker
+  SearchController,
+  SearchResponse
 } from "~/integrations"
 
 import {
@@ -71,7 +74,7 @@ import {
  */
 export type Search =
   | SearchQuery
-  | SearchResult
+  | SearchResponse
   | SearchShare
   | SearchSuggest
 
@@ -83,8 +86,10 @@ export type Search =
  * Mount options
  */
 interface MountOptions {
-  index$: ObservableInput<SearchIndex> /* Search index observable */
+  search: SearchController             /* Search controller */
   keyboard$: Observable<Keyboard>      /* Keyboard observable */
+  alert$: Subject<string>              /* Alert subject */
+  offline: boolean                     /* Search unavailable offline */
 }
 
 /* ----------------------------------------------------------------------------
@@ -94,8 +99,7 @@ interface MountOptions {
 /**
  * Mount search
  *
- * This function sets up the search functionality, including the underlying
- * web worker and all keyboard bindings.
+ * This function sets up the search functionality and keyboard bindings.
  *
  * @param el - Search element
  * @param options - Options
@@ -103,15 +107,30 @@ interface MountOptions {
  * @returns Search component observable
  */
 export function mountSearch(
-  el: HTMLElement, { index$, keyboard$ }: MountOptions
+  el: HTMLElement, { search, keyboard$, alert$, offline }: MountOptions
 ): Observable<Component<Search>> {
-  const config = configuration()
   try {
-    const worker$ = setupSearchWorker(config.search, index$)
-
     /* Retrieve query and result components */
     const query  = getComponentElement("search-query", el)
     const result = getComponentElement("search-result", el)
+
+    /* Warn when the configured provider doesn't support offline search */
+    if (offline) {
+      fromEvent(query, "focus")
+        .pipe(
+          map(() => translation("search.offline"))
+        )
+          .subscribe(alert$)
+
+    /* Warm the configured provider when search gains focus */
+    } else {
+      fromEvent(query, "focus")
+        .pipe(
+          take(1),
+          switchMap(() => from(search.setup()))
+        )
+          .subscribe({ error: () => el.hidden = true })
+    }
 
     /* Always close search on result selection */
     fromEvent<PointerEvent>(el, "click")
@@ -131,22 +150,22 @@ export function mountSearch(
           const active = getActiveElement()
           switch (key.type) {
 
-            /* Enter: go to first (best) result */
+            /* Enter: go to best result */
             case "Enter":
               if (active === query) {
-                const anchors = new Map<HTMLAnchorElement, number>()
-                for (const anchor of getElements<HTMLAnchorElement>(
+                const anchors = getElements<HTMLAnchorElement>(
                   ":first-child [href]", result
-                )) {
-                  const article = anchor.firstElementChild!
-                  anchors.set(anchor, parseFloat(
-                    article.getAttribute("data-md-score")!
-                  ))
-                }
+                )
 
-                /* Go to result with highest score, if any */
-                if (anchors.size) {
-                  const [[best]] = [...anchors].sort(([, a], [, b]) => b - a)
+                /* Prefer provider scores and otherwise retain document order */
+                if (anchors.length) {
+                  const score = (anchor: HTMLAnchorElement): number => Number(
+                    anchor.firstElementChild?.getAttribute("data-md-score") ||
+                    Number.NEGATIVE_INFINITY
+                  )
+                  const best = anchors.reduce((current, anchor) =>
+                    score(anchor) > score(current) ? anchor : current
+                  )
                   best.click()
                 }
 
@@ -213,11 +232,11 @@ export function mountSearch(
         })
 
     /* Create and return component */
-    const query$ = mountSearchQuery(query, { worker$ })
-    return merge(
-      query$,
-      mountSearchResult(result, { worker$, query$ })
-    )
+    const query$ = mountSearchQuery(query)
+    const result$ = offline
+      ? NEVER
+      : mountSearchResult(result, { search, query$ })
+    return merge(query$, result$)
       .pipe(
         mergeWith(
 
@@ -227,7 +246,7 @@ export function mountSearch(
 
           /* Search suggestions */
           ...getComponentElements("search-suggest", el)
-            .map(child => mountSearchSuggest(child, { worker$, keyboard$ }))
+            .map(child => mountSearchSuggest(child, { result$, keyboard$ }))
         )
       )
 
