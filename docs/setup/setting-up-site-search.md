@@ -1,4 +1,5 @@
 ---
+status: new
 icon: octicons/search-24
 search:
   boost: 1.05
@@ -6,36 +7,59 @@ search:
 
 # Setting up site search
 
-MaterialX for MkDocs provides an excellent client-side search implementation,
-omitting the need for the integration of third-party services, which might
-not be compliant with privacy regulations. Moreover, search even works
-[offline], allowing users to download your documentation.
+MaterialX for MkDocs 10.2.0 completely redesigns the built-in search system.
+The new implementation uses interchangeable search providers, improves index
+generation and result quality, and offers more flexible configuration for
+large and multilingual documentation sites. It also brings significantly
+better support for Chinese and Japanese content.
 
+[Pagefind]{target="_blank"} is the default provider. Its chunked, on-demand index is the best
+choice for sites served over HTTP and scales efficiently as a site grows.
+[Lunr]{target="_blank"} remains available for documentation that must also work [offline]{target="_blank"} when
+opened directly from `file://`.
+
+  [Pagefind]: https://pagefind.app/
+  [Lunr]: https://lunrjs.com/
   [offline]: ../plugins/offline.md
 
 ## Configuration
 
 ### Built-in search plugin
 
-<!-- md:version 0.1.0 -->
+<!-- md:version 10.2.0 -->
 <!-- md:plugin -->
 
-The built-in search plugin integrates seamlessly with MaterialX for MkDocs,
-adding multilingual client-side search with [lunr] and [lunr-languages]. It's
-enabled by default, but must be re-added to `mkdocs.yml` when other plugins
-are used:
+The built-in search plugin adds client-side search without requiring a hosted
+search service. It's enabled by default, but must be re-added to `mkdocs.yml`
+when other plugins are configured:
 
-``` yaml
-plugins:
-  - search
-```
+=== "Pagefind (default)"
 
-For a list of all settings, please consult the [plugin documentation].
+    ``` yaml
+    plugins:
+      - search
+    ```
+
+    Pagefind creates a chunked static index after the site is built and loads
+    only the index data needed for each query.
+
+=== "Lunr (offline)"
+
+    ``` yaml
+    plugins:
+      - search:
+          provider: lunr
+    ```
+
+    Lunr packages the search index with the site and can therefore search a
+    site opened directly from the local filesystem.
+
+Both providers use the same MaterialX search interface. Provider-specific
+settings are nested under `pagefind` and `lunr`, so changing providers doesn't
+require changing the theme or search UI. For the complete `mkdocs.yml`
+structure and all available settings, see the [plugin documentation]{target="_blank"}.
 
   [plugin documentation]: ../plugins/search.md
-
-  [lunr]: https://lunrjs.com
-  [lunr-languages]: https://github.com/MihaiValentin/lunr-languages
 
 ### Search suggestions
 
@@ -43,11 +67,15 @@ For a list of all settings, please consult the [plugin documentation].
 <!-- md:feature -->
 <!-- md:flag experimental -->
 
-When search suggestions are enabled, the search will display the likeliest
-completion for the last word which can be accepted with the ++arrow-right++ key.
-Add the following lines to `mkdocs.yml`:
+When search suggestions are enabled, the search displays the likeliest
+completion for the last word, which can be accepted with the ++arrow-right++
+key. Suggestions are currently available with the Lunr provider:
 
 ``` yaml
+plugins:
+  - search:
+      provider: lunr
+
 theme:
   features:
     - search.suggest
@@ -64,9 +92,9 @@ yields ^^search suggestions^^ as a suggestion.
 <!-- md:feature -->
 <!-- md:flag experimental -->
 
-When search highlighting is enabled and a user clicks on a search result,
-MaterialX for MkDocs will highlight all occurrences after following the link.
-Add the following lines to `mkdocs.yml`:
+When search highlighting is enabled and a user follows a search result,
+MaterialX for MkDocs highlights all occurrences of the search terms on the
+destination page. This feature works with both providers:
 
 ``` yaml
 theme:
@@ -84,9 +112,9 @@ highlights all occurrences of both terms.
 <!-- md:version 7.2.0 -->
 <!-- md:feature -->
 
-When search sharing is activated, a :material-share-variant: share button is
-rendered next to the reset button, which allows to deep link to the current
-search query and result. Add the following lines to `mkdocs.yml`:
+When search sharing is enabled, a :material-share-variant: share button is
+rendered next to the reset button. It copies a deep link to the current query
+and results to the clipboard:
 
 ``` yaml
 theme:
@@ -94,19 +122,43 @@ theme:
     - search.share
 ```
 
-When a user clicks the share button, the URL is automatically copied to the
-clipboard.
-
 ## Usage
+
+### Search exclusion
+
+<!-- md:version 9.0.0 -->
+<!-- md:flag metadata -->
+<!-- md:flag experimental -->
+
+Pages can be excluded from either provider with the front matter
+`search.exclude` property:
+
+``` yaml
+---
+search:
+  exclude: true
+---
+
+# Page title
+...
+```
+
+Use the built-in [meta plugin]{target="_blank"} to apply the same property to a complete folder
+and all of its subfolders. Excluding only part of a page is provider-specific:
+Pagefind uses `data-pagefind-ignore`, while Lunr uses `data-search-exclude`.
+See [Pagefind content exclusion]{target="_blank"} and [Lunr content exclusion]{target="_blank"} for examples.
+
+  [meta plugin]: ../plugins/meta.md
+  [Pagefind content exclusion]: ../plugins/search.md#excluding-content
+  [Lunr content exclusion]: ../plugins/search.md#excluding-sections-and-blocks
 
 ### Search boosting
 
 <!-- md:version 8.3.0 -->
 <!-- md:flag metadata -->
 
-Pages can be boosted in search with the front matter `search.boost` property,
-which will make them rank higher. Add the following lines at the top of a
-Markdown file:
+Lunr pages can be boosted with the front matter `search.boost` property. Use
+values above `1` to rank a page up and values below `1` to rank it down:
 
 === ":material-arrow-up-circle: Rank up"
 
@@ -120,8 +172,7 @@ Markdown file:
     ...
     ```
 
-    1.  :woman_in_lotus_position: When boosting pages, be gentle and start with
-        __low values__.
+    1.  When boosting pages, start with small adjustments.
 
 === ":material-arrow-down-circle: Rank down"
 
@@ -135,96 +186,9 @@ Markdown file:
     ...
     ```
 
-### Search exclusion
+Pagefind provides its own [content weighting]{target="_blank"} and browser-side [ranking]{target="_blank"}
+controls. The search [plugin documentation]{target="_blank"} explains how Pagefind options fit
+into `mkdocs.yml`.
 
-<!-- md:version 9.0.0 -->
-<!-- md:flag metadata -->
-<!-- md:flag experimental -->
-
-Pages can be excluded from search with the front matter `search.exclude`
-property, removing them from the index. Add the following lines at the top of a
-Markdown file:
-
-``` yaml
----
-search:
-  exclude: true
----
-
-# Page title
-...
-```
-
-#### Excluding sections
-
-When [Attribute Lists] is enabled, specific sections of pages can be excluded
-from search by adding the `data-search-exclude` pragma after a Markdown
-heading:
-
-=== ":octicons-file-code-16: `docs/page.md`"
-
-    ``` markdown
-    # Page title
-
-    ## Section 1
-
-    The content of this section is included
-
-    ## Section 2 { data-search-exclude }
-
-    The content of this section is excluded
-    ```
-
-=== ":octicons-codescan-16: `search_index.json`"
-
-    ``` json
-    {
-      ...
-      "docs": [
-        {
-          "location":"page/",
-          "text":"",
-          "title":"Document title"
-        },
-        {
-          "location":"page/#section-1",
-          "text":"<p>The content of this section is included</p>",
-          "title":"Section 1"
-        }
-      ]
-    }
-    ```
-
-  [Attribute Lists]: extensions/python-markdown.md#attribute-lists
-
-#### Excluding blocks
-
-When [Attribute Lists] is enabled, specific sections of pages can be excluded
-from search by adding the `data-search-exclude` pragma after a Markdown
-inline- or block-level element:
-
-=== ":octicons-file-code-16: `docs/page.md`"
-
-    ``` markdown
-    # Page title
-
-    The content of this block is included
-
-    The content of this block is excluded
-    { data-search-exclude }
-    ```
-
-=== ":octicons-codescan-16: `search_index.json`"
-
-    ``` json
-    {
-      ...
-      "docs": [
-        {
-          "location":"page/",
-          "text":"<p>The content of this block is included</p>",
-          "title":"Document title"
-        }
-      ]
-    }
-    ```
+  [content weighting]: https://pagefind.app/docs/weighting/
+  [ranking]: https://pagefind.app/docs/ranking/
