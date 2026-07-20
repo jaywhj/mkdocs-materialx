@@ -409,7 +409,7 @@
     font-size: px2rem(18px);
     line-height: 1;
     color: var(--mx-topbar-fg-muted);
-    white-space: nowrap;
+    white-space: pre;
     pointer-events: none;
     opacity: 0;
     transition: opacity 50ms;

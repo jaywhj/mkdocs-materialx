@@ -109,10 +109,7 @@ export function mountSearchSuggest(
         return words
       })
     )
-      .subscribe(words => el.innerHTML = words
-        .join("")
-        .replace(/\s/g, "&nbsp;")
-      )
+      .subscribe(words => el.textContent = words.join(""))
 
   /* Set up search keyboard handlers */
   keyboard$
@@ -124,11 +121,12 @@ export function mountSearchSuggest(
 
           /* Right arrow: accept current suggestion */
           case "ArrowRight":
+            const suggestion = el.textContent || ""
             if (
-              el.innerText.length &&
+              suggestion.length &&
               query.selectionStart === query.value.length
             )
-              query.value = el.innerText
+              query.value = suggestion
             break
         }
       })
