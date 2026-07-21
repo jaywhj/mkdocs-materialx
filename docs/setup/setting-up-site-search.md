@@ -7,11 +7,11 @@ search:
 
 # Setting up site search
 
-MaterialX for MkDocs 10.2.0 completely redesigns the built-in search system.
-The new implementation uses interchangeable search providers, improves index
-generation and result quality, and offers more flexible configuration for
+MaterialX for MkDocs `10.2.0` completely redesigns the built-in search system.
+The new implementation uses interchangeable search providers, **improves index
+generation and result quality**, and offers more flexible configuration for
 large and multilingual documentation sites. It also brings significantly
-better support for Chinese and Japanese content.
+more specialized support for Chinese and Japanese content.
 
 [Pagefind]{target="_blank"} is the default provider. Its chunked, on-demand index is the best
 choice for sites served over HTTP and scales efficiently as a site grows.
@@ -47,12 +47,14 @@ when other plugins are configured:
 
     ``` yaml
     plugins:
+      - offline
       - search:
           provider: lunr
     ```
 
-    Lunr packages the search index with the site and can therefore search a
-    site opened directly from the local filesystem.
+    Together with the offline plugin, Lunr packages the search index as a
+    script and can therefore search a site opened directly from the local
+    filesystem.
 
 Both providers use the same MaterialX search interface. Provider-specific
 settings are nested under `pagefind` and `lunr`, so changing providers doesn't

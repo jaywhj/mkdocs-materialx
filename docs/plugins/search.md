@@ -6,15 +6,15 @@ icon: lucide/search
 
 # Built-in search plugin
 
-MaterialX for MkDocs 10.2.0 introduces a completely redesigned search system.
-Search engines are now implemented as interchangeable providers, giving the
-built-in search interface better result quality, more efficient indexing, and
-more flexible configuration. The new architecture is particularly well suited
-to large sites and provides much better Chinese and Japanese support.
+MaterialX for MkDocs `10.2.0` introduces a completely redesigned search system.
+Search engines are now implemented as interchangeable providers, giving the built-in search interface
+**better result quality**, **more efficient indexing**, and **more flexible configuration**.
+The new architecture is particularly well suited to large sites and adds specialized support for Chinese and Japanese content.
 
-[Pagefind]{target="_blank"} is the default provider for sites served over HTTP. 
-[Lunr]{target="_blank"} remains available for sites that must also work when opened directly from `file://`. 
-Both providers are fully client-side and require no hosted search service.
+[Pagefind]{target="_blank"} is the default provider for sites served over HTTP.
+[Lunr]{target="_blank"} remains available for sites built with the [offline]
+plugin that must also work when opened directly from `file://`. Both providers
+are fully client-side and require no hosted search service.
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
@@ -32,19 +32,9 @@ At search time, the browser loads only the chunks and result data needed for
 the current query. Lunr writes `search_index.json`, then constructs and
 queries its in-memory index in a Web Worker.
 
-### When to use it
+### Integration with other plugins
 
-The built-in plugin is the recommended search solution for most documentation
-sites. Choose the provider according to how the final site is delivered:
-
-| Requirement | Provider |
-| --- | --- |
-| Served over HTTP or HTTPS | Pagefind (default) |
-| Large or multilingual site | Pagefind (default) |
-| Optimized Chinese or Japanese search | Pagefind (default) |
-| Opened directly from `file://` | Lunr |
-
-The plugin also integrates with other [built-in plugins]:
+The search plugin integrates with other [built-in plugins]:
 
 <div class="grid cards" markdown>
 
@@ -89,8 +79,8 @@ When a `plugins` list already exists, `search` must be included explicitly.
 ### Complete configuration structure
 
 The following example shows the complete provider-based structure. Only the
-block matching `provider` is used. All values are optional and should normally
-be omitted unless the defaults need to be changed:
+block matching `provider` is used. **All values are optional** and **should
+normally be omitted** unless the defaults need to be changed:
 
 ``` yaml
 plugins:
@@ -125,7 +115,7 @@ plugins:
             diacriticSimilarity: 0.8
             metaWeights:
               title: 5.0
-          indexWeight: 1.0
+          # indexWeight: 1.0
           # mergeFilter:
           #   site: Documentation
           noWorker: false
@@ -172,34 +162,56 @@ Use this setting to select the search provider:
     ```
 
 Provider-specific settings are isolated under their matching key, so Pagefind
-settings don't affect Lunr and vice versa.
+settings don't affect Lunr and vice versa. Keep the default Pagefind provider
+when the site is served over HTTP or HTTPS. When building with the [offline]
+plugin, select Lunr if the generated site must also support search when opened
+directly from `file://`.
 
 ## Pagefind
 
 <!-- md:version 10.2.0 -->
 
 Pagefind is a static search library designed around a small initial payload and
-on-demand index loading. MaterialX includes the extended Pagefind build for
-specialized Chinese and Japanese indexing.
+on-demand index loading. MaterialX installs Pagefind's extended release, which
+provides specialized segmentation for Chinese, Japanese, and Korean content.
 
 ### Features
 
-- __Chunked indexes__ – the generated index is split into small chunks instead
-  of being downloaded as one complete file.
-- __On-demand loading__ – the browser preloads the likely index chunk while a
-  query is entered, then fetches result details only when they're displayed.
-- __High-quality results__ – configurable ranking, section-level sub-results,
-  excerpts, metadata weighting, and language-aware processing improve result
-  relevance.
-- __Multilingual search__ – Pagefind detects the `lang` attribute in generated
-  HTML and creates independent indexes for each language automatically.
-- __Large-site performance__ – the chunked architecture avoids loading an
-  entire corpus into the browser and can accommodate sites with 100,000 pages
-  and beyond. Actual build time and network usage still depend on page size,
-  language mix, and hosting.
+Search quality is the primary reason Pagefind is the default provider. It
+combines several relevance signals instead of relying on term frequency alone:
+term similarity, page length, term saturation, diacritic similarity, content
+weights, and metadata weights can all influence ranking. Pagefind's defaults
+work for most sites, while the ranking model can be tuned when a documentation
+set contains very different page lengths or content types.
+
+Pagefind also returns structured page results with matching subsections. Each
+sub-result links directly to its heading and contains an excerpt centered on
+the match, so users can judge relevance before opening the page. MaterialX
+preserves this structure and renders it through the same interface as Lunr.
+
+| Search aspect | Pagefind | Lunr |
+| --- | --- | --- |
+| Relevance | Combines configurable frequency, similarity, page-length, saturation, diacritic, content, and metadata signals. | Uses Lunr scoring with field and page boosts, stemming, and token pipelines. |
+| Result context | Pagefind generates page metadata, matching subsections, anchored URLs, and contextual excerpts. | MaterialX indexes pages and sections, then reconstructs and highlights matching excerpts in the browser. |
+| Chinese, Japanese, and Korean | The extended indexer segments specialized languages while building the index and processing queries. | Chinese uses jieba during indexing; Japanese and Korean are segmented in the browser. |
+| Index delivery | Loads only the index chunks and result data required by the query. | Loads the complete JSON index and builds an in-memory index in a Web Worker. |
+
+In addition to result quality, Pagefind provides:
+
+- __Multilingual indexes__ – Pagefind detects the `lang` attribute in generated
+  HTML, builds a separate index for each language, and loads the index matching
+  the current page automatically.
+- __Responsive typeahead__ – MaterialX asks Pagefind to preload the likely
+  chunk while the query is being entered, then loads result details only when
+  they're rendered.
+- __Large-site efficiency__ – chunking avoids transferring the whole corpus.
+  Pagefind is designed for tens of thousands of pages; its official reference
+  reports a total search payload below 300kB for a 10,000-page site, including
+  the Pagefind library. Actual usage depends on the content and query.
 
 Pagefind must be served over HTTP or HTTPS because its JavaScript, WebAssembly,
-and index chunks are loaded on demand. Use Lunr for direct `file://` access.
+and index chunks are loaded on demand. Use Lunr together with the [offline]
+plugin for direct `file://` access.
 
 ### Index configuration
 
@@ -218,77 +230,41 @@ location:
 | `keep_index_url` | `true` | Keep `index.html` at the end of result URLs. |
 | `write_playground` | `false` | Write Pagefind's ranking playground into the search bundle. |
 | `verbose` | `false` | Enable detailed Pagefind indexing logs. |
-| `logfile` | none | Also write logs to a file inside `output_subdir`. |
+| `logfile` | none | Also write logs to a file; relative paths are resolved inside `output_subdir`. |
 | `options` | `{}` | Browser Search API configuration, described in the next section. |
 
-The defaults in this table are the effective MaterialX defaults. In particular,
-MaterialX preserves `._` for technical searches, keeps `index.html` in result
-URLs, and excludes navigation and footer elements unless these values are
-overridden.
-
-For example, the following configuration expands the searchable punctuation,
-excludes custom page furniture, and writes the Pagefind playground:
-
-``` yaml
-plugins:
-  - search:
-      provider: pagefind
-      pagefind:
-        exclude_selectors:
-          - nav
-          - footer
-          - .md-banner
-          - '[data-search-only="lunr"]'
-        include_characters: ._-$
-        write_playground: true
-```
-
-MaterialX manages the source site, HTML `glob`, and final `output_path`, so
-`site`, `source`, `glob`, and `output_path` aren't user settings.
-Process-oriented Pagefind CLI settings such as `serve`, `quiet`, and `silent`
-also don't apply to the embedded Python indexer. See Pagefind's [index
-configuration options]{target="_blank"} and [Python API]{target="_blank"} for the upstream reference.
+These are the effective MaterialX defaults. MaterialX marks the main content
+with `data-pagefind-body`, so navigation and other page furniture aren't
+indexed. It also manages the input directory, HTML `glob`, and `output_path`;
+`site`, `source`, `glob`, `output_path`, and CLI process options aren't user
+settings. See Pagefind's [index configuration options]{target="_blank"} and
+[Python API]{target="_blank"} for upstream details.
 
   [index configuration options]: https://pagefind.app/docs/config-options/
   [Python API]: https://pagefind.app/docs/py-api/
 
 ### Search API configuration
 
-Settings under `pagefind.options` are passed directly to Pagefind's browser
-Search API. They use the API's camel-case names and aren't reinterpreted by the
-plugin:
-
-``` yaml
-plugins:
-  - search:
-      provider: pagefind
-      pagefind:
-        options:
-          excerptLength: 20
-          exactDiacritics: false
-          ranking:
-            pageLength: 0.5
-            termSimilarity: 1.5
-            metaWeights:
-              title: 8.0
-```
-
-The following Search API options are available:
+With the routing exceptions described below, settings under `pagefind.options`
+are passed directly to Pagefind's browser Search API using camel-case names:
 
 | Option | Default | Description |
 | --- | --- | --- |
+| `baseUrl` | MaterialX-managed | Base URL prepended to result URLs. |
 | `basePath` | automatic | Override the Pagefind bundle path if automatic detection fails. |
-| `excerptLength` | `30` | Maximum number of words in generated result excerpts. |
+| `excerptLength` | `30` | Maximum target length for generated result excerpts. |
+| `highlightParam` | MaterialX-managed | Query parameter used by Pagefind's highlighting script. |
 | `exactDiacritics` | `false` | Treat accented and unaccented characters as distinct. |
-| `metaCacheTag` | automatic | Set a stable metadata cache key, useful for service workers and PWAs. |
+| `metaCacheTag` | timestamp | Set a stable metadata cache key, useful for service workers and PWAs. |
 | `ranking` | Pagefind defaults | Tune result ranking with the parameters below. |
-| `indexWeight` | `1.0` | Weight this index when combining multiple Pagefind indexes. |
+| `indexWeight` | Pagefind default | Weight this index when combining multiple Pagefind indexes. |
 | `mergeFilter` | none | Add a filter value to all results from a merged index. |
 | `noWorker` | `false` | Run search on the main thread instead of a Web Worker. |
 
-MaterialX manages `baseUrl` so result paths stay in sync with `site_url`, and
-manages `highlightParam` so `search.highlight` uses the correct query
-parameter. User values for those two options are therefore overridden.
+MaterialX always overrides `baseUrl` so result paths stay in sync with
+`site_url`. When `search.highlight` is enabled, it also sets `highlightParam`
+to `h`. `indexWeight` and `mergeFilter` only affect custom multisite
+integrations.
 
 The `ranking` object accepts all Pagefind ranking controls:
 
@@ -301,10 +277,9 @@ The `ranking` object accepts all Pagefind ranking controls:
 | `diacriticSimilarity` | `0.8` | Boost exact diacritic matches when normalization is enabled. |
 | `metaWeights` | `title: 5.0` | Weight matches in title or custom metadata fields. |
 
-For the authoritative list and value ranges, see Pagefind's [Search API
-configuration]{target="_blank"} and [ranking documentation]{target="_blank"}. Since `options` is passed through
-without a fixed MaterialX schema, every option supported by the bundled
-Pagefind version can be used without a theme-specific setting.
+For value ranges and tuning guidance, see Pagefind's [Search API
+configuration]{target="_blank"} and [ranking documentation]{target="_blank"}.
+MaterialX doesn't impose a separate schema on `options`.
 
   [Search API configuration]: https://pagefind.app/docs/search-config/
   [ranking documentation]: https://pagefind.app/docs/ranking/
@@ -371,12 +346,12 @@ wrapper is required for complete sections.
 ### Other Pagefind features
 
 Pagefind also supports metadata, filters, sorting, content weighting, custom
-records, external indexes, and search across multiple sites. These advanced
-features can require custom templates or frontend integration and are not
-covered here. See the [Pagefind documentation]{target="_blank"} and [multisite search]{target="_blank"} guide for
-the complete workflows.
+records, and search across multiple sites. These are upstream Pagefind
+capabilities; some require custom templates, indexing code, or frontend code
+beyond MaterialX's built-in integration. See the [Pagefind]{target="_blank"}
+documentation and [multisite search]{target="_blank"} guide for the complete
+workflows.
 
-  [Pagefind documentation]: https://pagefind.app/docs/
   [multisite search]: https://pagefind.app/docs/multisite/
 
 ## Lunr
