@@ -123,9 +123,7 @@ plugins:
 Start with `plugins: [search]` and add only the settings required by the site.
 The provider sections below explain when each option is useful.
 
-### General
-
-#### <!-- md:setting config.provider -->
+### Provider
 
 <!-- md:default `pagefind` -->
 
@@ -263,7 +261,7 @@ search:
   exclude: true
 ```
 
-#### Excluding repeated elements
+#### Excluding certain types of elements
 
 Use `exclude_selectors` for elements that should be ignored throughout the
 site, such as a custom banner or generated utility block:
