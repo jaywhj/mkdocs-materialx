@@ -183,8 +183,7 @@ provides specialized segmentation for Chinese, Japanese, and Korean content.
   Japanese, and Korean segmentation.
 
 Pagefind must be served over HTTP or HTTPS because its JavaScript, WebAssembly,
-and index chunks are loaded on demand. Use Lunr together with the [offline]{target="_blank"}
-plugin for direct `file://` access.
+and index chunks are loaded on demand.
 
 ### Index configuration
 
