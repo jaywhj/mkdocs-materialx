@@ -49,7 +49,7 @@ async def _async_build(site_dir: str, user_config: dict):
         **index_config,
     }
 
-    # 防御性编程：移除部分由插件接管的参数
+    # 防御性处理：移除部分由插件接管的参数
     final_config.pop("output_path", None)
     final_config.pop("site", None)
     final_config.pop("source", None)
