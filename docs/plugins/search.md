@@ -12,9 +12,8 @@ Search engines are now implemented as interchangeable providers, giving the buil
 The new architecture is particularly well suited to large sites and adds specialized support for Chinese and Japanese content.
 
 [Pagefind]{target="_blank"} is the default provider for sites served over HTTP.
-[Lunr]{target="_blank"} remains available for sites built with the [offline]{target="_blank"}
-plugin that must also work when opened directly from `file://`. Both providers
-are fully client-side and require no hosted search service.
+[Lunr]{target="_blank"} remains available for sites built with the [offline]{target="_blank"} plugin that must also work when opened directly from `file://`.
+Both providers are fully client-side and require no hosted search service.
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
@@ -28,9 +27,8 @@ site. The frontend loads that provider through a common integration and renders
 the results with MaterialX's built-in search interface.
 
 Pagefind scans the generated HTML and writes a chunked index beside the site.
-At search time, the browser loads only the chunks and result data needed for
-the current query. Lunr writes `search_index.json`, then constructs and
-queries its in-memory index in a Web Worker.
+At search time, the browser loads only the chunks and result data needed for the current query.
+Lunr writes `search_index.json`, then constructs and queries its in-memory index in a Web Worker.
 
 ### Integration with other plugins
 
@@ -78,8 +76,7 @@ plugins:
 ### Configuration structure
 
 The following example shows the provider-based structure and the options that
-are useful for most customizations. Only the block matching `provider` is
-used, and **all settings below it are optional**.
+are useful for most customizations. **All settings below it are optional**.
 
 ``` yaml
 plugins:
@@ -88,10 +85,10 @@ plugins:
 
       pagefind:
         # Index configuration
-        exclude_selectors:
-          - .md-banner
         include_characters: ._
         keep_index_url: true
+        exclude_selectors:
+          - .md-banner
         # output_subdir: search
         # logfile: pagefind.log
 
@@ -123,9 +120,7 @@ plugins:
 Start with `plugins: [search]` and add only the settings required by the site.
 The provider sections below explain when each option is useful.
 
-### General
-
-#### <!-- md:setting config.provider -->
+### Provider
 
 <!-- md:default `pagefind` -->
 
@@ -147,11 +142,10 @@ Use this setting to select the search provider:
           provider: lunr
     ```
 
-Provider-specific settings are isolated under their matching key, so Pagefind
-settings don't affect Lunr and vice versa. Keep the default Pagefind provider
-when the site is served over HTTP or HTTPS. When building with the [offline]{target="_blank"}
-plugin, select Lunr if the generated site must also support search when opened
-directly from `file://`.
+Provider-specific settings are isolated under their matching key, so Pagefind settings don't affect Lunr and vice versa.
+Keep the default Pagefind provider when the site is served over HTTP or HTTPS.
+When building with the [offline]{target="_blank"} plugin,
+select Lunr if the generated site must also support search when opened directly from `file://`.
 
 ## Pagefind
 
@@ -232,9 +226,8 @@ The most useful `ranking` controls are:
 | `diacriticSimilarity` | `0.8` | Boost exact diacritic matches when normalization is enabled. |
 | `metaWeights` | `title: 5.0` | Weight matches in title or custom metadata fields. |
 
-For value ranges and the remaining controls, see Pagefind's [ranking
-documentation]{target="_blank"}. MaterialX doesn't impose a separate schema
-on `options`.
+For value ranges and the remaining controls, see Pagefind's [ranking documentation]{target="_blank"}.
+MaterialX doesn't impose a separate schema on `options`.
 
   [Search API configuration]: https://pagefind.app/docs/search-config/
   [ranking documentation]: https://pagefind.app/docs/ranking/
@@ -263,7 +256,7 @@ search:
   exclude: true
 ```
 
-#### Excluding repeated elements
+#### Excluding certain types of elements
 
 Use `exclude_selectors` for elements that should be ignored throughout the
 site, such as a custom banner or generated utility block:
