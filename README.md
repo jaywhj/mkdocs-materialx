@@ -34,6 +34,7 @@
 
 - Added Markdown source support for **AI agents** to provide structured content, reducing token consumption by over 80%
 - Refactored the search functionality with a brand-new architecture design, **drastically improving search quality and indexing efficiency**. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
+    - Tested to improve search accuracy and performance by 50% ~ 80% over Zensical
 - Added code block download & **auto-collapse/expand** long code blocks features, see [Code blocks](https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks#code-collapse-expand)
 - Added the new **Steps** component for clearer, more intuitive display of procedures and workflows, see [Steps](https://jaywhj.github.io/mkdocs-materialx/reference/steps)
 - Added next-generation date & author plugin, see: [Add document dates & authors](https://jaywhj.github.io/mkdocs-materialx/setup/adding-document-dates-authors)
