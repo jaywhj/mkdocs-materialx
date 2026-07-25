@@ -90,7 +90,7 @@ yields ^^search suggestions^^ as a suggestion.
 <!-- md:flag experimental -->
 
 When search highlighting is enabled and a user follows a search result,
-MaterialX for MkDocs highlights all occurrences of the search terms on the
+MaterialX highlights all occurrences of the search terms on the
 destination page. This feature works with both providers:
 
 ``` yaml

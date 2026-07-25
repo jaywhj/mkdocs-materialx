@@ -59,7 +59,7 @@ The search plugin integrates with other [built-in plugins]:
 
 <!-- md:plugin [search] – built-in -->
 
-The search plugin is built into MaterialX for MkDocs and doesn't need to be
+The search plugin is built into MaterialX and doesn't need to be
 installed. Add `search` to the `plugins` list to enable it. Pagefind is the
 default provider:
 
@@ -188,7 +188,7 @@ MaterialX manages bundle routing, result URLs, and highlighting. The complete
 upstream option set remains available for special cases in Pagefind's [Search
 API configuration]{target="_blank"}.
 
-The most useful `ranking` controls are:
+The options for `ranking` are as follows:
 
 | Ranking option | Default | Purpose |
 | --- | --- | --- |
@@ -200,7 +200,6 @@ The most useful `ranking` controls are:
 | `metaWeights` | `title: 5.0` | Weight matches in title or custom metadata fields. |
 
 For value ranges and the remaining controls, see Pagefind's [ranking documentation]{target="_blank"}.
-MaterialX doesn't impose a separate schema on `options`.
 
   [Search API configuration]: https://pagefind.app/docs/search-config/
   [ranking documentation]: https://pagefind.app/docs/ranking/
