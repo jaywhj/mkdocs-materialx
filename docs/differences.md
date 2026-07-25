@@ -45,6 +45,7 @@ Therefore, MaterialX will adhere to the following goals and principles:
 
 - Added Markdown source support for **AI agents** to provide structured content, reducing token consumption by over 80%
 - Refactored the search functionality with a brand-new architecture design, **drastically improving search quality and indexing efficiency**. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](plugins/search.md){target="_blank"}
+    - Tested to improve search accuracy and performance by 50% ~ 80% over Zensical
 - Added code block download & **auto-collapse/expand** long code blocks features, see [Code blocks](reference/code-blocks.md#code-collapse-expand){target="_blank"}
 - Added the new **Steps** component for clearer, more intuitive display of procedures and workflows, see [Steps](reference/steps.md){target="_blank"}
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}

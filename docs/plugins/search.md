@@ -6,14 +6,11 @@ icon: lucide/search
 
 # Built-in search plugin
 
-MaterialX for MkDocs `10.2.0` introduces a completely redesigned search system.
-Search engines are now implemented as interchangeable providers, giving the built-in search interface
-**better result quality**, **more efficient indexing**, and **more flexible configuration**.
-The new architecture is particularly well suited to large sites and adds specialized support for Chinese and Japanese content.
+MaterialX `10.2.0` features a full refactor of the search module with a brand-new architecture, delivering substantial improvements to **search accuracy** and **indexing efficiency**.
 
-[Pagefind]{target="_blank"} is the default provider for sites served over HTTP.
-[Lunr]{target="_blank"} remains available for sites built with the [offline]{target="_blank"} plugin that must also work when opened directly from `file://`.
-Both providers are fully client-side and require no hosted search service.
+It supports a multi-provider architecture and can handle over 100,000 pages, with capabilities including chunked indexing, on-demand loading, index compression, multilingual search, cross-origin search and more, making it suitable for complex use cases and large-scale websites. Real-world benchmarks show its search accuracy and performance are 50% to 80% higher than Zensical.
+
+[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
@@ -75,8 +72,7 @@ plugins:
 
 ### Configuration structure
 
-The following example shows the provider-based structure and the options that
-are useful for most customizations. **All settings below it are optional**.
+The example below demonstrates the provider-based structure and available options, **all of which are optional**.
 
 ``` yaml
 plugins:
@@ -117,7 +113,6 @@ plugins:
         # jieba_dict_user: user_dict.txt
 ```
 
-Start with `plugins: [search]` and add only the settings required by the site.
 The provider sections below explain when each option is useful.
 
 ### Provider
@@ -142,42 +137,21 @@ Use this setting to select the search provider:
           provider: lunr
     ```
 
-Provider-specific settings are isolated under their matching key, so Pagefind settings don't affect Lunr and vice versa.
-Keep the default Pagefind provider when the site is served over HTTP or HTTPS.
-When building with the [offline]{target="_blank"} plugin,
-select Lunr if the generated site must also support search when opened directly from `file://`.
+[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
 
 ## Pagefind
 
 <!-- md:version 10.2.0 -->
 
 Pagefind is a static search library designed around a small initial payload and
-on-demand index loading. MaterialX installs Pagefind's extended release, which
-provides specialized segmentation for Chinese, Japanese, and Korean content.
+on-demand index loading. MaterialX integrates `pagefind[extended]` with specific support for Chinese and Japanese.
 
 ### Features
 
-- __High-quality ranking__ – Pagefind combines term frequency and similarity,
-  page length, term saturation, diacritics, and content and metadata weights.
-  This produces more relevant results across pages of different lengths and
-  content types, while keeping the ranking model configurable.
-- __Precise, informative results__ – Results are grouped by page and matching
-  subsection, link directly to the relevant heading, and include an excerpt
-  around the match. Users can identify the right result before opening it.
-- __Chunked index__ – The generated index is split into small chunks instead of
-  being delivered as one complete site-wide index.
-- __On-demand loading__ – MaterialX preloads the chunks likely to match the
-  current query and loads full result data only when it is rendered.
-- __Large-site scalability__ – Index chunking keeps the initial payload small
-  as content grows, making Pagefind suitable for sites with tens of thousands
-  of pages.
-- __Multilingual search__ – Pagefind detects the language of generated pages,
-  builds separate language indexes, and selects the appropriate index in the
-  browser. MaterialX uses the extended release for specialized Chinese,
-  Japanese, and Korean segmentation.
-
-Pagefind must be served over HTTP or HTTPS because its JavaScript, WebAssembly,
-and index chunks are loaded on demand.
+- **High-quality search results**: Pagefind leverages multiple metrics including term similarity, term saturation, term frequency, page length, diacritics, as well as weighting for content and metadata to perform comprehensive keyword matching, delivering more accurate and complete search results
+- **High performance for large websites**: Powered by chunked indexing and on-demand loading, Pagefind only loads index chunks relevant to the searched keywords regardless of total page volume. It avoids loading the entire index into memory, resulting in drastically improved search performance
+- **Multilingual search**: Pagefind automatically detects page languages and generates corresponding chunked indexes for all supported languages
+- **Cross-domain multi-site search**: Pagefind can be configured to search across multiple websites, merging results and filters into a single response
 
 ### Index configuration
 
@@ -194,10 +168,9 @@ MkDocs build. The following options cover the most common customizations:
 
 MaterialX marks the main content with `data-pagefind-body` and manages the
 index input, output, and result URL format. Other Pagefind index options remain
-available for advanced use; see the official [index configuration
-options]{target="_blank"}.
+available for advanced use; see the official [Index configuration]{target="_blank"}.
 
-  [index configuration options]: https://pagefind.app/docs/config-options/
+  [Index configuration]: https://pagefind.app/docs/config-options/
 
 ### Search API configuration
 

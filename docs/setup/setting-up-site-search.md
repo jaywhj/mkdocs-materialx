@@ -7,16 +7,11 @@ search:
 
 # Setting up site search
 
-MaterialX for MkDocs `10.2.0` completely redesigns the built-in search system.
-The new implementation uses interchangeable search providers, **improves index
-generation and result quality**, and offers more flexible configuration for
-large and multilingual documentation sites. It also brings significantly
-more specialized support for Chinese and Japanese content.
+MaterialX `10.2.0` features a full refactor of the search module with a brand-new architecture, delivering substantial improvements to **search accuracy** and **indexing efficiency**.
 
-[Pagefind]{target="_blank"} is the default provider. Its chunked, on-demand index is the best
-choice for sites served over HTTP and scales efficiently as a site grows.
-[Lunr]{target="_blank"} remains available for documentation that must also work [offline]{target="_blank"} when
-opened directly from `file://`.
+It supports a multi-provider architecture and can handle over 100,000 pages, with capabilities including chunked indexing, on-demand loading, index compression, multilingual search, cross-origin search and more, making it suitable for complex use cases and large-scale websites. Real-world benchmarks show its search accuracy and performance are 50% to 80% higher than Zensical.
+
+[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
