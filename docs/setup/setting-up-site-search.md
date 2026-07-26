@@ -7,11 +7,11 @@ search:
 
 # Setting up site search
 
-MaterialX `10.2.0` features a full refactor of the search module with a brand-new architecture, delivering substantial improvements to **search accuracy** and **indexing efficiency**.
+MaterialX `10.2.0` fully refactors the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**.
 
-It supports a multi-provider architecture and can handle over 100,000 pages, with capabilities including chunked indexing, on-demand loading, index compression, multilingual search, cross-origin search and more, making it suitable for complex use cases and large-scale websites. Real-world benchmarks show its search accuracy and performance are 50% to 80% higher than Zensical.
+It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages. Actual tests show its search accuracy and performance are 50%~80% higher than Zensical.
 
-[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
+[Pagefind]{target="_blank"} is the default provider. You may switch back to the original [Lunr]{target="_blank"} when using it in an [offline]{target="_blank"} environment (opened via the `file://` protocol).
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
@@ -90,7 +90,7 @@ yields ^^search suggestions^^ as a suggestion.
 <!-- md:flag experimental -->
 
 When search highlighting is enabled and a user follows a search result,
-MaterialX for MkDocs highlights all occurrences of the search terms on the
+MaterialX highlights all occurrences of the search terms on the
 destination page. This feature works with both providers:
 
 ``` yaml
