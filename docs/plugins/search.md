@@ -6,14 +6,15 @@ icon: lucide/search
 
 # Built-in search plugin
 
-MaterialX `10.2.0` features a full refactor of the search module with a brand-new architecture, delivering substantial improvements to **search accuracy** and **indexing efficiency**.
+MaterialX `10.2.0` fully refactors the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**.
 
-It supports a multi-provider architecture and can handle over 100,000 pages, with capabilities including chunked indexing, on-demand loading, index compression, multilingual search, cross-origin search and more, making it suitable for complex use cases and large-scale websites. Real-world benchmarks show its search accuracy and performance are 50% to 80% higher than Zensical.
+It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages. Actual tests show its search accuracy and performance are 50%~80% higher than Zensical.
 
-[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
+[Pagefind]{target="_blank"} is the default provider. You may switch back to the original [Lunr]{target="_blank"} when using it in an [offline]{target="_blank"} environment (opened via the `file://` protocol).
 
   [Pagefind]: https://pagefind.app/
   [Lunr]: https://lunrjs.com/
+  [offline]: offline.md
 
 ## Objective
 
@@ -27,41 +28,11 @@ Pagefind scans the generated HTML and writes a chunked index beside the site.
 At search time, the browser loads only the chunks and result data needed for the current query.
 Lunr writes `search_index.json`, then constructs and queries its in-memory index in a Web Worker.
 
-### Integration with other plugins
-
-The search plugin integrates with other [built-in plugins]:
-
-<div class="grid cards" markdown>
-
--   :material-connection: &nbsp; __[Built-in offline plugin][offline]__
-
-    ---
-
-    The offline plugin makes it possible to distribute the generated
-    [`site` directory][mkdocs.site_dir] as a `.zip` file. Use it together with
-    the Lunr provider so search also works from the local filesystem.
-
--   :material-file-tree: &nbsp; __[Built-in meta plugin][meta]__
-
-    ---
-
-    The meta plugin can apply search metadata to a complete documentation
-    section, making it easy to exclude a folder from either provider or tune
-    Lunr result ranking.
-
-</div>
-
-  [offline]: offline.md
-  [meta]: meta.md
-  [built-in plugins]: index.md
-
 ## Configuration
 
-<!-- md:plugin [search] – built-in -->
-
 The search plugin is built into MaterialX and doesn't need to be
-installed. Add `search` to the `plugins` list to enable it. Pagefind is the
-default provider:
+installed. Add `search` to the `plugins` list to enable it (pagefind is the
+default provider):
 
 ``` yaml
 plugins:
@@ -113,8 +84,6 @@ plugins:
         # jieba_dict_user: user_dict.txt
 ```
 
-The provider sections below explain when each option is useful.
-
 ### Provider
 
 <!-- md:default `pagefind` -->
@@ -137,7 +106,7 @@ Use this setting to select the search provider:
           provider: lunr
     ```
 
-[Pagefind]{target="_blank"} is set as the default provider. You may switch back to the legacy [Lunr]{target="_blank"} provider if you need [offline]{target="_blank"} usage via local `file://` protocol access.
+[Pagefind]{target="_blank"} is the default provider. You may switch back to the original [Lunr]{target="_blank"} when using it in an [offline]{target="_blank"} environment (opened via the `file://` protocol).
 
 ## Pagefind
 
@@ -148,41 +117,38 @@ on-demand index loading. MaterialX integrates `pagefind[extended]` with specific
 
 ### Features
 
-- **High-quality search results**: Pagefind leverages multiple metrics including term similarity, term saturation, term frequency, page length, diacritics, as well as weighting for content and metadata to perform comprehensive keyword matching, delivering more accurate and complete search results
-- **High performance for large websites**: Powered by chunked indexing and on-demand loading, Pagefind only loads index chunks relevant to the searched keywords regardless of total page volume. It avoids loading the entire index into memory, resulting in drastically improved search performance
-- **Multilingual search**: Pagefind automatically detects page languages and generates corresponding chunked indexes for all supported languages
-- **Cross-domain multi-site search**: Pagefind can be configured to search across multiple websites, merging results and filters into a single response
+- **High-quality search results**: It matches keywords comprehensively by combining multiple metrics including term similarity, term saturation, term frequency, page length, diacritics, as well as weights for content and metadata, delivering more accurate and comprehensive search results
+- **High performance for large sites**: It implements chunked indexing and on-demand loading mechanisms. Regardless of the total number of pages on the site, only index chunks relevant to search keywords are loaded into memory instead of the entire index, which greatly boosts search performance
+- **Multilingual search**: It automatically detects page languages and generates corresponding chunked indexes for all supported languages
+- **Cross-domain multi-site search**: It can be configured to search across multiple sites and merge results and filters into a single response
 
 ### Index configuration
 
-Settings directly under `pagefind` configure the index generated after the
-MkDocs build. The following options cover the most common customizations:
+Configure indexing options directly under the `pagefind` level:
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| `exclude_selectors` | `nav`, `footer` | CSS selectors and their descendants to omit from indexing. |
-| `include_characters` | `._` | Punctuation preserved as searchable characters. |
-| `keep_index_url` | `true` | Keep `index.html` at the end of result URLs. |
-| `logfile` | none | Also write logs to a file; relative paths are resolved inside `output_subdir`. |
-| `options` | `{}` | Browser Search API configuration, described in the next section. |
+| `exclude_selectors` | `nav`, `footer` | CSS selectors and their descendants to omit from indexing |
+| `include_characters` | `._` | Punctuation preserved as searchable characters |
+| `keep_index_url` | `true` | Keep `index.html` at the end of result URLs |
+| `logfile` | none | Also write logs to a file; relative paths are resolved inside `output_subdir` |
+| `options` | `{}` | Browser Search API configuration, described in the next section |
 
 MaterialX marks the main content with `data-pagefind-body` and manages the
 index input, output, and result URL format. Other Pagefind index options remain
-available for advanced use; see the official [Index configuration]{target="_blank"}.
+available for advanced use, see Pagefind's [index configuration]{target="_blank"}.
 
-  [Index configuration]: https://pagefind.app/docs/config-options/
+  [index configuration]: https://pagefind.app/docs/config-options/
 
 ### Search API configuration
 
-Settings under `pagefind.options` are passed to Pagefind's browser Search API
-using camel-case names. In normal use, only excerpt, diacritic matching, and
-ranking behavior need to be customized:
+Configure the browser Search API options directly under the `pagefind.options` level:
 
 | Option | Default | Description |
 | --- | --- | --- |
-| `excerptLength` | `30` | Maximum target length for generated result excerpts. |
-| `exactDiacritics` | `false` | Treat accented and unaccented characters as distinct. |
-| `ranking` | Pagefind defaults | Tune result ranking with the parameters below. |
+| `excerptLength` | `30` | Maximum target length for generated result excerpts |
+| `exactDiacritics` | `false` | Treat accented and unaccented characters as distinct |
+| `ranking` | Pagefind defaults | Tune result ranking with the parameters below |
 
 MaterialX manages bundle routing, result URLs, and highlighting. The complete
 upstream option set remains available for special cases in Pagefind's [Search
@@ -192,12 +158,12 @@ The options for `ranking` are as follows:
 
 | Ranking option | Default | Purpose |
 | --- | --- | --- |
-| `termFrequency` | `1.0` | Balance term frequency against weighted term count. |
-| `termSimilarity` | `1.0` | Prefer indexed terms whose length is closer to the query. |
-| `pageLength` | `0.75` | Control how strongly shorter-than-average pages are favored. |
-| `termSaturation` | `1.4` | Control how quickly repeated terms stop increasing relevance. |
-| `diacriticSimilarity` | `0.8` | Boost exact diacritic matches when normalization is enabled. |
-| `metaWeights` | `title: 5.0` | Weight matches in title or custom metadata fields. |
+| `termFrequency` | `1.0` | Balance term frequency against weighted term count |
+| `termSimilarity` | `1.0` | Prefer indexed terms whose length is closer to the query |
+| `pageLength` | `0.75` | Control how strongly shorter-than-average pages are favored |
+| `termSaturation` | `1.4` | Control how quickly repeated terms stop increasing relevance |
+| `diacriticSimilarity` | `0.8` | Boost exact diacritic matches when normalization is enabled |
+| `metaWeights` | `title: 5.0` | Weight matches in title or custom metadata fields |
 
 For value ranges and the remaining controls, see Pagefind's [ranking documentation]{target="_blank"}.
 
@@ -227,6 +193,8 @@ The [meta] plugin can apply the same property to every page in a folder:
 search:
   exclude: true
 ```
+
+  [meta]: meta.md
 
 #### Excluding certain types of elements
 
@@ -258,10 +226,6 @@ This complete section is excluded from Pagefind.
 
 </div>
 ```
-
-The attribute excludes the element and all of its children. Placing it only on
-a heading doesn't exclude the content that follows, which is why a wrapper is
-required for complete sections.
 
   [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
 
