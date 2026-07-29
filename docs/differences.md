@@ -16,9 +16,7 @@ icon: material/vector-difference-ab
 
     Similarly, mkdocs-material also has a new successor: **MaterialX** (based on mkdocs-material 9.7.1). It provides ongoing maintenance and updates, with full compatibility with the original ecosystem and zero migration costs.
 
-    ---
-
-    In short: **`MaterialX + ProperDocs`** is an equivalent replacement for `mkdocs-material + mkdocs` and provides ongoing maintenance and updates.
+In short: **`MaterialX + ProperDocs`** is an equivalent replacement for `mkdocs-material + mkdocs` and provides ongoing maintenance and updates.
 
 **MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and will adopt the following brand-new vision and positioning.
 

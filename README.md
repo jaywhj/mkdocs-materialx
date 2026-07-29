@@ -21,10 +21,9 @@
     Similarly, mkdocs-material also has a new successor: <strong>MaterialX</strong> (based on mkdocs-material 9.7.1). It provides ongoing maintenance and updates, with full compatibility with the original ecosystem and zero migration costs.
   </p>
   <hr>
-  <p>
-    In short: <strong><code>MaterialX + ProperDocs</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
-  </p>
 </details>
+
+In short: **`MaterialX + ProperDocs`** is an equivalent replacement for `mkdocs-material + mkdocs` and provides ongoing maintenance and updates.
 
 **MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and provides ongoing maintenance and updates.
 
