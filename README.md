@@ -21,10 +21,9 @@
     Similarly, mkdocs-material also has a new successor: <strong>MaterialX</strong> (based on mkdocs-material 9.7.1). It provides ongoing maintenance and updates, with full compatibility with the original ecosystem and zero migration costs.
   </p>
   <hr>
-  <p>
-    In short: <strong><code>MaterialX + ProperDocs</code></strong> is an equivalent replacement for <code>mkdocs-material + mkdocs</code> and provides ongoing maintenance and updates.
-  </p>
 </details>
+
+In short: **`MaterialX + ProperDocs`** is an equivalent replacement for `mkdocs-material + mkdocs` and provides ongoing maintenance and updates.
 
 **MaterialX** preserves the **rich features** and **stability** of the mkdocs-material project, while delivering **new features** and **broad compatibility**, and provides ongoing maintenance and updates.
 
@@ -33,7 +32,7 @@
 ## Update Highlights
 
 - Added Markdown source support for **AI agents** to provide structured content, reducing token consumption by over 80%
-- Refactored the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**.It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
+- Refactored the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**. It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
     - Actual tests show its search accuracy and performance are 50%~80% higher than Zensical
 - Added code block download & **auto-collapse/expand** long code blocks features, see [Code blocks](https://jaywhj.github.io/mkdocs-materialx/reference/code-blocks#code-collapse-expand)
 - Added the new **Steps** component for clearer, more intuitive display of procedures and workflows, see [Steps](https://jaywhj.github.io/mkdocs-materialx/reference/steps)
