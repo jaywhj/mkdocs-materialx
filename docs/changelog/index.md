@@ -209,9 +209,6 @@ __Changes__:
 - Added support for navigation paths (breadcrumbs)
 - Fixed #8519: Vector accents do not render when using KaTeX
 
-  [Zensical]: https://zensical.org
-  [Read the full announcement on our blog]: ../blog/posts/zensical.md
-
 ### 9.6.23 <small>November 1, 2025</small> { id="9.6.23" }
 
 - Updated Burmese translation

@@ -206,10 +206,16 @@
     margin-right: px2em(16px, 13.6px);
     margin-left: px2em(-16px, 13.6px);
     color: var(--md-default-fg-color--light);
+    white-space: pre;
     content: attr(data-linenos);
     user-select: none;
     background-color: var(--md-code-bg-color);
     box-shadow: px2rem(-1px) 0 var(--md-default-fg-color--lightest) inset;
+  }
+
+  // Code block line numbers (inline)
+  code .linenos:not([data-linenos]) {
+    margin-right: px2em(16px, 13.6px);
   }
 
   // Code block line anchors - Chrome and Safari seem to have a strange bug
@@ -221,6 +227,12 @@
   code a[id] {
     position: absolute;
     visibility: hidden;
+
+    // Align the targeted line directly below the sticky header. The default
+    // anchor offset includes extra spacing which exposes the preceding line.
+    &:target {
+      --md-scroll-offset: #{px2rem(24px)};
+    }
   }
 
   // Copying in progress - this class is set before the content is copied and
@@ -324,6 +336,12 @@
     flex: 1;
     min-width: 0;
   }
+}
+
+// Inline code block line numbers
+code a[href^="#__codelineno"] {
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
 }
 
 // Code block line numbers container
