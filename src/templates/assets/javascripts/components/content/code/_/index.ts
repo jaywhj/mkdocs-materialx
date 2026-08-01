@@ -253,6 +253,25 @@ function downloadFromUrl(source: string) {
 }
 
 /* ----------------------------------------------------------------------------
+ * Highlight helpers
+ * ------------------------------------------------------------------------- */
+
+const CODE_HIGHLIGHT_WIDTH = "--md-code-hl-width"
+
+/**
+ * Stretch highlighted lines to the full scroll width of a code block
+ *
+ * @param el - Code block element
+ */
+function updateCodeHighlightWidth(el: HTMLElement) {
+  el.style.removeProperty(CODE_HIGHLIGHT_WIDTH)
+
+  const width = el.scrollWidth
+  if (width > 0)
+    el.style.setProperty(CODE_HIGHLIGHT_WIDTH, `${width}px`)
+}
+
+/* ----------------------------------------------------------------------------
  * Code folding helpers
  * ------------------------------------------------------------------------- */
 
@@ -349,6 +368,10 @@ export function watchCodeBlock(
 ): Observable<Overflow> {
   return watchElementSize(el)
     .pipe(
+      tap(() => {
+        if (!el.classList.contains("md-code__content") && el.querySelector(".hll"))
+          updateCodeHighlightWidth(el)
+      }),
       map(({ width }) => {
         const content = getElementContentSize(el)
         return {

@@ -159,6 +159,7 @@
   // Highlighted line
   .hll {
     display: block;
+    min-width: var(--md-code-hl-width, max-content);
     padding: 0 px2em(16px, 13.6px);
     margin: 0 px2em(-16px, 13.6px);
     background-color: var(--md-code-hl-color--light);
