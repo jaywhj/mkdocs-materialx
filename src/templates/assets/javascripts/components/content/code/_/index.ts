@@ -253,6 +253,25 @@ function downloadFromUrl(source: string) {
 }
 
 /* ----------------------------------------------------------------------------
+ * Highlight helpers
+ * ------------------------------------------------------------------------- */
+
+const CODE_HIGHLIGHT_WIDTH = "--md-code-hl-width"
+
+/**
+ * Stretch highlighted lines to the full scroll width of a code block
+ *
+ * @param el - Code block element
+ */
+function updateCodeHighlightWidth(el: HTMLElement) {
+  el.style.removeProperty(CODE_HIGHLIGHT_WIDTH)
+
+  const width = el.scrollWidth
+  if (width > 0)
+    el.style.setProperty(CODE_HIGHLIGHT_WIDTH, `${width}px`)
+}
+
+/* ----------------------------------------------------------------------------
  * Code folding helpers
  * ------------------------------------------------------------------------- */
 
@@ -301,6 +320,35 @@ function getCodeLineCount(el: HTMLElement, spans: HTMLElement[]): number {
     : 0
 }
 
+function getCodeFoldHeight(
+  container: HTMLElement,
+  el: HTMLElement,
+  spans: HTMLElement[],
+  lines: number
+): number {
+  const lastVisibleLine = spans[lines - 1]
+  if (lastVisibleLine) {
+    return Math.ceil(
+      lastVisibleLine.getBoundingClientRect().bottom -
+      container.getBoundingClientRect().top
+    )
+  }
+
+  /* Fall back to line metrics when `line_spans` isn't configured */
+  const style = getComputedStyle(el)
+  const fontSize = parseFloat(style.fontSize) || 13.6
+  const lineHeight = parseFloat(style.lineHeight) || fontSize * 1.4
+  const paddingTop = parseFloat(style.paddingTop) || 0
+  const borderTop = parseFloat(style.borderTopWidth) || 0
+  const contentTop =
+    el.getBoundingClientRect().top -
+    container.getBoundingClientRect().top +
+    borderTop +
+    paddingTop
+
+  return Math.ceil(contentTop + lineHeight * lines)
+}
+
 /* ----------------------------------------------------------------------------
  * Functions
  * ------------------------------------------------------------------------- */
@@ -320,6 +368,10 @@ export function watchCodeBlock(
 ): Observable<Overflow> {
   return watchElementSize(el)
     .pipe(
+      tap(() => {
+        if (!el.classList.contains("md-code__content") && el.querySelector(".hll"))
+          updateCodeHighlightWidth(el)
+      }),
       map(({ width }) => {
         const content = getElementContentSize(el)
         return {
@@ -623,13 +675,8 @@ export function mountCodeBlock(
 
       if (foldThreshold && foldThreshold > 0 && lineCount > foldThreshold) {
         const updateFoldHeight = () => {
-          const lastVisibleLine = spans[foldThreshold - 1] as HTMLElement
-          if (!lastVisibleLine)
-            return
-
-          const visibleHeight = Math.ceil(
-            lastVisibleLine.getBoundingClientRect().bottom -
-            container.getBoundingClientRect().top
+          const visibleHeight = getCodeFoldHeight(
+            container, el, spans, foldThreshold
           )
           if (visibleHeight <= 0)
             return

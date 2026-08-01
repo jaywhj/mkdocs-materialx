@@ -9,7 +9,7 @@ search:
 
 MaterialX `10.2.0` fully refactors the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**.
 
-It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages. Actual tests show its search accuracy and performance are 50%~80% higher than Zensical.
+It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages.
 
 [Pagefind]{target="_blank"} is the default provider. You may switch back to the original [Lunr]{target="_blank"} when using it in an [offline]{target="_blank"} environment (opened via the `file://` protocol).
 
