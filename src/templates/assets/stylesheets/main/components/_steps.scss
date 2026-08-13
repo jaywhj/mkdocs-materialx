@@ -112,9 +112,6 @@
     > h5,
     > h6 {
       position: relative;
-      // Flex 保证如果标题超长换行，整体依然是一个规整的 Block
-      display: flex;
-      align-items: center;
       counter-increment: step-counter;
 
       // 圆圈垂直居中
