@@ -45,13 +45,14 @@ Therefore, MaterialX will adhere to the following goals and principles:
 - Refactored the search module with a brand-new architecture, greatly improving **search quality** and **indexing efficiency**. It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages, see [Search](plugins/search.md){target="_blank"}
 - Added code block download & **auto-collapse/expand** long code blocks features, see [Code blocks](reference/code-blocks.md#code-collapse-expand){target="_blank"}
 - Added the new **Steps** component for clearer, more intuitive display of procedures and workflows, see [Steps](reference/steps.md){target="_blank"}
+- Enhanced `blog` and support for CJK languages
 - Added next-generation date & author plugin, see: [Date and Authors](setup/adding-document-dates-authors.md){target="_blank"}
     - It's **20-500 times faster** than `git-revision-date-localized` and `git-authors`, and works in any environment (no-Git, Git environments, Docker, all CI/CD build systems, etc.)
     - Completely resolved date and time infrastructure issues, enabling the project to support automated date processing. **Manual date configuration is no longer required for any feature**, including: page date display, blog post dates, blog date archives, blog list sorting, sitemap.xml (lastmod - SEO improvements), RSS feeds, recently updated section, search ranking, and more
 - Added Recent Updated module, see: [Recently updated](setup/adding-recent-updates-module.md){target="_blank"}
     - Automatically generates document summaries (no manual configuration needed)
     - Intelligently estimates reading time, supporting all languages (CJK languages + Space-delimited languages)
-- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (better interactive experience)
+- Refactored the mobile TOC component for seamless NAV and TOC experience on mobile (**better interactive experience**)
 - Perfectly fixed the issue where swipe gestures would penetrate when the sidebar drawer was active on mobile (prone to accidental operations and poor user experience; unresolved in Zensical and Material)
 - Significantly polished the UX and details on mobile devices
     - Moved the "Back to top" container to the bottom, aligning with natural interaction logic
