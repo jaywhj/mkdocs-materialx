@@ -6,6 +6,16 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.2.1 <small>Oct 16, 2026</small> { id="10.2.1" }
+
+- Refactored the search functionality with a brand-new architecture design, supporting **Pagefind** framework, and drastically improving search quality and indexing efficiency. It supports chunked indexing, on-demand loading, index compression, and more, see [Search](../plugins/search.md){target="_blank"}
+- Added `Co-Authored-By` support for Git authors. See [Git author aggregation](../plugins/date-author.md#git-author-aggregation){target="_blank"}
+- Added aggregation support for Git `Co-Authored-By` entries. You can consolidate `Co-Authored-By` authors in the `.mailmap`
+- Enhanced author configuration — `authors.yml` now supports author exclusion. See [Enhanced author configuration](../plugins/date-author.md#enhanced-author-configuration){target="_blank"}
+- Fixed styling issues with the Steps component. See [Steps](../reference/steps.md){target="_blank"}
+- Fixed bugs related to the code folding feature
+- Fixed escaping issues in summaries of the recent update module
+
 ### 10.2.0 <small>July 25, 2026</small> { id="10.2.0" }
 
 - Refactored the search functionality with a brand-new architecture design, drastically improving search quality and indexing efficiency. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](../plugins/search.md){target="_blank"}

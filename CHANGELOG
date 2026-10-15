@@ -1,3 +1,13 @@
+mkdocs-materialx-10.2.1 (2026-10-16)
+
+- Refactored the search functionality with a brand-new architecture design, supporting Pagefind framework, and drastically improving search quality and indexing efficiency. It supports chunked indexing, on-demand loading, index compression, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
+- Added `Co-Authored-By` support for Git authors. See [Git author aggregation](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#git-author-aggregation)
+- Added aggregation support for Git `Co-Authored-By` entries. You can consolidate `Co-Authored-By` authors in the `.mailmap`
+- Enhanced author configuration — `authors.yml` now supports author exclusion. See [Enhanced author configuration](https://jaywhj.github.io/mkdocs-materialx/plugins/date-author#enhanced-author-configuration)
+- Fixed styling issues with the Steps component. See [Steps](https://jaywhj.github.io/mkdocs-materialx/reference/steps)
+- Fixed bugs related to the code folding feature
+- Fixed escaping issues in summaries of the recent update module
+
 mkdocs-materialx-10.2.0 (2026-07-25)
 
 - Refactored the search functionality with a brand-new architecture design, drastically improving search quality and indexing efficiency. It supports 100,000+ pages, chunked indexing, on-demand loading, index compression, multi-language capability, multiple search providers, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)
