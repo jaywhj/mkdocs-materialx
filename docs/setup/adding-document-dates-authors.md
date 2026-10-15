@@ -98,7 +98,7 @@ authors:
 
 For a better user experience, you can add full configuration for all authors. To do so, create an `authors.yml` file in the `docs/` folder using the format below:
 
-```yaml title="docs/authors.yml"
+```yaml { title="docs/authors.yml" data-fold="0"}
 authors:
   jaywhj:
     name: Aaron Wang
@@ -112,9 +112,14 @@ authors:
     url: https://xxx.com
     email: xxx@gmail.com
     description: xxx
+  bot:
+    name: Renovate Bot
+    ignore: true
 ```
 
 When the author name in `Front Matter`, `Git Author`, `site_author(mkdocs.yml)` matches the key in `authors`, the full author information of the key will be automatically loaded.
+
+You can exclude specific authors (such as bots or automation accounts) by setting `ignore: true`, `exclude: true`, or `hidden: true`.
 
 ## Avatar
 

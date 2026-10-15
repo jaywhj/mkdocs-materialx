@@ -283,7 +283,7 @@ flowchart LR
     === "Description"
 
         1. Prioritize reading custom authors in Front Matter
-        2. Then read the Git author
+        2. Then read the Git author (support `Co-Authored-By` co-authors)
         3. Next read the site_author in mkdocs.yml
         4. Finally read the PC username
 
@@ -315,7 +315,7 @@ authors:
 
 For a better user experience, you can add full configuration for all authors. To do so, create an `authors.yml` file in the `docs/` folder using the format below:
 
-```yaml title="docs/authors.yml"
+```yaml { title="docs/authors.yml" data-fold="0"}
 authors:
   jaywhj:
     name: Aaron Wang
@@ -329,9 +329,14 @@ authors:
     url: https://xxx.com
     email: xxx@gmail.com
     description: xxx
+  bot:
+    name: Renovate Bot
+    ignore: true
 ```
 
 When the author name in `Front Matter`, `Git Author`, `site_author(mkdocs.yml)` matches the key in `authors`, the full author information of the key will be automatically loaded.
+
+You can exclude specific authors (such as bots or automation accounts) by setting `ignore: true`, `exclude: true`, or `hidden: true`.
 
 #### Git author aggregation
 
@@ -344,6 +349,8 @@ Aaron <junewhj@qq.com> <aaron@gmail.com>
 Aaron <junewhj@qq.com> <aaron@AarondeMacBook-Pro.local>
 Aaron <junewhj@qq.com> aaron <aaronwqt@icloud.com>
 ```
+
+Mailmap rules apply to both primary commit authors and `Co-Authored-By` trailers in commit messages.
 
 ### Avatar
 
