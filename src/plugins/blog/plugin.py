@@ -23,6 +23,7 @@ from __future__ import annotations
 import logging
 import os
 import posixpath
+import re
 import yaml
 
 from babel.dates import format_date, format_datetime
@@ -42,7 +43,7 @@ from mkdocs.utils import copy_file, get_relative_url
 from paginate import Page as Pagination
 from shutil import rmtree
 from tempfile import mkdtemp
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 from yaml import SafeLoader
 from pathlib import Path
 from mkdocs_document_dates.utils import load_dates_and_authors, analyze_markdown
@@ -84,6 +85,24 @@ class BlogPlugin(BasePlugin[BlogConfig]):
     def on_config(self, config):
         if not self.config.enabled:
             return
+
+        # Validate share links up front, so malformed settings fail with a
+        # useful message instead of breaking template rendering.
+        for name, share in self.config.share_links.items():
+            if not isinstance(name, str) or not name:
+                raise PluginError("Share link names must be non-empty strings")
+            if (
+                not isinstance(share, dict)
+                or not isinstance(share.get("link"), str)
+                or not share["link"]
+            ):
+                raise PluginError(
+                    f"Share link '{name}' must be a mapping with a 'link' string"
+                )
+            if not isinstance(share.get("title", "Share Post!"), str):
+                raise PluginError(f"Share link '{name}' title must be a string")
+            if not isinstance(share.get("icon", "material/share"), str):
+                raise PluginError(f"Share link '{name}' icon must be a string")
 
         # Initialize entrypoint
         self.blog: View
@@ -355,6 +374,14 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         if not self.config.enabled:
             return
 
+        # Expose share links only for posts managed by this plugin instance.
+        # This keeps multiple blog instances independent.
+        if isinstance(page, Post):
+            if page not in self.blog.posts:
+                return
+            context["share_links"] = self._resolve_share_links(page)
+            return
+
         # Skip if page is not a view managed by this instance - this plugin has
         # support for multiple instances, which is why this check is necessary
         view = self._resolve_original(page)
@@ -375,6 +402,33 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         # Assign posts and pagination to context
         context["posts"]      = posts
         context["pagination"] = pager if pagination else None
+
+    # Resolve configured share links for a post
+    def _resolve_share_links(self, page: Post):
+        if not self.config.share_links:
+            return []
+
+        post_url = page.abs_url or page.canonical_url or page.url
+        values = {
+            "{post_url}": quote(post_url or "", safe = ""),
+            "{post_title}": quote(page.title or "", safe = ""),
+        }
+
+        links = []
+        for name, share in self.config.share_links.items():
+            css_name = re.sub(r"[^a-zA-Z0-9_-]+", "-", name).strip("-").lower()
+            href = share["link"]
+            for placeholder, value in values.items():
+                href = href.replace(placeholder, value)
+
+            links.append({
+                "name": css_name or "share",
+                "title": share.get("title", "Share Post!"),
+                "icon": share.get("icon", "material/share"),
+                "url": href,
+            })
+
+        return links
 
     # Remove temporary directory on shutdown
     def on_shutdown(self):

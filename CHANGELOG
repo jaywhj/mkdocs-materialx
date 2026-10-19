@@ -1,3 +1,9 @@
+mkdocs-materialx-10.2.2 (2026-10-24)
+
+- Enhanced `blog` functionality: added support for CJK languages and link sharing. See [Blog](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.share_links)
+- Fixed page rendering efficiency issues caused by the CSS `:has()` selector
+- Fixed incorrect sitemap handling of non-language alternate links
+
 mkdocs-materialx-10.2.1 (2026-10-16)
 
 - Refactored the search functionality with a brand-new architecture, supporting the **Pagefind** framework, and greatly improving search quality and indexing efficiency. It supports chunked indexing, on-demand loading, index compression, and more, see [Search](https://jaywhj.github.io/mkdocs-materialx/plugins/search)

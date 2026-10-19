@@ -155,22 +155,25 @@
 // 在「平板横屏」这个宽度区间生效 （大约 960–1219px）
 @include break-at-device(tablet landscape) {
   // 只在浏览器支持 :has() 选择器时生效
-  @supports selector(.md-container:has(.md-sidebar)) {
+  // stylelint-disable scss/operator-no-unspaced
+  @supports selector(.md-container:has(> .md-main > .md-main__inner > .md-sidebar)) {
     // 当右侧有 toc 侧栏时，把 .md-top 位置从「容器中心」调整为「正文中心」，向左挪半个 sidebar 宽度
-    .md-container:has(.md-sidebar.md-sidebar--secondary:not([hidden])) .md-top {
+    .md-container:has(> .md-main > .md-main__inner > .md-sidebar--secondary:not([hidden])) .md-top {
       margin-inline-start: calc(50% - var(--md-sidebar-primary-width) / 2);
     }
 
     [dir="rtl"]
-    .md-container:has(.md-sidebar.md-sidebar--secondary:not([hidden])) .md-top {
+    .md-container:has(> .md-main > .md-main__inner > .md-sidebar--secondary:not([hidden])) .md-top {
       margin-inline-start: calc(50% + var(--md-sidebar-primary-width) / 2);
     }
   }
+  // stylelint-enable scss/operator-no-unspaced
 }
 
 // 在桌面（screen）一直到更宽的屏幕 ，都应用这个逻辑
 @include break-from-device(screen) {
-  @supports selector(.md-container:has(.md-sidebar)) {
+  // stylelint-disable scss/operator-no-unspaced
+  @supports selector(.md-container:has(> .md-main > .md-main__inner > .md-sidebar)) {
 
     // 方向系数
     :root {
@@ -183,9 +186,9 @@
 
     .md-container {
       // 当左侧存在 sidebar（primary 或 post），且右侧 TOC 不存在时
-      &:has(.md-sidebar--primary:not([hidden])),
-      &:has(.md-sidebar--post:not([hidden])) {
-        &:not(:has(.md-sidebar--secondary:not([hidden]))) {
+      &:has(> .md-main > .md-main__inner > .md-sidebar--primary:not([hidden])),
+      &:has(> .md-main > .md-main__inner > .md-content--post > .md-sidebar--post:not([hidden])) {
+        &:not(:has(> .md-main > .md-main__inner > .md-sidebar--secondary:not([hidden]))) {
           .md-top {
             margin-inline-start:
               calc(
@@ -195,17 +198,19 @@
         }
       }
       // 只有右侧 TOC 时
-      &:has(.md-sidebar--secondary:not([hidden])) {
-        &:not(:has(.md-sidebar--primary:not([hidden])))
-        &:not(:has(.md-sidebar--post:not([hidden]))) {
-          .md-top {
-            margin-inline-start:
-              calc(
-                50% - var(--mx-dir) * var(--md-sidebar-primary-width) / 2
-              );
+      &:has(> .md-main > .md-main__inner > .md-sidebar--secondary:not([hidden])) {
+        &:not(:has(> .md-main > .md-main__inner > .md-sidebar--primary:not([hidden]))) {
+          &:not(:has(> .md-main > .md-main__inner > .md-content--post > .md-sidebar--post:not([hidden]))) {
+            .md-top {
+              margin-inline-start:
+                calc(
+                  50% - var(--mx-dir) * var(--md-sidebar-primary-width) / 2
+                );
+            }
           }
         }
       }
     }
   }
+  // stylelint-enable scss/operator-no-unspaced
 }

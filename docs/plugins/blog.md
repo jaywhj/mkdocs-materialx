@@ -678,6 +678,37 @@ plugins:
 A reading time of 480 characters per minute is considered to be the
 [average reading time of an adult].
 
+---
+
+#### <!-- md:setting config.share_links -->
+
+<!-- md:version 10.2.2 -->
+<!-- md:default `{}` -->
+
+Use this setting to add share links to each post's sidebar. Define one entry per
+button; the entry name is available as a CSS class suffix. Each entry requires a
+`link` and may set a `title` and an `icon`:
+
+``` yaml
+plugins:
+  - blog:
+      share_links:
+        mastodon:
+          title: Share on Mastodon
+          link: "https://mastodonshare.com/?url={post_url}&text={post_title}"
+          icon: simple/mastodon
+        bluesky:
+          title: Share on Bluesky
+          link: "https://bsky.app/intent/compose?text={post_title}%0A{post_url}"
+          icon: simple/bluesky
+```
+
+`{post_url}` and `{post_title}` are replaced with the current post's URL and title. Set `site_url` to provide an absolute URL for sharing.
+
+The default title is `Share Post!` and the default icon is `material/share`. Share buttons are only shown when this setting contains at least one entry. 
+
+Their links receive the CSS classes `md-post_share` and `md-post_share--<name>` so you can customize their appearance.
+
 ### Archive
 
 The following settings are available for archive pages:

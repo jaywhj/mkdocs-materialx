@@ -122,6 +122,28 @@
                 </li>
               </ul>
             {% endif %}
+            {% if share_links %}
+              <ul class="md-post__meta md-nav__list md-post_share">
+                <li class="md-nav__item md-nav__item--section">
+                  <div class="md-post__title">
+                    {% set title = lang.t("blog.share") %}
+                    <span class="md-ellipsis">{{ title if title != "blog.share" else "Share" }}</span>
+                  </div>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      {% for share in share_links %}
+                        <li class="md-nav__item">
+                          <a href="{{ share.url | e }}" class="md-nav__link md-post_share md-post_share--{{ share.name }}" target="_blank" rel="noopener noreferrer" title="{{ share.title | e }}" aria-label="{{ share.title | e }}">
+                            {% include ".icons/" ~ share.icon ~ ".svg" %}
+                            <span class="md-ellipsis">{{ share.title | e }}</span>
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            {% endif %}
           </nav>
           {% if "toc.integrate" in features %}
             {% include "partials/toc.html" %}

@@ -6,6 +6,12 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.2.2 <small>Oct 24, 2026</small> { id="10.2.2" }
+
+- Enhanced `blog` functionality: added support for CJK languages and link sharing. See [Blog](../plugins/blog.md#config.share_links){target="_blank"}
+- Fixed page rendering efficiency issues caused by the CSS `:has()` selector
+- Fixed incorrect sitemap handling of non-language alternate links
+
 ### 10.2.1 <small>Oct 16, 2026</small> { id="10.2.1" }
 
 - Refactored the search functionality with a brand-new architecture, supporting the **Pagefind** framework, and greatly improving search quality and indexing efficiency. It supports chunked indexing, on-demand loading, index compression, and more, see [Search](../plugins/search.md){target="_blank"}

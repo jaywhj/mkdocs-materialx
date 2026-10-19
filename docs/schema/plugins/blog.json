@@ -157,6 +157,30 @@
               "type": "number",
               "default": 480
             },
+            "share_links": {
+              "title": "Share links",
+              "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.share_links",
+              "type": "object",
+              "default": {},
+              "additionalProperties": {
+                "type": "object",
+                "required": ["link"],
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "default": "Share Post!"
+                  },
+                  "link": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "icon": {
+                    "type": "string",
+                    "default": "material/share"
+                  }
+                }
+              }
+            },
             "archive": {
               "title": "Archive",
               "markdownDescription": "https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.archive",
