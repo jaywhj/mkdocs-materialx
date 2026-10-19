@@ -69,7 +69,7 @@ export function setupAlternate(
   // Fetch sitemaps for all discovered alternate versions
   document$
     .pipe(
-      switchMap(() => getElements<HTMLLinkElement>("link[rel=alternate]")),
+      switchMap(() => getElements<HTMLLinkElement>("link[rel=alternate][hreflang]")),
       map(el => new URL(el.href)),
       filter(url => !alternate.has(url.toString())),
       mergeMap(url => fetchSitemap(url)
