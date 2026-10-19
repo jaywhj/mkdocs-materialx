@@ -52,6 +52,7 @@ class BlogConfig(Config):
     post_readtime = Type(bool, default = True)
     post_readtime_words_per_minute = Type(int, default = 240)
     post_readtime_words_per_minute_cjk = Type(int, default = 480)
+    share_links = Type(dict, default = {})
 
     # Settings for archive
     archive = Type(bool, default = True)
