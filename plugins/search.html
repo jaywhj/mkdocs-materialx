@@ -35,7 +35,7 @@
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06'/%3E%3C/svg%3E">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.2">
     
     
       
@@ -4722,28 +4722,28 @@
   
 
 
-<h1 id="built-in-search-plugin">Built-in search plugin<a class="headerlink" href="#built-in-search-plugin" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2019-12-18"><span class="material-icons" data-icon="doc_created"></span><time datetime="2019-12-18T16:13:17+00:00">2019-12-18</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-08-01"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-08-01T05:09:27+00:00">2026-08-01</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin B" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.bjorck@gmail.com&quot;&gt;Martin B&lt;/a&gt;"><span class="avatar-text"></span></div><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span></div><div class="avatar-wrapper" data-name="XhmikosR" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:xhmikosr@gmail.com&quot;&gt;XhmikosR&lt;/a&gt;"><span class="avatar-text"></span></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span></div></div></div></div></div>
+<h1 id="built-in-search-plugin">Built-in search plugin</h1>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2019-12-18"><span class="material-icons" data-icon="doc_created"></span><time datetime="2019-12-18T16:13:17+00:00">2019-12-18</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-08-01"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-08-01T05:09:27+00:00">2026-08-01</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin B" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.bjorck@gmail.com&quot;&gt;Martin B&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.bjorck@gmail.com"></a></div><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="XhmikosR" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:xhmikosr@gmail.com&quot;&gt;XhmikosR&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="xhmikosr@gmail.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>MaterialX <code>10.2.0</code> fully refactors the search module with a brand-new architecture, greatly improving <strong>search quality</strong> and <strong>indexing efficiency</strong>.</p>
 <p>It supports multi-provider mode, chunked indexing, on-demand loading, index compression, multilingual search and cross-domain search. It is suitable for various complex scenarios and large-scale sites, and can handle sites with more than 100,000 pages.</p>
 <p><a href="https://pagefind.app/" target="_blank">Pagefind</a> is the default provider. You may switch back to the original <a href="https://lunrjs.com/" target="_blank">Lunr</a> when using it in an <a href="offline.html" target="_blank">offline</a> environment (opened via the <code>file://</code> protocol).</p>
-<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
-<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
+<h2 id="objective">Objective</h2>
+<h3 id="how-it-works">How it works</h3>
 <p>The plugin builds the selected provider's index after MkDocs has rendered the
 site. The frontend loads that provider through a common integration and renders
 the results with MaterialX's built-in search interface.</p>
 <p>Pagefind scans the generated HTML and writes a chunked index beside the site.
 At search time, the browser loads only the chunks and result data needed for the current query.
 Lunr writes <code>search_index.json</code>, then constructs and queries its in-memory index in a Web Worker.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<h2 id="configuration">Configuration</h2>
 <p>The search plugin is built into MaterialX and doesn't need to be
 installed. Add <code>search</code> to the <code>plugins</code> list to enable it (pagefind is the
 default provider):</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
 </span></code></pre></div>
-<h3 id="configuration-structure">Configuration structure<a class="headerlink" href="#configuration-structure" title="Permanent link">¶</a></h3>
+<h3 id="configuration-structure">Configuration structure</h3>
 <p>The example below demonstrates the provider-based structure and available options, <strong>all of which are optional</strong>.</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
@@ -4782,7 +4782,7 @@ default provider):</p>
 </span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="c1"># jieba_dict: dict.txt</span>
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">        </span><span class="c1"># jieba_dict_user: user_dict.txt</span>
 </span></code></pre></div>
-<h3 id="provider">Provider<a class="headerlink" href="#provider" title="Permanent link">¶</a></h3>
+<h3 id="provider">Provider</h3>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>pagefind</code></span></span></p>
 <p>Use this setting to select the search provider:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="provider-pagefind" name="__tabbed_1" type="radio"><input id="provider-lunr" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="provider-pagefind">Pagefind</label><label for="provider-lunr">Lunr</label></div>
@@ -4802,18 +4802,18 @@ default provider):</p>
 </div>
 </div>
 <p><a href="https://pagefind.app/" target="_blank">Pagefind</a> is the default provider. You may switch back to the original <a href="https://lunrjs.com/" target="_blank">Lunr</a> when using it in an <a href="offline.html" target="_blank">offline</a> environment (opened via the <code>file://</code> protocol).</p>
-<h2 id="pagefind">Pagefind<a class="headerlink" href="#pagefind" title="Permanent link">¶</a></h2>
+<h2 id="pagefind">Pagefind</h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#10.2.0">10.2.0</a></span></span></p>
 <p>Pagefind is a static search library designed around a small initial payload and
 on-demand index loading. MaterialX integrates <code>pagefind[extended]</code> with specific support for Chinese and Japanese.</p>
-<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">¶</a></h3>
+<h3 id="features">Features</h3>
 <ul>
 <li><strong>High-quality search results</strong>: It matches keywords comprehensively by combining multiple metrics including term similarity, term saturation, term frequency, page length, diacritics, as well as weights for content and metadata, delivering more accurate and comprehensive search results</li>
 <li><strong>High performance for large sites</strong>: It implements chunked indexing and on-demand loading mechanisms. Regardless of the total number of pages on the site, only index chunks relevant to search keywords are loaded into memory instead of the entire index, which greatly boosts search performance</li>
 <li><strong>Multilingual search</strong>: It automatically detects page languages and generates corresponding chunked indexes for all supported languages</li>
 <li><strong>Cross-domain multi-site search</strong>: It can be configured to search across multiple sites and merge results and filters into a single response</li>
 </ul>
-<h3 id="index-configuration">Index configuration<a class="headerlink" href="#index-configuration" title="Permanent link">¶</a></h3>
+<h3 id="index-configuration">Index configuration</h3>
 <p>Configure indexing options directly under the <code>pagefind</code> level:</p>
 <table>
 <thead>
@@ -4854,7 +4854,7 @@ on-demand index loading. MaterialX integrates <code>pagefind[extended]</code> wi
 <p>MaterialX marks the main content with <code>data-pagefind-body</code> and manages the
 index input, output, and result URL format. Other Pagefind index options remain
 available for advanced use, see Pagefind's <a href="https://pagefind.app/docs/config-options/" target="_blank">index configuration</a>.</p>
-<h3 id="search-api-configuration">Search API configuration<a class="headerlink" href="#search-api-configuration" title="Permanent link">¶</a></h3>
+<h3 id="search-api-configuration">Search API configuration</h3>
 <p>Configure the browser Search API options directly under the <code>pagefind.options</code> level:</p>
 <table>
 <thead>
@@ -4928,8 +4928,8 @@ API configuration</a>.</p>
 </tbody>
 </table>
 <p>For value ranges and the remaining controls, see Pagefind's <a href="https://pagefind.app/docs/ranking/" target="_blank">ranking documentation</a>.</p>
-<h3 id="excluding-content">Excluding content<a class="headerlink" href="#excluding-content" title="Permanent link">¶</a></h3>
-<h4 id="excluding-an-entire-page">Excluding an entire page<a class="headerlink" href="#excluding-an-entire-page" title="Permanent link">¶</a></h4>
+<h3 id="excluding-content">Excluding content</h3>
+<h4 id="excluding-an-entire-page">Excluding an entire page</h4>
 <p>Use <code>search.exclude</code> in the Markdown front matter to remove a complete page and
 all of its sections from the Pagefind index:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nn">---</span>
@@ -4944,7 +4944,7 @@ all of its sections from the Pagefind index:</p>
 <div class="language-yaml highlight"><span class="filename">.meta.yml</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">search</span><span class="p">:</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
-<h4 id="excluding-certain-types-of-elements">Excluding certain types of elements<a class="headerlink" href="#excluding-certain-types-of-elements" title="Permanent link">¶</a></h4>
+<h4 id="excluding-certain-types-of-elements">Excluding certain types of elements</h4>
 <p>Use <code>exclude_selectors</code> for elements that should be ignored throughout the
 site, such as a custom banner or generated utility block:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">plugins</span><span class="p">:</span>
@@ -4955,7 +4955,7 @@ site, such as a custom banner or generated utility block:</p>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.generated-example</span>
 </span></code></pre></div>
 <p>The matched element and all of its children are excluded.</p>
-<h4 id="excluding-part-of-a-page">Excluding part of a page<a class="headerlink" href="#excluding-part-of-a-page" title="Permanent link">¶</a></h4>
+<h4 id="excluding-part-of-a-page">Excluding part of a page</h4>
 <p>Use Pagefind's <code>data-pagefind-ignore</code> attribute to exclude part of a document.
 For a complete section, wrap the heading and its content in an HTML container:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-pagefind-ignore</span> <span class="na">markdown</span><span class="p">&gt;</span>
@@ -4966,19 +4966,19 @@ For a complete section, wrap the heading and its content in an HTML container:</
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<h3 id="other-pagefind-features">Other Pagefind features<a class="headerlink" href="#other-pagefind-features" title="Permanent link">¶</a></h3>
+<h3 id="other-pagefind-features">Other Pagefind features</h3>
 <p>Pagefind also supports metadata, filters, sorting, content weighting, custom
 records, and search across multiple sites. These are upstream Pagefind
 capabilities; some require custom templates, indexing code, or frontend code
 beyond MaterialX's built-in integration. See the <a href="https://pagefind.app/" target="_blank">Pagefind</a>
 documentation and <a href="https://pagefind.app/docs/multisite/" target="_blank">multisite search</a> guide for the complete
 workflows.</p>
-<h2 id="lunr">Lunr<a class="headerlink" href="#lunr" title="Permanent link">¶</a></h2>
+<h2 id="lunr">Lunr</h2>
 <p>Lunr builds one JSON search index and loads it into a Web Worker in the
 browser. It is less efficient for very large sites than Pagefind, but remains
 the right provider when a generated site must work without an HTTP server.</p>
-<h3 id="language">Language<a class="headerlink" href="#language" title="Permanent link">¶</a></h3>
-<h4 id="config.lang"><code>lang</code><a class="headerlink" href="#config.lang" title="Permanent link">¶</a></h4>
+<h3 id="language">Language</h3>
+<h4 id="config.lang"><code>lang</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is computed"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.75 16.25 17 21l-2.75-3 1.16-1.16L17 18.43l3.59-3.59zM17.62 12C16.31 8.1 12 3.25 12 3.25S6 10 6 14c0 3.31 2.69 6 6 6h.34c-.22-.64-.34-1.3-.34-2 0-3.18 2.5-5.78 5.62-6"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify the language of the search index, enabling
@@ -5048,8 +5048,8 @@ Source community.</p>
 <p>If <a href="https://github.com/MihaiValentin/lunr-languages">lunr languages</a> doesn't support the selected <a href="../setup/changing-the-language.html#site-language">site language</a>, the plugin
 falls back to the language that is expected to yield the best stemming
 results.</p>
-<h3 id="tokenization">Tokenization<a class="headerlink" href="#tokenization" title="Permanent link">¶</a></h3>
-<h4 id="config.separator"><code>separator</code><a class="headerlink" href="#config.separator" title="Permanent link">¶</a></h4>
+<h3 id="tokenization">Tokenization</h3>
+<h4 id="config.separator"><code>separator</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is computed"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.75 16.25 17 21l-2.75-3 1.16-1.16L17 18.43l3.59-3.59zM17.62 12C16.31 8.1 12 3.25 12 3.25S6 10 6 14c0 3.31 2.69 6 6 6h.34c-.22-.64-.34-1.3-.34-2 0-3.18 2.5-5.78 5.62-6"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify the separator used to split words when building
@@ -5093,8 +5093,8 @@ blocks, allowing users to search for tag names.</p>
 </div>
 </div>
 </div>
-<h3 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">¶</a></h3>
-<h4 id="config.pipeline"><code>pipeline</code><a class="headerlink" href="#config.pipeline" title="Permanent link">¶</a></h4>
+<h3 id="pipeline">Pipeline</h3>
+<h4 id="config.pipeline"><code>pipeline</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is computed"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.75 16.25 17 21l-2.75-3 1.16-1.16L17 18.43l3.59-3.59zM17.62 12C16.31 8.1 12 3.25 12 3.25S6 10 6 14c0 3.31 2.69 6 6 6h.34c-.22-.64-.34-1.3-.34-2 0-3.18 2.5-5.78 5.62-6"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -5116,10 +5116,10 @@ computed from the <a href="../setup/changing-the-language.html#site-language">si
 <li><code>stopWordFilter</code> – Filter common words such as <code>a</code> and <code>the</code></li>
 <li><code>trimmer</code> – Trim whitespace from tokens</li>
 </ul>
-<h3 id="segmentation">Segmentation<a class="headerlink" href="#segmentation" title="Permanent link">¶</a></h3>
+<h3 id="segmentation">Segmentation</h3>
 <p>The plugin supports Chinese text segmentation with <a href="https://pypi.org/project/jieba/">jieba</a>. Japanese and
 Korean are segmented on the client side when Lunr is selected.</p>
-<h4 id="config.jieba_dict"><code>jieba_dict</code><a class="headerlink" href="#config.jieba_dict" title="Permanent link">¶</a></h4>
+<h4 id="config.jieba_dict"><code>jieba_dict</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.2.0">9.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -5137,7 +5137,7 @@ default dictionary:</p>
 <li><a href="https://github.com/fxsjy/jieba/raw/master/extra_dict/dict.txt.big">dict.txt.big</a> – 支持繁体分词更好的词典文件</li>
 </ul>
 <p>The path is resolved from the project root directory.</p>
-<h4 id="config.jieba_dict_user"><code>jieba_dict_user</code><a class="headerlink" href="#config.jieba_dict_user" title="Permanent link">¶</a></h4>
+<h4 id="config.jieba_dict_user"><code>jieba_dict_user</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.2.0">9.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -5151,7 +5151,7 @@ terms, and other site-specific vocabulary:</p>
 </span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">        </span><span class="nt">jieba_dict_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user_dict.txt</span>
 </span></code></pre></div>
 <p>The path is resolved from the project root directory.</p>
-<h3 id="excluding-sections-and-blocks">Excluding sections and blocks<a class="headerlink" href="#excluding-sections-and-blocks" title="Permanent link">¶</a></h3>
+<h3 id="excluding-sections-and-blocks">Excluding sections and blocks</h3>
 <p>When <a href="../setup/extensions/python-markdown.html#attribute-lists">Attribute Lists</a> is enabled, a section can be excluded from the Lunr
 index by adding <code>data-search-exclude</code> to its heading. The heading and all
 content up to the next heading of the same or higher level are omitted:</p>
@@ -5172,8 +5172,8 @@ that element:</p>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>This paragraph is excluded.
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>{ data-search-exclude }
 </span></code></pre></div>
-<h3 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
-<h4 id="meta.search.boost"><code>boost</code><a class="headerlink" href="#meta.search.boost" title="Permanent link">¶</a></h4>
+<h3 id="metadata">Metadata</h3>
+<h4 id="meta.search.boost"><code>boost</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#8.3.0">8.3.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#metadata" title="Metadata property"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15h6v2h-6zM9 7H7v2h2zm2 6h6v-2h-6zm0-4h6V7h-6zm-2 2H7v2h2zm12-6v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2m-2 0H5v14h14zM9 15H7v2h2z"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
@@ -5206,7 +5206,7 @@ results. Values above <code>1</code> rank a page up and values below <code>1</co
 </div>
 </div>
 </div>
-<h4 id="meta.search.exclude"><code>exclude</code><a class="headerlink" href="#meta.search.exclude" title="Permanent link">¶</a></h4>
+<h4 id="meta.search.exclude"><code>exclude</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#metadata" title="Metadata property"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15h6v2h-6zM9 7H7v2h2zm2 6h6v-2h-6zm0-4h6V7h-6zm-2 2H7v2h2zm12-6v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2m-2 0H5v14h14zM9 15H7v2h2z"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>

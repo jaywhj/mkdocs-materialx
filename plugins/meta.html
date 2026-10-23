@@ -35,7 +35,7 @@
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06'/%3E%3C/svg%3E">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.2">
     
     
       
@@ -4202,15 +4202,15 @@
   
 
 
-<h1 id="built-in-meta-plugin">Built-in meta plugin<a class="headerlink" href="#built-in-meta-plugin" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-03T08:15:22+00:00">2026-06-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span></div></div></div></div></div>
+<h1 id="built-in-meta-plugin">Built-in meta plugin</h1>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-03T08:15:22+00:00">2026-06-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The meta plugin solves the problem of setting metadata (front matter) for all
 pages in a folder, i.e., a subsection of your project, which is particularly
 useful to ensure that a certain subset of pages features specific tags, uses a
 custom template, or is attributed to an author.</p>
-<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
-<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
+<h2 id="objective">Objective</h2>
+<h3 id="how-it-works">How it works</h3>
 <p>The plugin scans the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs</code> directory</a> for <code>.meta.yml</code> files,
 and recursively merges the contents of those files with the metadata (front
 matter) of all pages that are contained in the same folder and all subfolders.
@@ -4236,7 +4236,7 @@ outside of the folder remain unaffected:</p>
 <p>When combining metadata, lists and dictionaries are recursively merged, which
 means you can append values to a list and add or set specific properties in a
 dictionary on arbitrary levels.</p>
-<h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
+<h3 id="when-to-use-it">When to use it</h3>
 <p>While the plugin itself doesn't offer much functionality beyond adding and
 merging metadata, it is a perfect companion for many of the other built-in
 plugins that MaterialX for MkDocs offers. Some of the most powerful combinations
@@ -4285,7 +4285,7 @@ control over search.</p>
 </li>
 </ul>
 </div>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<h2 id="configuration">Configuration</h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="meta.html">meta</a> – built-in</span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -4297,10 +4297,10 @@ applying metadata for multiple pages at once:</p>
 </span></code></pre></div>
 <p>The meta plugin is included with MaterialX for MkDocs and doesn't need to be
 installed.</p>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
+<h3 id="general">General</h3>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="config.enabled"><code>enabled</code><a class="headerlink" href="#config.enabled" title="Permanent link">¶</a></h4>
+<h4 id="config.enabled"><code>enabled</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
@@ -4310,10 +4310,10 @@ the plugin, use:</p>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">meta</span><span class="p">:</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
-<h3 id="meta-file">Meta file<a class="headerlink" href="#meta-file" title="Permanent link">¶</a></h3>
+<h3 id="meta-file">Meta file</h3>
 <p>The following settings are available for meta files:</p>
 <hr>
-<h4 id="config.meta_file"><code>meta_file</code><a class="headerlink" href="#config.meta_file" title="Permanent link">¶</a></h4>
+<h4 id="config.meta_file"><code>meta_file</code></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>.meta.yml</code></span></span></p>
 <p>Use this setting to change the meta file name the plugin will look for when

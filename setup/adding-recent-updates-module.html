@@ -35,7 +35,7 @@
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06'/%3E%3C/svg%3E">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.2">
     
     
       
@@ -4135,12 +4135,12 @@
   
 
 
-<h1 id="add-recent-updates-module">Add recent updates module<a class="headerlink" href="#add-recent-updates-module" title="Permanent link">¶</a></h1>
-<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-16"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-16T06:41:37+00:00">2026-02-16</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-19"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-19T07:13:53+00:00">2026-06-19</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span></div></div></div></div></div>
+<h1 id="add-recent-updates-module">Add recent updates module</h1>
+<div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-02-16"><span class="material-icons" data-icon="doc_created"></span><time datetime="2026-02-16T06:41:37+00:00">2026-02-16</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-19"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-19T07:13:53+00:00">2026-06-19</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_author"></span><div class="author-group"><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The recent updates module displays site documentation information in a structured way, which is ideal for sites with <strong>a large number of documents or frequent updates</strong>, allowing readers to <strong>quickly see what's new</strong>.</p>
-<p></p>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/screenshots/recently-updated-en.gif" data-desc-position="bottom"><img alt="recently-updated" src="../assets/screenshots/recently-updated-en.gif"></a></p>
+<h2 id="features">Features</h2>
 <ul>
 <li>Display recently updated documents in descending order by update time, list items are dynamically updated</li>
 <li>Support multiple view modes including list, detail and grid</li>
@@ -4150,9 +4150,9 @@
 <li>Support custom display quantity</li>
 <li>Support exclude specified files or folders</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<h2 id="installation">Installation</h2>
 <p>This feature is provided by the built-in plugin <a href="../plugins/date-author.html">document-dates</a> and requires no separate installation.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<h2 id="configuration">Configuration</h2>
 <p>Configure the switch <code>recently-updated</code> in <code>document-dates</code>:</p>
 <div class="language-yaml highlight"><span class="filename">mkdocs.yml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">document-dates</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
@@ -4163,19 +4163,19 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'*/index.md'</span><span class="w">      </span><span class="c1"># Example: exclude all index.md files in any subfolders</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blog/*</span><span class="w">            </span><span class="c1"># Example: exclude all files in blog folder, including subfolders</span>
 </span></code></pre></div>
-<h2 id="add-to-sidebar-navigation">Add to sidebar navigation<a class="headerlink" href="#add-to-sidebar-navigation" title="Permanent link">¶</a></h2>
+<h2 id="add-to-sidebar-navigation">Add to sidebar navigation</h2>
 <p>Download the sample template <a href="https://github.com/jaywhj/mkdocs-document-dates/blob/main/templates/overrides/partials/nav.html">nav.html</a>, and override this path <code>docs/overrides/partials/nav.html</code></p>
-<h2 id="add-anywhere-in-document">Add anywhere in document<a class="headerlink" href="#add-anywhere-in-document" title="Permanent link">¶</a></h2>
+<h2 id="add-anywhere-in-document">Add anywhere in document</h2>
 <p>Insert this line anywhere in your document:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">&lt;!-- RECENTLY_UPDATED_DOCS --&gt;</span>
 </span></code></pre></div>
-<h2 id="configure-article-cover">Configure article cover<a class="headerlink" href="#configure-article-cover" title="Permanent link">¶</a></h2>
+<h2 id="configure-article-cover">Configure article cover</h2>
 <p>Use the field <code>cover</code> in Front Matter to specify the article cover (supports URL paths and local file paths):</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nn">---</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">cover</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assets/cat.jpg</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nn">---</span>
 </span></code></pre></div>
-<h2 id="summary-line-configuration">Summary Line Configuration<a class="headerlink" href="#summary-line-configuration" title="Permanent link">¶</a></h2>
+<h2 id="summary-line-configuration">Summary Line Configuration</h2>
 <p>The plugin intelligently parses article content and simply refine the summary without manual configuration. The number of summary lines can be configured separately for <strong>grid</strong> and <strong>detail</strong> views:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">plugins</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
