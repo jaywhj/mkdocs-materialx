@@ -53,7 +53,7 @@ dependencies = [
   "backrefs>=5.7.post1",
   "requests>=2.30",
   "pagefind[extended]>=1.5.2,<2",
-  "mkdocs-document-dates==3.8.8"
+  "mkdocs-document-dates==3.8.9"
 ]
 
 classifiers = [

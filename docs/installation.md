@@ -27,7 +27,7 @@ Open up a terminal and install MaterialX with:
 === "Pin"
 
     ```
-    pip install mkdocs-materialx==10.2.1
+    pip install mkdocs-materialx==10.2.2
     ```
 
 === "Upgrade"
@@ -62,7 +62,7 @@ and pull the image with:
 === "Pin"
 
     ```
-    docker pull jaywhj/mkdocs-materialx:10.2.1
+    docker pull jaywhj/mkdocs-materialx:10.2.2
     ```
 
   [Docker image]: https://hub.docker.com/r/jaywhj/mkdocs-materialx

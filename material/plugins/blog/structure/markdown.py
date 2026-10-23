@@ -33,13 +33,14 @@ from xml.etree.ElementTree import Element
 class ExcerptTreeprocessor(Treeprocessor):
 
     # Initialize excerpt tree processor
-    def __init__(self, page: Page, base: Page | None = None):
+    def __init__(self, page: Page, base: Page | None = None, reference_id: str = ""):
         self.page = page
         self.base = base
+        self.reference_id = reference_id
+        self.references: dict[str, tuple[str, str]] = {}
 
     # Transform HTML after Markdown processing
     def run(self, root: Element):
-        assert self.base
         main = True
 
         # We're only interested in anchors, which is why we continue when the
@@ -51,11 +52,16 @@ class ExcerptTreeprocessor(Treeprocessor):
 
             # The main headline should link to the post page, not to a specific
             # anchor, which is why we remove the anchor in that case
-            path = get_relative_url(self.page.url, self.base.url)
-            if main:
-                el.set("href", path)
+            if self.base is None:
+                token = f"mkxexcerpt-anchor-{self.reference_id}://{len(self.references)}"
+                self.references[token] = (self.page.url, "" if main else anchor)
+                el.set("href", token)
             else:
-                el.set("href", path + anchor)
+                path = get_relative_url(self.page.url, self.base.url)
+                if main:
+                    el.set("href", path)
+                else:
+                    el.set("href", path + anchor)
 
             # Main headline has been seen
             main = False
