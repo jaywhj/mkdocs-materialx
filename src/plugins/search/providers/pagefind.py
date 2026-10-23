@@ -49,6 +49,14 @@ async def _async_build(site_dir: str, user_config: dict):
         **index_config,
     }
 
+    # Match Lunr's behavior: permalink anchor text must not enter search results
+    exclude_selectors = final_config.get("exclude_selectors", [])
+    if ".headerlink" not in exclude_selectors:
+        final_config["exclude_selectors"] = [
+            *exclude_selectors,
+            ".headerlink",
+        ]
+
     # 防御性处理：移除部分由插件接管的参数
     final_config.pop("output_path", None)
     final_config.pop("site", None)
