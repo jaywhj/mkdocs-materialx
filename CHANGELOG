@@ -1,8 +1,12 @@
 mkdocs-materialx-10.2.2 (2026-10-24)
 
-- Enhanced `blog` functionality: added support for CJK languages and link sharing. See [Blog](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.share_links)
+- Enhanced `blog` functionality:
+    - Major performance boost via new architecture: **4x** higher build efficiency and significantly reduced build time
+    - Improved reading time estimation: supports all major & mixed languages (new **CJK** support), and covers all Markdown content blocks, see [post_readtime](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#new-features)
+    - Added sharing module with one-click social sharing (Mastodon/Bluesky/SinaWeibo/QQ/Douban), see [share_links](https://jaywhj.github.io/mkdocs-materialx/plugins/blog#config.share_links)
 - Fixed page rendering efficiency issues caused by the CSS `:has()` selector
 - Fixed incorrect sitemap handling of non-language alternate links
+- Fixed date formatting when no locale is available
 
 mkdocs-materialx-10.2.1 (2026-10-16)
 

@@ -694,13 +694,25 @@ plugins:
   - blog:
       share_links:
         mastodon:
-          title: Share on Mastodon
+          title: Mastodon
           link: "https://mastodonshare.com/?url={post_url}&text={post_title}"
           icon: simple/mastodon
         bluesky:
-          title: Share on Bluesky
+          title: Bluesky
           link: "https://bsky.app/intent/compose?text={post_title}%0A{post_url}"
           icon: simple/bluesky
+        weibo:
+          title: Sina Weibo
+          link: "https://service.weibo.com/share/share.php?url={post_url}&title={post_title}"
+          icon: simple/sinaweibo
+        qq:
+          title: QQ
+          link: "https://connect.qq.com/widget/shareqq/index.html?url={post_url}&title={post_title}"
+          icon: simple/qq
+        douban:
+          title: Douban
+          link: "https://www.douban.com/recommend/?url={post_url}&title={post_title}&sel=&v=1"
+          icon: simple/douban
 ```
 
 `{post_url}` and `{post_title}` are replaced with the current post's URL and title. Set `site_url` to provide an absolute URL for sharing.
@@ -708,6 +720,8 @@ plugins:
 The default title is `Share Post!` and the default icon is `material/share`. Share buttons are only shown when this setting contains at least one entry. 
 
 Their links receive the CSS classes `md-post_share` and `md-post_share--<name>` so you can customize their appearance.
+
+![blog_share](../assets/screenshots/blog_share.png)
 
 ### Archive
 

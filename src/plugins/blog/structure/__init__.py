@@ -22,9 +22,11 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 import yaml
 
-from copy import copy
+from copy import copy, deepcopy
+from html import escape
 from markdown import Markdown
 from datetime import datetime
 from material.plugins.blog.author import Author
@@ -33,14 +35,70 @@ from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.exceptions import PluginError
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.nav import Link, Section
-from mkdocs.structure.pages import Page, _RelativePathTreeprocessor
+from mkdocs.structure.pages import AMP_SUBSTITUTE, Page, _RelativePathTreeprocessor
 from mkdocs.structure.toc import get_toc
+from mkdocs.utils import get_relative_url
+from urllib.parse import unquote, urlsplit, urlunsplit
+from uuid import uuid4
 from mkdocs.utils.meta import YAML_RE
 from re import Match
 from yaml import SafeLoader
 
 from .config import PostConfig
 from .markdown import ExcerptTreeprocessor
+
+# -----------------------------------------------------------------------------
+# Cached excerpt link handling
+
+class _ExcerptRelativePathTreeprocessor(_RelativePathTreeprocessor):
+    """Resolve links once, but defer their view-relative URLs until rendering."""
+
+    def __init__(self, file: File, files: Files, config: MkDocsConfig, reference_id: str):
+        super().__init__(file, files, config)
+        self.reference_id = reference_id
+        self.references: dict[str, tuple[str, str, str]] = {}
+
+    def path_to_url(self, url: str) -> str:
+        scheme, netloc, path, query, anchor = urlsplit(url)
+        target_file = None
+        if (
+            not scheme
+            and not netloc
+            and not url.startswith(("/", "\\"))
+            and path
+            and AMP_SUBSTITUTE not in url
+        ):
+            path = unquote(path)
+            target_uri = next(
+                self._possible_target_uris(self.file, path, self.config.use_directory_urls)
+            )
+            target_file = self.files.get_file_from_path(target_uri)
+
+        # Keep MkDocs' normal resolution, validation warnings and anchor tracking.
+        resolved = super().path_to_url(url)
+        if target_file is None:
+            return resolved
+
+        token = f"mkxexcerpt-path-{self.reference_id}://{len(self.references)}"
+        self.references[token] = (target_file.url, query, anchor)
+        return token
+
+def _rebase_excerpt_links(
+    html: str,
+    page: Page,
+    references: dict[str, tuple[str, str, str] | tuple[str, str]],
+) -> str:
+    """Rebase all cached link placeholders in one pass over the HTML."""
+    def replace(match: re.Match):
+        url, *parts = references[match.group(0)]
+        path = get_relative_url(url, page.url)
+        if len(parts) == 1:
+            resolved = path + parts[0]
+        else:
+            resolved = urlunsplit(("", "", path, parts[0], parts[1]))
+        return escape(resolved, quote=True)
+
+    return re.sub(r"mkxexcerpt-(?:anchor|path)-[0-9a-f]{32}://\d+", replace, html)
 
 # -----------------------------------------------------------------------------
 # Classes
@@ -151,6 +209,7 @@ class Excerpt(Page):
     def __init__(self, post: Post, config: MkDocsConfig, files: Files):
         self.file = copy(post.file)
         self.post = post
+        self._reference_id = uuid4().hex
 
         # Set canonical URL, or we can't print excerpts when debugging the
         # blog plugin, as the `abs_url` property would be missing
@@ -180,7 +239,7 @@ class Excerpt(Page):
         # Register excerpt tree processor - this processor resolves anchors to
         # posts from within views, so they point to the correct location
         self.md.treeprocessors.register(
-            ExcerptTreeprocessor(post),
+            ExcerptTreeprocessor(post, reference_id = self._reference_id),
             "excerpt",
             0
         )
@@ -188,39 +247,58 @@ class Excerpt(Page):
         # Register relative path tree processor - this processor resolves links
         # to other pages and assets, and is used by MkDocs itself
         self.md.treeprocessors.register(
-            _RelativePathTreeprocessor(self.file, files, config),
+            _ExcerptRelativePathTreeprocessor(self.file, files, config, self._reference_id),
             "relpath",
             1
         )
 
-    # Render an excerpt of the post on the given page - note that this is not
-    # thread-safe because excerpts are shared across views, as it cuts down on
-    # the cost of initialization. However, if in the future, we decide to render
-    # posts and views concurrently, we must change this behavior.
+        self._rendered_content: str | None = None
+        self._rendered_more: str | None = None
+        self._rendered_toc = None
+        self._render_references: dict[str, tuple[str, str, str] | tuple[str, str]] = {}
+
+    # Render Markdown once per excerpt, then materialize a view-specific copy.
     def render(self, page: Page, separator: str):
-        self.file.url = page.url
+        if self._rendered_content is None:
+            # Resolve the Markdown once against the post's canonical file URL.
+            self.file.url = self.post.url
+            self.md.reset()
+            self.markdown = self.post.markdown
+            if not self.post._title_from_render:
+                self.markdown = "\n\n".join([f"# {self.post.title}", self.markdown])
 
-        # Retrieve excerpt tree processor and set page as base
-        at = self.md.treeprocessors.get_index_for_name("excerpt")
-        processor: ExcerptTreeprocessor = self.md.treeprocessors[at]
-        processor.base = page
+            html = self.md.convert(self.markdown)
+            html, *more = html.split(separator, 1)
+            self._rendered_content = html
+            self._rendered_more = more[0] if more else None
+            self._rendered_toc = get_toc(getattr(self.md, "toc_tokens", []))
 
-        # Ensure that the excerpt includes a title in its content, since the
-        # title is linked to the post when rendering - see https://t.ly/5Gg2F
-        self.markdown = self.post.markdown
-        if not self.post._title_from_render:
-            self.markdown = "\n\n".join([f"# {self.post.title}", self.markdown])
+            excerpt_processor: ExcerptTreeprocessor = self.md.treeprocessors[
+                self.md.treeprocessors.get_index_for_name("excerpt")
+            ]
+            relpath_processor: _ExcerptRelativePathTreeprocessor = self.md.treeprocessors[
+                self.md.treeprocessors.get_index_for_name("relpath")
+            ]
+            self._render_references = {
+                **excerpt_processor.references,
+                **relpath_processor.references,
+            }
 
-        # Convert Markdown to HTML and extract excerpt
-        self.content = self.md.convert(self.markdown)
-        self.content, *more = self.content.split(separator, 1)
-        if more:
-            self.more = more[0]
-
-        # Extract table of contents and reset post URL - if we wouldn't reset
-        # the excerpt URL, linking to the excerpt from the view would not work
-        self.toc = get_toc(getattr(self.md, "toc_tokens", []))
-        self.file.url = self.post.url
+        # Return an independent Page-like object so content, URLs and TOC data
+        # from one view cannot be overwritten by rendering another view.
+        rendered = copy(self)
+        rendered.file = copy(self.file)
+        rendered.file.url = self.post.url
+        rendered.content = _rebase_excerpt_links(
+            self._rendered_content, page, self._render_references
+        )
+        rendered.more = self._rendered_more
+        if rendered.more is not None:
+            rendered.more = _rebase_excerpt_links(
+                rendered.more, page, self._render_references
+            )
+        rendered.toc = deepcopy(self._rendered_toc)
+        return rendered
 
 # -----------------------------------------------------------------------------
 

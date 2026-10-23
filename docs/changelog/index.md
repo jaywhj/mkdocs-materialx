@@ -8,9 +8,13 @@ icon: material/layers-triple-outline
 
 ### 10.2.2 <small>Oct 24, 2026</small> { id="10.2.2" }
 
-- Enhanced `blog` functionality: added support for CJK languages and link sharing. See [Blog](../plugins/blog.md#config.share_links){target="_blank"}
+- Enhanced `blog` functionality:
+    - Major performance boost via new architecture: **4x** higher build efficiency and significantly reduced build time
+    - Improved reading time estimation: supports all major & mixed languages (new **CJK** support), and covers all Markdown content blocks, see [post_readtime](../plugins/blog.md#new-features){target="_blank"}
+    - Added sharing module with one-click social sharing (Mastodon/Bluesky/SinaWeibo/QQ/Douban), see [share_links](../plugins/blog.md#config.share_links){target="_blank"}
 - Fixed page rendering efficiency issues caused by the CSS `:has()` selector
 - Fixed incorrect sitemap handling of non-language alternate links
+- Fixed date formatting when no locale is available
 
 ### 10.2.1 <small>Oct 16, 2026</small> { id="10.2.1" }
 

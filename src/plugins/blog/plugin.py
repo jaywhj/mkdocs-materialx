@@ -874,7 +874,7 @@ class BlogPlugin(BasePlugin[BlogConfig]):
 
     # Render excerpt in the context of the given view
     def _render_post(self, excerpt: Excerpt, view: View):
-        excerpt.render(view, self.config.post_excerpt_separator)
+        excerpt = excerpt.render(view, self.config.post_excerpt_separator)
 
         # Attach top-level table of contents item to view if it should be added
         # and both, the view and excerpt contain table of contents items
