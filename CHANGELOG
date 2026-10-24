@@ -7,6 +7,7 @@ mkdocs-materialx-10.2.2 (2026-10-24)
 - Fixed page rendering efficiency issues caused by the CSS `:has()` selector
 - Fixed incorrect sitemap handling of non-language alternate links
 - Fixed date formatting when no locale is available
+- Fixed inline code rendering in Lunr search result titles
 
 mkdocs-materialx-10.2.1 (2026-10-16)
 
