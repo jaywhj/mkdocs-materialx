@@ -154,7 +154,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       toc_depth: 4
-      # permalink: true
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem
