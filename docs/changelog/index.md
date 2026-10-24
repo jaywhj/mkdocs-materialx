@@ -15,6 +15,7 @@ icon: material/layers-triple-outline
 - Fixed page rendering efficiency issues caused by the CSS `:has()` selector
 - Fixed incorrect sitemap handling of non-language alternate links
 - Fixed date formatting when no locale is available
+- Fixed inline code rendering in Lunr search result titles
 
 ### 10.2.1 <small>Oct 16, 2026</small> { id="10.2.1" }
 
