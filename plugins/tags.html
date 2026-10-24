@@ -5132,20 +5132,20 @@
   
 
 
-<h1 id="built-in-tags-plugin">Built-in tags plugin</h1>
+<h1 id="built-in-tags-plugin">Built-in tags plugin<a class="headerlink" href="#built-in-tags-plugin" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-06"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-06T09:17:05+00:00">2026-06-06</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The tags plugin adds first-class support for categorizing pages with the use
 of tags, adding the possibility to group related pages and make them
 discoverable via search and dedicated tags indexes. If your documentation is
 large, tags can help to discover relevant information faster.</p>
-<h2 id="objective">Objective</h2>
-<h3 id="how-it-works">How it works</h3>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
 <p>The plugin scans all pages for the <a href="#meta.tags"><code>tags</code></a> metadata property and
 generates a tags index, which is an inverted list of tags and the pages they
 appear on. The tags index can be located anywhere in the <a href="https://www.mkdocs.org/user-guide/configuration/#nav"><code>nav</code></a>,
 allowing for maximum flexibility when adding tags to your project.</p>
-<h3 id="when-to-use-it">When to use it</h3>
+<h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
 <p>If you want to add one or multiple tags indexes to your project, the tags
 plugin is a perfect choice as it makes this process ridiculously simple.
 Additionally, it integrates perfectly with several of the other
@@ -5172,7 +5172,7 @@ documentation.</p>
 </li>
 </ul>
 </div>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#8.2.0">8.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="tags.html">tags</a> – built-in</span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#multiple-instances" title="Multiple instances"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 8V5H5v3h4a3 3 0 0 0 3 3 3 3 0 0 0 3-3zm0-5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 15h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></span></a></span></span></p>
@@ -5184,10 +5184,10 @@ straightforward. Just add the following lines to <code>mkdocs.yml</code>, and st
 </span></code></pre></div>
 <p>The tags plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.</p>
-<h3 id="general">General</h3>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="config.enabled"><code>enabled</code></h4>
+<h4 id="config.enabled"><code>enabled</code><a class="headerlink" href="#config.enabled" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.1.7">9.1.7</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
@@ -5197,10 +5197,10 @@ the plugin, use:</p>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
-<h3 id="tags">Tags</h3>
+<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">¶</a></h3>
 <p>The following settings are available for tags:</p>
 <hr>
-<h4 id="config.tags"><code>tags</code></h4>
+<h4 id="config.tags"><code>tags</code><a class="headerlink" href="#config.tags" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.3.2">9.3.2</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable rendering of tags. The plugin still
@@ -5213,7 +5213,7 @@ Rendering can be disabled with:</p>
 <p>This setting is automatically disabled if <a href="#config.export_only"><code>export_only</code></a>
 is enabled.</p>
 <hr>
-<h4 id="config.tags_file"><code>tags_file</code></h4>
+<h4 id="config.tags_file"><code>tags_file</code><a class="headerlink" href="#config.tags_file" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#8.2.0">8.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <div class="admonition warning">
@@ -5238,7 +5238,7 @@ if you want to have a tags index.</p>
 <p>The provided path is resolved from the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs</code> directory</a>.</p>
 </div>
 <hr>
-<h4 id="config.tags_slugify"><code>tags_slugify</code></h4>
+<h4 id="config.tags_slugify"><code>tags_slugify</code><a class="headerlink" href="#config.tags_slugify" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><a href="https://github.com/facelessuser/pymdown-extensions/blob/01c91ce79c91304c22b4e3d7a9261accc931d707/pymdownx/slugs.py#L59-L65"><code>pymdownx.slugs.slugify</code></a></span></span></p>
 <p>Use this setting to change the function for generating URL-compatible slugs
@@ -5254,7 +5254,7 @@ from <a href="https://facelessuser.github.io/pymdown-extensions/extras/slugs/">P
 languages. Of course, you can also provide a custom slugification function for
 more granular control.</p>
 <hr>
-<h4 id="config.tags_slugify_separator"><code>tags_slugify_separator</code></h4>
+<h4 id="config.tags_slugify_separator"><code>tags_slugify_separator</code><a class="headerlink" href="#config.tags_slugify_separator" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>-</code></span></span></p>
 <p>Use this setting to change the separator that is passed to the slugification
@@ -5265,7 +5265,7 @@ is a hyphen, it can be set to any string, e.g., <code>_</code>:</p>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="nt">tags_slugify_separator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_slugify_format"><code>tags_slugify_format</code></h4>
+<h4 id="config.tags_slugify_format"><code>tags_slugify_format</code><a class="headerlink" href="#config.tags_slugify_format" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>tag:{slug}</code></span></span></p>
 <p>Use this setting to change the format string that is used when generating tag
@@ -5280,7 +5280,7 @@ unique, the default being:</p>
 <li><code>slug</code> – Tag slug, slugified with <a href="#config.tags_slugify"><code>tags_slugify</code></a></li>
 </ul>
 <hr>
-<h4 id="config.tags_hierarchy"><code>tags_hierarchy</code></h4>
+<h4 id="config.tags_hierarchy"><code>tags_hierarchy</code><a class="headerlink" href="#config.tags_hierarchy" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -5292,7 +5292,7 @@ enable this setting in <code>mkdocs.yml</code> with:</p>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">tags_hierarchy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_hierarchy_separator"><code>tags_hierarchy_separator</code></h4>
+<h4 id="config.tags_hierarchy_separator"><code>tags_hierarchy_separator</code><a class="headerlink" href="#config.tags_hierarchy_separator" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>/</code></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
@@ -5304,7 +5304,7 @@ can change this to any string, e.g., <code>.</code>:</p>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="nt">tags_hierarchy_separator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_sort_by"><code>tags_sort_by</code></h4>
+<h4 id="config.tags_sort_by"><code>tags_sort_by</code><a class="headerlink" href="#config.tags_sort_by" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>material.plugins.tags.tag_name</code></span></span></p>
 <p>Use this setting to specify a custom function for comparing tags. By default,
@@ -5318,7 +5318,7 @@ case-insensitive comparison:</p>
 or number representing the tag, that is used for sorting, and reference it in
 <a href="#config.tags_sort_by"><code>tags_sort_by</code></a>.</p>
 <hr>
-<h4 id="config.tags_sort_reverse"><code>tags_sort_reverse</code></h4>
+<h4 id="config.tags_sort_reverse"><code>tags_sort_reverse</code><a class="headerlink" href="#config.tags_sort_reverse" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>Use this setting to reverse the order in which tags are sorted when comparing
@@ -5329,7 +5329,7 @@ ordering as follows:</p>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">tags_sort_reverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_name_property"><code>tags_name_property</code></h4>
+<h4 id="config.tags_name_property"><code>tags_name_property</code><a class="headerlink" href="#config.tags_name_property" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><a href="#meta.tags"><code>tags</code></a></span></span></p>
 <p>Use this setting to change the name of the front matter property that is used by
@@ -5340,7 +5340,7 @@ to change it, you can use:</p>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">      </span><span class="nt">tags_name_property</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_name_variable"><code>tags_name_variable</code></h4>
+<h4 id="config.tags_name_variable"><code>tags_name_variable</code><a class="headerlink" href="#config.tags_name_variable" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>tags</code></span></span></p>
 <p>Use this setting to change the name of the template variable that is used by
@@ -5351,7 +5351,7 @@ to change it, you can use:</p>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="nt">tags_name_variable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.tags_allowed"><code>tags_allowed</code></h4>
+<h4 id="config.tags_allowed"><code>tags_allowed</code><a class="headerlink" href="#config.tags_allowed" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>The plugin allows to check tags against a predefined list, in order to catch
@@ -5367,10 +5367,10 @@ want to allow with:</p>
 <p>The plugin stops the build if a page references a tag that is not part of
 this list. Pages can be assigned to tags by using the <a href="#meta.tags"><code>tags</code></a>
 metadata property.</p>
-<h3 id="listings">Listings</h3>
+<h3 id="listings">Listings<a class="headerlink" href="#listings" title="Permanent link">¶</a></h3>
 <p>The following settings are available for listings:</p>
 <hr>
-<h4 id="config.listings"><code>listings</code></h4>
+<h4 id="config.listings"><code>listings</code><a class="headerlink" href="#config.listings" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable listings. It is normally not necessary to
@@ -5383,7 +5383,7 @@ you can disable them if necessary with:</p>
 <p>This setting is automatically disabled if <a href="#config.export_only"><code>export_only</code></a>
 is enabled.</p>
 <hr>
-<h4 id="config.listings_map"><code>listings_map</code></h4>
+<h4 id="config.listings_map"><code>listings_map</code><a class="headerlink" href="#config.listings_map" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this define listing configurations that you can then reference in listings
@@ -5401,7 +5401,7 @@ when you have many tag listings:</p>
 </span></code></pre></div>
 <p>See the <a href="#listing-configuration">listings section</a> for a list of all available settings.</p>
 <hr>
-<h4 id="config.listings_sort_by"><code>listings_sort_by</code></h4>
+<h4 id="config.listings_sort_by"><code>listings_sort_by</code><a class="headerlink" href="#config.listings_sort_by" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>material.plugins.tags.item_title</code></span></span></p>
 <p>Use this setting to specify a custom function for comparing listing items. By
@@ -5427,7 +5427,7 @@ criterion with the following configuration:</p>
 or number representing the item, that is used for sorting, and reference it in
 <a href="#config.listings_sort_by"><code>listings_sort_by</code></a>.</p>
 <hr>
-<h4 id="config.listings_sort_reverse"><code>listings_sort_reverse</code></h4>
+<h4 id="config.listings_sort_reverse"><code>listings_sort_reverse</code><a class="headerlink" href="#config.listings_sort_reverse" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>Use this setting to reverse the order in which items are sorted when comparing
@@ -5438,7 +5438,7 @@ ordering as follows:</p>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">      </span><span class="nt">listings_sort_reverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.listings_tags_sort_by"><code>listings_tags_sort_by</code></h4>
+<h4 id="config.listings_tags_sort_by"><code>listings_tags_sort_by</code><a class="headerlink" href="#config.listings_tags_sort_by" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>material.plugins.tags.tag_name</code></span></span></p>
 <p>Use this setting to specify a custom function for comparing tags in listings. By
@@ -5452,7 +5452,7 @@ for case-insensitivity:</p>
 or number representing the tag, that is used for sorting, and reference it in
 <a href="#config.listings_tags_sort_by"><code>listings_tags_sort_by</code></a>.</p>
 <hr>
-<h4 id="config.listings_tags_sort_reverse"><code>listings_tags_sort_reverse</code></h4>
+<h4 id="config.listings_tags_sort_reverse"><code>listings_tags_sort_reverse</code><a class="headerlink" href="#config.listings_tags_sort_reverse" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>Use this setting to reverse the order in which tags are sorted when comparing
@@ -5463,7 +5463,7 @@ ordering as follows:</p>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">      </span><span class="nt">listings_tags_sort_reverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.listings_directive"><code>listings_directive</code></h4>
+<h4 id="config.listings_directive"><code>listings_directive</code><a class="headerlink" href="#config.listings_directive" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>material/tags</code></span></span></p>
 <p>Use this setting to change the name of the directive the plugin will look for
@@ -5477,7 +5477,7 @@ when processing pages. If you want to use a shorter directive than
 <div class="language-html highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cm">&lt;!-- $tags { include: [foo, bar] } --&gt;</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.listings_toc"><code>listings_toc</code></h4>
+<h4 id="config.listings_toc"><code>listings_toc</code><a class="headerlink" href="#config.listings_toc" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable tags showing up in the table of contents.
@@ -5487,10 +5487,10 @@ behavior with:</p>
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span>
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">      </span><span class="nt">listings_toc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
-<h3 id="shadow-tags">Shadow tags</h3>
+<h3 id="shadow-tags">Shadow tags<a class="headerlink" href="#shadow-tags" title="Permanent link">¶</a></h3>
 <p>The following settings are available for shadow tags:</p>
 <hr>
-<h4 id="config.shadow"><code>shadow</code></h4>
+<h4 id="config.shadow"><code>shadow</code><a class="headerlink" href="#config.shadow" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>Use this setting to specify whether the plugin should include shadow tags on
@@ -5513,7 +5513,7 @@ deploy previews:</p>
 </div>
 </div>
 <hr>
-<h4 id="config.shadow_on_serve"><code>shadow_on_serve</code></h4>
+<h4 id="config.shadow_on_serve"><code>shadow_on_serve</code><a class="headerlink" href="#config.shadow_on_serve" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should include shadow tags on
@@ -5524,7 +5524,7 @@ them when previewing, use:</p>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">      </span><span class="nt">shadow_on_serve</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.shadow_tags"><code>shadow_tags</code></h4>
+<h4 id="config.shadow_tags"><code>shadow_tags</code><a class="headerlink" href="#config.shadow_tags" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>The plugin allows to specify a predefined list of shadow tags which can be
@@ -5537,7 +5537,7 @@ setting. Shadow tags must be specified as a list:</p>
 </span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Internal</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.shadow_tags_prefix"><code>shadow_tags_prefix</code></h4>
+<h4 id="config.shadow_tags_prefix"><code>shadow_tags_prefix</code><a class="headerlink" href="#config.shadow_tags_prefix" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify a string that is checked as a prefix for each tag.
@@ -5548,7 +5548,7 @@ practice is to use <code>_</code> as a prefix:</p>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">      </span><span class="nt">shadow_tags_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.shadow_tags_suffix"><code>shadow_tags_suffix</code></h4>
+<h4 id="config.shadow_tags_suffix"><code>shadow_tags_suffix</code><a class="headerlink" href="#config.shadow_tags_suffix" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify a string that is checked as a suffix for each tag.
@@ -5558,10 +5558,10 @@ can be to use <code>Internal</code> as a suffix:</p>
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">tags</span><span class="p">:</span>
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">      </span><span class="nt">shadow_tags_suffix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Internal</span>
 </span></code></pre></div>
-<h3 id="export">Export</h3>
+<h3 id="export">Export<a class="headerlink" href="#export" title="Permanent link">¶</a></h3>
 <p>The following settings are available for exporting:</p>
 <hr>
-<h4 id="config.export"><code>export</code></h4>
+<h4 id="config.export"><code>export</code><a class="headerlink" href="#config.export" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin creates a <code>tags.json</code> file
@@ -5572,7 +5572,7 @@ other plugins and projects:</p>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">      </span><span class="nt">export</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.export_file"><code>export_file</code></h4>
+<h4 id="config.export_file"><code>export_file</code><a class="headerlink" href="#config.export_file" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>tags.json</code></span></span></p>
 <p>Use this setting to change the path of the file where the exported tags are
@@ -5584,7 +5584,7 @@ use:</p>
 </span></code></pre></div>
 <p>The provided path is resolved from the <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a>.</p>
 <hr>
-<h4 id="config.export_only"><code>export_only</code></h4>
+<h4 id="config.export_only"><code>export_only</code><a class="headerlink" href="#config.export_only" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>This setting is solely provided for convenience to disable the rendering of tags
@@ -5596,11 +5596,11 @@ while keeping the export functionality:</p>
 </span></code></pre></div>
 <p>This will automatically disable the <a href="#config.tags"><code>tags</code></a> and
 <a href="#config.listings"><code>listings</code></a> settings.</p>
-<h2 id="usage">Usage</h2>
-<h3 id="metadata">Metadata</h3>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
+<h3 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
 <p>The following properties are available:</p>
 <hr>
-<h4 id="meta.tags"><code>tags</code></h4>
+<h4 id="meta.tags"><code>tags</code><a class="headerlink" href="#meta.tags" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#8.2.0">8.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#metadata" title="Metadata property"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15h6v2h-6zM9 7H7v2h2zm2 6h6v-2h-6zm0-4h6V7h-6zm-2 2H7v2h2zm12-6v14c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2m-2 0H5v14h14zM9 15H7v2h2z"></path></svg></span></a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
@@ -5620,13 +5620,13 @@ appear in the generated tags index. Tags are defined as a list of strings
 <p>If you want to prevent accidental typos when assigning tags to pages, you can
 set a predefined list of allowed tags in <code>mkdocs.yml</code> by using the
 <a href="#config.tags_allowed"><code>tags_allowed</code></a> setting.</p>
-<h3 id="listing-configuration">Listing configuration</h3>
+<h3 id="listing-configuration">Listing configuration<a class="headerlink" href="#listing-configuration" title="Permanent link">¶</a></h3>
 <p>The listings configuration controls which tags are included in or excluded from
 a listing and whether a listing only includes pages in the current scope.
 Furthermore, listings can override some values from the global configuration.</p>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="listing.scope"><code>scope</code></h4>
+<h4 id="listing.scope"><code>scope</code><a class="headerlink" href="#listing.scope" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>false</code></span></span></p>
 <p>This setting specifies whether the listing should only consider pages that are
@@ -5652,7 +5652,7 @@ embedded in:</p>
 </div>
 </div>
 <hr>
-<h4 id="listing.shadow"><code>shadow</code></h4>
+<h4 id="listing.shadow"><code>shadow</code><a class="headerlink" href="#listing.shadow" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is computed"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.75 16.25 17 21l-2.75-3 1.16-1.16L17 18.43l3.59-3.59zM17.62 12C16.31 8.1 12 3.25 12 3.25S6 10 6 14c0 3.31 2.69 6 6 6h.34c-.22-.64-.34-1.3-.34-2 0-3.18 2.5-5.78 5.62-6"></path></svg></span></a></span></span></p>
 <p>This setting specifies whether the listing should include shadow tags, which
@@ -5678,7 +5678,7 @@ basis:</p>
 </div>
 </div>
 <hr>
-<h4 id="listing.toc"><code>toc</code></h4>
+<h4 id="listing.toc"><code>toc</code><a class="headerlink" href="#listing.toc" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><a href="#config.listings_toc"><code>listings_toc</code></a></span></span></p>
 <p>This setting specifies whether the listing should render tags inside the table
@@ -5704,7 +5704,7 @@ setting on a per-listing basis:</p>
 </div>
 </div>
 <hr>
-<h4 id="listing.include"><code>include</code></h4>
+<h4 id="listing.include"><code>include</code><a class="headerlink" href="#listing.include" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify which tags should be included in the listing. Each
@@ -5733,7 +5733,7 @@ respective tag:</p>
 </div>
 <p>If this setting is left empty, all tags and pages are included.</p>
 <hr>
-<h4 id="listing.exclude"><code>exclude</code></h4>
+<h4 id="listing.exclude"><code>exclude</code><a class="headerlink" href="#listing.exclude" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify which tags should be excluded from the listing. Each

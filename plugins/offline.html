@@ -4168,7 +4168,7 @@
   
 
 
-<h1 id="built-in-offline-plugin">Built-in offline plugin</h1>
+<h1 id="built-in-offline-plugin">Built-in offline plugin<a class="headerlink" href="#built-in-offline-plugin" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-03T08:15:22+00:00">2026-06-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Edwin Amsler" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:EdwinGuy@GMail.com&quot;&gt;Edwin Amsler&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="EdwinGuy@GMail.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p><a href="https://www.mkdocs.org">MkDocs</a> is one of the few frameworks that supports building
@@ -4176,8 +4176,8 @@ offline-capable documentation that can be directly viewed by the user – no
 server needed. With the offline plugin, you can distribute the
 <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a> as a downloadable <code>.zip</code> file while
 retaining most interactive functionality.</p>
-<h2 id="objective">Objective</h2>
-<h3 id="how-it-works">How it works</h3>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
 <p>After <a href="../creating-your-site.html#building-your-site">building your project</a>, switch to the <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a>
 and open <code>index.html</code> in your browser – you're now viewing your documentation
 from your local file system! Most browsers will denote this by showing <code>file://</code>
@@ -4195,7 +4195,7 @@ keeps working by moving the search index to a JavaScript file, and leveraging
 <p>Additionally, the plugin automatically disables the <a href="https://www.mkdocs.org/user-guide/configuration/#use_directory_urls"><code>use_directory_urls</code></a> setting, ensuring that users can open your
 documentation directly from the local file system.</p>
 <p>There are some <a href="#limitations">limitations</a>.</p>
-<h3 id="when-to-use-it">When to use it</h3>
+<h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
 <p>As the name already indicates, the plugin should only be used when you're
 <a href="../creating-your-site.html#building-your-site">building your project</a> for offline distribution. It's also good to know, that
 the offline plugin plays nicely with the following other plugins, helping to
@@ -4222,7 +4222,7 @@ techniques.</p>
 </li>
 </ul>
 </div>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="offline.html">offline</a> – built-in</span></span></p>
 <p>As with all <a href="index.html">built-in plugins</a>, getting started with the offline plugin is
@@ -4233,10 +4233,10 @@ building offline-capable documentation:</p>
 </span></code></pre></div>
 <p>The offline plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.</p>
-<h3 id="general">General</h3>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="config.enabled"><code>enabled</code></h4>
+<h4 id="config.enabled"><code>enabled</code><a class="headerlink" href="#config.enabled" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.0.0">9.0.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
@@ -4246,7 +4246,7 @@ good idea to use an <a href="https://www.mkdocs.org/user-guide/configuration/#en
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">offline</span><span class="p">:</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kt">!ENV</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">OFFLINE</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">]</span>
 </span></code></pre></div>
-<h2 id="limitations">Limitations</h2>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h2>
 <p>When enabling the offline plugin, make sure to disable the following settings,
 as they make use of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> which will error when invoked from the local
 file system:</p>

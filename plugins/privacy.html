@@ -4646,15 +4646,15 @@
   
 
 
-<h1 id="built-in-privacy-plugin">Built-in privacy plugin</h1>
+<h1 id="built-in-privacy-plugin">Built-in privacy plugin<a class="headerlink" href="#built-in-privacy-plugin" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-03T08:15:22+00:00">2026-06-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Dr. Vedran Miletić" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:vedran@miletic.net&quot;&gt;Dr. Vedran Miletić&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="vedran@miletic.net"></a></div><div class="avatar-wrapper" data-name="Marius Maryniak" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:mrsmrynk@gmail.com&quot;&gt;Marius Maryniak&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="mrsmrynk@gmail.com"></a></div><div class="avatar-wrapper" data-name="Lumikeiju" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:167577930+Lumikeiju@users.noreply.github.com&quot;&gt;Lumikeiju&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="167577930+Lumikeiju@users.noreply.github.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The privacy plugin offers a streamlined solution for automatically self-hosting
 external assets. With just a single line of configuration, the plugin can
 automatically identify and download external assets, making GDPR compliance
 as effortless as it can possibly be.</p>
-<h2 id="objective">Objective</h2>
-<h3 id="how-it-works">How it works</h3>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
 <p>The plugin scans the generated HTML for external assets, i.e., scripts, style
 sheets, images, and web fonts, downloads them, stores them in the
 <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a> and replaces all references with links to
@@ -4676,7 +4676,7 @@ requesting external assets, are removed from the output, as they're not
 necessary when self-hosting. After the plugin has done its work, your project
 will be free of requests to external services.</p>
 <p>There are some <a href="#limitations">limitations</a>.</p>
-<h3 id="when-to-use-it">When to use it</h3>
+<h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
 <p>The plugin was developed to make compliance with the 2018 European
 <strong>General Data Protection Regulation</strong> (GDPR) as simple as possible, while
 retaining the flexibility and power that MaterialX for MkDocs offers, like for
@@ -4709,7 +4709,7 @@ file that can be downloaded.</p>
 </li>
 </ul>
 </div>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="privacy.html">privacy</a> – built-in</span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#multiple-instances" title="Multiple instances"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 8V5H5v3h4a3 3 0 0 0 3 3 3 3 0 0 0 3-3zm0-5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 15h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></span></a></span></span>
@@ -4722,10 +4722,10 @@ effortlessly self-hosting external assets:</p>
 </span></code></pre></div>
 <p>The privacy plugin is built into MaterialX for MkDocs and doesn't need to be
 installed.</p>
-<h3 id="general">General</h3>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="config.enabled"><code>enabled</code></h4>
+<h4 id="config.enabled"><code>enabled</code><a class="headerlink" href="#config.enabled" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
@@ -4737,7 +4737,7 @@ If you want to disable the plugin, e.g., for local builds, you can use an
 </span></code></pre></div>
 <p>This configuration enables the plugin only during continuous integration (CI).</p>
 <hr>
-<h4 id="config.concurrency"><code>concurrency</code></h4>
+<h4 id="config.concurrency"><code>concurrency</code><a class="headerlink" href="#config.concurrency" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text">available CPUs - 1</span></span></p>
 <p>With more CPUs available, the plugin can do more work in parallel, and thus
@@ -4748,14 +4748,14 @@ processing completely, use:</p>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 <p>By default, the plugin uses all available CPUs - 1 with a minimum of 1.</p>
-<h3 id="caching">Caching</h3>
+<h3 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">¶</a></h3>
 <p>The plugin implements an <a href="requirements/caching.html">intelligent caching</a> mechanism, ensuring that external
 assets are only downloaded when they're not already contained in the cache.
 While the initial build might take some time, it's a good idea to use caching,
 as it will speed up consecutive builds.</p>
 <p>The following settings are available for caching:</p>
 <hr>
-<h4 id="config.cache"><code>cache</code></h4>
+<h4 id="config.cache"><code>cache</code><a class="headerlink" href="#config.cache" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to instruct the plugin to bypass the cache, in order to
@@ -4767,7 +4767,7 @@ debugging the plugin itself. Caching can be disabled with:</p>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.cache_dir"><code>cache_dir</code></h4>
+<h4 id="config.cache_dir"><code>cache_dir</code><a class="headerlink" href="#config.cache_dir" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>.cache/plugin/privacy</code></span></span></p>
 <p>It is normally not necessary to specify this setting, except for when you want
@@ -4780,10 +4780,10 @@ cached. If you want to change it, use:</p>
 <p>If you're using <a href="index.html#multiple-instances">multiple instances</a> of the plugin, it can be a good idea to
 set different cache directories for both instances, so that they don't interfere
 with each other.</p>
-<h3 id="logging">Logging</h3>
+<h3 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h3>
 <p>The following settings are available for logging:</p>
 <hr>
-<h4 id="config.log"><code>log</code></h4>
+<h4 id="config.log"><code>log</code><a class="headerlink" href="#config.log" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should display log messages when
@@ -4793,7 +4793,7 @@ building your site. While not being recommended, you can disable logging with:</
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="nt">log</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.log_level"><code>log_level</code></h4>
+<h4 id="config.log_level"><code>log_level</code><a class="headerlink" href="#config.log_level" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>info</code></span></span></p>
 <p>Use this setting to control the log level that the plugin should employ when
@@ -4836,10 +4836,10 @@ messages and is only useful for debugging.</p>
 </div>
 </div>
 </div>
-<h3 id="external-assets">External assets</h3>
+<h3 id="external-assets">External assets<a class="headerlink" href="#external-assets" title="Permanent link">¶</a></h3>
 <p>The following settings are available for external assets:</p>
 <hr>
-<h4 id="config.assets"><code>assets</code></h4>
+<h4 id="config.assets"><code>assets</code><a class="headerlink" href="#config.assets" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should download external
@@ -4850,7 +4850,7 @@ handling of external assets with:</p>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="nt">assets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.assets_fetch"><code>assets_fetch</code></h4>
+<h4 id="config.assets_fetch"><code>assets_fetch</code><a class="headerlink" href="#config.assets_fetch" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should downloads or only report
@@ -4862,7 +4862,7 @@ assets placed by the author in pages:</p>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="nt">assets_fetch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.assets_fetch_dir"><code>assets_fetch_dir</code></h4>
+<h4 id="config.assets_fetch_dir"><code>assets_fetch_dir</code><a class="headerlink" href="#config.assets_fetch_dir" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.5.0">9.5.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>assets/external</code></span></span></p>
 <p>It is normally not necessary to specify this setting, except for when you want
@@ -4875,7 +4875,7 @@ external assets are stored. If you want to change it, use:</p>
 <p>This configuration stores the downloaded copies at <code>my/custom/dir</code> in the
 <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a>.</p>
 <hr>
-<h4 id="config.assets_include"><code>assets_include</code></h4>
+<h4 id="config.assets_include"><code>assets_include</code><a class="headerlink" href="#config.assets_include" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to enable downloading of external assets for specific origins,
@@ -4887,7 +4887,7 @@ external assets for different origins:</p>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unsplash.com/*</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.assets_exclude"><code>assets_exclude</code></h4>
+<h4 id="config.assets_exclude"><code>assets_exclude</code><a class="headerlink" href="#config.assets_exclude" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to disable downloading of external assets for specific origins,
@@ -4910,10 +4910,10 @@ is implemented via relative URLs. <a href="https://github.com/giscus/giscus/blob
 </li>
 </ol>
 <hr>
-<h3 id="external-links">External links</h3>
+<h3 id="external-links">External links<a class="headerlink" href="#external-links" title="Permanent link">¶</a></h3>
 <p>The following settings are available for external links:</p>
 <hr>
-<h4 id="config.links"><code>links</code></h4>
+<h4 id="config.links"><code>links</code><a class="headerlink" href="#config.links" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to instruct the plugin to parse and process external links to
@@ -4925,7 +4925,7 @@ links, use:</p>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">      </span><span class="nt">links</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.links_attr_map"><code>links_attr_map</code></h4>
+<h4 id="config.links_attr_map"><code>links_attr_map</code><a class="headerlink" href="#config.links_attr_map" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to specify additional attributes that should be added to
@@ -4937,7 +4937,7 @@ so they open in a new tab:</p>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_blank</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.links_noopener"><code>links_noopener</code></h4>
+<h4 id="config.links_noopener"><code>links_noopener</code><a class="headerlink" href="#config.links_noopener" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>It is normally not recommended to change this setting, as it will automatically
@@ -4947,8 +4947,8 @@ annotate external links that open in a new window with <code>rel="noopener"</cod
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">privacy</span><span class="p">:</span>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">      </span><span class="nt">links_noopener</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
-<h2 id="limitations">Limitations</h2>
-<h3 id="dynamic-urls">Dynamic URLs</h3>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">¶</a></h2>
+<h3 id="dynamic-urls">Dynamic URLs<a class="headerlink" href="#dynamic-urls" title="Permanent link">¶</a></h3>
 <p>Dynamically created URLs as part of scripts are not detected, and thus cannot be
 downloaded automatically, as the plugin does not execute scripts – it only detects fully qualified URLs for downloading and replacement. In short, don't do this:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://example.com"</span>
@@ -4957,7 +4957,7 @@ downloaded automatically, as the plugin does not execute scripts – it only det
 <p>Instead, always use fully qualified URLs:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="s2">"https://example.com/script.js"</span>
 </span></code></pre></div>
-<h3 id="embedded-html">Embedded HTML</h3>
+<h3 id="embedded-html">Embedded HTML<a class="headerlink" href="#embedded-html" title="Permanent link">¶</a></h3>
 <p>By default, embedded HTML files (e.g. in iframes) are not scanned for external
 assets. This is a limitation of MkDocs, as it considers <code>.html</code> files to be
 templates, which must be explicitly listed under

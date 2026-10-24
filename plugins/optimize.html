@@ -4556,15 +4556,15 @@
   
 
 
-<h1 id="built-in-optimize-plugin">Built-in optimize plugin</h1>
+<h1 id="built-in-optimize-plugin">Built-in optimize plugin<a class="headerlink" href="#built-in-optimize-plugin" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2023-09-14"><span class="material-icons" data-icon="doc_created"></span><time datetime="2023-09-14T17:09:18+00:00">2023-09-14</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-06-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-06-03T08:15:22+00:00">2026-06-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The optimize plugin automatically identifies and optimizes all media files when
 <a href="../creating-your-site.html#building-your-site">building your project</a> by using common compression and conversion techniques.
 As a result, your site loads significantly faster and yields better rankings in
 search engines.</p>
-<h2 id="objective">Objective</h2>
-<h3 id="how-it-works">How it works</h3>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">¶</a></h2>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">¶</a></h3>
 <p>The plugin scans the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs</code> directory</a> for media files and
 assets, optimizing them automatically in order to reduce the final size of the
 <a href="https://www.mkdocs.org/user-guide/configuration/#site_dir"><code>site</code> directory</a>. This leads to faster loading times as you
@@ -4576,7 +4576,7 @@ This makes it possible to swap out or update images, without having to worry
 about optimizing them, or even worse, forgetting to do so.</p>
 <p>In order to optimize media files, a few <a href="#configuration">dependencies</a> need to be available on
 your system.</p>
-<h3 id="when-to-use-it">When to use it</h3>
+<h3 id="when-to-use-it">When to use it<a class="headerlink" href="#when-to-use-it" title="Permanent link">¶</a></h3>
 <p>It's generally recommended to use the plugin, as media files are optimized
 automatically without the need for intervention, ensuring that your site loads
 as fast as possible. Optimized media files are one of the key components for a
@@ -4605,7 +4605,7 @@ file that can be downloaded.</p>
 </li>
 </ul>
 </div>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#plugin" title="Plugin"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3zm7 1v5h3V4zm-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1"></path></svg></span></a></span><span class="mdx-badge__text"><a href="optimize.html">optimize</a> – built-in</span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#multiple-instances" title="Multiple instances"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 8V5H5v3h4a3 3 0 0 0 3 3 3 3 0 0 0 3-3zm0-5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM3 15h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></span></a></span></span>
@@ -4622,10 +4622,10 @@ installed.</p>
 dependencies for <a href="requirements/image-processing.html">image processing</a>, if they're not already available on your
 system. The linked guide includes instructions for several operating systems
 and mentions some alternative environments.</p>
-<h3 id="general">General</h3>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
 <p>The following settings are available:</p>
 <hr>
-<h4 id="config.enabled"><code>enabled</code></h4>
+<h4 id="config.enabled"><code>enabled</code><a class="headerlink" href="#config.enabled" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the plugin when <a href="../creating-your-site.html#building-your-site">building your project</a>.
@@ -4637,7 +4637,7 @@ If you want to disable the plugin, e.g., for local builds, you can use an
 </span></code></pre></div>
 <p>This configuration enables the plugin only during continuous integration (CI).</p>
 <hr>
-<h4 id="config.concurrency"><code>concurrency</code></h4>
+<h4 id="config.concurrency"><code>concurrency</code><a class="headerlink" href="#config.concurrency" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text">available CPUs - 1</span></span></p>
 <p>With more CPUs available, the plugin can do more work in parallel, and thus
@@ -4648,14 +4648,14 @@ processing completely, use:</p>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </span></code></pre></div>
 <p>By default, the plugin uses all available CPUs - 1 with a minimum of 1.</p>
-<h3 id="caching">Caching</h3>
+<h3 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">¶</a></h3>
 <p>The plugin implements an <a href="requirements/caching.html">intelligent caching</a> mechanism, ensuring that a media
 file or asset is only passed through the optimization pipeline when its contents
 change. If you swap out or update an image, the plugin detects it and updates
 the optimized version of the media file.</p>
 <p>The following settings are available for caching:</p>
 <hr>
-<h4 id="config.cache"><code>cache</code></h4>
+<h4 id="config.cache"><code>cache</code><a class="headerlink" href="#config.cache" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to instruct the plugin to bypass the cache, in order to
@@ -4667,7 +4667,7 @@ the plugin itself. Caching can be disabled with:</p>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">      </span><span class="nt">cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.cache_dir"><code>cache_dir</code></h4>
+<h4 id="config.cache_dir"><code>cache_dir</code><a class="headerlink" href="#config.cache_dir" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>.cache/plugin/optimize</code></span></span></p>
 <p>It is normally not necessary to specify this setting, except for when you want
@@ -4680,14 +4680,14 @@ If you want to change it, use:</p>
 <p>If you're using <a href="index.html#multiple-instances">multiple instances</a> of the plugin, it can be a good idea to
 set different cache directories for both instances, so that they don't interfere
 with each other.</p>
-<h3 id="optimization">Optimization</h3>
+<h3 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">¶</a></h3>
 <p>Documentation often makes use of screenshots or diagrams for better
 visualization of things, both of which are prime candidates for optimization.
 The plugin automatically optimizes images using <a href="https://pngquant.org/">pngquant</a> for <code>.png</code> files,
 and <a href="https://pillow.readthedocs.io/">Pillow</a> for <code>.jpg</code> files.</p>
 <p>The following settings are available for optimization:</p>
 <hr>
-<h4 id="config.optimize"><code>optimize</code></h4>
+<h4 id="config.optimize"><code>optimize</code><a class="headerlink" href="#config.optimize" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable media file optimization. Currently,
@@ -4699,7 +4699,7 @@ might be added. If you want to disable optimization, use:</p>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="nt">optimize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_png"><code>optimize_png</code></h4>
+<h4 id="config.optimize_png"><code>optimize_png</code><a class="headerlink" href="#config.optimize_png" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the optimization of <code>.png</code> files. It's
@@ -4710,7 +4710,7 @@ the optimization of <code>.png</code> files, use:</p>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">      </span><span class="nt">optimize_png</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_png_speed"><code>optimize_png_speed</code></h4>
+<h4 id="config.optimize_png_speed"><code>optimize_png_speed</code><a class="headerlink" href="#config.optimize_png_speed" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>3</code> of <code>1-10</code></span></span></p>
 <p>Use this setting to specify the speed/quality tradeoff that <a href="https://pngquant.org/">pngquant</a> applies
@@ -4734,7 +4734,7 @@ when optimizing <code>.png</code> files. The lower the number, the more aggressi
 </div>
 <p>A factor of <code>10</code> has 5% lower quality, but is 8x faster than the default <code>3</code>.</p>
 <hr>
-<h4 id="config.optimize_png_strip"><code>optimize_png_strip</code></h4>
+<h4 id="config.optimize_png_strip"><code>optimize_png_strip</code><a class="headerlink" href="#config.optimize_png_strip" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to specify whether <a href="https://pngquant.org/">pngquant</a> should strip optional metadata
@@ -4745,7 +4745,7 @@ If you want to preserve metadata, use:</p>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">      </span><span class="nt">optimize_png_strip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_jpg"><code>optimize_jpg</code></h4>
+<h4 id="config.optimize_jpg"><code>optimize_jpg</code><a class="headerlink" href="#config.optimize_jpg" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to enable or disable the optimization of <code>.jpg</code> files. It's
@@ -4756,7 +4756,7 @@ the optimization of <code>.jpg</code> files, use:</p>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">optimize_jpg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_jpg_quality"><code>optimize_jpg_quality</code></h4>
+<h4 id="config.optimize_jpg_quality"><code>optimize_jpg_quality</code><a class="headerlink" href="#config.optimize_jpg_quality" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>60</code> of <code>0-100</code></span></span></p>
 <p>Use this setting to specify the image quality that <a href="https://pillow.readthedocs.io/">Pillow</a> applies when
@@ -4767,7 +4767,7 @@ fine-tune and change this setting:</p>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">      </span><span class="nt">optimize_jpg_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_jpg_progressive"><code>optimize_jpg_progressive</code></h4>
+<h4 id="config.optimize_jpg_progressive"><code>optimize_jpg_progressive</code><a class="headerlink" href="#config.optimize_jpg_progressive" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to specify whether <a href="https://pillow.readthedocs.io/">Pillow</a> should use progressive encoding
@@ -4778,7 +4778,7 @@ to disable progressive encoding, use:</p>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="nt">optimize_jpg_progressive</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.optimize_include"><code>optimize_include</code></h4>
+<h4 id="config.optimize_include"><code>optimize_include</code><a class="headerlink" href="#config.optimize_include" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to enable media file optimization for specific directories
@@ -4792,7 +4792,7 @@ media files differently:</p>
 <p>This configuration enables optimization for all media files that are contained
 in the <code>screenshots</code> folder and its subfolders inside the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs</code> directory</a>.</p>
 <hr>
-<h4 id="config.optimize_exclude"><code>optimize_exclude</code></h4>
+<h4 id="config.optimize_exclude"><code>optimize_exclude</code><a class="headerlink" href="#config.optimize_exclude" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value is empty"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 3.77-.75.84S9.97 6.06 8.68 7.94 6 12.07 6 14.23a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-2.16-1.39-4.41-2.68-6.29s-2.57-3.33-2.57-3.33zm0 3.13c.44.52.84.95 1.68 2.17 1.21 1.76 2.32 4 2.32 5.16 0 2.22-1.78 4-4 4s-4-1.78-4-4c0-1.16 1.11-3.4 2.32-5.16.84-1.22 1.24-1.65 1.68-2.17"></path></svg></span></a></span></span></p>
 <p>Use this setting to disable media file optimization for specific directories
@@ -4805,10 +4805,10 @@ media files differently:</p>
 </span></code></pre></div>
 <p>This configuration disables optimization for all media files that are contained
 in the <code>vendor</code> folder and its subfolders inside the <a href="https://www.mkdocs.org/user-guide/configuration/#docs_dir"><code>docs</code> directory</a>.</p>
-<h3 id="reporting">Reporting</h3>
+<h3 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">¶</a></h3>
 <p>The following settings are available for reporting:</p>
 <hr>
-<h4 id="config.print_gain"><code>print_gain</code></h4>
+<h4 id="config.print_gain"><code>print_gain</code><a class="headerlink" href="#config.print_gain" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should print the number of bytes
@@ -4818,7 +4818,7 @@ gained after optimizing each file. If you want to disable this behavior, use:</p
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">      </span><span class="nt">print_gain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </span></code></pre></div>
 <hr>
-<h4 id="config.print_gain_summary"><code>print_gain_summary</code></h4>
+<h4 id="config.print_gain_summary"><code>print_gain_summary</code><a class="headerlink" href="#config.print_gain_summary" title="Permanent link">¶</a></h4>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.7.0">9.7.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#default" title="Default value"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"></path></svg></span></a></span><span class="mdx-badge__text"><code>true</code></span></span></p>
 <p>Use this setting to control whether the plugin should print the total number of

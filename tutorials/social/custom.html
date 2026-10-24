@@ -4110,7 +4110,7 @@
   
 
 
-<h1 id="custom-cards">Custom cards</h1>
+<h1 id="custom-cards">Custom cards<a class="headerlink" href="#custom-cards" title="Permanent link">¶</a></h1>
 <div class="document-dates-plugin-wrapper document-dates-top"><div class="document-dates-plugin" locale="en"><div class="dd-left"><span class="dd-item" data-tippy-content="" data-tippy-raw="2024-05-28"><span class="material-icons" data-icon="doc_created"></span><time datetime="2024-05-28T11:21:00+00:00">2024-05-28</time></span><span class="dd-item" data-tippy-content="" data-tippy-raw="2026-04-03"><span class="material-icons" data-icon="doc_updated"></span><time datetime="2026-04-03T07:22:41+00:00">2026-04-03</time></span></div><div class="dd-right"><span class="material-icons" data-icon="doc_authors"></span><div class="author-group"><div class="avatar-wrapper" data-name="Alexander Voss" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:alex@corealisation.com&quot;&gt;Alexander Voss&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="alex@corealisation.com"></a></div><div class="avatar-wrapper" data-name="Martin Donath" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:martin.donath@squidfunk.com&quot;&gt;Martin Donath&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="martin.donath@squidfunk.com"></a></div><div class="avatar-wrapper" data-name="Aaron" data-tippy-content="" data-tippy-raw="&lt;a href=&quot;mailto:junewhj@qq.com&quot;&gt;Aaron&lt;/a&gt;"><span class="avatar-text"></span><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="" data-desc-position="bottom"><img class="avatar" data-src="" data-email="junewhj@qq.com"></a></div></div></div></div></div>
 
 <p>The social plugin allows you to define custom layouts for your social cards
@@ -4118,7 +4118,7 @@ to suit your specific needs if the configuration options are not enough.
 For example, you may want to define a social card to advertise a new release
 of your product. It should have an icon indicating a launch announcement as
 well as the version number of the release on the card.</p>
-<h2 id="setup">Setup</h2>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h2>
 <p>You can either design a custom layout from scratch or use an existing layout
 as the basis that you add to or otherwise modify. In this tutorial, you will
 use the default layout as the basis.</p>
@@ -4151,7 +4151,7 @@ to the plugin configuration in your <code>mkdocs.yml</code>:</p>
 <li>a specification that consists of a number of layers that the social plugin
   applies on top of each other in the order in which they are defined.</li>
 </ul>
-<h2 id="define-page-metadata">Define page metadata</h2>
+<h2 id="define-page-metadata">Define page metadata<a class="headerlink" href="#define-page-metadata" title="Permanent link">¶</a></h2>
 <p>In the following, you will add a version number to the social card. This
 assumes you have a changelog page with information about each release.
 Add the version number of the latest version to the page header (so it does
@@ -4171,7 +4171,7 @@ not need to be parsed out of the Markdown content):</p>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Releases</span>
 </span></code></pre></div>
 </div>
-<h2 id="extract-page-metadata">Extract page metadata</h2>
+<h2 id="extract-page-metadata">Extract page metadata<a class="headerlink" href="#extract-page-metadata" title="Permanent link">¶</a></h2>
 <p>With the data defined in the page header, you can now add code to the layout
 that pulls it out and makes it available to render later on. This is to separate
 the data manipulation from the actual layout instructions and so make the
@@ -4192,7 +4192,7 @@ layout file easier to read.</p>
 entries and spits out a message to the social card if not. Unfortunately, there
 is no straightforward way to raise an exception or log an error, so the messages
 merely appear in the social card produced.</p>
-<h2 id="add-release-version-layer">Add release version layer</h2>
+<h2 id="add-release-version-layer">Add release version layer<a class="headerlink" href="#add-release-version-layer" title="Permanent link">¶</a></h2>
 <p>The next step is to use these data definitions in a new layer and add it to the
 ones already present.</p>
 <div class="admonition example">
@@ -4208,7 +4208,7 @@ ones already present.</p>
 </div>
 <p>You should now see the social plugin use the custom layout on the changelog page
 you set up.</p>
-<h2 id="adjust-layout">Adjust layout</h2>
+<h2 id="adjust-layout">Adjust layout<a class="headerlink" href="#adjust-layout" title="Permanent link">¶</a></h2>
 <p>Finally, the rocket icon used for the changelog page is not quite in the right
 position. Find the please where the <code>page_icon</code> variable is used to create the
 page icon layer and adjust the horizontal position to 600 instead of 800.</p>
@@ -4223,7 +4223,7 @@ there are a number of things you can do:</p>
    run it over your layout file, for example: <code>jinja2 event.yml</code>.</li>
 </ol>
 </div>
-<h2 id="whats-next">What's next?</h2>
+<h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
 <p>If you do not have a blog yet, why not check out the
 <a href="../blogs/basic.html">blog tutorials</a> and learn how to set one up? The social
 plugin will help you draw attention to your posts on social media.</p>

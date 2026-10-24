@@ -4302,14 +4302,14 @@
   
 
 
-<h1 id="authoring">Authoring</h1>
+<h1 id="authoring">Authoring<a class="headerlink" href="#authoring" title="Permanent link">¶</a></h1>
 <p>MaterialX for MkDocs is packed with many great features that make technical
 writing a joyful activity. This section of the documentation explains how to set up
 a page, and showcases all available specimen that can be used directly from
 within Markdown files.</p>
-<h2 id="configuration">Configuration</h2>
-<h2 id="usage">Usage</h2>
-<h3 id="setting-the-page-title">Setting the page <code>title</code></h3>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
+<h3 id="setting-the-page-title">Setting the page <code>title</code><a class="headerlink" href="#setting-the-page-title" title="Permanent link">¶</a></h3>
 <p>Each page has a designated title, which is used in the navigation sidebar, for
 <a href="../setup/setting-up-social-cards.html">social cards</a> and in other places. While MkDocs attempts to automatically
 determine the title of a page in a <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data">four step process</a>, the title can also be
@@ -4327,7 +4327,7 @@ explicitly set with the front matter <code>title</code> property:</p>
     site title, which is set via <a href="https://www.mkdocs.org/user-guide/configuration/#site_name"><code>site_name</code></a>, is appended with a
     dash.</li>
 </ol>
-<h3 id="setting-the-page-description">Setting the page <code>description</code></h3>
+<h3 id="setting-the-page-description">Setting the page <code>description</code><a class="headerlink" href="#setting-the-page-description" title="Permanent link">¶</a></h3>
 <p>A Markdown file can include a description that is added to the <code>meta</code> tags of
 a page, and is also used for <a href="../setup/setting-up-social-cards.html">social cards</a>. It's a good idea to set a
 <a href="https://www.mkdocs.org/user-guide/configuration/#site_description"><code>site_description</code></a> in <code>mkdocs.yml</code> as a fallback value if
@@ -4343,7 +4343,7 @@ the author does not explicitly define a description for a Markdown file:</p>
 <li>This line sets the <code>meta</code> tag containing the description inside the
     document <code>head</code> for the current page to the provided value.</li>
 </ol>
-<h3 id="setting-the-page-icon">Setting the page <code>icon</code></h3>
+<h3 id="setting-the-page-icon">Setting the page <code>icon</code><a class="headerlink" href="#setting-the-page-icon" title="Permanent link">¶</a></h3>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.2.0">9.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
 <p>An icon can be assigned to each page, which is then rendered as part of the
@@ -4370,7 +4370,7 @@ top of a Markdown file:</p>
 </div><p></p>
 </li>
 </ol>
-<h3 id="setting-the-page-status">Setting the page <code>status</code></h3>
+<h3 id="setting-the-page-status">Setting the page <code>status</code><a class="headerlink" href="#setting-the-page-status" title="Permanent link">¶</a></h3>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.2.0">9.2.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span>
 <span class="mdx-badge mdx-badge--right"><span class="mdx-badge__icon"><a href="https://mkdocs-material.github.io/examples/page-status.zip" title="Download example files"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.11.89-2 2-2h6l2 2zm-.75 7H16V9h-2v4h-3.25L15 17.25"></path></svg></span></a></span><span class="mdx-badge__text"><a href="https://mkdocs-material.github.io/examples/page-status.zip"><code>.zip</code></a></span></span>
@@ -4408,7 +4408,7 @@ Markdown file:</p>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-10 5h-2v-2h2zm0-4h-2V7h2z"></path></svg></span> – <code>new</code></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3zm0 5h2v9H9zm4 0h2v9h-2z"></path></svg></span> – <code>deprecated</code></li>
 </ul>
-<h4 id="custom-page-status">Custom page status</h4>
+<h4 id="custom-page-status">Custom page status<a class="headerlink" href="#custom-page-status" title="Permanent link">¶</a></h4>
 <p>You can define a custom page status this way but if you want it to
 have an icon other than the default one you need to also configure
 that in your <code>extra.css</code>.</p>
@@ -4421,7 +4421,7 @@ that in your <code>extra.css</code>.</p>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="kp">-webkit-</span><span class="k">mask-image</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--md-status--happy</span><span class="p">);</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="setting-the-page-subtitle">Setting the page <code>subtitle</code></h3>
+<h3 id="setting-the-page-subtitle">Setting the page <code>subtitle</code><a class="headerlink" href="#setting-the-page-subtitle" title="Permanent link">¶</a></h3>
 <p><span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#version" title="Minimum version"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"></path></svg></span></a></span><span class="mdx-badge__text"><a href="../changelog/index.html#9.6.0">9.6.0</a></span></span>
 <span class="mdx-badge"><span class="mdx-badge__icon"><a href="../conventions.html#experimental" title="Experimental"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3zm7-6 1.34-1.34L16.27 18H7.73l2.66-4.61zm-.5-4a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5"></path></svg></span></a></span></span></p>
 <p>Each page can define a subtitle, which is then rendered below the title as part
@@ -4434,7 +4434,7 @@ adding the following lines:</p>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># Page title</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nn">...</span>
 </span></code></pre></div>
-<h3 id="setting-the-page-template">Setting the page <code>template</code></h3>
+<h3 id="setting-the-page-template">Setting the page <code>template</code><a class="headerlink" href="#setting-the-page-template" title="Permanent link">¶</a></h3>
 <p>If you're using <a href="../customization.html#extending-the-theme">theme extension</a> and created a new page template in the
 <code>overrides</code> directory, you can enable it for a specific page. Add the following
 lines at the top of a Markdown file:</p>
@@ -4453,9 +4453,9 @@ in the corresponding folder with the following content:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom.html</span>
 </span></code></pre></div>
 </details>
-<h2 id="customization">Customization</h2>
-<h3 id="using-metadata-in-templates">Using metadata in templates</h3>
-<h4 id="on-all-pages"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41z"></path></svg></span> on all pages</h4>
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">¶</a></h2>
+<h3 id="using-metadata-in-templates">Using metadata in templates<a class="headerlink" href="#using-metadata-in-templates" title="Permanent link">¶</a></h3>
+<h4 id="on-all-pages"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41z"></path></svg></span> on all pages<a class="headerlink" href="#on-all-pages" title="Permanent link">¶</a></h4>
 <p>In order to add custom <code>meta</code> tags to your document, you can <a href="../customization.html#extending-the-theme">extend the theme
 </a> and <a href="../customization.html#overriding-blocks">override the <code>extrahead</code> block</a>,
 e.g. to add indexing policies for search engines via the <code>robots</code> property:</p>
@@ -4465,7 +4465,7 @@ e.g. to add indexing policies for search engines via the <code>robots</code> pro
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"robots"</span> <span class="na">content</span><span class="o">=</span><span class="s">"noindex, nofollow"</span> <span class="p">/&gt;</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>{% endblock %}
 </span></code></pre></div>
-<h4 id="on-a-single-page"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"></path></svg></span> on a single page</h4>
+<h4 id="on-a-single-page"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"></path></svg></span> on a single page<a class="headerlink" href="#on-a-single-page" title="Permanent link">¶</a></h4>
 <p>If you want to set a <code>meta</code> tag on a single page, or want to set different
 values for different pages, you can use the <code>page.meta</code> object inside your
 template override, e.g.:</p>
