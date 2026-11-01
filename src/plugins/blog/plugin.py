@@ -408,7 +408,7 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         if not self.config.share_links:
             return []
 
-        post_url = page.abs_url or page.canonical_url or page.url
+        post_url = page.canonical_url or page.url
         values = {
             "{post_url}": quote(post_url or "", safe = ""),
             "{post_title}": quote(page.title or "", safe = ""),
