@@ -46,6 +46,21 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/index.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/2026/10/31/blog-usage-demo.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/2026/11/01/featured-materialx-sites.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/changelog/index.html</loc>
         <lastmod>2026-10-24</lastmod>
         <changefreq>daily</changefreq>
@@ -97,7 +112,7 @@
     </url>
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/plugins/blog.html</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
@@ -378,6 +393,16 @@
     <url>
         <loc>https://jaywhj.github.io/mkdocs-materialx/tutorials/social/custom.html</loc>
         <lastmod>2026-04-03</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/archive/2026.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://jaywhj.github.io/mkdocs-materialx/blog/category/general.html</loc>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>daily</changefreq>
     </url>
 </urlset>
