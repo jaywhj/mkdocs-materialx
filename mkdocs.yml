@@ -121,7 +121,20 @@ theme:
 #---- 3. Plugins & Hooks ----
 
 plugins:
-  # - blog
+  - blog:
+      share_links:
+        mastodon:
+          title: Mastodon
+          link: "https://mastodonshare.com/?url={post_url}&text={post_title}"
+          icon: simple/mastodon
+        bluesky:
+          title: Bluesky
+          link: "https://bsky.app/intent/compose?text={post_title}%0A{post_url}"
+          icon: simple/bluesky
+        weibo:
+          title: Sina Weibo
+          link: "https://service.weibo.com/share/share.php?url={post_url}&title={post_title}"
+          icon: simple/sinaweibo
   # - tags
   - offline
   - search
@@ -290,17 +303,17 @@ nav:
   #   - Changelog:
   #     - insiders/changelog/index.md
   #     - How to upgrade: insiders/upgrade.md
-  - Tutorials:
-    # - tutorials/index.md
-    - "Blogs":
-      - tutorials/blogs/basic.md
-      - tutorials/blogs/navigation.md
-      - tutorials/blogs/engage.md
-    - "Social cards":
-      - tutorials/social/basic.md
-      - tutorials/social/custom.md
-  # - Blog:
-    # - blog/index.md
+  # - Tutorials:
+  #   # - tutorials/index.md
+  #   - "Blogs":
+  #     - tutorials/blogs/basic.md
+  #     - tutorials/blogs/navigation.md
+  #     - tutorials/blogs/engage.md
+  #   - "Social cards":
+  #     - tutorials/social/basic.md
+  #     - tutorials/social/custom.md
+  - Blog:
+    - blog/index.md
 
   - System:
     - Changelog:
