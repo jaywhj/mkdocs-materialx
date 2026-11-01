@@ -689,7 +689,7 @@ Use this setting to add share links to each post's sidebar. Define one entry per
 button; the entry name is available as a CSS class suffix. Each entry requires a
 `link` and may set a `title` and an `icon`:
 
-``` yaml
+``` yaml title="mkdocs.yml"
 plugins:
   - blog:
       share_links:
