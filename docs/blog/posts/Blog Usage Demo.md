@@ -16,7 +16,7 @@ Now you only need to focus on your content when using the blog feature — no ov
 
         ``` title="post.md"
         # Chinese search support
-        正文 ing ...
+        text ...
         ```
     
     === "Before"
@@ -30,10 +30,9 @@ Now you only need to focus on your content when using the blog feature — no ov
           making it faster and smaller at the same time
         categories:
           - Search
-          - Performance
         ---
     
         # Chinese search support
-        正文 ing ...
+        text ...
         ```
 
