@@ -27,7 +27,7 @@ I’ve curated a list of sites built with MaterialX for reference. Feel free to 
 
 
 
-### CN
+### ZH
 
 - <https://jaywhj.netlify.app/>{target="_blank"}
 - <https://hongjun.vip/>{target="_blank"}
