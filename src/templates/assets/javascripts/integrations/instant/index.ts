@@ -33,6 +33,7 @@ import {
   distinctUntilKeyChanged,
   endWith,
   exhaustMap,
+  filter,
   fromEvent,
   ignoreElements,
   map,
@@ -53,7 +54,8 @@ import {
   getOptionalElement,
   requestHTML,
   setLocation,
-  setLocationHash
+  setLocationHash,
+  watchPrint
 } from "~/browser"
 import { getComponentElement } from "~/components"
 
@@ -422,10 +424,15 @@ export function setupInstantNavigation(
   // Track viewport offset, so we can restore it when the user navigates back
   // and forth between pages. Note that this must be debounced and cannot be
   // done in popstate, as popstate has already removed the entry from the
-  // history, which means it is too late.
+  // history, which means it is too late. While printing, the viewport offset
+  // changes due to the print layout, but we must not touch the history, as
+  // Chrome treats this as a navigation and closes the print preview.
   viewport$.pipe(
     distinctUntilKeyChanged("offset"),
-    debounceTime(100)
+    debounceTime(100),
+    withLatestFrom(watchPrint()),
+    filter(([, printing]) => !printing),
+    map(([viewport]) => viewport)
   )
     .subscribe(({ offset }) => {
       history.replaceState(offset, "")
