@@ -56,7 +56,7 @@ When `.authors.yml` contains a matching author, the blog uses the full author pr
 
     === "blog/posts/post1.md"
 
-        ```markdown title="post1.md"
+        ```markdown
         ---
         authors: [aaron, Frederick, Alexander Wang]
         categories: [General]
@@ -70,7 +70,7 @@ When `.authors.yml` contains a matching author, the blog uses the full author pr
 
     === "blog/posts/post2.md"
 
-        ```markdown title="post2.md"
+        ```markdown
         # Blog Usage Demo
 
         MaterialX has always been guided by the philosophy of **simplicity** and **ease of use**. 
