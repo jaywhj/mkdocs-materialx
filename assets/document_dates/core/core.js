@@ -1,38 +1,10 @@
 /*
     1.加载头像
 */
-function isLatin(name) {
-    return /^[A-Za-z\s]+$/.test(name.trim());
-}
-function extractInitials(name) {
-    name = name.trim();
-    if (!name) return '?';
-    if (isLatin(name)) {
-        const parts = name.toUpperCase().split(/\s+/).filter(Boolean);
-        return parts.length >= 2 ? parts[0][0] + parts[parts.length - 1][0] : parts[0][0];
-    } else {
-        return name[0];
-    }
-}
-function nameToHSL(name, s = 50, l = 55) {
-    let hash = 0;
-    for (let i = 0; i < name.length; i++) {
-        hash = name.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    const hue = hash % 360;
-    return `hsl(${hue}, ${s}%, ${l}%)`;
-}
-
 function loadAvatars() {
+    if (window.ddAvatar) window.ddAvatar.renderInitials(document);
+
     document.querySelectorAll('.avatar-wrapper').forEach(wrapper => {
-        const name = wrapper.dataset.name || '';
-        const initials = extractInitials(name);
-        const bgColor = nameToHSL(name);
-
-        const textEl = wrapper.querySelector('.avatar-text');
-        textEl.textContent = initials;
-        textEl.style.backgroundColor = bgColor;
-
         const imgEl = wrapper.querySelector('img.avatar');
         if (imgEl) {
             const urls = [];
@@ -433,6 +405,7 @@ function initLayoutSwitcher() {
 */
 let datesAutoWrapObserver = null;
 function initPluginFeatures() {
+    if (window.ddAvatar) window.ddAvatar.renderInitials(document);
     tippyManager.initialize();
     processDataLoading();
     initLayoutSwitcher();

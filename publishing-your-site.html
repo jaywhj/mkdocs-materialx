@@ -35,7 +35,7 @@
           <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11.75 1a.75.75 0 0 1 .75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 0 1 0 2.65l-3.187 2.75a1.75 1.75 0 0 1-1.143.425H12.5v9.25a.75.75 0 0 1-1.5 0V13H3.75A1.75 1.75 0 0 1 2 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 0 1 .75-.75m7.282 4.5H3.75a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h15.282c.06 0 .118-.021.163-.06l3.188-2.75a.248.248 0 0 0 0-.38l-3.188-2.75a.25.25 0 0 0-.163-.06'/%3E%3C/svg%3E">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.2.3">
     
     
       
@@ -43,7 +43,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.1d60cbd7.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.de7f2082.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.a45159b5.min.css">
@@ -252,17 +252,17 @@
     
       <link rel="stylesheet" href="assets/document_dates/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="assets/document_dates/tippy/scale.css">
+    
       <link rel="stylesheet" href="assets/document_dates/tippy/shift-away.css">
     
-      <link rel="stylesheet" href="assets/document_dates/tippy/tippy.css">
+      <link rel="stylesheet" href="assets/document_dates/tippy/light.css">
     
       <link rel="stylesheet" href="assets/document_dates/tippy/material.css">
     
       <link rel="stylesheet" href="assets/document_dates/tippy/backdrop.css">
-    
-      <link rel="stylesheet" href="assets/document_dates/tippy/scale.css">
-    
-      <link rel="stylesheet" href="assets/document_dates/tippy/light.css">
     
       <link rel="stylesheet" href="assets/document_dates/core/core.css">
     
@@ -4136,7 +4136,7 @@ charge and pretty easy to set up.</p>
 documentation. At the root of your repository, create a new GitHub Actions
 workflow, e.g. <code>.github/workflows/ci.yml</code>, and copy and paste the following
 contents:</p>
-<div class="language-yaml highlight" data-download="data-download"><span class="filename">.github/workflows/ci.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
+<div class="language-yaml highlight" data-download="None"><span class="filename">.github/workflows/ci.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">on</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
@@ -4213,7 +4213,7 @@ Page is set to <code>gh-pages</code>.</p>
 by using the <a href="https://docs.gitlab.com/ee/ci/">GitLab CI</a> task runner. At the root of your repository, create a
 task definition named <code>.gitlab-ci.yml</code> and copy and paste the following
 contents:</p>
-<div class="language-yaml highlight" data-download="data-download"><span class="filename">.gitlab-ci.yml</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">pages</span><span class="p">:</span>
+<div class="language-yaml highlight" data-download="None"><span class="filename">.gitlab-ci.yml</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">pages</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python:latest</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
@@ -4450,9 +4450,11 @@ arguments, see <a href="https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy"
     
     
   
-      <script src="assets/javascripts/bundle.19ace10b.min.js"></script>
+      <script src="assets/javascripts/bundle.50eacf89.min.js"></script>
       
         <script src="assets/document_dates/core/timeago.min.js"></script>
+      
+        <script src="assets/document_dates/core/avatar.js"></script>
       
         <script src="assets/document_dates/tippy/popper.min.js"></script>
       
