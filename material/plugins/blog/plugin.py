@@ -21,6 +21,7 @@
 from __future__ import annotations
 
 import logging
+import mkdocs_document_dates
 import os
 import posixpath
 import re
@@ -41,7 +42,8 @@ from mkdocs.structure.pages import Page
 from mkdocs.structure.toc import AnchorLink, TableOfContents
 from mkdocs.utils import copy_file, get_relative_url
 from paginate import Page as Pagination
-from shutil import rmtree
+from pymdownx.slugs import slugify
+from shutil import copy2, rmtree
 from tempfile import mkdtemp
 from urllib.parse import quote, urlparse
 from yaml import SafeLoader
@@ -86,6 +88,13 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         if not self.config.enabled:
             return
 
+        if self.config.authors or self.config.authors_profiles:
+            avatar_script = "assets/document_dates/core/avatar.js"
+            scripts = config.get("extra_javascript") or []
+            if not any(str(script) == avatar_script for script in scripts):
+                scripts.append(avatar_script)
+            config["extra_javascript"] = scripts
+
         # Validate share links up front, so malformed settings fail with a
         # useful message instead of breaking template rendering.
         for name, share in self.config.share_links.items():
@@ -108,8 +117,10 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         self.blog: View
 
         # Initialize and resolve authors, if enabled
-        if self.config.authors:
+        if self.config.authors or self.config.authors_profiles:
             self.authors = self._resolve_authors(config)
+        else:
+            self.authors = {}
 
         # By default, drafts are rendered when the documentation is served,
         # but not when it is built, for a better user experience
@@ -292,11 +303,8 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         # Extract and assign authors to post, if enabled
         if self.config.authors:
             for id in page.config.authors:
-                if id not in self.authors:
-                    raise PluginError(f"Couldn't find author '{id}'")
-
                 # Append to list of authors
-                page.authors.append(self.authors[id])
+                page.authors.append(self._resolve_author(id))
 
         # Extract settings for excerpts
         separator      = self.config.post_excerpt_separator
@@ -364,6 +372,17 @@ class BlogPlugin(BasePlugin[BlogConfig]):
         # Register custom template filters
         env.filters["date"] = date_filter
         env.filters["url"]  = url_filter_with_pagination
+
+    def on_post_build(self, config):
+        if not self.config.enabled or not (
+            self.config.authors or self.config.authors_profiles
+        ):
+            return
+
+        source = Path(mkdocs_document_dates.__file__).parent / "static" / "core" / "avatar.js"
+        target = Path(config.site_dir) / "assets" / "document_dates" / "core" / "avatar.js"
+        target.parent.mkdir(parents = True, exist_ok = True)
+        copy2(source, target)
 
     # Prepare view for rendering (run latest) - views are rendered last, as we
     # need to mutate the navigation to account for pagination. The main problem
@@ -526,6 +545,9 @@ class BlogPlugin(BasePlugin[BlogConfig]):
             # configured drafts to be included in the navigation.
             post = self._resolve_post(file, config, data[getattr(file, 'src_uri')]['created'])
             if not self._is_excluded(post):
+                if self.config.authors or self.config.authors_profiles:
+                    for author_id in post.config.authors:
+                        self._resolve_author(author_id)
                 yield post
 
     # Resolve authors - check if there's an authors file at the configured
@@ -569,6 +591,21 @@ class BlogPlugin(BasePlugin[BlogConfig]):
 
         # Return authors
         return config.authors
+
+    # Resolve an author from the optional authors file, or use the post's
+    # author string as its display name when no matching entry exists.
+    def _resolve_author(self, author_id: str):
+        author = self.authors.get(author_id)
+        if author is None:
+            author = Author()
+            author.load_dict({
+                "name": author_id,
+                "description": "",
+                "avatar": "",
+                "slug": slugify(case = "lower")(author_id, "-"),
+            })
+            self.authors[author_id] = author
+        return author
 
     # Resolve views of the given view in pre-order
     def _resolve_views(self, view: View):
