@@ -122,6 +122,7 @@ theme:
 
 plugins:
   - blog:
+      post_excerpt_max_authors: 5
       share_links:
         mastodon:
           title: Mastodon
@@ -223,8 +224,9 @@ exclude_docs: |
   archives/
 #  /drafts/
 
-# not_in_nav: |
-#   /tutorials/**/*.md
+not_in_nav: |
+  tutorials/
+
 
 nav:
   - Home: index.md

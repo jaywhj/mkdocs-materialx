@@ -1131,9 +1131,12 @@ The following settings are available for authors:
 <!-- md:version 9.2.0 -->
 <!-- md:default `true` -->
 
-Use this setting to enable or disable post authors. If this setting is enabled,
-the plugin will look for a file named [`.authors.yml`][config.authors_file] and
-render authors in posts and views. Disable this behavior with:
+Use this setting to enable or disable post authors. When enabled, authors listed
+in a post's `authors` metadata are rendered. The plugin optionally uses
+[`.authors.yml`][config.authors_file] to load full author profiles. If a name
+has no matching entry, the value from the post is used as the display name and
+a text avatar is generated. Posts without an `authors` value do not render an
+author. Disable author rendering for all posts with:
 
 ``` yaml
 plugins:
@@ -1148,9 +1151,9 @@ plugins:
 <!-- md:version 9.2.0 -->
 <!-- md:default `{blog}/.authors.yml` -->
 
-Use this setting to change the path of the file where the author information for
-your posts resides. It's normally not necessary to change this setting, but if
-you need to, use:
+Use this setting to change the path of the optional file containing additional
+author information for your posts. Posts can render authors without this file.
+To configure a different path, use:
 
 ``` yaml
 plugins:
@@ -1544,9 +1547,11 @@ The following properties are available:
 <!-- md:flag metadata -->
 <!-- md:default none -->
 
-Use this property to associate a post with [authors] by providing a list of
-identifiers as defined in the [`authors_file`][config.authors_file]. If an
-author can't be resolved, the plugin will terminate with an error:
+Use this property to list the authors of a post. Each value can match an entry
+in the optional [`authors_file`][config.authors_file], in which case the
+configured author profile is used. If there is no matching entry, the value
+itself becomes the display name and a text avatar is generated. If this
+property is omitted, no author is rendered for the post:
 
 ``` yaml
 ---

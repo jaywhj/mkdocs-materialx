@@ -61,6 +61,18 @@
     flex-direction: column;
     gap: px2rem(12px);
     margin: 0 px2rem(20px) px2rem(24px);
+
+    // Keep blog author photos in full color without changing global authors
+    .md-author img {
+      filter: none;
+      opacity: 1;
+    }
+
+    // Document Dates applies grayscale to the shared avatar wrapper class
+    .avatar-wrapper {
+      filter: none;
+      opacity: 1;
+    }
   }
 
   // Post metadata

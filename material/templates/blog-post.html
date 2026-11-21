@@ -24,7 +24,13 @@
                 {% for author in page.authors %}
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="{{ author.avatar | url }}" alt="{{ author.name }}">
+                      {% if author.avatar %}
+                        <img src="{{ author.avatar | url }}" alt="{{ author.name }}">
+                      {% else %}
+                        <span class="avatar-wrapper" data-name="{{ author.name | e }}" aria-hidden="true">
+                          <span class="avatar-text"></span>
+                        </span>
+                      {% endif %}
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -34,8 +40,10 @@
                           {{ author.name }}
                         {% endif %}
                       </strong>
-                      <br>
-                      {{ author.description }}
+                      {% if author.description %}
+                        <br>
+                        {{ author.description }}
+                      {% endif %}
                     </span>
                   </div>
                 {% endfor %}
