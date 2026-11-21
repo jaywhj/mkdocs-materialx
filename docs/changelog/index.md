@@ -6,6 +6,17 @@ icon: material/layers-triple-outline
 
 ## MaterialX
 
+### 10.2.3 <small>Nov 21, 2026</small> { id="10.2.3" }
+
+- Fixed Chrome print previews closing unexpectedly when printing a scrolled page with `navigation.instant` enabled
+- Fixed creation and update dates for Markdown files in initialized Git submodules
+- Resolved the docs directory path before calculating Git-relative paths, fixing date fallbacks when the directory is accessed through a symlink
+- Simplified `blog` post author setup and made `.authors.yml` optional:
+    - When `.authors.yml` contains a matching author, the blog uses the full author profile
+    - Otherwise, the author name from the post is used to create a fallback author with a text avatar
+    - Posts without an `authors` value do not render an author
+    - [Effect preview](../blog/index.md){target="_blank"}
+
 ### 10.2.2 <small>Oct 24, 2026</small> { id="10.2.2" }
 
 - Enhanced `blog` functionality:

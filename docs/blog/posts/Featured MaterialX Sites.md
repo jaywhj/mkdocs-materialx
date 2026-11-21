@@ -1,3 +1,8 @@
+---
+authors: [aaron, Frederick, Alexander Wang]
+categories: [General]
+---
+
 # Featured MaterialX Sites
 
 I’ve curated a list of sites built with MaterialX for reference. Feel free to submit your site in the comment section below.
