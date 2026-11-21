@@ -13477,9 +13477,9 @@
 <h2 id="materialx">MaterialX<a class="headerlink" href="#materialx" title="Permanent link">¶</a></h2>
 <h3 id="10.2.3">10.2.3 <small>Nov 21, 2026</small><a class="headerlink" href="#10.2.3" title="Permanent link">¶</a></h3>
 <ul>
+<li>Added Git submodule support for document date retrieval</li>
+<li>Fixed date fallback failures when accessing directories via symlinks</li>
 <li>Fixed Chrome print previews closing unexpectedly when printing a scrolled page with <code>navigation.instant</code> enabled</li>
-<li>Fixed creation and update dates for Markdown files in initialized Git submodules</li>
-<li>Resolved the docs directory path before calculating Git-relative paths, fixing date fallbacks when the directory is accessed through a symlink</li>
 <li>Simplified <code>blog</code> post author setup and made <code>.authors.yml</code> optional:<ul>
 <li>When <code>.authors.yml</code> contains a matching author, the blog uses the full author profile</li>
 <li>Otherwise, the author name from the post is used to create a fallback author with a text avatar</li>
